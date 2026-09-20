@@ -66,7 +66,7 @@ export class StickerWorld {
   if(this.reduced.matches){for(let i=0;i<400;i++)this.step();this.render();}
   return this.selected.length;
  }
- shake(){for(const item of this.items){if(item.target||item.pinned)continue;Sleeping.set(item.body,false);if(this.reduced.matches){Body.setPosition(item.body,{x:50+Math.random()*(this.width-100),y:this.height-100-Math.random()*200});}else{Body.setVelocity(item.body,{x:(Math.random()-.5)*13,y:-9-Math.random()*8});Body.setAngularVelocity(item.body,(Math.random()-.5)*.2);}}if(this.reduced.matches){for(let i=0;i<400;i++)this.step();this.render();}}
+ shake(strength=1,horizontal=0){for(const item of this.items){if(item.target||item.pinned)continue;Sleeping.set(item.body,false);if(this.reduced.matches){Body.setPosition(item.body,{x:50+Math.random()*(this.width-100),y:this.height-100-Math.random()*200});}else{Body.setVelocity(item.body,{x:((Math.random()-.5)*13+horizontal*5)*strength,y:(-9-Math.random()*8)*strength});Body.setAngularVelocity(item.body,(Math.random()-.5)*.2*strength);}}if(this.reduced.matches){for(let i=0;i<400;i++)this.step();this.render();}}
  private step(){for(const item of this.items){if(item.pinned)continue;const body=item.body;const d=this.drag?.item===item?this.drag:undefined;const target=d?{x:Math.max(20,Math.min(this.width-20,d.x-d.dx)),y:Math.max(30,Math.min(this.height-70,d.y-d.dy))}:item.target;
    if(target){Sleeping.set(body,false);Body.applyForce(body,body.position,{x:body.mass*((target.x-body.position.x)*.000055-body.velocity.x*.00046),y:body.mass*((target.y-body.position.y)*.000055-body.velocity.y*.00046-this.engine.gravity.y*.001)});Body.setAngularVelocity(body,body.angularVelocity*.7-body.angle*.035);}
    // Recover bodies after a drastic resize or an energetic throw.

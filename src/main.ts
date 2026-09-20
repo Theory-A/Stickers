@@ -1,11 +1,39 @@
 import './style.css';
 import { StickerWorld } from './physics';
+import { DeviceShakeDetector } from './deviceShake';
 import { parseSearchResponse, type Sticker } from './types';
 const $ = <T extends HTMLElement>(id:string)=>document.getElementById(id) as T;
 const input=$<HTMLInputElement>('search'), status=$('search-status'),section=document.querySelector<HTMLElement>('.search-section')!;
 const detail=$<HTMLDialogElement>('detail'),collection=$<HTMLDialogElement>('collection');
 let world:StickerWorld;
 let version=0, timer:ReturnType<typeof setTimeout>,controller:AbortController|undefined,composing=false;
+const shakeDetector=new DeviceShakeDetector();
+const motionTip=$('motion-tip');
+let motionEnabled=false,motionRequesting=false;
+function onDeviceMotion(event:DeviceMotionEvent){
+ if(document.hidden||detail.open||collection.open)return;
+ const acceleration=event.acceleration;
+ const sample=acceleration?.x!=null&&acceleration.y!=null&&acceleration.z!=null?acceleration:event.accelerationIncludingGravity;
+ const impulse=shakeDetector.sample(sample,performance.now());
+ if(impulse)world.shake(impulse.strength,impulse.horizontal);
+}
+function onVisibilityChange(){shakeDetector.reset();}
+async function enablePhoneShake(){
+ if(motionEnabled||motionRequesting||!isSecureContext||!('DeviceMotionEvent' in window)||!matchMedia('(pointer: coarse)').matches)return;
+ motionRequesting=true;
+ try{
+  const requestPermission=(DeviceMotionEvent as typeof DeviceMotionEvent & {requestPermission?:()=>Promise<'granted'|'denied'>}).requestPermission;
+  if(requestPermission&&await requestPermission.call(DeviceMotionEvent)!=='granted'){
+   motionTip.textContent='tap to mix stickers';
+   return;
+  }
+  window.addEventListener('devicemotion',onDeviceMotion);
+  document.addEventListener('visibilitychange',onVisibilityChange);
+  motionEnabled=true;
+  motionTip.textContent='shake your phone to mix';
+ }catch{motionTip.textContent='tap to mix stickers';}
+ finally{motionRequesting=false;}
+}
 function setSearching(searching:boolean){
  section.classList.toggle('loading',searching);$('search-form').setAttribute('aria-busy',String(searching));
 }
@@ -36,7 +64,9 @@ async function boot(){const res=await fetch('/stickers/catalog.json',{cache:'no-
  await Promise.all(stickers.map(s=>new Promise<void>(resolve=>{const image=new Image();image.onload=()=>resolve();image.onerror=()=>resolve();image.src=s.image;})));
  world=new StickerWorld($('sticker-stage'),stickers,()=>status.getBoundingClientRect().bottom,showSticker);$('collection-count').textContent=String(stickers.length);
  for(const sticker of stickers){const button=document.createElement('button');const image=document.createElement('img');image.src=sticker.image;image.alt='';image.loading='lazy';button.append(image,document.createTextNode(sticker.title));button.onclick=()=>showSticker(sticker);$('collection-grid').append(button);}
- $('browse').onclick=()=>collection.showModal();$('shuffle').onclick=()=>world.shake();
+ $('browse').onclick=()=>collection.showModal();
+ if(!isSecureContext||!('DeviceMotionEvent' in window)||!matchMedia('(pointer: coarse)').matches)motionTip.hidden=true;
+ $('shuffle').onclick=()=>{void enablePhoneShake();world.shake();};
  input.addEventListener('input',()=>schedule());input.addEventListener('compositionstart',()=>{composing=true;clearTimeout(timer);controller?.abort();version++;setSearching(false);status.textContent='Waiting for you to finish typing…';});input.addEventListener('compositionend',()=>{composing=false;schedule();});
  $('search-form').addEventListener('submit',e=>{e.preventDefault();schedule(true);});$('clear').onclick=()=>{input.value='';schedule();input.focus();};
  document.querySelectorAll<HTMLButtonElement>('[data-query]').forEach(b=>b.onclick=()=>{input.value=b.dataset.query!;schedule(true);});
@@ -44,4 +74,4 @@ async function boot(){const res=await fetch('/stickers/catalog.json',{cache:'no-
  try{const response=await fetch('/api/status');const data=await response.json();$('mode-label').textContent=data.mode==='jev'?'JEV SEARCH':'LOCAL SEARCH';}catch{/* Search reports an actionable error on use. */}
 }
 boot().catch(()=>{status.textContent='The collection couldn’t load. Please refresh to try again.';status.classList.add('error');});
-if(import.meta.hot)import.meta.hot.dispose(()=>{controller?.abort();clearTimeout(timer);world?.destroy();});
+if(import.meta.hot)import.meta.hot.dispose(()=>{controller?.abort();clearTimeout(timer);window.removeEventListener('devicemotion',onDeviceMotion);document.removeEventListener('visibilitychange',onVisibilityChange);world?.destroy();});
