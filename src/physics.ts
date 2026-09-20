@@ -13,6 +13,8 @@ export class StickerWorld {
  private width=0;
  private stickerCount=29;
  private height=0;
+ private tiltTarget?:{x:number;y:number};
+ private lastWakeGravity={x:0,y:1.15};
  private drag?:{item:Item;pointer:number;x:number;y:number;startX:number;startY:number;dx:number;dy:number;moved:boolean;stillSince?:number;anchorX:number;anchorY:number};
  private reduced=matchMedia('(prefers-reduced-motion: reduce)');
  private resizeObserver:ResizeObserver;
@@ -43,7 +45,7 @@ export class StickerWorld {
  }
  private mobileScale(){return this.width<=700?.56:1;}
  private baseSize(){return (this.width<600?105:Math.min(175,Math.max(125,this.width/8.5)))*Math.min(1,Math.sqrt(29/this.stickerCount))*this.mobileScale();}
- private setWalls(){Composite.remove(this.engine.world,this.walls);const opts={isStatic:true,friction:.8};this.walls=[Bodies.rectangle(this.width/2,this.height-25,this.width+300,50,opts),Bodies.rectangle(-50,this.height/2,100,this.height*8,opts),Bodies.rectangle(this.width+50,this.height/2,100,this.height*8,opts)];Composite.add(this.engine.world,this.walls);}
+ private setWalls(){Composite.remove(this.engine.world,this.walls);const opts={isStatic:true,friction:.8};this.walls=[Bodies.rectangle(this.width/2,this.height-25,this.width+300,50,opts),Bodies.rectangle(-50,this.height/2,100,this.height*8,opts),Bodies.rectangle(this.width+50,this.height/2,100,this.height*8,opts)];if(this.tiltTarget)this.walls.push(Bodies.rectangle(this.width/2,-50,this.width+300,100,opts));Composite.add(this.engine.world,this.walls);}
  private resize(){const width=this.stage.clientWidth,height=this.stage.clientHeight;if(width===this.width&&height===this.height)return;const oldWidth=this.width,oldHeight=this.height;this.width=width;this.height=height;for(const item of this.items){const factor=this.baseSize()/Math.max(item.width,item.height);Body.scale(item.body,factor,factor);item.width*=factor;item.height*=factor;item.element.style.width=item.width+'px';item.element.style.height=item.height+'px';Body.setPosition(item.body,{x:Math.min(width-item.width/2,Math.max(item.width/2,item.body.position.x/oldWidth*width)),y:Math.min(height-70,item.body.position.y/oldHeight*height)});Sleeping.set(item.body,false);}this.setWalls();this.setMatches(this.selected);}
  setMatches(ids:string[]){
   this.selected=[...ids].filter(id=>!this.items.some(item=>item.sticker.id===id&&item.pinned)).slice(0,10);
@@ -67,8 +69,27 @@ export class StickerWorld {
   return this.selected.length;
  }
  shake(strength=1,horizontal=0){for(const item of this.items){if(item.target||item.pinned)continue;Sleeping.set(item.body,false);if(this.reduced.matches){Body.setPosition(item.body,{x:50+Math.random()*(this.width-100),y:this.height-100-Math.random()*200});}else{Body.setVelocity(item.body,{x:((Math.random()-.5)*13+horizontal*5)*strength,y:(-9-Math.random()*8)*strength});Body.setAngularVelocity(item.body,(Math.random()-.5)*.2*strength);}}if(this.reduced.matches){for(let i=0;i<400;i++)this.step();this.render();}}
- private step(){for(const item of this.items){if(item.pinned)continue;const body=item.body;const d=this.drag?.item===item?this.drag:undefined;const target=d?{x:Math.max(20,Math.min(this.width-20,d.x-d.dx)),y:Math.max(30,Math.min(this.height-70,d.y-d.dy))}:item.target;
-   if(target){Sleeping.set(body,false);Body.applyForce(body,body.position,{x:body.mass*((target.x-body.position.x)*.000055-body.velocity.x*.00046),y:body.mass*((target.y-body.position.y)*.000055-body.velocity.y*.00046-this.engine.gravity.y*.001)});Body.setAngularVelocity(body,body.angularVelocity*.7-body.angle*.035);}
+ setTiltGravity(x:number,y:number){
+  if(this.reduced.matches)return;
+  const first=!this.tiltTarget;
+  this.tiltTarget={x:Math.max(-1.15,Math.min(1.15,x*1.15)),y:Math.max(-1.15,Math.min(1.15,y*1.15))};
+  if(first){
+   for(const item of this.items){item.body.friction=.22;if(item.pinned||item.body.position.y>=item.height/2)continue;Body.setPosition(item.body,{x:item.body.position.x,y:item.height/2+2});Body.setVelocity(item.body,{x:0,y:0});}
+   this.setWalls();
+  }
+  if(first||Math.hypot(this.tiltTarget.x-this.lastWakeGravity.x,this.tiltTarget.y-this.lastWakeGravity.y)>.07){
+   this.lastWakeGravity={...this.tiltTarget};
+   for(const item of this.items)if(!item.pinned&&!item.target)Sleeping.set(item.body,false);
+  }
+ }
+ resetTiltGravity(){
+  if(!this.tiltTarget)return;
+  this.tiltTarget=undefined;this.engine.gravity.x=0;this.engine.gravity.y=1.15;this.lastWakeGravity={x:0,y:1.15};this.setWalls();
+  for(const item of this.items){item.body.friction=.65;if(!item.pinned&&!item.target)Sleeping.set(item.body,false);}
+ }
+ private step(){if(this.tiltTarget){this.engine.gravity.x+=(this.tiltTarget.x-this.engine.gravity.x)*.15;this.engine.gravity.y+=(this.tiltTarget.y-this.engine.gravity.y)*.15;}
+  for(const item of this.items){if(item.pinned)continue;const body=item.body;const d=this.drag?.item===item?this.drag:undefined;const target=d?{x:Math.max(20,Math.min(this.width-20,d.x-d.dx)),y:Math.max(30,Math.min(this.height-70,d.y-d.dy))}:item.target;
+   if(target){Sleeping.set(body,false);Body.applyForce(body,body.position,{x:body.mass*((target.x-body.position.x)*.000055-body.velocity.x*.00046-this.engine.gravity.x*.001),y:body.mass*((target.y-body.position.y)*.000055-body.velocity.y*.00046-this.engine.gravity.y*.001)});Body.setAngularVelocity(body,body.angularVelocity*.7-body.angle*.035);}
    // Recover bodies after a drastic resize or an energetic throw.
    if(body.position.y>this.height+200||body.position.x < -250||body.position.x>this.width+250){Body.setPosition(body,{x:this.width/2,y:this.height-200});Body.setVelocity(body,{x:0,y:0});}
   }Engine.update(this.engine,1000/60);}

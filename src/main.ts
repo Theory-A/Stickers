@@ -1,37 +1,51 @@
 import './style.css';
 import { StickerWorld } from './physics';
-import { DeviceShakeDetector } from './deviceShake';
+import { gravityFromMotion, type TiltGravity } from './deviceTilt';
 import { parseSearchResponse, type Sticker } from './types';
 const $ = <T extends HTMLElement>(id:string)=>document.getElementById(id) as T;
 const input=$<HTMLInputElement>('search'), status=$('search-status'),section=document.querySelector<HTMLElement>('.search-section')!;
 const detail=$<HTMLDialogElement>('detail'),collection=$<HTMLDialogElement>('collection');
 let world:StickerWorld;
 let version=0, timer:ReturnType<typeof setTimeout>,controller:AbortController|undefined,composing=false;
-const shakeDetector=new DeviceShakeDetector();
 const motionTip=$('motion-tip');
-let motionEnabled=false,motionRequesting=false;
+const tiltButton=$<HTMLButtonElement>('shuffle');
+const motionSupported=isSecureContext&&'DeviceMotionEvent' in window&&matchMedia('(pointer: coarse)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+let tiltEnabled=false,motionRequesting=false,filteredTilt:TiltGravity|undefined,lastMotionAt=0;
 function onDeviceMotion(event:DeviceMotionEvent){
  if(document.hidden||detail.open||collection.open)return;
- const acceleration=event.acceleration;
- const sample=acceleration?.x!=null&&acceleration.y!=null&&acceleration.z!=null?acceleration:event.accelerationIncludingGravity;
- const impulse=shakeDetector.sample(sample,performance.now());
- if(impulse)world.shake(impulse.strength,impulse.horizontal);
+ const legacyAngle=(window as Window & {orientation?:number}).orientation;
+ const screenAngle=screen.orientation?.angle??(typeof legacyAngle==='number'?-legacyAngle:0);
+ const gravity=gravityFromMotion(event.accelerationIncludingGravity,screenAngle);
+ if(!gravity)return;
+ const now=performance.now();
+ const blend=filteredTilt?1-Math.exp(-Math.min(now-lastMotionAt,1000)/160):1;
+ filteredTilt={x:filteredTilt?filteredTilt.x+(gravity.x-filteredTilt.x)*blend:gravity.x,y:filteredTilt?filteredTilt.y+(gravity.y-filteredTilt.y)*blend:gravity.y};
+ lastMotionAt=now;
+ world.setTiltGravity(filteredTilt.x,filteredTilt.y);
 }
-function onVisibilityChange(){shakeDetector.reset();}
-async function enablePhoneShake(){
- if(motionEnabled||motionRequesting||!isSecureContext||!('DeviceMotionEvent' in window)||!matchMedia('(pointer: coarse)').matches)return;
+function onVisibilityChange(){if(document.hidden){filteredTilt=undefined;world.resetTiltGravity();}}
+function disablePhoneTilt(){
+ window.removeEventListener('devicemotion',onDeviceMotion);document.removeEventListener('visibilitychange',onVisibilityChange);
+ filteredTilt=undefined;tiltEnabled=false;world.resetTiltGravity();
+ tiltButton.classList.remove('tilt-active');tiltButton.setAttribute('aria-pressed','false');
+ tiltButton.setAttribute('aria-label','Enable tilt physics');motionTip.textContent='tap to enable tilt';
+}
+async function togglePhoneTilt(){
+ if(tiltEnabled){disablePhoneTilt();return;}
+ if(motionRequesting)return;
  motionRequesting=true;
  try{
   const requestPermission=(DeviceMotionEvent as typeof DeviceMotionEvent & {requestPermission?:()=>Promise<'granted'|'denied'>}).requestPermission;
   if(requestPermission&&await requestPermission.call(DeviceMotionEvent)!=='granted'){
-   motionTip.textContent='tap to mix stickers';
+   motionTip.hidden=true;tiltButton.querySelector('.shake-label-mobile')!.textContent='Shake';
+   tiltButton.setAttribute('aria-label','Shake things up');tiltButton.onclick=()=>world.shake();
    return;
   }
   window.addEventListener('devicemotion',onDeviceMotion);
   document.addEventListener('visibilitychange',onVisibilityChange);
-  motionEnabled=true;
-  motionTip.textContent='shake your phone to mix';
- }catch{motionTip.textContent='tap to mix stickers';}
+  tiltEnabled=true;tiltButton.classList.add('tilt-active');tiltButton.setAttribute('aria-pressed','true');
+  tiltButton.setAttribute('aria-label','Tilt physics on; tap to turn off');motionTip.textContent='tilt phone to move stickers';
+ }catch{motionTip.hidden=true;tiltButton.querySelector('.shake-label-mobile')!.textContent='Shake';tiltButton.setAttribute('aria-label','Shake things up');tiltButton.onclick=()=>world.shake();}
  finally{motionRequesting=false;}
 }
 function setSearching(searching:boolean){
@@ -65,8 +79,8 @@ async function boot(){const res=await fetch('/stickers/catalog.json',{cache:'no-
  world=new StickerWorld($('sticker-stage'),stickers,()=>status.getBoundingClientRect().bottom,showSticker);$('collection-count').textContent=String(stickers.length);
  for(const sticker of stickers){const button=document.createElement('button');const image=document.createElement('img');image.src=sticker.image;image.alt='';image.loading='lazy';button.append(image,document.createTextNode(sticker.title));button.onclick=()=>showSticker(sticker);$('collection-grid').append(button);}
  $('browse').onclick=()=>collection.showModal();
- if(!isSecureContext||!('DeviceMotionEvent' in window)||!matchMedia('(pointer: coarse)').matches)motionTip.hidden=true;
- $('shuffle').onclick=()=>{void enablePhoneShake();world.shake();};
+ if(motionSupported){tiltButton.setAttribute('aria-pressed','false');tiltButton.setAttribute('aria-label','Enable tilt physics');tiltButton.onclick=()=>void togglePhoneTilt();}
+ else{motionTip.hidden=true;tiltButton.querySelector('.shake-label-mobile')!.textContent='Shake';tiltButton.setAttribute('aria-label','Shake things up');tiltButton.onclick=()=>world.shake();}
  input.addEventListener('input',()=>schedule());input.addEventListener('compositionstart',()=>{composing=true;clearTimeout(timer);controller?.abort();version++;setSearching(false);status.textContent='Waiting for you to finish typing…';});input.addEventListener('compositionend',()=>{composing=false;schedule();});
  $('search-form').addEventListener('submit',e=>{e.preventDefault();schedule(true);});$('clear').onclick=()=>{input.value='';schedule();input.focus();};
  document.querySelectorAll<HTMLButtonElement>('[data-query]').forEach(b=>b.onclick=()=>{input.value=b.dataset.query!;schedule(true);});

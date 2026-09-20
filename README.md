@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite. The app works immediately with local tag matching. Drag and toss the stickers, click one to inspect or download it, or use **Shake things up**. On a supported phone over HTTPS, tap **Shake** once to enable motion access, then physically shake the phone to toss the stickers. Search suggestions lift matching stickers. Press `/` to focus search and Escape to clear it. **Browse the collection** makes every sticker accessible without digging through the pile.
+Open the local URL printed by Vite. The app works immediately with local tag matching. Drag and toss the stickers, click one to inspect or download it, or use **Shake things up** on desktop. On a supported phone over HTTPS, tap **Tilt** to enable motion access, then tip the phone to pull the stickers in that direction; tap **Tilt** again to turn it off. Search suggestions lift matching stickers. Press `/` to focus search and Escape to clear it. **Browse the collection** makes every sticker accessible without digging through the pile.
 
 ## Enable Jev
 
