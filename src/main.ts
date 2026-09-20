@@ -64,7 +64,10 @@ let ids:Set<string>;
 async function runSearch(query:string,requestVersion:number){
  controller=new AbortController();setSearching(true);status.classList.remove('error');status.textContent='Looking through the little things…';
  try{const res=await fetch('/api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query}),signal:controller.signal});if(!res.ok)throw new Error('Search unavailable');const data=parseSearchResponse(await res.json(),ids);if(requestVersion!==version)return;
-  const matchCount=world.setMatches(data.matches.map(m=>m.id));$('mode-label').textContent=data.mode==='jev'?'JEV SEARCH':'LOCAL SEARCH';status.textContent=matchCount?`${matchCount} little ${matchCount===1?'match':'matches'} for “${query}”${data.mode==='local'?' · local tag search':''}`:`No little matches yet. Try a color, an object, or an activity.`;
+  const matchCount=world.setMatches(data.matches.map(m=>m.id));$('mode-label').textContent=data.mode==='jev'?'JEV SEARCH':'LOCAL SEARCH';
+  const oldStatusBottom=status.getBoundingClientRect().bottom;
+  status.textContent=matchCount?`${matchCount} little ${matchCount===1?'match':'matches'} for “${query}”${data.mode==='local'?' · local tag search':''}`:`No little matches yet. Try a color, an object, or an activity.`;
+  if(Math.abs(status.getBoundingClientRect().bottom-oldStatusBottom)>1)world.relayoutMatches();
  }catch(error){if(requestVersion!==version||(error as Error).name==='AbortError')return;status.classList.add('error');status.textContent='Couldn’t search just now. Press Enter to try again.';
  }finally{if(requestVersion===version)setSearching(false);}
 }
