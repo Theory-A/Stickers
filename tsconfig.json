@@ -20,6 +20,7 @@
     "allowImportingTsExtensions": true
   },
   "include": [
+    "api",
     "src",
     "server",
     "tests",

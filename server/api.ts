@@ -3,8 +3,7 @@ import { readFileSync, statSync } from 'node:fs';
 import { TypeSafeClient } from '@typesafe-ai/sdk';
 import { createSearchService } from './search.ts';
 import type { Sticker } from '../src/types.ts';
-export function createApi(env:Record<string,string|undefined>) {
- const catalogPath=new URL('../public/stickers/catalog.json',import.meta.url);
+export function createApi(env:Record<string,string|undefined>,catalogPath:string|URL=new URL('../public/stickers/catalog.json',import.meta.url)) {
  let catalogVersion='';
  let stickerCount=0;
  const apiKey = env.TYPESAFE_API_KEY?.trim();
@@ -35,7 +34,13 @@ export function createApi(env:Record<string,string|undefined>) {
   res.on('close',abort);
   active++;
   try {
-   let body = ''; for await (const chunk of req) {body += chunk; if(Buffer.byteLength(body)>4096) {send(413,{error:'Request too large'});return;}}
+   // Vercel parses the body before invoking a Node function; local Node/Vite
+   // requests still expose the raw stream.
+   const parsedBody=(req as IncomingMessage & {body?:unknown}).body;
+   let body = '';
+   if(parsedBody!==undefined){body=typeof parsedBody==='string'?parsedBody:Buffer.isBuffer(parsedBody)?parsedBody.toString('utf8'):JSON.stringify(parsedBody);}
+   else {for await (const chunk of req) {body += chunk; if(Buffer.byteLength(body)>4096) {send(413,{error:'Request too large'});return;}}}
+   if(Buffer.byteLength(body)>4096)return send(413,{error:'Request too large'});
    let data:unknown; try {data=JSON.parse(body);} catch {return send(400,{error:'Invalid JSON'});}
    const query = (data as {query?:unknown})?.query;
    if(typeof query !== 'string' || query.length>240) return send(400,{error:'Search must be text of at most 240 characters.'});

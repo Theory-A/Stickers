@@ -30,6 +30,12 @@ npm start
 
 The Node server serves `dist/` and the search API on http://localhost:3000 (override with `PORT`). Keep `public/stickers/catalog.json` available to the server. A static-only hosting service cannot run the Jev endpoint. The supplied server binds to loopback; configure hosting/network access for deployment as appropriate. `npm run preview` also includes the API for local build previews.
 
+## Vercel deployment
+
+Deploy this repository with the Vite framework preset. `vercel.json` builds the frontend into `dist/`, while `api/search.ts` and `api/status.ts` expose the shared server handler as Node functions. The sticker catalog is explicitly included in the function bundle.
+
+Set `TYPESAFE_API_KEY` in the Vercel project's environment variables for Production (and Preview if needed), then redeploy. The local `.env.local` file is gitignored and is not uploaded. Do not prefix this secret with `VITE_`. After deployment, `/api/status` should return JSON with `mode: "jev"` and `stickerCount: 51`. Without the key, the API uses local tag matching.
+
 ## Assets
 
 - `assets/grids/batch-01.png` through `batch-14.png`: original generated sheets.
