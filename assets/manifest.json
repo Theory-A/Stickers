@@ -1,0 +1,381 @@
+[
+  {
+    "id": "sticker-01",
+    "source": "A9B5F5C0-E1A4-4C8C-983E-1E3A15678726.JPG",
+    "reference": "assets/references/sticker-01.png",
+    "batch": 1,
+    "cell": 0
+  },
+  {
+    "id": "sticker-02",
+    "source": "IMG_0324 Medium.jpeg",
+    "reference": "assets/references/sticker-02.png",
+    "batch": 1,
+    "cell": 1
+  },
+  {
+    "id": "sticker-03",
+    "source": "IMG_0339.jpg",
+    "reference": "assets/references/sticker-03.png",
+    "batch": 1,
+    "cell": 2
+  },
+  {
+    "id": "sticker-04",
+    "source": "IMG_0395 Medium.jpeg",
+    "reference": "assets/references/sticker-04.png",
+    "batch": 1,
+    "cell": 3
+  },
+  {
+    "id": "sticker-05",
+    "source": "IMG_0522 Medium.jpeg",
+    "reference": "assets/references/sticker-05.png",
+    "batch": 2,
+    "cell": 0
+  },
+  {
+    "id": "sticker-06",
+    "source": "IMG_0563 Medium.jpeg",
+    "reference": "assets/references/sticker-06.png",
+    "batch": 2,
+    "cell": 1
+  },
+  {
+    "id": "sticker-07",
+    "source": "IMG_1295 Medium.jpeg",
+    "reference": "assets/references/sticker-07.png",
+    "batch": 2,
+    "cell": 2
+  },
+  {
+    "id": "sticker-08",
+    "source": "IMG_1817.JPG",
+    "reference": "assets/references/sticker-08.png",
+    "batch": 2,
+    "cell": 3
+  },
+  {
+    "id": "sticker-09",
+    "source": "IMG_1870.jpg",
+    "reference": "assets/references/sticker-09.png",
+    "batch": 3,
+    "cell": 0
+  },
+  {
+    "id": "sticker-10",
+    "source": "IMG_3033 Medium.jpeg",
+    "reference": "assets/references/sticker-10.png",
+    "batch": 3,
+    "cell": 1
+  },
+  {
+    "id": "sticker-11",
+    "source": "IMG_3121 Medium.jpeg",
+    "reference": "assets/references/sticker-11.png",
+    "batch": 3,
+    "cell": 2
+  },
+  {
+    "id": "sticker-12",
+    "source": "IMG_3209 Medium.jpeg",
+    "reference": "assets/references/sticker-12.png",
+    "batch": 3,
+    "cell": 3
+  },
+  {
+    "id": "sticker-13",
+    "source": "IMG_3428 Medium.jpeg",
+    "reference": "assets/references/sticker-13.png",
+    "batch": 4,
+    "cell": 0
+  },
+  {
+    "id": "sticker-14",
+    "source": "IMG_3516 Medium.jpeg",
+    "reference": "assets/references/sticker-14.png",
+    "batch": 4,
+    "cell": 1
+  },
+  {
+    "id": "sticker-15",
+    "source": "IMG_3625 Medium.jpeg",
+    "reference": "assets/references/sticker-15.png",
+    "batch": 4,
+    "cell": 2
+  },
+  {
+    "id": "sticker-16",
+    "source": "IMG_3795 Medium.jpeg",
+    "reference": "assets/references/sticker-16.png",
+    "batch": 4,
+    "cell": 3
+  },
+  {
+    "id": "sticker-17",
+    "source": "IMG_4513.JPG",
+    "reference": "assets/references/sticker-17.png",
+    "batch": 5,
+    "cell": 0
+  },
+  {
+    "id": "sticker-18",
+    "source": "IMG_4581.JPG",
+    "reference": "assets/references/sticker-18.png",
+    "batch": 5,
+    "cell": 1
+  },
+  {
+    "id": "sticker-19",
+    "source": "IMG_5015.JPG",
+    "reference": "assets/references/sticker-19.png",
+    "batch": 5,
+    "cell": 2
+  },
+  {
+    "id": "sticker-20",
+    "source": "IMG_6456.JPG",
+    "reference": "assets/references/sticker-20.png",
+    "batch": 5,
+    "cell": 3
+  },
+  {
+    "id": "sticker-21",
+    "source": "IMG_6626 Medium.jpeg",
+    "reference": "assets/references/sticker-21.png",
+    "batch": 6,
+    "cell": 0
+  },
+  {
+    "id": "sticker-22",
+    "source": "IMG_6891.JPG",
+    "reference": "assets/references/sticker-22.png",
+    "batch": 6,
+    "cell": 1
+  },
+  {
+    "id": "sticker-23",
+    "source": "IMG_6975 Medium.jpeg",
+    "reference": "assets/references/sticker-23.png",
+    "batch": 6,
+    "cell": 2
+  },
+  {
+    "id": "sticker-24",
+    "source": "IMG_7098.JPG",
+    "reference": "assets/references/sticker-24.png",
+    "batch": 6,
+    "cell": 3
+  },
+  {
+    "id": "sticker-25",
+    "source": "IMG_7477.JPG",
+    "reference": "assets/references/sticker-25.png",
+    "batch": 7,
+    "cell": 0
+  },
+  {
+    "id": "sticker-26",
+    "source": "IMG_7811.JPG",
+    "reference": "assets/references/sticker-26.png",
+    "batch": 7,
+    "cell": 1
+  },
+  {
+    "id": "sticker-27",
+    "source": "IMG_7916.JPG",
+    "reference": "assets/references/sticker-27.png",
+    "batch": 7,
+    "cell": 2
+  },
+  {
+    "id": "sticker-28",
+    "source": "IMG_7933.JPG",
+    "reference": "assets/references/sticker-28.png",
+    "batch": 7,
+    "cell": 3
+  },
+  {
+    "id": "sticker-29",
+    "source": "IMG_8713.JPG",
+    "reference": "assets/references/sticker-29.png",
+    "batch": 8,
+    "cell": 0
+  },
+  {
+    "id": "sticker-30",
+    "source": "060F7A32-DC8F-4351-87DC-87B67D0EE32E.PNG",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-30.png",
+    "batch": 9,
+    "cell": 0
+  },
+  {
+    "id": "sticker-31",
+    "source": "7436e59e593109a23272404946c91464.jpg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-31.png",
+    "batch": 9,
+    "cell": 1
+  },
+  {
+    "id": "sticker-32",
+    "source": "CAEC109D-2167-448D-A045-E8C49AFD2B6C.PNG",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-32.png",
+    "batch": 9,
+    "cell": 2
+  },
+  {
+    "id": "sticker-33",
+    "source": "DSCF0432.JPG",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-33.png",
+    "batch": 9,
+    "cell": 3
+  },
+  {
+    "id": "sticker-34",
+    "source": "IMG_0838.JPG",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-34.png",
+    "batch": 10,
+    "cell": 0
+  },
+  {
+    "id": "sticker-35",
+    "source": "IMG_1269 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-35.png",
+    "batch": 10,
+    "cell": 1
+  },
+  {
+    "id": "sticker-36",
+    "source": "IMG_1340 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-36.png",
+    "batch": 10,
+    "cell": 2
+  },
+  {
+    "id": "sticker-37",
+    "source": "IMG_1679 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-37.png",
+    "batch": 10,
+    "cell": 3
+  },
+  {
+    "id": "sticker-38",
+    "source": "IMG_1821.jpg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-38.png",
+    "batch": 11,
+    "cell": 0
+  },
+  {
+    "id": "sticker-39",
+    "source": "IMG_2325 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-39.png",
+    "batch": 11,
+    "cell": 1
+  },
+  {
+    "id": "sticker-40",
+    "source": "IMG_2405 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-40.png",
+    "batch": 11,
+    "cell": 2
+  },
+  {
+    "id": "sticker-41",
+    "source": "IMG_3102 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-41.png",
+    "batch": 11,
+    "cell": 3
+  },
+  {
+    "id": "sticker-42",
+    "source": "IMG_3129 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-42.png",
+    "batch": 12,
+    "cell": 0
+  },
+  {
+    "id": "sticker-43",
+    "source": "IMG_4794 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-43.png",
+    "batch": 12,
+    "cell": 1
+  },
+  {
+    "id": "sticker-44",
+    "source": "IMG_4824 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-44.png",
+    "batch": 12,
+    "cell": 2
+  },
+  {
+    "id": "sticker-45",
+    "source": "IMG_5447 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-45.png",
+    "batch": 12,
+    "cell": 3
+  },
+  {
+    "id": "sticker-46",
+    "source": "IMG_5666 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-46.png",
+    "batch": 13,
+    "cell": 0
+  },
+  {
+    "id": "sticker-47",
+    "source": "IMG_5876.jpg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-47.png",
+    "batch": 13,
+    "cell": 1
+  },
+  {
+    "id": "sticker-48",
+    "source": "IMG_6106 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-48.png",
+    "batch": 13,
+    "cell": 2
+  },
+  {
+    "id": "sticker-49",
+    "source": "IMG_6819.jpg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-49.png",
+    "batch": 13,
+    "cell": 3
+  },
+  {
+    "id": "sticker-50",
+    "source": "IMG_7065 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-50.png",
+    "batch": 14,
+    "cell": 0
+  },
+  {
+    "id": "sticker-51",
+    "source": "IMG_9414 Medium.jpeg",
+    "sourceFolder": "more_images",
+    "reference": "assets/references/sticker-51.png",
+    "batch": 14,
+    "cell": 1
+  }
+]

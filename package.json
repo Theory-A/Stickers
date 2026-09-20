@@ -1,0 +1,29 @@
+{
+  "name": "little-paper-world",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "start": "tsx server/index.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "assets:prepare": "node scripts/prepare-references.mjs",
+    "assets:slice": "node scripts/slice-stickers.mjs",
+    "assets:metadata": "node scripts/sync-metadata.mjs"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0",
+    "matter-js": "^0.20.0",
+    "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/matter-js": "^0.20.2",
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

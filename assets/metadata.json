@@ -1,0 +1,2228 @@
+{
+  "sticker-01": {
+    "title": "Blue daydream",
+    "description": "A rear-view woman with a brown hair bun wears a blue and white striped sleeveless top and white trousers, carrying a black tote with blue artwork.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "blue",
+      "white",
+      "black"
+    ],
+    "clothing": [
+      "striped top",
+      "sleeveless top",
+      "white trousers"
+    ],
+    "objects": [
+      "tote bag",
+      "watch"
+    ],
+    "actions": [
+      "standing",
+      "looking away"
+    ],
+    "moods": [
+      "calm"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "stripes",
+      "blue",
+      "tote",
+      "bag",
+      "bun",
+      "rear view",
+      "casual"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-02": {
+    "title": "One good swing",
+    "description": "A woman with a ponytail swings a golf club over her shoulder, wearing a cream knit vest, black long sleeves, black wide-leg trousers and white sneakers.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "cream",
+      "black",
+      "white"
+    ],
+    "clothing": [
+      "knit vest",
+      "black trousers",
+      "sneakers"
+    ],
+    "objects": [
+      "golf club"
+    ],
+    "actions": [
+      "golf",
+      "swinging",
+      "standing"
+    ],
+    "moods": [
+      "focused"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "golf",
+      "sport",
+      "active",
+      "club",
+      "ponytail",
+      "vest",
+      "sneakers"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-03": {
+    "title": "Better together",
+    "description": "Two smiling people pose shoulder to shoulder. The man wears a black jacket and scarf; the woman wears a black jacket over a white top and holds his arm.",
+    "subjects": [
+      "woman",
+      "man",
+      "two people",
+      "couple"
+    ],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "clothing": [
+      "jackets",
+      "scarf",
+      "white top"
+    ],
+    "objects": [],
+    "actions": [
+      "smiling",
+      "posing",
+      "holding arm"
+    ],
+    "moods": [
+      "happy",
+      "warm"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "david",
+      "couple",
+      "together",
+      "selfie",
+      "smile",
+      "black",
+      "jackets",
+      "portrait"
+    ],
+    "people": [
+      "sijie",
+      "cj",
+      "david"
+    ]
+  },
+  "sticker-04": {
+    "title": "Just us",
+    "description": "A close-up pair leans together. The woman with long brown hair rests her chin on her hand in a cream sweater; the man wears a navy polo.",
+    "subjects": [
+      "woman",
+      "man",
+      "two people",
+      "couple"
+    ],
+    "colors": [
+      "cream",
+      "navy"
+    ],
+    "clothing": [
+      "sweater",
+      "polo"
+    ],
+    "objects": [
+      "earrings"
+    ],
+    "actions": [
+      "leaning",
+      "resting chin",
+      "posing"
+    ],
+    "moods": [
+      "relaxed"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "david",
+      "couple",
+      "together",
+      "selfie",
+      "chin on hand",
+      "cozy",
+      "portrait"
+    ],
+    "people": [
+      "sijie",
+      "cj",
+      "david"
+    ]
+  },
+  "sticker-05": {
+    "title": "Loafing around",
+    "description": "An orange and white tabby cat rests in a compact loaf pose with its striped tail curled around its paws.",
+    "subjects": [
+      "cat",
+      "animal"
+    ],
+    "colors": [
+      "orange",
+      "white"
+    ],
+    "clothing": [],
+    "objects": [
+      "tail",
+      "whiskers"
+    ],
+    "actions": [
+      "sitting",
+      "resting",
+      "loafing"
+    ],
+    "moods": [
+      "calm",
+      "cozy"
+    ],
+    "tags": [
+      "cat",
+      "kitty",
+      "tabby",
+      "ginger",
+      "orange",
+      "white",
+      "fluffy",
+      "loaf",
+      "animal"
+    ],
+    "people": []
+  },
+  "sticker-06": {
+    "title": "A little swing",
+    "description": "A rear-view woman in a green cable-knit sweater, blue jeans and a white cap sits on a swing, holding its chains. A pale shoulder strap crosses her back.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "green",
+      "blue",
+      "white"
+    ],
+    "clothing": [
+      "sweater",
+      "jeans",
+      "cap"
+    ],
+    "objects": [
+      "swing",
+      "chains",
+      "shoulder bag"
+    ],
+    "actions": [
+      "swinging",
+      "sitting",
+      "holding"
+    ],
+    "moods": [
+      "playful"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "green",
+      "swing",
+      "knit",
+      "cap",
+      "jeans",
+      "rear view",
+      "play",
+      "adventure"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-07": {
+    "title": "The scenic route",
+    "description": "Two people in sunglasses sit on a tan camel with a red and white geometric saddle blanket. The woman wears a cream sleeveless top and blue jeans; the man wears black.",
+    "subjects": [
+      "camel",
+      "animal",
+      "woman",
+      "man",
+      "two people",
+      "couple"
+    ],
+    "colors": [
+      "tan",
+      "red",
+      "white",
+      "blue",
+      "black"
+    ],
+    "clothing": [
+      "sleeveless top",
+      "jeans",
+      "black shirt"
+    ],
+    "objects": [
+      "sunglasses",
+      "saddle",
+      "blanket",
+      "bag"
+    ],
+    "actions": [
+      "riding",
+      "sitting"
+    ],
+    "moods": [
+      "adventurous"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "david",
+      "camel",
+      "riding",
+      "sunglasses",
+      "shades",
+      "red",
+      "animal",
+      "travel",
+      "adventure",
+      "couple"
+    ],
+    "people": [
+      "sijie",
+      "cj",
+      "david"
+    ]
+  },
+  "sticker-08": {
+    "title": "Dinner with character",
+    "description": "A man in a navy shirt leans toward a row of grilled kebab skewers. A pale paper note sits on his forehead; a glass, plate and chopsticks are beside the food.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "navy",
+      "orange",
+      "cream"
+    ],
+    "clothing": [
+      "navy shirt"
+    ],
+    "objects": [
+      "kebabs",
+      "skewers",
+      "grill",
+      "glass",
+      "plate",
+      "chopsticks",
+      "paper note"
+    ],
+    "actions": [
+      "leaning",
+      "dining"
+    ],
+    "moods": [
+      "playful"
+    ],
+    "tags": [
+      "david",
+      "barbecue",
+      "bbq",
+      "food",
+      "kebabs",
+      "dinner",
+      "skewers",
+      "navy",
+      "funny"
+    ],
+    "people": [
+      "david"
+    ]
+  },
+  "sticker-09": {
+    "title": "Wind in our hair",
+    "description": "A smiling woman and a man pose with windblown hair and sunglasses on their heads. Both wear black tops; the man wears a backpack and a small chest camera.",
+    "subjects": [
+      "woman",
+      "man",
+      "two people",
+      "couple"
+    ],
+    "colors": [
+      "black"
+    ],
+    "clothing": [
+      "sleeveless top",
+      "black sweater"
+    ],
+    "objects": [
+      "sunglasses",
+      "backpack",
+      "camera",
+      "earrings"
+    ],
+    "actions": [
+      "posing",
+      "smiling"
+    ],
+    "moods": [
+      "happy",
+      "adventurous"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "david",
+      "couple",
+      "selfie",
+      "wind",
+      "black",
+      "backpack",
+      "camera",
+      "sunglasses",
+      "travel",
+      "adventure"
+    ],
+    "people": [
+      "sijie",
+      "cj",
+      "david"
+    ]
+  },
+  "sticker-10": {
+    "title": "Up a little higher",
+    "description": "A smiling woman in a white sleeveless top, black trousers and gray climbing shoes reaches upward while climbing bright yellow holds.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "white",
+      "black",
+      "yellow",
+      "gray"
+    ],
+    "clothing": [
+      "sleeveless top",
+      "trousers",
+      "climbing shoes"
+    ],
+    "objects": [
+      "climbing holds"
+    ],
+    "actions": [
+      "climbing",
+      "reaching"
+    ],
+    "moods": [
+      "happy",
+      "active"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "climbing",
+      "bouldering",
+      "sport",
+      "yellow",
+      "active",
+      "adventure",
+      "climb"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-11": {
+    "title": "A very big hug",
+    "description": "A laughing woman in a beige coat hugs a huge fluffy gray and white dog with dark ears and a pink tongue.",
+    "subjects": [
+      "woman",
+      "dog",
+      "animal"
+    ],
+    "colors": [
+      "beige",
+      "gray",
+      "white"
+    ],
+    "clothing": [
+      "coat"
+    ],
+    "objects": [],
+    "actions": [
+      "hugging",
+      "holding",
+      "laughing"
+    ],
+    "moods": [
+      "happy",
+      "joyful"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "dog",
+      "fluffy",
+      "hug",
+      "laughing",
+      "happy",
+      "pet",
+      "animal",
+      "cozy"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-12": {
+    "title": "Swing for it",
+    "description": "A woman in a red batting helmet, green cable-knit sweater and blue jeans swings a wooden baseball bat toward a baseball.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "red",
+      "green",
+      "blue",
+      "brown"
+    ],
+    "clothing": [
+      "sweater",
+      "jeans",
+      "helmet"
+    ],
+    "objects": [
+      "bat",
+      "baseball"
+    ],
+    "actions": [
+      "swinging",
+      "batting"
+    ],
+    "moods": [
+      "focused",
+      "active"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "baseball",
+      "bat",
+      "red",
+      "helmet",
+      "green",
+      "sport",
+      "active",
+      "adventure"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-13": {
+    "title": "Made with a spark",
+    "description": "A woman in purple safety glasses and an apron over a cream vest and black top works glass rods over a small orange torch flame.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "purple",
+      "cream",
+      "black",
+      "orange"
+    ],
+    "clothing": [
+      "apron",
+      "vest",
+      "black shirt"
+    ],
+    "objects": [
+      "safety glasses",
+      "torch",
+      "flame",
+      "glass rods",
+      "tools"
+    ],
+    "actions": [
+      "crafting",
+      "making",
+      "holding"
+    ],
+    "moods": [
+      "focused",
+      "creative"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "glasses",
+      "craft",
+      "glasswork",
+      "flame",
+      "creative",
+      "tools",
+      "apron"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-14": {
+    "title": "Coffee & a good laugh",
+    "description": "A laughing woman in a beige coat over a white turtleneck holds a blue takeaway coffee cup with a white lid and a phone.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "beige",
+      "white",
+      "blue"
+    ],
+    "clothing": [
+      "coat",
+      "turtleneck"
+    ],
+    "objects": [
+      "coffee",
+      "cup",
+      "phone"
+    ],
+    "actions": [
+      "laughing",
+      "holding"
+    ],
+    "moods": [
+      "happy",
+      "joyful"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "coffee",
+      "cup",
+      "laughing",
+      "beige",
+      "coat",
+      "phone",
+      "happy",
+      "cozy"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-15": {
+    "title": "In full bloom",
+    "description": "A smiling woman with brown hair, white turtleneck and black and white patterned top is framed by pink blossoms and green leaves.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "pink",
+      "green",
+      "black",
+      "white"
+    ],
+    "clothing": [
+      "turtleneck",
+      "patterned top"
+    ],
+    "objects": [
+      "flowers",
+      "blossoms",
+      "branches",
+      "leaves"
+    ],
+    "actions": [
+      "smiling"
+    ],
+    "moods": [
+      "happy",
+      "gentle"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "flowers",
+      "pink",
+      "blossoms",
+      "spring",
+      "smiling",
+      "happy",
+      "floral"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-16": {
+    "title": "A brighter outlook",
+    "description": "A woman in a black sweater touches blue mirrored sunglasses while holding an orange phone. A tan crossbody strap and small necklace complete the portrait.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "black",
+      "blue",
+      "orange",
+      "tan"
+    ],
+    "clothing": [
+      "sweater"
+    ],
+    "objects": [
+      "sunglasses",
+      "phone",
+      "necklace",
+      "crossbody bag"
+    ],
+    "actions": [
+      "holding",
+      "adjusting glasses"
+    ],
+    "moods": [
+      "cool",
+      "confident"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "sunglasses",
+      "shades",
+      "blue",
+      "orange",
+      "phone",
+      "black",
+      "portrait"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-17": {
+    "title": "Take the long way",
+    "description": "A man in a white short-sleeve linen shirt and dark trousers stands with a long-lens camera on a shoulder strap, a clear water bottle and a watch.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "white",
+      "black"
+    ],
+    "clothing": [
+      "linen shirt",
+      "trousers"
+    ],
+    "objects": [
+      "camera",
+      "water bottle",
+      "watch"
+    ],
+    "actions": [
+      "standing",
+      "carrying"
+    ],
+    "moods": [
+      "calm"
+    ],
+    "tags": [
+      "david",
+      "camera",
+      "photography",
+      "white",
+      "shirt",
+      "travel",
+      "bottle",
+      "adventure"
+    ],
+    "people": [
+      "david"
+    ]
+  },
+  "sticker-18": {
+    "title": "One quick message",
+    "description": "A seated man in a white shirt looks down and types on a silver phone. A black bowl and chopsticks sit in front of him; he wears a watch.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "white",
+      "black",
+      "silver"
+    ],
+    "clothing": [
+      "shirt"
+    ],
+    "objects": [
+      "phone",
+      "watch",
+      "bowl",
+      "chopsticks"
+    ],
+    "actions": [
+      "typing",
+      "sitting",
+      "looking down"
+    ],
+    "moods": [
+      "focused"
+    ],
+    "tags": [
+      "david",
+      "phone",
+      "texting",
+      "white",
+      "shirt",
+      "dining",
+      "bowl"
+    ],
+    "people": [
+      "david"
+    ]
+  },
+  "sticker-19": {
+    "title": "Picnic, please",
+    "description": "A barefoot man in a navy shirt and black shorts sits cross-legged opening a wine bottle on a colorful plaid blanket, with snacks and a red drink bottle.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "navy",
+      "black",
+      "red",
+      "pink",
+      "blue",
+      "yellow"
+    ],
+    "clothing": [
+      "shirt",
+      "shorts"
+    ],
+    "objects": [
+      "wine bottle",
+      "snacks",
+      "food",
+      "picnic blanket",
+      "drink bottle"
+    ],
+    "actions": [
+      "sitting",
+      "opening bottle"
+    ],
+    "moods": [
+      "relaxed"
+    ],
+    "tags": [
+      "david",
+      "picnic",
+      "food",
+      "wine",
+      "snacks",
+      "plaid",
+      "blanket",
+      "navy",
+      "red",
+      "relax"
+    ],
+    "people": [
+      "david"
+    ]
+  },
+  "sticker-20": {
+    "title": "Looking for wonder",
+    "description": "A smiling woman in a black sleeveless top holds binoculars up to her eyes. She wears red bead and fine silver bracelets.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "black",
+      "red",
+      "silver"
+    ],
+    "clothing": [
+      "sleeveless top"
+    ],
+    "objects": [
+      "binoculars",
+      "bracelets"
+    ],
+    "actions": [
+      "looking",
+      "holding"
+    ],
+    "moods": [
+      "curious",
+      "happy"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "binoculars",
+      "looking",
+      "explore",
+      "adventure",
+      "black",
+      "bracelet"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-21": {
+    "title": "A timeless afternoon",
+    "description": "A woman in layered peach-pink hanfu holds a round floral fan. Her half-up hairstyle is decorated with flowers, pearls and dangling ornaments.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "pink",
+      "peach",
+      "cream"
+    ],
+    "clothing": [
+      "hanfu",
+      "layered robe"
+    ],
+    "objects": [
+      "round fan",
+      "hair ornaments",
+      "pearls",
+      "flowers"
+    ],
+    "actions": [
+      "holding",
+      "smiling"
+    ],
+    "moods": [
+      "gentle"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "hanfu",
+      "fan",
+      "pink",
+      "peach",
+      "traditional clothing",
+      "floral",
+      "pearls"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-22": {
+    "title": "Everyday patterns",
+    "description": "A smiling woman wears a black cropped shirt, black and white elephant-print wide-leg pants and tan sandals, holding a phone with a bag at her side.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "black",
+      "white",
+      "tan"
+    ],
+    "clothing": [
+      "crop top",
+      "elephant-print pants",
+      "wide-leg pants",
+      "sandals"
+    ],
+    "objects": [
+      "phone",
+      "bag",
+      "bracelet"
+    ],
+    "actions": [
+      "standing",
+      "holding",
+      "smiling"
+    ],
+    "moods": [
+      "happy",
+      "casual"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "phone",
+      "elephant print",
+      "pattern",
+      "pants",
+      "black",
+      "sandals",
+      "smile"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-23": {
+    "title": "Blue hour",
+    "description": "A smiling woman in a pale blue-lavender floral dress with puff sleeves holds a phone in front of her.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "blue",
+      "lavender"
+    ],
+    "clothing": [
+      "floral dress",
+      "puff sleeves"
+    ],
+    "objects": [
+      "phone",
+      "necklace"
+    ],
+    "actions": [
+      "standing",
+      "holding",
+      "smiling"
+    ],
+    "moods": [
+      "happy",
+      "gentle"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "dress",
+      "blue",
+      "lavender",
+      "floral",
+      "puff sleeves",
+      "phone",
+      "smile"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-24": {
+    "title": "Nothing but sunshine",
+    "description": "A broadly smiling woman wears a black sleeveless gathered dress, bracelets and a black shoulder bag.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "black"
+    ],
+    "clothing": [
+      "sleeveless dress"
+    ],
+    "objects": [
+      "shoulder bag",
+      "bracelets"
+    ],
+    "actions": [
+      "standing",
+      "laughing",
+      "smiling"
+    ],
+    "moods": [
+      "happy",
+      "joyful"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "black",
+      "dress",
+      "laughing",
+      "smile",
+      "happy",
+      "bag"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-25": {
+    "title": "A soft kind of day",
+    "description": "A woman with long brown hair looks down and types on a phone, wearing a long pale pink smocked sundress with shoulder straps, tan sandals and a white shoulder bag.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "pink",
+      "cream",
+      "white",
+      "tan"
+    ],
+    "clothing": [
+      "sundress",
+      "long dress",
+      "sandals"
+    ],
+    "objects": [
+      "phone",
+      "shoulder bag"
+    ],
+    "actions": [
+      "standing",
+      "typing",
+      "looking down"
+    ],
+    "moods": [
+      "focused",
+      "calm"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "pink",
+      "dress",
+      "phone",
+      "texting",
+      "sandals",
+      "bag"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-26": {
+    "title": "Along for the ride",
+    "description": "A smiling woman in a white cap, sunglasses and a taupe quilted jacket takes a selfie beside a rear-view man in a black jacket. A red bag strap crosses the pair.",
+    "subjects": [
+      "woman",
+      "man",
+      "two people",
+      "couple"
+    ],
+    "colors": [
+      "white",
+      "taupe",
+      "black",
+      "red"
+    ],
+    "clothing": [
+      "cap",
+      "quilted jacket",
+      "black jacket"
+    ],
+    "objects": [
+      "sunglasses",
+      "bag"
+    ],
+    "actions": [
+      "posing",
+      "looking back"
+    ],
+    "moods": [
+      "happy",
+      "adventurous"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "david",
+      "couple",
+      "selfie",
+      "sunglasses",
+      "cap",
+      "jacket",
+      "travel",
+      "adventure"
+    ],
+    "people": [
+      "sijie",
+      "cj",
+      "david"
+    ]
+  },
+  "sticker-27": {
+    "title": "Hello, sunshine",
+    "description": "A smiling woman in a long yellow floral sundress rests one hand on a bamboo rail and holds a black bag. Glasses sit on top of her brown hair.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "yellow",
+      "black",
+      "green"
+    ],
+    "clothing": [
+      "floral sundress",
+      "long dress"
+    ],
+    "objects": [
+      "glasses",
+      "bag",
+      "bamboo rail"
+    ],
+    "actions": [
+      "standing",
+      "smiling",
+      "leaning"
+    ],
+    "moods": [
+      "happy"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "yellow",
+      "dress",
+      "floral",
+      "flowers",
+      "glasses",
+      "bag",
+      "smile"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-28": {
+    "title": "Say cheese, extra cheese",
+    "description": "A close-up man in a dark shirt stretches the corners of his mouth with both hands in a big toothy grin.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "black"
+    ],
+    "clothing": [
+      "dark shirt"
+    ],
+    "objects": [],
+    "actions": [
+      "grinning",
+      "pulling cheeks"
+    ],
+    "moods": [
+      "silly",
+      "playful"
+    ],
+    "tags": [
+      "david",
+      "silly",
+      "funny",
+      "grin",
+      "teeth",
+      "face",
+      "portrait",
+      "smile"
+    ],
+    "people": [
+      "david"
+    ]
+  },
+  "sticker-29": {
+    "title": "Love at first flight",
+    "description": "A smiling woman in clear goggles, brown and white striped sleeves and a black harness skydives with a helmeted instructor in a navy and yellow suit. Both raise their hands into heart shapes.",
+    "subjects": [
+      "woman",
+      "two people",
+      "skydivers"
+    ],
+    "colors": [
+      "brown",
+      "white",
+      "black",
+      "navy",
+      "yellow"
+    ],
+    "clothing": [
+      "striped shirt",
+      "skydiving suit",
+      "helmet"
+    ],
+    "objects": [
+      "goggles",
+      "harness",
+      "helmet"
+    ],
+    "actions": [
+      "skydiving",
+      "flying",
+      "making heart gesture"
+    ],
+    "moods": [
+      "excited",
+      "happy",
+      "adventurous"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "david",
+      "skydiving",
+      "flying",
+      "heart",
+      "adventure",
+      "goggles",
+      "helmet",
+      "stripes",
+      "tandem"
+    ],
+    "people": [
+      "sijie",
+      "cj",
+      "david"
+    ]
+  },
+  "sticker-30": {
+    "title": "A faithful little friend",
+    "description": "A long-haired sable dog with a pointed snout, dark ears, brown coat and fluffy white chest stands looking to the side.",
+    "subjects": [
+      "dog",
+      "animal"
+    ],
+    "colors": [
+      "brown",
+      "white",
+      "black"
+    ],
+    "clothing": [],
+    "objects": [],
+    "actions": [
+      "standing",
+      "looking aside"
+    ],
+    "moods": [
+      "gentle",
+      "alert"
+    ],
+    "tags": [
+      "dog",
+      "collie",
+      "sheltie",
+      "fluffy",
+      "pet",
+      "sable",
+      "brown",
+      "white"
+    ],
+    "people": []
+  },
+  "sticker-31": {
+    "title": "A higher kind of happy",
+    "description": "A smiling woman with sunglasses on her head wears a white and brown short-sleeve top, dark trousers and a beige jacket tied at her waist. She carries a pink backpack with a blue water bottle.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "pink",
+      "beige",
+      "white",
+      "brown",
+      "black",
+      "blue"
+    ],
+    "clothing": [
+      "shirt",
+      "trousers",
+      "jacket"
+    ],
+    "objects": [
+      "backpack",
+      "water bottle",
+      "sunglasses"
+    ],
+    "actions": [
+      "hiking",
+      "carrying",
+      "looking back"
+    ],
+    "moods": [
+      "happy",
+      "adventurous"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "hiking",
+      "hike",
+      "backpack",
+      "pink",
+      "sunglasses",
+      "water bottle",
+      "travel",
+      "adventure"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-32": {
+    "title": "A wink for you",
+    "description": "An orange and white cat with a red collar winks one eye beside two pink heart shapes.",
+    "subjects": [
+      "cat",
+      "animal"
+    ],
+    "colors": [
+      "orange",
+      "white",
+      "red",
+      "pink"
+    ],
+    "clothing": [
+      "collar"
+    ],
+    "objects": [
+      "hearts"
+    ],
+    "actions": [
+      "winking"
+    ],
+    "moods": [
+      "playful",
+      "affectionate"
+    ],
+    "tags": [
+      "cat",
+      "kitty",
+      "wink",
+      "heart",
+      "love",
+      "orange",
+      "red collar",
+      "cute"
+    ],
+    "people": []
+  },
+  "sticker-33": {
+    "title": "A quiet moment",
+    "description": "A barefoot man in a black shirt and black trousers sits cross-legged on a small stool, hands loosely joined, wearing a dark watch.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "black"
+    ],
+    "clothing": [
+      "shirt",
+      "trousers"
+    ],
+    "objects": [
+      "watch",
+      "stool"
+    ],
+    "actions": [
+      "sitting",
+      "cross-legged"
+    ],
+    "moods": [
+      "calm",
+      "relaxed"
+    ],
+    "tags": [
+      "david",
+      "black",
+      "cross-legged",
+      "sitting",
+      "barefoot",
+      "portrait",
+      "quiet"
+    ],
+    "people": [
+      "david"
+    ]
+  },
+  "sticker-34": {
+    "title": "Paws up",
+    "description": "A fluffy gray and cream tabby cat stands upright with both front paws raised, wearing a pink charm and round pale tag.",
+    "subjects": [
+      "cat",
+      "animal"
+    ],
+    "colors": [
+      "gray",
+      "cream",
+      "brown",
+      "pink"
+    ],
+    "clothing": [],
+    "objects": [
+      "collar",
+      "tag"
+    ],
+    "actions": [
+      "standing",
+      "reaching",
+      "raising paws"
+    ],
+    "moods": [
+      "curious",
+      "playful"
+    ],
+    "tags": [
+      "cat",
+      "kitty",
+      "tabby",
+      "paws",
+      "fluffy",
+      "gray",
+      "playful"
+    ],
+    "people": []
+  },
+  "sticker-35": {
+    "title": "Four wheels of fun",
+    "description": "A smiling woman in black sunglasses, a white sleeveless top and blue jeans sits on an orange and black quad bike, hands on the handlebars.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "orange",
+      "black",
+      "white",
+      "blue"
+    ],
+    "clothing": [
+      "sleeveless top",
+      "jeans"
+    ],
+    "objects": [
+      "quad bike",
+      "atv",
+      "sunglasses",
+      "handlebars"
+    ],
+    "actions": [
+      "riding",
+      "driving",
+      "sitting"
+    ],
+    "moods": [
+      "happy",
+      "adventurous"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "atv",
+      "quad",
+      "bike",
+      "orange",
+      "sunglasses",
+      "adventure",
+      "driving",
+      "vehicle"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-36": {
+    "title": "One dune at a time",
+    "description": "A barefoot woman in a white sleeveless top and wide blue jeans walks while carrying a long dark reddish-brown sandboard. Sunglasses hang at her neckline.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "white",
+      "blue",
+      "brown",
+      "red"
+    ],
+    "clothing": [
+      "sleeveless top",
+      "jeans"
+    ],
+    "objects": [
+      "sandboard",
+      "sunglasses"
+    ],
+    "actions": [
+      "walking",
+      "carrying",
+      "sandboarding"
+    ],
+    "moods": [
+      "focused",
+      "adventurous"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "sandboard",
+      "sandboarding",
+      "board",
+      "barefoot",
+      "jeans",
+      "adventure"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-37": {
+    "title": "Let it rain",
+    "description": "A dark silhouette in a calf-length black dress stands with arms stretched outward and feet crossed, framed by pale silver rain motifs. No facial details are visible.",
+    "subjects": [
+      "person",
+      "silhouette"
+    ],
+    "colors": [
+      "black",
+      "silver",
+      "cream"
+    ],
+    "clothing": [
+      "dress"
+    ],
+    "objects": [
+      "rain motifs"
+    ],
+    "actions": [
+      "standing",
+      "stretching arms"
+    ],
+    "moods": [
+      "peaceful"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "silhouette",
+      "rain",
+      "dress",
+      "black",
+      "arms out",
+      "peaceful"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-38": {
+    "title": "A very good bite",
+    "description": "An excited woman in a black sleeveless top and black gloves holds a large orange grilled prawn near her open smiling mouth. Sunglasses rest on her head.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "black",
+      "orange"
+    ],
+    "clothing": [
+      "sleeveless top",
+      "gloves"
+    ],
+    "objects": [
+      "prawn",
+      "shrimp",
+      "seafood",
+      "sunglasses"
+    ],
+    "actions": [
+      "eating",
+      "holding",
+      "smiling"
+    ],
+    "moods": [
+      "excited",
+      "happy"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "prawn",
+      "shrimp",
+      "seafood",
+      "food",
+      "eating",
+      "black gloves",
+      "sunglasses",
+      "happy"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-39": {
+    "title": "Blue, beautifully layered",
+    "description": "A woman wears a long blue dress, dark cardigan, and a dark floral headscarf over a white lace head covering. She adjusts the scarf with one hand and carries a small black handbag.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "blue",
+      "black",
+      "white"
+    ],
+    "clothing": [
+      "long dress",
+      "cardigan",
+      "headscarf",
+      "lace head covering"
+    ],
+    "objects": [
+      "handbag"
+    ],
+    "actions": [
+      "standing",
+      "adjusting scarf"
+    ],
+    "moods": [
+      "calm"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "blue",
+      "dress",
+      "headscarf",
+      "floral",
+      "lace",
+      "layered",
+      "bag"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-40": {
+    "title": "Follow the breeze",
+    "description": "A woman in an ankle-length cobalt blue sleeveless dress, beige crochet hat and brown sandals looks down as her long skirt billows to the side.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "blue",
+      "beige",
+      "brown"
+    ],
+    "clothing": [
+      "maxi dress",
+      "crochet hat",
+      "sandals"
+    ],
+    "objects": [],
+    "actions": [
+      "standing",
+      "looking down"
+    ],
+    "moods": [
+      "calm"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "blue",
+      "dress",
+      "maxi",
+      "hat",
+      "crochet",
+      "sandals",
+      "breeze"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-41": {
+    "title": "Camera, ready",
+    "description": "A man in a black hoodie, dark trousers and pale blue sneakers stands with a compact camera on a red crossbody strap. Sunglasses sit on his head.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "black",
+      "blue",
+      "red"
+    ],
+    "clothing": [
+      "hoodie",
+      "trousers",
+      "sneakers"
+    ],
+    "objects": [
+      "camera",
+      "red strap",
+      "sunglasses"
+    ],
+    "actions": [
+      "standing"
+    ],
+    "moods": [
+      "relaxed"
+    ],
+    "tags": [
+      "david",
+      "camera",
+      "photography",
+      "hoodie",
+      "black",
+      "red strap",
+      "travel",
+      "adventure"
+    ],
+    "people": [
+      "david"
+    ]
+  },
+  "sticker-42": {
+    "title": "The open road",
+    "description": "A smiling man wearing black clothes and blue-gray sneakers sits on a red, black and silver motorcycle with mirrors, a round headlight and black rear pannier.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "black",
+      "red",
+      "silver",
+      "blue"
+    ],
+    "clothing": [
+      "jacket",
+      "trousers",
+      "sneakers"
+    ],
+    "objects": [
+      "motorcycle",
+      "mirrors",
+      "pannier",
+      "headlight"
+    ],
+    "actions": [
+      "riding",
+      "sitting"
+    ],
+    "moods": [
+      "happy",
+      "adventurous"
+    ],
+    "tags": [
+      "david",
+      "motorcycle",
+      "motorbike",
+      "bike",
+      "red",
+      "vehicle",
+      "ride",
+      "adventure"
+    ],
+    "people": [
+      "david"
+    ]
+  },
+  "sticker-43": {
+    "title": "Dressed for a good day",
+    "description": "A fluffy sable and white collie dog with dark ears and a pink tongue wears a bright orange round bib with a golden edge.",
+    "subjects": [
+      "dog",
+      "animal"
+    ],
+    "colors": [
+      "brown",
+      "white",
+      "black",
+      "orange",
+      "gold"
+    ],
+    "clothing": [
+      "bib"
+    ],
+    "objects": [],
+    "actions": [
+      "sitting",
+      "panting"
+    ],
+    "moods": [
+      "cheerful"
+    ],
+    "tags": [
+      "dog",
+      "collie",
+      "sheltie",
+      "fluffy",
+      "orange",
+      "bib",
+      "pet",
+      "happy"
+    ],
+    "people": []
+  },
+  "sticker-44": {
+    "title": "A little golden magic",
+    "description": "A woman in a white short-sleeve top, light blue jeans, black belt and white sneakers poses with large gold paper angel-wing motifs behind her shoulders.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "white",
+      "blue",
+      "gold",
+      "black"
+    ],
+    "clothing": [
+      "shirt",
+      "jeans",
+      "belt",
+      "sneakers"
+    ],
+    "objects": [
+      "golden wings"
+    ],
+    "actions": [
+      "standing",
+      "posing"
+    ],
+    "moods": [
+      "happy"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "wings",
+      "angel",
+      "gold",
+      "jeans",
+      "white",
+      "sneakers",
+      "magic"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-45": {
+    "title": "Do not disturb",
+    "description": "A fluffy gray-brown striped cat curls up with its tail wrapped around its body and its head resting near its front paws, eyes half open.",
+    "subjects": [
+      "cat",
+      "animal"
+    ],
+    "colors": [
+      "gray",
+      "brown",
+      "cream"
+    ],
+    "clothing": [],
+    "objects": [
+      "tail",
+      "paws"
+    ],
+    "actions": [
+      "lying",
+      "curling up",
+      "resting"
+    ],
+    "moods": [
+      "sleepy",
+      "cozy"
+    ],
+    "tags": [
+      "cat",
+      "kitty",
+      "tabby",
+      "sleepy",
+      "resting",
+      "curled",
+      "fluffy",
+      "cozy"
+    ],
+    "people": []
+  },
+  "sticker-46": {
+    "title": "Fan of slow afternoons",
+    "description": "A woman in a black top, tan wide-leg trousers and white sneakers sits on a bamboo chair. She holds a round woven fan in front of her mouth, with a pink bag on her lap.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "black",
+      "tan",
+      "white",
+      "pink"
+    ],
+    "clothing": [
+      "shirt",
+      "trousers",
+      "sneakers"
+    ],
+    "objects": [
+      "fan",
+      "bamboo chair",
+      "pink bag"
+    ],
+    "actions": [
+      "sitting",
+      "holding fan"
+    ],
+    "moods": [
+      "relaxed"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "fan",
+      "bamboo",
+      "chair",
+      "sitting",
+      "pink bag",
+      "relax"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-47": {
+    "title": "One for the memories",
+    "description": "A smiling woman holds a silver and black camera, wearing an open pale pink shirt over a white top, beige high-waisted trousers and a dark woven belt. Sunglasses rest on her head.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "pink",
+      "white",
+      "beige",
+      "black",
+      "silver"
+    ],
+    "clothing": [
+      "shirt",
+      "top",
+      "trousers",
+      "belt"
+    ],
+    "objects": [
+      "camera",
+      "sunglasses",
+      "bracelet"
+    ],
+    "actions": [
+      "photographing",
+      "holding",
+      "smiling"
+    ],
+    "moods": [
+      "happy"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "camera",
+      "photography",
+      "pink",
+      "shirt",
+      "sunglasses",
+      "travel"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-48": {
+    "title": "Just a little message",
+    "description": "A woman wearing a black sleeveless knit top and gray-blue jeans looks down at a phone. A taupe shoulder bag and closed white umbrella hang at her side.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "black",
+      "gray",
+      "blue",
+      "taupe",
+      "white"
+    ],
+    "clothing": [
+      "sleeveless top",
+      "jeans"
+    ],
+    "objects": [
+      "phone",
+      "shoulder bag",
+      "umbrella",
+      "bracelets"
+    ],
+    "actions": [
+      "typing",
+      "looking down"
+    ],
+    "moods": [
+      "focused"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "phone",
+      "texting",
+      "umbrella",
+      "bag",
+      "black",
+      "jeans"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-49": {
+    "title": "Iced coffee, warm smile",
+    "description": "A smiling seated woman in an oversized white T-shirt holds a clear cup of iced milky coffee with a green straw. Sunglasses rest on her head.",
+    "subjects": [
+      "woman"
+    ],
+    "colors": [
+      "white",
+      "tan",
+      "green"
+    ],
+    "clothing": [
+      "t-shirt"
+    ],
+    "objects": [
+      "iced coffee",
+      "cup",
+      "green straw",
+      "sunglasses"
+    ],
+    "actions": [
+      "sitting",
+      "holding",
+      "smiling"
+    ],
+    "moods": [
+      "happy",
+      "relaxed"
+    ],
+    "tags": [
+      "sijie",
+      "cj",
+      "coffee",
+      "iced coffee",
+      "latte",
+      "green straw",
+      "cup",
+      "sunglasses",
+      "white",
+      "happy"
+    ],
+    "people": [
+      "sijie",
+      "cj"
+    ]
+  },
+  "sticker-50": {
+    "title": "Three cups of cute",
+    "description": "Three white bear-shaped candles with little black faces and wicks sit in pink, green and terracotta teacups with handles and saucers. White paw prints decorate the front cups.",
+    "subjects": [
+      "bear-shaped candles"
+    ],
+    "colors": [
+      "white",
+      "pink",
+      "green",
+      "terracotta"
+    ],
+    "clothing": [],
+    "objects": [
+      "candles",
+      "teacups",
+      "saucers",
+      "wicks",
+      "paw-print motifs"
+    ],
+    "actions": [],
+    "moods": [
+      "cute",
+      "playful"
+    ],
+    "tags": [
+      "bear",
+      "candle",
+      "cup",
+      "teacup",
+      "pink",
+      "green",
+      "terracotta",
+      "cute"
+    ],
+    "people": []
+  },
+  "sticker-51": {
+    "title": "Holding on to adventure",
+    "description": "A man in black sunglasses and a black long-sleeve sweater holds a red wrapped saddle handle above a red patterned saddle blanket. A small chest camera and harness are visible.",
+    "subjects": [
+      "man"
+    ],
+    "colors": [
+      "black",
+      "red"
+    ],
+    "clothing": [
+      "sweater"
+    ],
+    "objects": [
+      "sunglasses",
+      "saddle",
+      "handle",
+      "patterned blanket",
+      "camera",
+      "harness"
+    ],
+    "actions": [
+      "riding",
+      "holding"
+    ],
+    "moods": [
+      "adventurous"
+    ],
+    "tags": [
+      "david",
+      "saddle",
+      "riding",
+      "red",
+      "blanket",
+      "sunglasses",
+      "camera",
+      "adventure"
+    ],
+    "people": [
+      "david"
+    ]
+  }
+}

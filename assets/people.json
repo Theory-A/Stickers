@@ -1,0 +1,71 @@
+{
+  "sijie": {
+    "name": "Sijie",
+    "aliases": [
+      "sijie",
+      "cj"
+    ],
+    "source": "User-provided identification",
+    "stickers": [
+      "sticker-01",
+      "sticker-02",
+      "sticker-03",
+      "sticker-04",
+      "sticker-06",
+      "sticker-07",
+      "sticker-09",
+      "sticker-10",
+      "sticker-11",
+      "sticker-12",
+      "sticker-13",
+      "sticker-14",
+      "sticker-15",
+      "sticker-16",
+      "sticker-20",
+      "sticker-21",
+      "sticker-22",
+      "sticker-23",
+      "sticker-24",
+      "sticker-25",
+      "sticker-26",
+      "sticker-27",
+      "sticker-29",
+      "sticker-31",
+      "sticker-35",
+      "sticker-36",
+      "sticker-37",
+      "sticker-38",
+      "sticker-39",
+      "sticker-40",
+      "sticker-44",
+      "sticker-46",
+      "sticker-47",
+      "sticker-48",
+      "sticker-49"
+    ]
+  },
+  "david": {
+    "name": "David",
+    "aliases": [
+      "david"
+    ],
+    "source": "User-provided identification",
+    "stickers": [
+      "sticker-03",
+      "sticker-04",
+      "sticker-07",
+      "sticker-08",
+      "sticker-09",
+      "sticker-17",
+      "sticker-18",
+      "sticker-19",
+      "sticker-26",
+      "sticker-28",
+      "sticker-29",
+      "sticker-33",
+      "sticker-41",
+      "sticker-42",
+      "sticker-51"
+    ]
+  }
+}
