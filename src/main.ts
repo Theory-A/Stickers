@@ -1,6 +1,6 @@
 import './style.css';
 import { StickerWorld } from './physics';
-import { gravityFromMotion, type TiltGravity } from './deviceTilt';
+import { gravityFromMotion, inferMotionPolarity, type MotionPolarity, type TiltGravity } from './deviceTilt';
 import { parseSearchResponse, type Sticker } from './types';
 const $ = <T extends HTMLElement>(id:string)=>document.getElementById(id) as T;
 const input=$<HTMLInputElement>('search'), status=$('search-status'),section=document.querySelector<HTMLElement>('.search-section')!;
@@ -11,11 +11,13 @@ const motionTip=$('motion-tip');
 const tiltButton=$<HTMLButtonElement>('shuffle');
 const motionSupported=isSecureContext&&'DeviceMotionEvent' in window&&matchMedia('(pointer: coarse)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
 let tiltEnabled=false,motionRequesting=false,filteredTilt:TiltGravity|undefined,lastMotionAt=0;
+let motionPolarity:MotionPolarity|undefined;
 function onDeviceMotion(event:DeviceMotionEvent){
  if(document.hidden||detail.open||collection.open)return;
  const legacyAngle=(window as Window & {orientation?:number}).orientation;
  const screenAngle=screen.orientation?.angle??(typeof legacyAngle==='number'?-legacyAngle:0);
- const gravity=gravityFromMotion(event.accelerationIncludingGravity,screenAngle);
+ motionPolarity??=inferMotionPolarity(event.accelerationIncludingGravity,screenAngle)??undefined;
+ const gravity=gravityFromMotion(event.accelerationIncludingGravity,screenAngle,motionPolarity??-1);
  if(!gravity)return;
  const now=performance.now();
  const blend=filteredTilt?1-Math.exp(-Math.min(now-lastMotionAt,1000)/160):1;
