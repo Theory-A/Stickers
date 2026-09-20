@@ -41,7 +41,7 @@ export class StickerWorld {
   this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(stage);
   this.frame=requestAnimationFrame(this.tick);
  }
- private mobileScale(){return this.width<=700?.7:1;}
+ private mobileScale(){return this.width<=700?.56:1;}
  private baseSize(){return (this.width<600?105:Math.min(175,Math.max(125,this.width/8.5)))*Math.min(1,Math.sqrt(29/this.stickerCount))*this.mobileScale();}
  private setWalls(){Composite.remove(this.engine.world,this.walls);const opts={isStatic:true,friction:.8};this.walls=[Bodies.rectangle(this.width/2,this.height-25,this.width+300,50,opts),Bodies.rectangle(-50,this.height/2,100,this.height*8,opts),Bodies.rectangle(this.width+50,this.height/2,100,this.height*8,opts)];Composite.add(this.engine.world,this.walls);}
  private resize(){const width=this.stage.clientWidth,height=this.stage.clientHeight;if(width===this.width&&height===this.height)return;const oldWidth=this.width,oldHeight=this.height;this.width=width;this.height=height;for(const item of this.items){const factor=this.baseSize()/Math.max(item.width,item.height);Body.scale(item.body,factor,factor);item.width*=factor;item.height*=factor;item.element.style.width=item.width+'px';item.element.style.height=item.height+'px';Body.setPosition(item.body,{x:Math.min(width-item.width/2,Math.max(item.width/2,item.body.position.x/oldWidth*width)),y:Math.min(height-70,item.body.position.y/oldHeight*height)});Sleeping.set(item.body,false);}this.setWalls();this.setMatches(this.selected);}
