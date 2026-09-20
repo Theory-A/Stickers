@@ -13,7 +13,7 @@ function showSticker(sticker:Sticker){
  collection.close();$<HTMLImageElement>('detail-image').src=sticker.image;$<HTMLImageElement>('detail-image').alt=sticker.description;
  $('detail-title').textContent=sticker.title;$('detail-description').textContent=sticker.description;
  const tags=$('detail-tags');tags.replaceChildren();for(const tag of sticker.tags.slice(0,8)){const button=document.createElement('button');button.textContent=tag;button.onclick=()=>{detail.close();input.value=tag;schedule(true);};tags.append(button);}
- const download=$<HTMLAnchorElement>('download');download.href=sticker.image;download.download=sticker.title.toLowerCase().replaceAll(' ','-')+'.png';detail.showModal();
+ const download=$<HTMLAnchorElement>('download');download.href=sticker.downloadImage||sticker.image;download.download=sticker.title.toLowerCase().replaceAll(' ','-')+'.png';detail.showModal();
 }
 for(const dialog of [detail,collection]){dialog.querySelector('.dialog-close')?.addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});}
 let ids:Set<string>;

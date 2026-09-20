@@ -7,7 +7,7 @@ const env = {...loadEnv('production',process.cwd(),''),...process.env};
 const api = createApi(env);
 const root = resolve('dist');
 if(!existsSync(root)) throw new Error('Run npm run build before npm start');
-const mime:Record<string,string> = {'.html':'text/html','.js':'text/javascript','.css':'text/css','.png':'image/png','.json':'application/json','.svg':'image/svg+xml'};
+const mime:Record<string,string> = {'.html':'text/html','.js':'text/javascript','.css':'text/css','.png':'image/png','.webp':'image/webp','.json':'application/json','.svg':'image/svg+xml'};
 createServer((req,res)=>void api(req,res,()=>{
  let path:string;try {path=decodeURIComponent(new URL(req.url||'/','http://localhost').pathname);} catch {res.writeHead(400).end();return;}
  let file=resolve(root,'.'+path);

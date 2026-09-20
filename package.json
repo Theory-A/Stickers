@@ -11,7 +11,8 @@
     "test": "tsx --test tests/*.test.ts",
     "assets:prepare": "node scripts/prepare-references.mjs",
     "assets:slice": "node scripts/slice-stickers.mjs",
-    "assets:metadata": "node scripts/sync-metadata.mjs"
+    "assets:metadata": "node scripts/sync-metadata.mjs",
+    "assets:optimize": "node scripts/optimize-stickers.mjs"
   },
   "dependencies": {
     "@typesafe-ai/sdk": "^0.6.0",

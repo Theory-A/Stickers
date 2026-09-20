@@ -1,5 +1,5 @@
 export interface Sticker {
- id: string; title: string; source: string; sourceFolder?: string; image: string; width: number; height: number;
+ id: string; title: string; source: string; sourceFolder?: string; image: string; downloadImage?: string; width: number; height: number;
  people?: string[]; description: string; subjects: string[]; colors: string[]; clothing: string[];
  objects: string[]; actions: string[]; moods: string[]; tags: string[];
 }

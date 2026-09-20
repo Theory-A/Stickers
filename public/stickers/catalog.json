@@ -3,7 +3,7 @@
     "id": "sticker-01",
     "source": "A9B5F5C0-E1A4-4C8C-983E-1E3A15678726.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-01.png",
+    "image": "/stickers/sticker-01.webp",
     "width": 266,
     "height": 664,
     "title": "Blue daydream",
@@ -46,13 +46,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-01.png"
   },
   {
     "id": "sticker-02",
     "source": "IMG_0324 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-02.png",
+    "image": "/stickers/sticker-02.webp",
     "width": 353,
     "height": 664,
     "title": "One good swing",
@@ -95,13 +96,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-02.png"
   },
   {
     "id": "sticker-03",
     "source": "IMG_0339.jpg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-03.png",
+    "image": "/stickers/sticker-03.webp",
     "width": 584,
     "height": 635,
     "title": "Better together",
@@ -147,13 +149,14 @@
       "sijie",
       "cj",
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-03.png"
   },
   {
     "id": "sticker-04",
     "source": "IMG_0395 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-04.png",
+    "image": "/stickers/sticker-04.webp",
     "width": 529,
     "height": 637,
     "title": "Just us",
@@ -198,13 +201,14 @@
       "sijie",
       "cj",
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-04.png"
   },
   {
     "id": "sticker-05",
     "source": "IMG_0522 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-05.png",
+    "image": "/stickers/sticker-05.webp",
     "width": 502,
     "height": 482,
     "title": "Loafing around",
@@ -242,13 +246,14 @@
       "loaf",
       "animal"
     ],
-    "people": []
+    "people": [],
+    "downloadImage": "/stickers/sticker-05.png"
   },
   {
     "id": "sticker-06",
     "source": "IMG_0563 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-06.png",
+    "image": "/stickers/sticker-06.webp",
     "width": 370,
     "height": 638,
     "title": "A little swing",
@@ -294,13 +299,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-06.png"
   },
   {
     "id": "sticker-07",
     "source": "IMG_1295 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-07.png",
+    "image": "/stickers/sticker-07.webp",
     "width": 661,
     "height": 642,
     "title": "The scenic route",
@@ -356,13 +362,14 @@
       "sijie",
       "cj",
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-07.png"
   },
   {
     "id": "sticker-08",
     "source": "IMG_1817.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-08.png",
+    "image": "/stickers/sticker-08.webp",
     "width": 599,
     "height": 588,
     "title": "Dinner with character",
@@ -407,13 +414,14 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-08.png"
   },
   {
     "id": "sticker-09",
     "source": "IMG_1870.jpg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-09.png",
+    "image": "/stickers/sticker-09.webp",
     "width": 612,
     "height": 631,
     "title": "Wind in our hair",
@@ -463,13 +471,14 @@
       "sijie",
       "cj",
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-09.png"
   },
   {
     "id": "sticker-10",
     "source": "IMG_3033 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-10.png",
+    "image": "/stickers/sticker-10.webp",
     "width": 310,
     "height": 664,
     "title": "Up a little higher",
@@ -513,13 +522,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-10.png"
   },
   {
     "id": "sticker-11",
     "source": "IMG_3121 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-11.png",
+    "image": "/stickers/sticker-11.webp",
     "width": 637,
     "height": 656,
     "title": "A very big hug",
@@ -562,13 +572,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-11.png"
   },
   {
     "id": "sticker-12",
     "source": "IMG_3209 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-12.png",
+    "image": "/stickers/sticker-12.webp",
     "width": 611,
     "height": 567,
     "title": "Swing for it",
@@ -614,13 +625,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-12.png"
   },
   {
     "id": "sticker-13",
     "source": "IMG_3428 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-13.png",
+    "image": "/stickers/sticker-13.webp",
     "width": 636,
     "height": 648,
     "title": "Made with a spark",
@@ -669,13 +681,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-13.png"
   },
   {
     "id": "sticker-14",
     "source": "IMG_3516 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-14.png",
+    "image": "/stickers/sticker-14.webp",
     "width": 471,
     "height": 662,
     "title": "Coffee & a good laugh",
@@ -720,13 +733,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-14.png"
   },
   {
     "id": "sticker-15",
     "source": "IMG_3625 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-15.png",
+    "image": "/stickers/sticker-15.webp",
     "width": 556,
     "height": 630,
     "title": "In full bloom",
@@ -771,13 +785,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-15.png"
   },
   {
     "id": "sticker-16",
     "source": "IMG_3795 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-16.png",
+    "image": "/stickers/sticker-16.webp",
     "width": 548,
     "height": 633,
     "title": "A brighter outlook",
@@ -822,13 +837,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-16.png"
   },
   {
     "id": "sticker-17",
     "source": "IMG_4513.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-17.png",
+    "image": "/stickers/sticker-17.webp",
     "width": 373,
     "height": 664,
     "title": "Take the long way",
@@ -868,13 +884,14 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-17.png"
   },
   {
     "id": "sticker-18",
     "source": "IMG_4581.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-18.png",
+    "image": "/stickers/sticker-18.webp",
     "width": 584,
     "height": 648,
     "title": "One quick message",
@@ -915,13 +932,14 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-18.png"
   },
   {
     "id": "sticker-19",
     "source": "IMG_5015.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-19.png",
+    "image": "/stickers/sticker-19.webp",
     "width": 645,
     "height": 604,
     "title": "Picnic, please",
@@ -969,13 +987,14 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-19.png"
   },
   {
     "id": "sticker-20",
     "source": "IMG_6456.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-20.png",
+    "image": "/stickers/sticker-20.webp",
     "width": 468,
     "height": 605,
     "title": "Looking for wonder",
@@ -1016,13 +1035,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-20.png"
   },
   {
     "id": "sticker-21",
     "source": "IMG_6626 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-21.png",
+    "image": "/stickers/sticker-21.webp",
     "width": 359,
     "height": 664,
     "title": "A timeless afternoon",
@@ -1066,13 +1086,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-21.png"
   },
   {
     "id": "sticker-22",
     "source": "IMG_6891.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-22.png",
+    "image": "/stickers/sticker-22.webp",
     "width": 282,
     "height": 664,
     "title": "Everyday patterns",
@@ -1119,13 +1140,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-22.png"
   },
   {
     "id": "sticker-23",
     "source": "IMG_6975 Medium.jpeg",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-23.png",
+    "image": "/stickers/sticker-23.webp",
     "width": 349,
     "height": 593,
     "title": "Blue hour",
@@ -1168,13 +1190,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-23.png"
   },
   {
     "id": "sticker-24",
     "source": "IMG_7098.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-24.png",
+    "image": "/stickers/sticker-24.webp",
     "width": 345,
     "height": 560,
     "title": "Nothing but sunshine",
@@ -1214,13 +1237,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-24.png"
   },
   {
     "id": "sticker-25",
     "source": "IMG_7477.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-25.png",
+    "image": "/stickers/sticker-25.webp",
     "width": 310,
     "height": 664,
     "title": "A soft kind of day",
@@ -1265,13 +1289,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-25.png"
   },
   {
     "id": "sticker-26",
     "source": "IMG_7811.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-26.png",
+    "image": "/stickers/sticker-26.webp",
     "width": 619,
     "height": 661,
     "title": "Along for the ride",
@@ -1321,13 +1346,14 @@
       "sijie",
       "cj",
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-26.png"
   },
   {
     "id": "sticker-27",
     "source": "IMG_7916.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-27.png",
+    "image": "/stickers/sticker-27.webp",
     "width": 492,
     "height": 592,
     "title": "Hello, sunshine",
@@ -1371,13 +1397,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-27.png"
   },
   {
     "id": "sticker-28",
     "source": "IMG_7933.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-28.png",
+    "image": "/stickers/sticker-28.webp",
     "width": 527,
     "height": 583,
     "title": "Say cheese, extra cheese",
@@ -1412,13 +1439,14 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-28.png"
   },
   {
     "id": "sticker-29",
     "source": "IMG_8713.JPG",
     "sourceFolder": "images",
-    "image": "/stickers/sticker-29.png",
+    "image": "/stickers/sticker-29.webp",
     "width": 569,
     "height": 664,
     "title": "Love at first flight",
@@ -1472,13 +1500,14 @@
       "sijie",
       "cj",
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-29.png"
   },
   {
     "id": "sticker-30",
     "source": "060F7A32-DC8F-4351-87DC-87B67D0EE32E.PNG",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-30.png",
+    "image": "/stickers/sticker-30.webp",
     "width": 554,
     "height": 652,
     "title": "A faithful little friend",
@@ -1512,13 +1541,14 @@
       "brown",
       "white"
     ],
-    "people": []
+    "people": [],
+    "downloadImage": "/stickers/sticker-30.png"
   },
   {
     "id": "sticker-31",
     "source": "7436e59e593109a23272404946c91464.jpg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-31.png",
+    "image": "/stickers/sticker-31.webp",
     "width": 371,
     "height": 664,
     "title": "A higher kind of happy",
@@ -1568,13 +1598,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-31.png"
   },
   {
     "id": "sticker-32",
     "source": "CAEC109D-2167-448D-A045-E8C49AFD2B6C.PNG",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-32.png",
+    "image": "/stickers/sticker-32.webp",
     "width": 535,
     "height": 538,
     "title": "A wink for you",
@@ -1612,13 +1643,14 @@
       "red collar",
       "cute"
     ],
-    "people": []
+    "people": [],
+    "downloadImage": "/stickers/sticker-32.png"
   },
   {
     "id": "sticker-33",
     "source": "DSCF0432.JPG",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-33.png",
+    "image": "/stickers/sticker-33.webp",
     "width": 511,
     "height": 592,
     "title": "A quiet moment",
@@ -1656,13 +1688,14 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-33.png"
   },
   {
     "id": "sticker-34",
     "source": "IMG_0838.JPG",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-34.png",
+    "image": "/stickers/sticker-34.webp",
     "width": 433,
     "height": 659,
     "title": "Paws up",
@@ -1700,13 +1733,14 @@
       "gray",
       "playful"
     ],
-    "people": []
+    "people": [],
+    "downloadImage": "/stickers/sticker-34.png"
   },
   {
     "id": "sticker-35",
     "source": "IMG_1269 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-35.png",
+    "image": "/stickers/sticker-35.webp",
     "width": 560,
     "height": 664,
     "title": "Four wheels of fun",
@@ -1754,13 +1788,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-35.png"
   },
   {
     "id": "sticker-36",
     "source": "IMG_1340 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-36.png",
+    "image": "/stickers/sticker-36.webp",
     "width": 438,
     "height": 643,
     "title": "One dune at a time",
@@ -1804,13 +1839,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-36.png"
   },
   {
     "id": "sticker-37",
     "source": "IMG_1679 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-37.png",
+    "image": "/stickers/sticker-37.webp",
     "width": 469,
     "height": 606,
     "title": "Let it rain",
@@ -1850,13 +1886,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-37.png"
   },
   {
     "id": "sticker-38",
     "source": "IMG_1821.jpg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-38.png",
+    "image": "/stickers/sticker-38.webp",
     "width": 590,
     "height": 664,
     "title": "A very good bite",
@@ -1902,13 +1939,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-38.png"
   },
   {
     "id": "sticker-39",
     "source": "IMG_2325 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-39.png",
+    "image": "/stickers/sticker-39.webp",
     "width": 372,
     "height": 664,
     "title": "Blue, beautifully layered",
@@ -1951,13 +1989,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-39.png"
   },
   {
     "id": "sticker-40",
     "source": "IMG_2405 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-40.png",
+    "image": "/stickers/sticker-40.webp",
     "width": 355,
     "height": 664,
     "title": "Follow the breeze",
@@ -1997,13 +2036,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-40.png"
   },
   {
     "id": "sticker-41",
     "source": "IMG_3102 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-41.png",
+    "image": "/stickers/sticker-41.webp",
     "width": 242,
     "height": 664,
     "title": "Camera, ready",
@@ -2044,13 +2084,14 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-41.png"
   },
   {
     "id": "sticker-42",
     "source": "IMG_3129 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-42.png",
+    "image": "/stickers/sticker-42.webp",
     "width": 610,
     "height": 654,
     "title": "The open road",
@@ -2095,13 +2136,14 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-42.png"
   },
   {
     "id": "sticker-43",
     "source": "IMG_4794 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-43.png",
+    "image": "/stickers/sticker-43.webp",
     "width": 423,
     "height": 629,
     "title": "Dressed for a good day",
@@ -2138,13 +2180,14 @@
       "pet",
       "happy"
     ],
-    "people": []
+    "people": [],
+    "downloadImage": "/stickers/sticker-43.png"
   },
   {
     "id": "sticker-44",
     "source": "IMG_4824 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-44.png",
+    "image": "/stickers/sticker-44.webp",
     "width": 502,
     "height": 605,
     "title": "A little golden magic",
@@ -2188,13 +2231,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-44.png"
   },
   {
     "id": "sticker-45",
     "source": "IMG_5447 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-45.png",
+    "image": "/stickers/sticker-45.webp",
     "width": 599,
     "height": 378,
     "title": "Do not disturb",
@@ -2232,13 +2276,14 @@
       "fluffy",
       "cozy"
     ],
-    "people": []
+    "people": [],
+    "downloadImage": "/stickers/sticker-45.png"
   },
   {
     "id": "sticker-46",
     "source": "IMG_5666 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-46.png",
+    "image": "/stickers/sticker-46.webp",
     "width": 507,
     "height": 658,
     "title": "Fan of slow afternoons",
@@ -2282,13 +2327,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-46.png"
   },
   {
     "id": "sticker-47",
     "source": "IMG_5876.jpg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-47.png",
+    "image": "/stickers/sticker-47.webp",
     "width": 439,
     "height": 661,
     "title": "One for the memories",
@@ -2335,13 +2381,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-47.png"
   },
   {
     "id": "sticker-48",
     "source": "IMG_6106 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-48.png",
+    "image": "/stickers/sticker-48.webp",
     "width": 379,
     "height": 651,
     "title": "Just a little message",
@@ -2386,13 +2433,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-48.png"
   },
   {
     "id": "sticker-49",
     "source": "IMG_6819.jpg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-49.png",
+    "image": "/stickers/sticker-49.webp",
     "width": 475,
     "height": 642,
     "title": "Iced coffee, warm smile",
@@ -2438,13 +2486,14 @@
     "people": [
       "sijie",
       "cj"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-49.png"
   },
   {
     "id": "sticker-50",
     "source": "IMG_7065 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-50.png",
+    "image": "/stickers/sticker-50.webp",
     "width": 664,
     "height": 556,
     "title": "Three cups of cute",
@@ -2481,13 +2530,14 @@
       "terracotta",
       "cute"
     ],
-    "people": []
+    "people": [],
+    "downloadImage": "/stickers/sticker-50.png"
   },
   {
     "id": "sticker-51",
     "source": "IMG_9414 Medium.jpeg",
     "sourceFolder": "more_images",
-    "image": "/stickers/sticker-51.png",
+    "image": "/stickers/sticker-51.webp",
     "width": 455,
     "height": 664,
     "title": "Holding on to adventure",
@@ -2529,6 +2579,7 @@
     ],
     "people": [
       "david"
-    ]
+    ],
+    "downloadImage": "/stickers/sticker-51.png"
   }
 ]

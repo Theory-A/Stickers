@@ -1,3 +1,4 @@
+import {optimizeCatalog} from './optimize-stickers.mjs';
 // Extract connected sticker silhouettes, rather than cutting blindly through 2x2 axes.
 // The generator may shift its gutters. This preserves whole silhouettes and the alpha.
 import sharp from 'sharp';
@@ -47,4 +48,4 @@ dimensions.sort((a,b)=>a.id.localeCompare(b.id,undefined,{numeric:true}));
 if(dimensions.length!==manifest.length)throw new Error('Cutout count does not match the source manifest');
 await writeFile('assets/cutouts.json',JSON.stringify(dimensions,null,2));
 const catalog=dimensions.map(({id,source,sourceFolder,image,width,height})=>{if(!metadata[id])throw new Error(`Missing metadata: ${id}`);return {id,source,sourceFolder:sourceFolder || 'images',image,width,height,...metadata[id]};});
-await writeFile('public/stickers/catalog.json',JSON.stringify(catalog,null,2));console.log(`Sliced and catalogued ${catalog.length} transparent stickers.`);
+await writeFile('public/stickers/catalog.json',JSON.stringify(await optimizeCatalog(catalog),null,2));console.log(`Sliced and catalogued ${catalog.length} transparent stickers.`);
