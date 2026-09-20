@@ -31,3 +31,10 @@ test('forgets a pulse after a sensor gap',()=>{
  assert.equal(detector.sample(motion(-14),500),null);
  assert.equal(detector.sample(motion(14),620),null);
 });
+
+test('responds to lighter back-and-forth motion',()=>{
+ const detector=new DeviceShakeDetector();
+ detector.sample(motion(0),0);
+ assert.equal(detector.sample(motion(6),100),null);
+ assert.ok(detector.sample(motion(-6),220));
+});

@@ -2,7 +2,7 @@ type MotionSample = {x:number|null;y:number|null;z:number|null};
 type Vector = {x:number;y:number;z:number};
 export type ShakeImpulse = {strength:number;horizontal:number};
 
-const threshold=11;
+const threshold=5.5;
 const minPulseGap=80;
 const maxPulseGap=700;
 const cooldown=1700;
