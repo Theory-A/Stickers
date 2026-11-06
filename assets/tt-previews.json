@@ -1,0 +1,407 @@
+{
+  "link-001": {
+    "url": "https://owenyoung.com",
+    "status": "found",
+    "title": "Owen",
+    "description": null,
+    "siteName": "Owen",
+    "image": "/people-previews/link-001.webp",
+    "sourceImage": "https://media.jant.me/media/sit_01kmyfab3cfztrzn5qs9b80083/assets/avatar/med_01kvd47zb5fzttpwxjwy7mnfdg.png",
+    "imageAlt": "Owen"
+  },
+  "link-002": {
+    "url": "https://goodenough.us",
+    "status": "found",
+    "title": "Good Enough",
+    "description": "Hello, we are Good Enough. We make useful, well-made software, like Pika, Letterbird, and Album Whale. You’re good enough, too.",
+    "siteName": "Good Enough",
+    "image": "/people-previews/link-002.webp",
+    "sourceImage": "https://goodenough.us/social_preview.png",
+    "imageAlt": "Good Enough"
+  },
+  "link-003": {
+    "url": "https://netnewswire.com",
+    "status": "found",
+    "title": "NetNewsWire",
+    "description": null,
+    "siteName": "NetNewsWire",
+    "image": "/people-previews/link-003.webp",
+    "sourceImage": "https://netnewswire.com/images/nnw7.0-appicon-ios-dark.png",
+    "imageAlt": "NetNewsWire avatar"
+  },
+  "link-004": {
+    "url": "https://miniflux.app",
+    "status": "no_image",
+    "title": null,
+    "description": "Miniflux is a minimalist and opinionated feed reader",
+    "siteName": null
+  },
+  "link-005": {
+    "url": "https://dj.theory-a.com",
+    "status": "found",
+    "title": "David Jiang · Founder of Theory A",
+    "description": "David Jiang: founder of Theory A, former Apple Siri and Google X engineer, building AI products, financial visualization, and bilingual writing from Shanghai. Available for AI product work, consulting, and in-person AI lessons.",
+    "siteName": null,
+    "image": "/people-previews/link-005.webp",
+    "sourceImage": "https://dj.theory-a.com/opengraph-image?99dbf1b5c61f6388",
+    "imageAlt": "David Jiang: founder of Theory A, AI products, financial visualization, bilingual writing. Shanghai."
+  },
+  "link-006": {
+    "url": "https://glove.theory-a.com",
+    "status": "no_image",
+    "title": null,
+    "description": null,
+    "siteName": null
+  },
+  "link-007": {
+    "url": "https://curriculum.theory-a.com",
+    "status": "found",
+    "title": "孩子要学的一切：4 到 14 岁该学什么、先学什么：一张看得见的成长地图",
+    "description": "1083 个值得学的知识点，从认字、数数到编程、看懂世界，按年龄排好：每个是什么、怎么检查孩子学会了、要先学什么。参考中国现行的 2022 年版义务教育课程标准整理，免费，中英双语。",
+    "siteName": "孩子要学的一切",
+    "image": "/people-previews/link-007.webp",
+    "sourceImage": "https://curriculum.theory-a.com/og.jpg",
+    "imageAlt": "孩子要学的一切"
+  },
+  "link-008": {
+    "url": "https://junwei.cool",
+    "status": "no_image",
+    "title": null,
+    "description": null,
+    "siteName": null
+  },
+  "link-009": {
+    "url": "https://lite.ego.app",
+    "status": "found",
+    "title": "Fastest browser for AI agents to run web automation | ego(lite)",
+    "description": "Always free, no set up. Claude Code or Codex runs 100+ browser automation tasks at the same time. The fastest agent browser in our open Real-World Bench.",
+    "siteName": "ego(lite)",
+    "image": "/people-previews/link-009.webp",
+    "sourceImage": "https://cdn.ego.app/website-assets/a634e3f916713f0d34f041910cb788562b5330b67fa940593643b4135487a053/og.png",
+    "imageAlt": "Ego Lite"
+  },
+  "link-011": {
+    "url": "https://podcasts-stamp.depykung.app",
+    "status": "no_image",
+    "title": null,
+    "description": "一份由编者持续整理的中文播客封面收藏，按设计语言翻阅、发现和收藏好设计。",
+    "siteName": null
+  },
+  "link-012": {
+    "url": "https://yytyyf.com",
+    "status": "found",
+    "title": "yytyyf — 把每个作业，都做成作品。",
+    "description": "独立开发者 yytyyf 的作品主页：飞搜、Swob、KeyKeeper、Long2Text、Halo 等十几个产品。",
+    "siteName": null,
+    "image": "/people-previews/link-012.webp",
+    "sourceImage": "https://yytyyf.com/avatar.png",
+    "imageAlt": "Personal website"
+  },
+  "link-013": {
+    "url": "https://opentrends.io",
+    "status": "found",
+    "title": "Tech News Today · OpenTrends",
+    "description": "Today's most-cited technology stories from Hacker News, The Verge, TechCrunch, Reuters and twenty more sources, distilled into a ten-line digest with citations. Refreshed every five minutes.",
+    "siteName": "OpenTrends",
+    "image": "/people-previews/link-013.webp",
+    "sourceImage": "https://opentrends.io/og-image.png",
+    "imageAlt": "OpenTrends: hundreds of AI, tech, hardware and maker sources in one view, with built-in translation"
+  },
+  "link-014": {
+    "url": "https://keykeeper.dev",
+    "status": "found",
+    "title": "Trust agents to manage your API keys. Safely.",
+    "description": "Agents fetch, store, verify and use keys on your Mac. You approve; they never see the value.",
+    "siteName": "KeyKeeper",
+    "image": "/people-previews/link-014.webp",
+    "sourceImage": "https://keykeeper.dev/opengraph-image?080cc86933947152",
+    "imageAlt": "KeyKeeper — Your AI sees the key's name. Never the value."
+  },
+  "link-015": {
+    "url": "https://haitao.wiki",
+    "status": "no_image",
+    "title": null,
+    "description": "Shanghai-based Investment Analyst. I work with the best founders, earn their trust, and be there when it matters. Focus Area: AI software, AI infra, and GenAI Models.",
+    "siteName": null
+  },
+  "link-019": {
+    "url": "https://github.com/Openhaitao/iphone-use-pro",
+    "status": "found",
+    "title": "GitHub - Openhaitao/iphone-use-pro: Control a real iPhone from a Mac with AirPlay and BLE HID. Source-build preview for Apple Silicon and macOS 27+.",
+    "description": "Control a real iPhone from a Mac with AirPlay and BLE HID. Source-build preview for Apple Silicon and macOS 27+. - Openhaitao/iphone-use-pro",
+    "siteName": "GitHub",
+    "image": "/people-previews/link-019.webp",
+    "sourceImage": "https://opengraph.githubassets.com/d7dc049b2b23286d89a15e1686d3e609ebc2480b8bf0142064152cbdfceebc8e/Openhaitao/iphone-use-pro",
+    "imageAlt": "Control a real iPhone from a Mac with AirPlay and BLE HID. Source-build preview for Apple Silicon and macOS 27+. - Openhaitao/iphone-use-pro"
+  },
+  "link-020": {
+    "url": "https://comma.surf",
+    "status": "found",
+    "title": "Comma: your 24/7 AI personal assistant, free and open source",
+    "description": "A free, open source personal AI agent that is always on, proactive and sessionless. Self-host your open source alternative to Muse, Dots, Instinct and Town.",
+    "siteName": "Comma",
+    "image": "/people-previews/link-020.webp",
+    "sourceImage": "https://comma.surf/og-image.png",
+    "imageAlt": "Comma"
+  },
+  "link-021": {
+    "url": "https://github.com/AFK-surf/Comma",
+    "status": "found",
+    "title": "GitHub - AFK-surf/Comma: Best free & open source super agent. Always-on, proactive, sessionless. Browser, computer use, files, remote control. Compatible with ChatGPT/codex and claude code. Selfhost your open source alternative to Muse, Dots and Town. Built with Go/Elixir/Lean.",
+    "description": "Best free &amp; open source super agent. Always-on, proactive, sessionless. Browser, computer use, files, remote control. Compatible with ChatGPT/codex and claude code. Selfhost your open source al...",
+    "siteName": "GitHub",
+    "image": "/people-previews/link-021.webp",
+    "sourceImage": "https://opengraph.githubassets.com/ad090e4f653210e77ecc6985ac761b74bda5ad3e35cef41fc28cbb650c3113a8/AFK-surf/Comma",
+    "imageAlt": "Best free &amp; open source super agent. Always-on, proactive, sessionless. Browser, computer use, files, remote control. Compatible with ChatGPT/codex and claude code. Selfhost your open source al..."
+  },
+  "link-023": {
+    "url": "https://liangyue.site",
+    "status": "no_image",
+    "title": null,
+    "description": "Yue (Cassie) Liang 的个人主页：1Day、Tabspace，以及她正在做的产品和记录。",
+    "siteName": null
+  },
+  "link-024": {
+    "url": "https://notes.liangyue.site",
+    "status": "found",
+    "title": "CS 与 LLM 学习知识库",
+    "description": "面向计算机专业新生的中文知识库：从 CS 基础课程，到大语言模型（LLM）的训练与推理系统。每篇笔记都配有可作答的选择题。算法刷题见 NudgeCode。 从哪里开始：先看 学习路线，它把每门课对应到下面的笔记。每个概念只在一篇里讲透，其他地方用链接指过去。收藏的小节和高亮见 我的收藏。 学习路线 学习路线 — 从零到 AI Infra 按什么顺序学、每门课对应本库哪几篇 编程与工具 函数与环境模型 — 程序运行时，一个名字是怎么找到它的值的？ 高阶函数与递归 — 怎么把”做法”本身当数据传来传去，又怎么让函数调用自己？ 数据抽象与对象 — 怎么用函数和类把数据的表示藏起来？ 迭代器生成器与解...",
+    "siteName": "CS 与 LLM 学习知识库",
+    "image": "/people-previews/link-024.webp",
+    "sourceImage": "https://notes.liangyue.site/index-og-image.webp",
+    "imageAlt": "面向计算机专业新生的中文知识库：从 CS 基础课程，到大语言模型（LLM）的训练与推理系统。每篇笔记都配有可作答的选择题。算法刷题见 NudgeCode。 从哪里开始：先看 学习路线，它把每门课对应到下面的笔记。每个概念只在一篇里讲透，其他地方用链接指过去。收藏的小节和高亮见 我的收藏。 学习路线 学习路线 — 从零到 AI Infra 按什么顺序学、每门课对应本库哪几篇 编程与工具 函数与环境模型 — 程序运行时，一个名字是怎么找到它的值的？ 高阶函数与递归 — 怎么把”做法”本身当数据传来传去，又怎么让函数调用自己？ 数据抽象与对象 — 怎么用函数和类把数据的表示藏起来？ 迭代器生成器与解..."
+  },
+  "link-026": {
+    "url": "https://nudgecode.liangyue.site",
+    "status": "found",
+    "title": "NudgeCode · AI interview tutor: hints, not answers",
+    "description": "Prepare for coding interviews with an AI tutor that gives hints, not answers: 355 algorithm problems in 13 patterns, ML coding and AI infra exercises, and AI mock interviews.",
+    "siteName": "NudgeCode",
+    "image": "/people-previews/link-026.webp",
+    "sourceImage": "https://nudgecode.liangyue.site/og.png",
+    "imageAlt": "NudgeCode"
+  },
+  "link-027": {
+    "url": "https://custombili.liangyue.site",
+    "status": "no_image",
+    "title": null,
+    "description": null,
+    "siteName": null
+  },
+  "link-028": {
+    "url": "https://xlrocket.blog",
+    "status": "found",
+    "title": "效率火箭，火箭君的新博客",
+    "description": "高效搞定事情，尽情享受生活",
+    "siteName": "效率火箭，火箭君的新博客",
+    "image": "/people-previews/link-028.webp",
+    "sourceImage": "https://i0.wp.com/xlrocket.blog/wp-content/uploads/2023/03/xlrocket.logo_.jpg?fit=250%2C250&ssl=1",
+    "imageAlt": "xlrocket.blog"
+  },
+  "link-029": {
+    "url": "https://github.com/occupysaas",
+    "status": "found",
+    "title": "Occupy Saas",
+    "description": "A SaaS company for the 1,000,000 Laid Off Developers to create clean room reproductions of the companies that Laid them off. - Occupy Saas",
+    "siteName": "GitHub",
+    "image": "/people-previews/link-029.webp",
+    "sourceImage": "https://avatars.githubusercontent.com/u/342696355?s=280&v=4",
+    "imageAlt": "A SaaS company for the 1,000,000 Laid Off Developers to create clean room reproductions of the companies that Laid them off. - Occupy Saas"
+  },
+  "link-031": {
+    "url": "https://tryklack.com",
+    "status": "found",
+    "title": "Klack",
+    "description": "Satisfying sound with every keystroke",
+    "siteName": "Klack",
+    "image": "/people-previews/link-031.webp",
+    "sourceImage": "https://cdn.tryklack.com/images/meta.png",
+    "imageAlt": "Klack"
+  },
+  "link-033": {
+    "url": "https://pixpet.com.cn",
+    "status": "no_image",
+    "title": null,
+    "description": "PixPet-番茄钟专注与像素宠物养成 PixPet 是一款把「专注 + 运动 + 像素宠物收集」融合在一起的养成应用。在这里，每一次专注、每一步前进，都会让你的像素宠物和收藏世界一起成长。PixPet 用轻松可爱的方式，让坚持专注这件事变得更有反馈、更有陪伴感。 PixPet 核心功能 【专注养成】支持倒计时/正计时、番茄钟循环、短休息与长休息，完成专注可获得像素晶石奖励。 【专注屏蔽干扰】专注时可使用 App 屏蔽工具，减少分心，提升沉浸感。 【数据记录与成长可视化】专注时间轴、统计趋势、专注场景标签，帮助你看见长期进步。 【运动兑换】读取步数进行能量兑换，把日常活动转化为游戏内资源。 【探索与收集】地图探索宝箱、NFC 扫描、兑换码奖励，持续解锁新内容。 【宠物生态】宠物商店、抽奖系统、零食/药品/形象商店，打造你的专属像素宠物阵容。 【挑战与社交】任务中心、成就系统、排行榜、宠物对战，增加长期目标与互动乐趣。 【多端体验】支持通知提醒、实时活动（Live Activities），并提供可选的数据同步能力。 你的支持和建议会给 PixPet 的进步带来巨大帮助！ 欢迎大家通过下列方式联系开发者",
+    "siteName": null
+  },
+  "link-034": {
+    "url": "https://joyboy.club",
+    "status": "found",
+    "title": "joyboy.club — say a game, play it",
+    "description": "One sentence in, a playable pixel world out. Play the worlds members made, or make your own.",
+    "siteName": "joyboy.club",
+    "image": "/people-previews/link-034.webp",
+    "sourceImage": "https://joyboy.club/app/og.png",
+    "imageAlt": "JoyBoy.Club"
+  },
+  "link-037": {
+    "url": "https://askyumi.com",
+    "status": "found",
+    "title": "Ask Yumi",
+    "description": "Explore your food memories, taste preferences, and sensory personality with Ask Yumi.",
+    "siteName": "Ask Yumi",
+    "image": "/people-previews/link-037.webp",
+    "sourceImage": "https://askyumi.com/yumi-logo.png",
+    "imageAlt": "味觉数字孪生 / Ask Yumi"
+  },
+  "link-040": {
+    "url": "https://github.com/hanxinhao000/WeRead-KOReader-Plugin",
+    "status": "fetch_failed",
+    "error": "CalledProcessError"
+  },
+  "link-041": {
+    "url": "https://gesture-synth-weld.vercel.app",
+    "status": "no_image",
+    "title": null,
+    "description": null,
+    "siteName": null
+  },
+  "link-042": {
+    "url": "https://github.com/ericwei97-cloud/gesture-synth",
+    "status": "found",
+    "title": "GitHub - ericwei97-cloud/gesture-synth: A camera-based musical instrument that transforms hand gestures into chords, melodies, and expressive synth controls using MediaPipe and Web Audio API.",
+    "description": "A camera-based musical instrument that transforms hand gestures into chords, melodies, and expressive synth controls using MediaPipe and Web Audio API. - ericwei97-cloud/gesture-synth",
+    "siteName": "GitHub",
+    "image": "/people-previews/link-042.webp",
+    "sourceImage": "https://opengraph.githubassets.com/41bfc1eee1bb721714e2e18d2c3ec88664f6603caeef45d08b85358b8e8d4e91/ericwei97-cloud/gesture-synth",
+    "imageAlt": "A camera-based musical instrument that transforms hand gestures into chords, melodies, and expressive synth controls using MediaPipe and Web Audio API. - ericwei97-cloud/gesture-synth"
+  },
+  "link-048": {
+    "url": "https://project-e9844dc2.eazo.dev",
+    "status": "found",
+    "title": "Yuheng Li — Editorial Portfolio",
+    "description": "A bilingual Swiss-editorial portfolio and exploration lab for Yuheng Li.",
+    "siteName": "Yuheng Li",
+    "image": "/people-previews/link-048.webp",
+    "sourceImage": "https://project-e9844dc2-1qhj0pm24.eazo.dev/images/yuheng-li-portrait.jpg",
+    "imageAlt": "Yuheng Li in front of a traditional Chinese hall"
+  },
+  "link-049": {
+    "url": "https://project-f73d2085.eazo.dev",
+    "status": "found",
+    "title": "MediBridge China — China Medical & Cultural Concierge",
+    "description": "MediBridge China is a medical and cultural concierge for international visitors: healthcare coordination, traditional wellness experiences and private journeys in Shanghai, Hangzhou and Nanjing. Coordination only — not a healthcare provider.",
+    "siteName": null,
+    "image": "/people-previews/link-049.webp",
+    "sourceImage": "https://project-f73d2085-9nr4mi26l.eazo.dev/images/shanghai-bund.webp",
+    "imageAlt": "医桥中国"
+  },
+  "link-051": {
+    "url": "https://anyway.fm",
+    "status": "fetch_failed",
+    "error": "CalledProcessError"
+  },
+  "link-053": {
+    "url": "https://sidewave.link",
+    "status": "found",
+    "title": "Sidewave",
+    "description": "Sidewave is a creative studio. Each project is its own release, starting with 1K.",
+    "siteName": "Sidewave",
+    "image": "/people-previews/link-053.webp",
+    "sourceImage": "https://sidewave.link/assets/og/sidewave-og-network.jpg",
+    "imageAlt": "Sidewave"
+  },
+  "link-055": {
+    "url": "https://huiye.org",
+    "status": "found",
+    "title": "Drawnpage: Hand-drawn story video maker",
+    "description": "Make a hand-drawn story video from your writing. Review a sample, then export the vertical pages. Colored pencil, ink wash, or a flat storybook.",
+    "siteName": "Drawnpage",
+    "image": "/people-previews/link-055.webp",
+    "sourceImage": "https://huiye.org/site/og-en.png",
+    "imageAlt": "Drawnpage: Hand-drawn story video maker"
+  },
+  "link-059": {
+    "url": "https://emojimix.brucehjt.workers.dev",
+    "status": "no_image",
+    "title": null,
+    "description": "Fuse 2–6 emoji into one brand-new creature with AI.",
+    "siteName": null
+  },
+  "link-062": {
+    "url": "https://springbrand.ai",
+    "status": "no_image",
+    "title": "SpringBrand — AI Agent Builder to Get Work Done",
+    "description": "Describe a task and build an AI agent to do it. Connect plugins and APIs to give agents all the tools they need to get work done.",
+    "siteName": "SpringBrand"
+  },
+  "link-064": {
+    "url": "https://smg.fm",
+    "status": "no_image",
+    "title": null,
+    "description": null,
+    "siteName": null
+  },
+  "link-066": {
+    "url": "https://twittershots.com",
+    "status": "found",
+    "title": "Create Beautiful Twitter Screenshots in Seconds - TwitterShots",
+    "description": "Turn any Tweet or X post into stunning share-ready images. API, bulk processing & custom branding. Trusted by 10,000+ creators.",
+    "siteName": "twittershots.com",
+    "image": "/people-previews/link-066.webp",
+    "sourceImage": "https://twittershots.com/twittershots-og.png",
+    "imageAlt": "TwitterShots"
+  },
+  "link-067": {
+    "url": "https://www.postpiper.ai",
+    "status": "found",
+    "title": "Social Media Scheduler for the AI era | PostPiper",
+    "description": "Draft, schedule, and publish to X and LinkedIn directly from ChatGPT, Claude, or your favorite AI agents.",
+    "siteName": null,
+    "image": "/people-previews/link-067.webp",
+    "sourceImage": "https://www.postpiper.ai/postpiper-og.webp",
+    "imageAlt": "PostPiper"
+  },
+  "link-069": {
+    "url": "https://tab-002-prompt-jadd.pages.grok.bot",
+    "status": "no_image",
+    "title": null,
+    "description": null,
+    "siteName": null
+  },
+  "link-070": {
+    "url": "https://goodinsight.ai",
+    "status": "found",
+    "title": "好AI营销周报 | Hao Wu | Substack",
+    "description": "聚焦 AI 驱动的营销变革，由 Hao 与 AI 营销 Agent「小Hao」协作，每周扫描 200+ 中外精选源，筛选500+篇内容，提炼3个核心商业信号。面向创业者、CMO、品牌与市场研究负责人，覆盖 AI 动态、消费趋势与商业模式变革。. Click to read 好AI营销周报, by Hao Wu, a Substack publication. Launched 8 months ago.",
+    "siteName": null,
+    "image": "/people-previews/link-070.webp",
+    "sourceImage": "https://substackcdn.com/image/fetch/$s_!eBay!,w_400,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc496e0ec-76cd-4335-812d-add58f52f6ac_600x600.png",
+    "imageAlt": "GoodInsight.ai"
+  },
+  "link-071": {
+    "url": "https://github.com/haopsy/brand-logo-finder",
+    "status": "found",
+    "title": "GitHub - haopsy/brand-logo-finder: Source-traceable brand logo collection with explicit identity review and image-bound QC",
+    "description": "Source-traceable brand logo collection with explicit identity review and image-bound QC - haopsy/brand-logo-finder",
+    "siteName": "GitHub",
+    "image": "/people-previews/link-071.webp",
+    "sourceImage": "https://opengraph.githubassets.com/02ce03b61a67fb7ccc70db8da80edb7995f62c860bfe072d9b85b5adf8b51ebf/haopsy/brand-logo-finder",
+    "imageAlt": "Source-traceable brand logo collection with explicit identity review and image-bound QC - haopsy/brand-logo-finder"
+  },
+  "link-072": {
+    "url": "https://blog.yorks0n.com",
+    "status": "no_image",
+    "title": null,
+    "description": "All those moments will be lost in time, like tears in rain.",
+    "siteName": null
+  },
+  "link-074": {
+    "url": "https://github.com/Yorks0n/ZotWatch",
+    "status": "found",
+    "title": "GitHub - Yorks0n/ZotWatch: Recommend Articles According to Zotero Library",
+    "description": "Recommend Articles According to Zotero Library. Contribute to Yorks0n/ZotWatch development by creating an account on GitHub.",
+    "siteName": "GitHub",
+    "image": "/people-previews/link-074.webp",
+    "sourceImage": "https://opengraph.githubassets.com/f75e966832de6d02d2cd0262a2da411898d57fa6bdd5d177de2eee6f6b63832d/Yorks0n/ZotWatch",
+    "imageAlt": "Recommend Articles According to Zotero Library. Contribute to Yorks0n/ZotWatch development by creating an account on GitHub."
+  },
+  "link-075": {
+    "url": "https://zotwatch.yorks0n.com",
+    "status": "no_image",
+    "title": null,
+    "description": "连接 Zotero 文献库，持续发现与你研究相关的新文献。",
+    "siteName": null
+  }
+}

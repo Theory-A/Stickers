@@ -13,6 +13,7 @@ createServer((req,res)=>void api(req,res,()=>{
  let file=resolve(root,'.'+path);
  if(file!==root && !file.startsWith(root+sep)){res.writeHead(403).end();return;}
  if(file===root) file=resolve(root,'index.html');
+ if(path==='/tab-thursday'||path==='/tab-thursday/') file=resolve(root,'tab-thursday/index.html');
  if(!existsSync(file)||!statSync(file).isFile()){res.writeHead(404).end('Not found');return;}
  res.writeHead(200,{'Content-Type':mime[extname(file)]||'application/octet-stream'});
  createReadStream(file).pipe(res);

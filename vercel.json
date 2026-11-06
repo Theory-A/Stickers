@@ -3,6 +3,10 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/tab-thursday", "destination": "/tab-thursday/index.html" },
+    { "source": "/tab-thursday/", "destination": "/tab-thursday/index.html" }
+  ],
   "functions": {
     "api/*.ts": {
       "includeFiles": "public/stickers/catalog.json",

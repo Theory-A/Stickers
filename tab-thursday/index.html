@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#edf3ed" />
+ <meta name="description" content="A sea of curious people. Explore the people, projects, and ideas from Tab Thursday." />
+ <title>Tab Thursday — Find your kind of curious</title>
+ <link rel="icon" type="image/png" href="/favicon.png" />
+</head>
+<body class="thursday">
+ <div id="app">
+  <div class="water-light" aria-hidden="true"></div>
+  <header>
+   <a class="brand" href="/" aria-label="Little Paper World home"><img class="brand-icon" src="/logo.webp" width="35" height="35" alt="" />little paper world<span class="brand-period">.</span></a>
+   <div class="header-actions"><span class="edition">THE TAB THURSDAY COLLECTION</span><button id="motion-toggle" class="shuffle" type="button" aria-pressed="false">Pause the current</button></div>
+  </header>
+  <main>
+   <section class="search-section" aria-labelledby="heading">
+    <div class="eyebrow"><span></span> TAB THURSDAY · 星期四</div>
+    <h1 id="heading">Find your kind of <em>curious.</em></h1>
+    <p class="intro">A sea of people, projects, and possibility.<br />See who comes to the surface.</p>
+    <form id="search-form" role="search">
+     <label class="sr-only" for="search">Find people by name, interests, projects, or presentations</label>
+     <div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="search" type="search" maxlength="240" placeholder="Who’s exploring AI, design, or a little of both?" autocomplete="off" aria-describedby="search-status"/><button type="button" id="clear" aria-label="Clear search" hidden>×</button><kbd id="shortcut">/</kbd></div>
+    </form>
+    <div class="suggestions"><span>Dive into</span><button type="button" data-query="AI agents">AI agents ↗</button><button type="button" data-query="creative tools">creative tools</button><button type="button" data-query="knowledge">knowledge</button></div>
+    <p id="search-status" role="status" aria-live="polite">Describe an interest. Watch someone rise.</p>
+   </section>
+   <div id="ocean" aria-label="People swimming beneath the surface"></div>
+   <div id="ocean-note" aria-hidden="true"><span>good company, just beneath the surface</span><span class="ocean-line"></span></div>
+   <section id="surface" aria-labelledby="surface-title" hidden>
+    <div class="surface-heading"><div><div class="eyebrow">ABOVE THE SURFACE</div><h2 id="surface-title">A few kindred minds.</h2></div><button id="dive-back" type="button">Let them drift back ↓</button></div>
+    <div id="people-grid"></div>
+   </section>
+  </main>
+  <footer><span><span class="status-dot"></span><span id="people-count">32</span> CURIOUS PEOPLE <span class="footer-divider">/</span> <span id="mode-label">CONNECTING…</span></span><button id="browse" type="button">Meet everyone <span aria-hidden="true">↗</span></button><span class="drag-hint">TWO THURSDAYS. MANY POSSIBILITIES.</span></footer>
+ </div>
+ <script type="module" src="/src/tabThursday.ts"></script>
+</body>
+</html>

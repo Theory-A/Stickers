@@ -1,0 +1,5048 @@
+{
+  "dataset_name": "Tab Thursday #001 and #002 presenter directory",
+  "generated_at": "2026-11-06",
+  "language": "en",
+  "schema_version": "1.1",
+  "counts": {
+    "events": 2,
+    "event_001_presenters": 18,
+    "event_002_presenters": 21,
+    "unique_presenters": 32,
+    "people_with_verified_profile_avatar": 4,
+    "links": 77,
+    "links_with_preview_thumbnail": 0
+  },
+  "events": {
+    "001": {
+      "title": "Tab 星期四 #001 分享汇总",
+      "date": "2026-10-29",
+      "location": "706 上海（迎龙大厦）",
+      "presenter_count": 18,
+      "summary": "The first event centered on independent software, personal tools, creative experiments, AI-assisted development and alternative ways to organize information.",
+      "presenter_ids": [
+        "owen",
+        "david-jiang",
+        "junwei",
+        "gloria-x",
+        "huajuan",
+        "yang-yuntong",
+        "haitao",
+        "cassie",
+        "cc",
+        "edward-luo",
+        "sideway",
+        "yi-chen",
+        "gou-yi",
+        "wentao",
+        "caoyuan-zhang",
+        "feng-zhong",
+        "tiantian",
+        "imxiaorong"
+      ],
+      "source_link_id": "link-076"
+    },
+    "002": {
+      "title": "Tab 星期四 #002 分享汇总",
+      "date": "2026-11-05",
+      "location": "上海幸福里",
+      "presenter_count": 21,
+      "summary": "The second event covered AI agents, developer infrastructure, consumer software, knowledge systems, AI-enabled services, GEO and creative workflows.",
+      "presenter_ids": [
+        "owen",
+        "david-jiang",
+        "yang-yuntong",
+        "haitao",
+        "cassie",
+        "cc",
+        "caoyuan-zhang",
+        "yuhang",
+        "lucky",
+        "xiaohe",
+        "jj-ying",
+        "chen-yana",
+        "xi-shengbo",
+        "hu-jingting",
+        "peter-lei",
+        "colleen",
+        "sima-guang-za-gang",
+        "0xinhua",
+        "sean-shao",
+        "hao",
+        "yorkson"
+      ],
+      "source_link_id": "link-077"
+    }
+  },
+  "people": [
+    {
+      "id": "owen",
+      "name": "Owen",
+      "aliases": [
+        "Owen Young"
+      ],
+      "tags": [
+        "indie_internet",
+        "RSS",
+        "information_curation",
+        "small_teams"
+      ],
+      "avatar": null,
+      "description": "Independent-internet and information-workflow enthusiast. Presented a small-team creative philosophy at #001 and a highly curated RSS reading workflow at #002.",
+      "projects": [
+        {
+          "name": "Good Enough",
+          "url": "https://goodenough.us",
+          "summary": "A small, classically internet-oriented team aiming to make beautiful things that make the world a little better.",
+          "id": "owen-project-01",
+          "link_id": "link-002"
+        },
+        {
+          "name": "RSS reading workflow",
+          "url": null,
+          "summary": "NetNewsWire for Chinese-language sources and self-hosted Miniflux for English-language sources; custom JavaScript inserts summaries and translation helps triage without opening every article.",
+          "id": "owen-project-02",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "Good Enough",
+          "summary": "Introduced Good Enough as a small independent internet team with the aspiration to make good things that make the world slightly better.",
+          "link_ids": [
+            "link-002"
+          ]
+        },
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Personal RSS workflow",
+          "summary": "Explained a bilingual RSS workflow: NetNewsWire for Chinese sources, self-hosted Miniflux for English sources, custom JavaScript summaries in the feed list, and translation to triage articles before opening them.",
+          "link_ids": [
+            "link-003",
+            "link-004"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-001",
+        "link-002",
+        "link-003",
+        "link-004"
+      ]
+    },
+    {
+      "id": "david-jiang",
+      "name": "David Jiang",
+      "aliases": [
+        "David"
+      ],
+      "tags": [
+        "semantic_visualization",
+        "education",
+        "knowledge_graphs",
+        "indie_software"
+      ],
+      "avatar": null,
+      "description": "Software maker exploring ways to represent and navigate knowledge. His two talks covered 3D semantic visualization and a structured learning map for children.",
+      "projects": [
+        {
+          "name": "语言星系 / Language Galaxy",
+          "url": "https://glove.theory-a.com",
+          "summary": "Places word embeddings in a 3D space so users can inspect how words distribute and relate in semantic space.",
+          "id": "david-jiang-project-01",
+          "link_id": "link-006"
+        },
+        {
+          "name": "孩子要学的一切",
+          "url": "https://curriculum.theory-a.com",
+          "summary": "A learning map for ages 4–14 with 1,083 knowledge points across 13 subjects and 2,071 prerequisite relationships; based on UK/US curricula and compared with China's 2022 compulsory-education curriculum standards. Each point includes a question parents can use to check understanding; progress is local and the product avoids streaks, points, leaderboards and push notifications.",
+          "id": "david-jiang-project-02",
+          "link_id": "link-007"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "语言星系",
+          "summary": "Presented a 3D visualization of word vectors, letting people explore how words are distributed in semantic space.",
+          "link_ids": [
+            "link-006"
+          ]
+        },
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "孩子要学的一切",
+          "summary": "Presented a structured learning map for children aged 4–14: 1,083 knowledge points, 13 subjects and 2,071 prerequisite links, with parent-facing check questions and locally stored progress.",
+          "link_ids": [
+            "link-007"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-005",
+        "link-006",
+        "link-007"
+      ]
+    },
+    {
+      "id": "junwei",
+      "name": "Junwei",
+      "aliases": [],
+      "tags": [
+        "generative_3d",
+        "natural_language_interfaces",
+        "creative_tools",
+        "3d_scene_generation"
+      ],
+      "avatar": null,
+      "description": "Presented a natural-language interface for generating and editing 3D scenes through APIs from major cloud providers.",
+      "projects": [
+        {
+          "name": "Natural-language 3D scene generation",
+          "url": "https://junwei.cool",
+          "summary": "Uses natural-language instructions and major-provider APIs to generate and edit 3D scenes in batches.",
+          "id": "junwei-project-01",
+          "link_id": "link-008"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "一句话生成和编辑 3D 场景",
+          "summary": "Demonstrated generating and editing 3D scenes from natural-language instructions by calling large cloud-provider APIs.",
+          "link_ids": [
+            "link-008"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-008"
+      ]
+    },
+    {
+      "id": "gloria-x",
+      "name": "Gloria X",
+      "aliases": [],
+      "tags": [
+        "AI_agents",
+        "agent_browsers",
+        "browser_automation",
+        "session_isolation"
+      ],
+      "avatar": null,
+      "description": "Presented browser infrastructure designed for AI agents, emphasizing isolated workspaces and reusable authenticated sessions.",
+      "projects": [
+        {
+          "name": "Ego Lite",
+          "url": "https://lite.ego.app",
+          "summary": "A lightweight browser for AI agents with isolated workspaces and reusable login sessions.",
+          "id": "gloria-x-project-01",
+          "link_id": "link-009"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "Ego Lite",
+          "summary": "Introduced a lightweight browser for AI agents, with isolated workspaces and reusable login state.",
+          "link_ids": [
+            "link-009"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-009"
+      ]
+    },
+    {
+      "id": "huajuan",
+      "name": "花卷",
+      "aliases": [],
+      "tags": [
+        "podcasts",
+        "media_discovery",
+        "content_curation",
+        "web_apps"
+      ],
+      "avatar": null,
+      "description": "Presented a lightweight visual directory for discovering interesting podcasts and jumping directly to listening platforms.",
+      "projects": [
+        {
+          "name": "播客封面展示网站",
+          "url": "https://podcasts-stamp.depykung.app",
+          "summary": "Collects podcast cover art in a browsable visual directory; clicking a cover opens the listening destination.",
+          "id": "huajuan-project-01",
+          "link_id": "link-011"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "播客封面展示网站",
+          "summary": "Shared a visual website that collects good podcast covers and lets visitors jump to listen with one click.",
+          "link_ids": [
+            "link-011"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-010",
+        "link-011"
+      ]
+    },
+    {
+      "id": "yang-yuntong",
+      "name": "杨云童",
+      "aliases": [
+        "yytyyf"
+      ],
+      "tags": [
+        "developer_tools",
+        "desktop_apps",
+        "API_key_management",
+        "vibe_coding",
+        "translation"
+      ],
+      "avatar": null,
+      "description": "Independent software maker whose projects span developer utilities, multi-project AI-assisted coding workflows and desktop translation interfaces.",
+      "projects": [
+        {
+          "name": "OpenTrends",
+          "url": "https://opentrends.io",
+          "summary": "A site for sharing product trends and independent-development ideas.",
+          "id": "yang-yuntong-project-01",
+          "link_id": "link-013"
+        },
+        {
+          "name": "KeyKeeper",
+          "url": "https://keykeeper.dev",
+          "summary": "A local API-key management tool intended to reduce the risk of key leakage.",
+          "id": "yang-yuntong-project-02",
+          "link_id": "link-014"
+        },
+        {
+          "name": "Transparent",
+          "url": null,
+          "summary": "A draggable transparent desktop window that translates content underneath it without intercepting clicks or typing; it uses macOS's built-in local translation model by default and synchronizes with scrolling.",
+          "id": "yang-yuntong-project-03",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "OpenTrends, KeyKeeper and multi-project vibe coding",
+          "summary": "Presented OpenTrends and KeyKeeper, then discussed coordinating context across multiple products while one person vibe-codes several projects.",
+          "link_ids": [
+            "link-013",
+            "link-014"
+          ]
+        },
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Transparent",
+          "summary": "Demonstrated a draggable transparent desktop overlay that translates the app underneath it, does not block interaction, and follows scrolling. The default translation engine is macOS's local model; the live demo showed some scrolling latency.",
+          "link_ids": []
+        }
+      ],
+      "link_ids": [
+        "link-012",
+        "link-013",
+        "link-014"
+      ]
+    },
+    {
+      "id": "haitao",
+      "name": "海涛",
+      "aliases": [
+        "Haitao",
+        "Haitao HU",
+        "Openhaitao"
+      ],
+      "tags": [
+        "AI_agents",
+        "agent_orchestration",
+        "iPhone_automation",
+        "open_source",
+        "personal_AI"
+      ],
+      "avatar": {
+        "url": "https://avatars.githubusercontent.com/u/236951346?s=64&v=4",
+        "source": "GitHub profile",
+        "verified": true,
+        "note": "Public GitHub avatar for Openhaitao; the GitHub profile identifies the account as Haitao HU."
+      },
+      "description": "Builder and technology investor interested in AI-agent systems and personal automation. His presentations moved from controlling an iPhone programmatically to delegating real-world work across parallel cloud agents.",
+      "public_profile_bio": "GitHub profile says he invests in technology and builds with AI agents; it lists Linear Capital and Shanghai.",
+      "projects": [
+        {
+          "name": "iPhone Use Pro",
+          "url": "https://github.com/Openhaitao/iphone-use-pro",
+          "summary": "Open-source control of a real iPhone from a Mac using AirPlay for screen mirroring and Bluetooth HID for mouse/keyboard input.",
+          "id": "haitao-project-01",
+          "link_id": "link-019"
+        },
+        {
+          "name": "Comma",
+          "url": "https://comma.surf",
+          "summary": "An AI assistant that presents one chat interface while dispatching requests as independent tasks to parallel agents operating cloud computers and connected apps such as email, Linear, Notion and GitHub; supports self-hosting and messaging interfaces.",
+          "id": "haitao-project-02",
+          "link_id": "link-020"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "iPhone Use Pro",
+          "summary": "Presented an open-source project for automating iPhone interaction by emulating a Bluetooth mouse/keyboard from a computer.",
+          "link_ids": [
+            "link-019"
+          ]
+        },
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Comma",
+          "summary": "Introduced an open-source AI assistant that decomposes a request into independent tasks and delegates them to parallel agents on cloud computers. Agents can work with email, Linear, Notion and GitHub; decisions requiring the user are queued for approval. The presenter framed task-oriented rather than session-oriented work as a possible next agent interface.",
+          "link_ids": [
+            "link-020",
+            "link-021"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-015",
+        "link-016",
+        "link-017",
+        "link-018",
+        "link-019",
+        "link-020",
+        "link-021"
+      ]
+    },
+    {
+      "id": "cassie",
+      "name": "Cassie",
+      "aliases": [
+        "Liang Yue",
+        "cassieliang6709"
+      ],
+      "tags": [
+        "consumer_apps",
+        "AI_learning",
+        "recommendation_systems",
+        "LLM_engineering",
+        "indie_software"
+      ],
+      "avatar": {
+        "url": "https://avatars.githubusercontent.com/u/196204516?s=64&v=4",
+        "source": "GitHub profile",
+        "verified": true,
+        "note": "Public GitHub avatar for cassieliang6709."
+      },
+      "description": "Product builder exploring consumer apps and AI-assisted learning. Her GitHub profile describes work on LLM, RAG and agent systems; event projects include a synchronized video diary, algorithm-learning videos and a customizable Bilibili feed.",
+      "public_profile_bio": "GitHub profile identifies the display name as Liang Yue and describes a focus on building AI systems (LLM, RAG, agents). It also links a portfolio, notes and LinkedIn.",
+      "projects": [
+        {
+          "name": "1day",
+          "url": null,
+          "summary": "An iOS app that records two-second clips from the front and rear cameras and lets friends see what everyone was doing at the same UTC moment.",
+          "id": "cassie-project-01",
+          "link_id": null
+        },
+        {
+          "name": "NudgeCode",
+          "url": "https://nudgecode.liangyue.site",
+          "summary": "An algorithm-learning tool that uses AI-generated instructional videos instead of relying only on long notes or quizzes.",
+          "id": "cassie-project-02",
+          "link_id": "link-026"
+        },
+        {
+          "name": "custombili",
+          "url": "https://custombili.liangyue.site",
+          "summary": "A customizable Bilibili recommendation feed using public interfaces and user-defined quality and recency filters.",
+          "id": "cassie-project-03",
+          "link_id": "link-027"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "1day",
+          "summary": "Presented an iOS app that records two-second simultaneous front- and rear-camera videos, allowing friends to compare what they were doing at the same UTC time.",
+          "link_ids": []
+        },
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "NudgeCode and custombili",
+          "summary": "Presented NudgeCode, which uses Claude-generated instructional videos to make algorithm study more engaging, and custombili, which lets users define their own Bilibili recommendation rules. The event notes compare an estimated $120 video-model workflow with about $2.20 for frame-by-frame generation using an LLM plus stitching.",
+          "link_ids": [
+            "link-026",
+            "link-027"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-022",
+        "link-023",
+        "link-024",
+        "link-025",
+        "link-026",
+        "link-027"
+      ]
+    },
+    {
+      "id": "cc",
+      "name": "CC",
+      "aliases": [],
+      "tags": [
+        "local_first",
+        "open_source",
+        "SaaS_alternatives",
+        "personal_tools",
+        "software_ownership"
+      ],
+      "avatar": null,
+      "description": "Interested in software that users can own and control. Presented local-first personal tools and an AI-assisted clean-room effort to recreate commercial SaaS products as self-hostable open-source alternatives.",
+      "projects": [
+        {
+          "name": "Local-first personal tools",
+          "url": null,
+          "summary": "A philosophy and set of tools that keep user data in local files under the user's control.",
+          "id": "cc-project-01",
+          "link_id": null
+        },
+        {
+          "name": "Occupy SaaS",
+          "url": "https://github.com/occupysaas",
+          "summary": "An AI-assisted clean-room recreation effort intended to produce free, self-hostable open-source alternatives to commercial SaaS products. The event notes mention ZeroAuthy as an Auth0 alternative and SalesCompel as a Salesforce alternative.",
+          "id": "cc-project-02",
+          "link_id": "link-029"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "Local-first personal tools",
+          "summary": "Discussed local-first tools that store personal data in local files so the user retains control.",
+          "link_ids": []
+        },
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Occupy SaaS",
+          "summary": "Presented an effort by developers to use AI for clean-room recreations of commercial SaaS products as free, self-hostable open-source alternatives. The event notes name ZeroAuthy and SalesCompel and raise the question of who will maintain the alternatives over time.",
+          "link_ids": [
+            "link-029"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-028",
+        "link-029"
+      ]
+    },
+    {
+      "id": "edward-luo",
+      "name": "Edward Luo",
+      "aliases": [],
+      "tags": [
+        "mobile_agents",
+        "iOS",
+        "vibe_coding",
+        "Mac_apps",
+        "developer_workflows"
+      ],
+      "avatar": null,
+      "description": "Presented a mobile agent-control concept and practical AI-assisted development lessons; also recommended a Mac utility built around recordings of real mechanical keyboards.",
+      "projects": [
+        {
+          "name": "Vibe Island for iOS",
+          "url": null,
+          "summary": "A mobile control center for AI agents; the talk also covered the presenter's vibe-coding workflow.",
+          "id": "edward-luo-project-01",
+          "link_id": null
+        },
+        {
+          "name": "Klack",
+          "url": "https://tryklack.com",
+          "summary": "A Mac app using recordings of real mechanical keyboard sounds.",
+          "id": "edward-luo-project-02",
+          "link_id": "link-031"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "Vibe Island iOS and Klack",
+          "summary": "Presented an iOS agent-control center and lessons from vibe-coding; recommended Klack, a Mac app using recordings of real mechanical keyboards.",
+          "link_ids": [
+            "link-031"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-030",
+        "link-031"
+      ]
+    },
+    {
+      "id": "sideway",
+      "name": "Sideway",
+      "aliases": [],
+      "tags": [
+        "indie_apps",
+        "consumer_products",
+        "pixel_art",
+        "neighborhood_discovery",
+        "product_design"
+      ],
+      "avatar": null,
+      "description": "Indie maker presenting a portfolio of small consumer applications, including a Pomodoro timer with collectible pixel pets and experiments around food logging, zines and neighborhood culture.",
+      "projects": [
+        {
+          "name": "PixPet",
+          "url": "https://pixpet.com.cn",
+          "summary": "A focus timer combining the Pomodoro technique with pixel-art pet collection.",
+          "id": "sideway-project-01",
+          "link_id": "link-033"
+        },
+        {
+          "name": "刺饭 Civa",
+          "url": null,
+          "summary": "A small application related to meal preparation and calorie tracking.",
+          "id": "sideway-project-02",
+          "link_id": null
+        },
+        {
+          "name": "Flipin",
+          "url": null,
+          "summary": "A small application for electronic zine layout and publishing.",
+          "id": "sideway-project-03",
+          "link_id": null
+        },
+        {
+          "name": "JoyBoy.Club",
+          "url": "https://joyboy.club",
+          "summary": "A project about neighborhood culture.",
+          "id": "sideway-project-04",
+          "link_id": "link-034"
+        },
+        {
+          "name": "Animals Nearby",
+          "url": null,
+          "summary": "A small application for discovering nearby animals.",
+          "id": "sideway-project-05",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "PixPet and indie app portfolio",
+          "summary": "Presented PixPet, a Pomodoro timer with pixel-pet collection, and a set of small apps covering food preparation/calorie tracking, electronic zines, neighborhood culture and nearby-animal discovery.",
+          "link_ids": [
+            "link-033",
+            "link-034"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-032",
+        "link-033",
+        "link-034"
+      ]
+    },
+    {
+      "id": "yi-chen",
+      "name": "以陈",
+      "aliases": [],
+      "tags": [
+        "wearable_computing",
+        "ambient_recording",
+        "speech_transcription",
+        "personal_knowledge"
+      ],
+      "avatar": null,
+      "description": "Presented an ambient recording and transcription workflow using Apple Watch for capture and local phone processing.",
+      "projects": [
+        {
+          "name": "AllDay",
+          "url": null,
+          "summary": "An AI recording app that records throughout the day via Apple Watch and transcribes locally on the phone; the event notes quoted a one-time price of RMB 68.",
+          "id": "yi-chen-project-01",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "AllDay",
+          "summary": "Presented an AI recording app that uses Apple Watch for all-day recording and performs transcription locally on the phone; the event notes stated a RMB 68 one-time purchase price.",
+          "link_ids": []
+        }
+      ],
+      "link_ids": [
+        "link-035"
+      ]
+    },
+    {
+      "id": "gou-yi",
+      "name": "勾以",
+      "aliases": [],
+      "tags": [
+        "food_tech",
+        "personalization",
+        "market_research",
+        "AI_services",
+        "restaurant_technology"
+      ],
+      "avatar": null,
+      "description": "Presented an AI service for restaurants that models customer taste preferences through questionnaires as a lower-cost alternative to conventional offline research.",
+      "projects": [
+        {
+          "name": "味觉数字孪生 / Ask Yumi",
+          "url": "https://askyumi.com",
+          "summary": "An AI service for restaurant businesses that creates a customer's taste-preference profile from questionnaires, aiming to reduce the cost of offline market research.",
+          "id": "gou-yi-project-01",
+          "link_id": "link-037"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "味觉数字孪生",
+          "summary": "Presented an AI service for restaurants that uses questionnaires to create a digital twin of customer taste preferences, potentially replacing more expensive offline research.",
+          "link_ids": [
+            "link-037"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-036",
+        "link-037"
+      ]
+    },
+    {
+      "id": "wentao",
+      "name": "Wentao",
+      "aliases": [],
+      "tags": [
+        "cross_border_ecommerce",
+        "ecommerce_operations",
+        "AI_agents",
+        "automation",
+        "entrepreneurship"
+      ],
+      "avatar": null,
+      "description": "Presented an AI-assisted cross-border e-commerce operating system, including product selection, ERP and workflows for a Russian dropshipping model.",
+      "projects": [
+        {
+          "name": "Russian dropshipping workflow",
+          "url": null,
+          "summary": "Uses agents and Claude to build product-selection tools, ERP software and much of the operating workflow for cross-border e-commerce.",
+          "id": "wentao-project-01",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "AI-assisted Russian dropshipping",
+          "summary": "Explained a Russian-market dropshipping operation and the use of agents and Claude to build product-selection tooling, ERP and the broader operating workflow.",
+          "link_ids": []
+        }
+      ],
+      "link_ids": [
+        "link-038"
+      ]
+    },
+    {
+      "id": "caoyuan-zhang",
+      "name": "草原张",
+      "aliases": [
+        "Galaxy"
+      ],
+      "tags": [
+        "reading_tools",
+        "e_readers",
+        "creative_coding",
+        "human_computer_interaction",
+        "open_source"
+      ],
+      "avatar": null,
+      "description": "Technology enthusiast who shared a reading-device integration and later demonstrated a browser-based musical instrument controlled by hand gestures.",
+      "projects": [
+        {
+          "name": "weread.koplugin",
+          "url": "https://github.com/hanxinhao000/WeRead-KOReader-Plugin",
+          "summary": "A KOReader plugin connecting older Kindle/e-reader devices to WeRead, syncing reading progress, reading time and highlights.",
+          "id": "caoyuan-zhang-project-01",
+          "link_id": "link-040"
+        },
+        {
+          "name": "Gesture Synth",
+          "url": "https://gesture-synth-weld.vercel.app",
+          "summary": "A browser-based musical instrument built by Eric Wei; uses MediaPipe hand tracking and Web Audio. The presenter recommended and performed with it.",
+          "id": "caoyuan-zhang-project-02",
+          "link_id": "link-041"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "WeRead KOReader plugin",
+          "summary": "Recommended a KOReader plugin that connects older Kindle devices to WeRead and synchronizes reading progress, reading time and highlights.",
+          "link_ids": [
+            "link-040"
+          ]
+        },
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Gesture Synth",
+          "summary": "Recommended and performed with a browser instrument that tracks both hands using MediaPipe and synthesizes music with Web Audio; one hand selects chords while the other controls harmony and expression. The event notes attribute the project to Eric Wei.",
+          "link_ids": [
+            "link-041",
+            "link-042"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-039",
+        "link-040",
+        "link-041",
+        "link-042"
+      ]
+    },
+    {
+      "id": "feng-zhong",
+      "name": "冯中",
+      "aliases": [],
+      "tags": [
+        "game_development",
+        "AI_coding",
+        "indie_games",
+        "roguelike",
+        "tower_defense"
+      ],
+      "avatar": null,
+      "description": "Game designer who used GPT to build a playable independent-game demo despite having no programming background.",
+      "projects": [
+        {
+          "name": "Near-Earth asteroid defense game demo",
+          "url": null,
+          "summary": "A tower-defense roguelike prototype about defending Earth from near-Earth asteroids, developed over roughly a month with GPT.",
+          "id": "feng-zhong-project-01",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "Building an indie game with GPT",
+          "summary": "Shared the workflow and experience of using GPT to make a tower-defense roguelike demo about near-Earth asteroid defense, despite having no prior programming background.",
+          "link_ids": []
+        }
+      ],
+      "link_ids": []
+    },
+    {
+      "id": "tiantian",
+      "name": "天天",
+      "aliases": [],
+      "tags": [
+        "AI_creativity",
+        "metaphor",
+        "generative_writing",
+        "philosophy",
+        "fables"
+      ],
+      "avatar": null,
+      "description": "Explored whether AI can discover previously unnoticed relationships in the world and turn them into original metaphors and fables.",
+      "projects": [],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "Can AI create new metaphors?",
+          "summary": "Asked whether AI can identify relationships in reality that humans have not noticed and use those discoveries to create new metaphors and fables.",
+          "link_ids": []
+        }
+      ],
+      "link_ids": [
+        "link-043"
+      ]
+    },
+    {
+      "id": "imxiaorong",
+      "name": "imxiaorong",
+      "aliases": [],
+      "tags": [
+        "recommender_systems",
+        "personal_feeds",
+        "information_curation",
+        "personalization"
+      ],
+      "avatar": null,
+      "description": "Shared techniques for training a personalized Muse information feed.",
+      "projects": [
+        {
+          "name": "Personal Muse feed",
+          "url": null,
+          "summary": "A personalized recommendation feed trained or tuned to the user's own interests.",
+          "id": "imxiaorong-project-01",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "001",
+          "date": "2026-10-29",
+          "title": "Training a personal Muse feed",
+          "summary": "Shared experience and techniques for training a personal information feed using Muse.",
+          "link_ids": []
+        }
+      ],
+      "link_ids": [
+        "link-044"
+      ]
+    },
+    {
+      "id": "yuhang",
+      "name": "雨杭",
+      "aliases": [],
+      "tags": [
+        "Apple_TV",
+        "AI_coding",
+        "media_apps",
+        "video_playback",
+        "indie_development"
+      ],
+      "avatar": null,
+      "description": "Presented an Apple TV Bilibili client built by two developers using AI for coding and deployment despite neither having prior Apple TV app-development experience.",
+      "projects": [
+        {
+          "name": "Bilibili Apple TV client",
+          "url": null,
+          "summary": "An Apple TV app with multiple accounts, livestreams, phone casting, danmaku-keyword ad skipping, up to 256× playback and playback-position recovery; distributed through TestFlight beta at the time of the event.",
+          "id": "yuhang-project-01",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "AI-built Bilibili Apple TV client",
+          "summary": "Showed an Apple TV Bilibili client whose code and deployment were produced with AI. Features included multiple accounts, livestreaming, phone casting, ad skipping based on danmaku keywords, up to 256× playback and recovery after crashes; the app was in TestFlight beta.",
+          "link_ids": []
+        }
+      ],
+      "link_ids": [
+        "link-045"
+      ]
+    },
+    {
+      "id": "lucky",
+      "name": "Lucky",
+      "aliases": [],
+      "tags": [
+        "sleep_science",
+        "neurotechnology",
+        "wearable_hardware",
+        "human_performance",
+        "brain_stimulation"
+      ],
+      "avatar": null,
+      "description": "Shared a synthesis of Andrew Huberman's discussion of sleep and emerging neurotechnology for regulating sleep, focus and creativity.",
+      "projects": [],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Sleep and neurotechnology",
+          "summary": "Summarized a Huberman podcast on sleep and energy management, discussing experimental vestibular-stimulation sleep masks, temperature-regulating mattresses and vagus-nerve stimulation implants, then speculating about hardware that could monitor and modulate focus and creativity.",
+          "link_ids": [
+            "link-047"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-046",
+        "link-047"
+      ]
+    },
+    {
+      "id": "xiaohe",
+      "name": "小禾",
+      "aliases": [],
+      "tags": [
+        "health_travel",
+        "concierge_services",
+        "China_inbound",
+        "AI_service_operations",
+        "medical_tourism"
+      ],
+      "avatar": null,
+      "description": "Building a concierge service for foreigners visiting China, combining medical coordination with cultural and business experiences. The event notes describe AI-assisted proposal preparation with human review.",
+      "projects": [
+        {
+          "name": "医桥中国",
+          "url": "https://project-f73d2085.eazo.dev",
+          "summary": "Medical and cultural concierge services for foreigners visiting China: hospital coordination, medical accompaniment, traditional Chinese medicine experiences, business visits and city tours. Initial coverage includes Shanghai, Hangzhou and Nanjing.",
+          "id": "xiaohe-project-01",
+          "link_id": "link-049"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "医桥中国",
+          "summary": "Presented a concierge service for foreigners visiting China, covering medical coordination, accompaniment, TCM experiences, business visits and city tours in Shanghai, Hangzhou and Nanjing. AI drafts client plans, which are reviewed by a human before delivery; the presenter said the website was built with AI in about half an hour and the accompaniment service already had customers.",
+          "link_ids": [
+            "link-049"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-048",
+        "link-049"
+      ]
+    },
+    {
+      "id": "jj-ying",
+      "name": "JJ Ying",
+      "aliases": [],
+      "tags": [
+        "typography",
+        "LLM_evaluation",
+        "font_recommendation",
+        "creative_tools",
+        "multidimensional_scoring"
+      ],
+      "avatar": null,
+      "description": "Presented a method for using language models to score typefaces and recommend visually similar fonts for a font-preview product.",
+      "projects": [
+        {
+          "name": "Anyway.Fonts",
+          "url": "https://anyway.fm",
+          "summary": "A font-preview and similarity-recommendation tool. Fonts are scored on five axes: classical/modern, regular/free, soft/hard, geometric/handwritten and plain/decorative.",
+          "id": "jj-ying-project-01",
+          "link_id": "link-051"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "LLM-based font similarity scoring",
+          "summary": "Explained how LLMs can score fonts on five visual dimensions and recommend neighbors in that feature space. The model sees specimen pages rather than font names; different models and versions disagree, so prompts need calibrated reference examples. The event notes say Gemini handled large PDFs faster while OpenAI models were more accurate but more prone to timeouts.",
+          "link_ids": [
+            "link-051"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-050",
+        "link-051"
+      ]
+    },
+    {
+      "id": "chen-yana",
+      "name": "陈雅娜",
+      "aliases": [],
+      "tags": [
+        "social_networks",
+        "creator_economy",
+        "algorithmic_design",
+        "community_governance",
+        "platform_economics"
+      ],
+      "avatar": null,
+      "description": "Presented a social-network concept that replaces algorithmic recommendations with a curated creator set and explicit creator-to-creator endorsement or rebuttal.",
+      "projects": [
+        {
+          "name": "1K",
+          "url": "https://sidewave.link",
+          "summary": "A social app with 1,000 invited creators. Everyone else follows the full creator set; there is no recommendation algorithm. Creators publicly endorse or rebut each other's posts, replies from readers are separated into another layer, and platform revenue is divided into 1,000 shares associated with creator seats that rotate.",
+          "id": "chen-yana-project-01",
+          "link_id": "link-053"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "1K / Sidewave",
+          "summary": "Introduced a social app with 1,000 invited creators and no recommendation algorithm. Readers follow all creators; creators publicly endorse or rebut content, reader replies sit on a separate layer, and platform revenue is split into 1,000 shares with rotating seats.",
+          "link_ids": [
+            "link-053"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-052",
+        "link-053"
+      ]
+    },
+    {
+      "id": "xi-shengbo",
+      "name": "奚圣波",
+      "aliases": [],
+      "tags": [
+        "GEO",
+        "AI_search",
+        "SEO",
+        "content_distribution",
+        "website_discovery"
+      ],
+      "avatar": null,
+      "description": "Shared practical Generative Engine Optimization techniques for improving the chance that AI search systems discover and recommend a website.",
+      "projects": [
+        {
+          "name": "绘页",
+          "url": "https://huiye.org",
+          "summary": "A tool for turning text into illustrated story videos.",
+          "id": "xi-shengbo-project-01",
+          "link_id": "link-055"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "GEO for 绘页",
+          "summary": "Explained allowing AI crawlers in robots.txt, adding llms.txt with site purpose, target users, pricing and competitor differences, and prompting AI systems to visit the site. The event notes report 51 AI-origin visits to an older site over seven days, while noting that results are difficult to predict.",
+          "link_ids": [
+            "link-055"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-054",
+        "link-055",
+        "link-056"
+      ]
+    },
+    {
+      "id": "hu-jingting",
+      "name": "胡敬亭",
+      "aliases": [
+        "JTing"
+      ],
+      "tags": [
+        "generative_images",
+        "emoji",
+        "prompt_engineering",
+        "consumer_AI",
+        "mobile_apps"
+      ],
+      "avatar": null,
+      "description": "Presented a generative-image utility that combines multiple emoji into a single image, using structured prompts to improve consistency.",
+      "projects": [
+        {
+          "name": "EmojiFuse",
+          "url": "https://emojimix.brucehjt.workers.dev",
+          "summary": "Combines two to six emoji into a generated image, with style switching and prompt constraints for subject, environment and gesture. The event notes said the web version required a proxy in mainland China, Android was available and iOS was unfinished.",
+          "id": "hu-jingting-project-01",
+          "link_id": "link-059"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "EmojiFuse",
+          "summary": "Demonstrated a text-to-image tool that merges two to six emoji into one image. Structured prompt rules constrain the main subject, environment and gesture to improve consistency; the event notes described Android availability and an unfinished iOS version.",
+          "link_ids": [
+            "link-059",
+            "link-058"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-057",
+        "link-058",
+        "link-059"
+      ]
+    },
+    {
+      "id": "peter-lei",
+      "name": "Peter Lei",
+      "aliases": [
+        "Peterleixx"
+      ],
+      "tags": [
+        "agentic_research",
+        "machine_learning",
+        "benchmark_driven_development",
+        "model_ensembles",
+        "AI_engineering"
+      ],
+      "avatar": {
+        "url": "https://avatars.githubusercontent.com/u/80127946?s=64&v=4",
+        "source": "GitHub profile",
+        "verified": true,
+        "note": "Public GitHub profile avatar; appears to be GitHub's default identicon rather than a personal portrait."
+      },
+      "description": "Presented an agent-driven approach to algorithm research, using measurable benchmarks, tool access and ensembles of public models to work around limited compute.",
+      "projects": [
+        {
+          "name": "AI-generated image / Photoshop-trace detector",
+          "url": null,
+          "summary": "A model developed through an agent-driven research workflow over roughly two days on a MacBook, according to the presenter.",
+          "id": "peter-lei-project-01",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Agent-driven algorithm research",
+          "summary": "Described using an AI agent to research and build an image-generation/Photoshop-trace detection model. The proposed workflow: define a measurable benchmark, expose inference capabilities as tools, and use weighted ensembles of public models when compute is insufficient for training. The claimed comparison with a senior scientist's two months of work is the presenter's report, not independently validated.",
+          "link_ids": []
+        }
+      ],
+      "link_ids": [
+        "link-060"
+      ]
+    },
+    {
+      "id": "colleen",
+      "name": "Colleen",
+      "aliases": [
+        "Kejing Y."
+      ],
+      "tags": [
+        "AI_marketing",
+        "MCP",
+        "growth_analytics",
+        "social_data",
+        "multi_agent_evaluation"
+      ],
+      "avatar": null,
+      "description": "Presented an MCP-connected marketing and growth platform for AI clients, with social-platform data collection, market research, customer acquisition and brand analysis.",
+      "projects": [
+        {
+          "name": "SpringBrand",
+          "url": "https://springbrand.ai",
+          "summary": "An MCP-connected marketing/growth platform for Claude, ChatGPT and Cursor, offering market research, lead generation, social data collection and brand analysis.",
+          "id": "colleen-project-01",
+          "link_id": "link-062"
+        },
+        {
+          "name": "LLM poker and Mahjong demonstrations",
+          "url": null,
+          "summary": "A demonstration of multiple language models playing poker and Mahjong to compare their behavior.",
+          "id": "colleen-project-02",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "SpringBrand and multi-model games",
+          "summary": "Introduced an MCP platform that connects to Claude, ChatGPT and Cursor for research, lead generation and content workflows, including data from Xiaohongshu and Weibo. Also demonstrated multiple LLMs playing poker and Mahjong to compare behavior. The event notes linked a sample Teamily growth analysis based on public data.",
+          "link_ids": [
+            "link-062"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-061",
+        "link-062"
+      ]
+    },
+    {
+      "id": "sima-guang-za-gang",
+      "name": "司马光砸缸",
+      "aliases": [],
+      "tags": [
+        "prompt_engineering",
+        "image_generation",
+        "creative_workflows",
+        "education_content",
+        "reusable_templates"
+      ],
+      "avatar": null,
+      "description": "Shared a modular, highly iterated prompt system for producing consistent illustrations for a paid course about Zizhi Tongjian.",
+      "projects": [
+        {
+          "name": "Zizhi Tongjian course illustration prompt system",
+          "url": "https://smg.fm",
+          "summary": "A reusable prompt broken into modules for style, texture, technique, palette, characters and scenes; the story content is the main changing input.",
+          "id": "sima-guang-za-gang-project-01",
+          "link_id": "link-064"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Reusable illustration prompt for 资治通鉴",
+          "summary": "Shared a prompt system refined over 100+ iterations across nearly a month for illustrations accompanying a paid course on Zizhi Tongjian. It modularizes style, texture, technique, color, characters and scenes; the event notes report a success rate above 90% in the presenter's workflow.",
+          "link_ids": [
+            "link-064"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-063",
+        "link-064"
+      ]
+    },
+    {
+      "id": "0xinhua",
+      "name": "0xinhua",
+      "aliases": [],
+      "tags": [
+        "GEO",
+        "AI_search",
+        "ChatGPT_discovery",
+        "social_publishing",
+        "MCP"
+      ],
+      "avatar": null,
+      "description": "Presented reverse-engineering techniques for understanding ChatGPT product recommendations and practical GEO tactics; also builds tools for social publishing.",
+      "projects": [
+        {
+          "name": "TwitterShots",
+          "url": "https://twittershots.com",
+          "summary": "A tool for creating screenshots of posts.",
+          "id": "0xinhua-project-01",
+          "link_id": "link-066"
+        },
+        {
+          "name": "PostPiper",
+          "url": "https://www.postpiper.ai",
+          "summary": "An MCP-enabled tool for drafting, scheduling and publishing posts to X and LinkedIn from AI-agent workflows.",
+          "id": "0xinhua-project-02",
+          "link_id": "link-067"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Reverse-engineering ChatGPT recommendations and GEO",
+          "summary": "Explained how to inspect the web app's network traffic and conversation JSON to identify expanded search terms and visited sites behind a ChatGPT answer. Shared content-structure tactics such as visible update dates, exact numbers, comparison tables and structured summaries; also introduced TwitterShots and PostPiper.",
+          "link_ids": [
+            "link-066",
+            "link-067"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-065",
+        "link-066",
+        "link-067"
+      ]
+    },
+    {
+      "id": "sean-shao",
+      "name": "Sean Shao",
+      "aliases": [
+        "hopsken"
+      ],
+      "tags": [
+        "context_engineering",
+        "prompting",
+        "agent_behavior",
+        "mixture_of_experts",
+        "LLM_workflows"
+      ],
+      "avatar": null,
+      "description": "Shared a role-framing prompt for agents and a hypothesis about how it activates domain-specific expertise in mixture-of-experts models; also discussed context overflow signals.",
+      "projects": [],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "Role-framing prompt for agents",
+          "summary": "Recommended prompting an agent to identify the relevant discipline and begin from the standards of a senior practitioner in that role. The presenter theorized that this can activate relevant expertise in MoE models; loss of the role framing was described as a possible sign that context is nearing its limit.",
+          "link_ids": [
+            "link-069"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-068",
+        "link-069"
+      ]
+    },
+    {
+      "id": "hao",
+      "name": "Hao",
+      "aliases": [
+        "haopsy"
+      ],
+      "tags": [
+        "AI_consulting",
+        "workflow_automation",
+        "PowerPoint",
+        "reusable_skills",
+        "professional_services"
+      ],
+      "avatar": null,
+      "description": "Presented an AI-native consulting and presentation-production workflow built from reusable skills and specialized processes; also open-sourced a brand-logo discovery tool.",
+      "projects": [
+        {
+          "name": "GoodInsight.ai",
+          "url": "https://goodinsight.ai",
+          "summary": "AI-enabled consulting and professional report/PPT production.",
+          "id": "hao-project-01",
+          "link_id": "link-070"
+        },
+        {
+          "name": "Brand Logo Finder",
+          "url": "https://github.com/haopsy/brand-logo-finder",
+          "summary": "An open-source tool for collecting official brand logos while preserving source evidence and routing uncertain matches to human review.",
+          "id": "hao-project-02",
+          "link_id": "link-071"
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "AI-native consulting and Brand Logo Finder",
+          "summary": "Explained how reusable AI skills and workflow specialization reduced a consulting/PPT delivery cycle from about two weeks to two days. The presenter reported AI doing about 95% of execution and delivery prices falling to roughly one-third to one-fifth of previous levels; also introduced an open-source, source-traceable brand-logo finder.",
+          "link_ids": [
+            "link-070",
+            "link-071"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-070",
+        "link-071"
+      ]
+    },
+    {
+      "id": "yorkson",
+      "name": "Yorkson",
+      "aliases": [
+        "Yorks0n"
+      ],
+      "tags": [
+        "personal_knowledge_management",
+        "academic_search",
+        "Zotero",
+        "RSS",
+        "recommendation_systems"
+      ],
+      "avatar": {
+        "url": "https://avatars.githubusercontent.com/u/24605974?v=4",
+        "source": "GitHub profile",
+        "verified": true,
+        "note": "Public GitHub avatar for Yorks0n."
+      },
+      "description": "Builder of personal information and research-discovery systems. Presented Zotero-based academic-paper recommendations and a multi-agent news-reading workflow.",
+      "projects": [
+        {
+          "name": "ZotWatch",
+          "url": "https://github.com/Yorks0n/ZotWatch",
+          "summary": "Builds a personal research-interest model from a Zotero library and recommends up to 30 new papers per day; uses embeddings for initial retrieval and an LLM for final selection, with web and RSS delivery.",
+          "id": "yorkson-project-01",
+          "link_id": "link-074"
+        },
+        {
+          "name": "Multi-agent news reader",
+          "url": null,
+          "summary": "Uses separate bots to summarize Hacker News, Reddit and X, then a further bot selects items for deeper reading and generates HTML for a read-it-later workflow.",
+          "id": "yorkson-project-02",
+          "link_id": null
+        }
+      ],
+      "event_recap": [
+        {
+          "event_id": "002",
+          "date": "2026-11-05",
+          "title": "ZotWatch and agentic news curation",
+          "summary": "Presented ZotWatch, which builds a personal interest model from a Zotero library and recommends up to 30 new papers per day. A lightweight embedding model narrows thousands of papers to dozens before an LLM makes the final selection. Also described a similar multi-bot pipeline for aggregating and filtering news from Hacker News, Reddit and X.",
+          "link_ids": [
+            "link-074",
+            "link-075"
+          ]
+        }
+      ],
+      "link_ids": [
+        "link-072",
+        "link-073",
+        "link-074",
+        "link-075"
+      ]
+    }
+  ],
+  "data_notes": [
+    "The event pages are the primary source for attendee names, presentation summaries and links.",
+    "Descriptions and tags are editorial summaries inferred from the presentations, not verified job titles.",
+    "A null avatar means no individual avatar was verified in the sources checked; group photos and presentation screenshots were not repurposed as profile portraits.",
+    "Only four public GitHub profile avatars were verified and included. Some are identicons rather than personal photographs.",
+    "Some presentations describe prototypes, demos or recommendations rather than products owned by the presenter; the project summaries preserve that distinction where known.",
+    "Claims and metrics reported during talks are attributed to the event notes or presenter and are not independently validated.",
+    "All person, project, event-source and event-recap URLs are normalized into the top-level links array. People and projects reference these records by link_ids/link_id.",
+    "Each link has a stable id, canonical_url slot, thumbnail_url convenience field, and structured Open Graph, Twitter Card and favicon preview metadata.",
+    "Preview metadata fields are currently null with status=not_fetched unless explicitly populated; populate them with a server-side metadata fetcher. Do not infer a thumbnail from a page title or avatar."
+  ],
+  "sources": [
+    {
+      "label": "Tab Thursday #001",
+      "url": "https://tabthursday.com/001"
+    },
+    {
+      "label": "Tab Thursday #002",
+      "url": "https://tabthursday.com/002"
+    },
+    {
+      "label": "Cassie GitHub profile",
+      "url": "https://github.com/cassieliang6709"
+    },
+    {
+      "label": "Haitao GitHub profile",
+      "url": "https://github.com/Openhaitao"
+    },
+    {
+      "label": "Peter Lei GitHub profile",
+      "url": "https://github.com/Peterleixx"
+    },
+    {
+      "label": "Yorkson GitHub profile",
+      "url": "https://github.com/Yorks0n"
+    }
+  ],
+  "links": [
+    {
+      "id": "link-001",
+      "url": "https://owenyoung.com",
+      "canonical_url": null,
+      "label": "Personal website",
+      "type": "personal_site",
+      "person_ids": [
+        "owen"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-002",
+      "url": "https://goodenough.us",
+      "canonical_url": null,
+      "label": "Good Enough",
+      "type": "project",
+      "person_ids": [
+        "owen"
+      ],
+      "project_ids": [
+        "owen-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-003",
+      "url": "https://netnewswire.com",
+      "canonical_url": null,
+      "label": "NetNewsWire",
+      "type": "tool",
+      "person_ids": [
+        "owen"
+      ],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-004",
+      "url": "https://miniflux.app",
+      "canonical_url": null,
+      "label": "Miniflux",
+      "type": "tool",
+      "person_ids": [
+        "owen"
+      ],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-005",
+      "url": "https://dj.theory-a.com",
+      "canonical_url": null,
+      "label": "Personal website",
+      "type": "personal_site",
+      "person_ids": [
+        "david-jiang"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-006",
+      "url": "https://glove.theory-a.com",
+      "canonical_url": null,
+      "label": "语言星系 / Language Galaxy",
+      "type": "project",
+      "person_ids": [
+        "david-jiang"
+      ],
+      "project_ids": [
+        "david-jiang-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-007",
+      "url": "https://curriculum.theory-a.com",
+      "canonical_url": null,
+      "label": "孩子要学的一切",
+      "type": "project",
+      "person_ids": [
+        "david-jiang"
+      ],
+      "project_ids": [
+        "david-jiang-project-02"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-008",
+      "url": "https://junwei.cool",
+      "canonical_url": null,
+      "label": "Personal website / project",
+      "type": "personal_site",
+      "person_ids": [
+        "junwei"
+      ],
+      "project_ids": [
+        "junwei-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-009",
+      "url": "https://lite.ego.app",
+      "canonical_url": null,
+      "label": "Ego Lite",
+      "type": "project",
+      "person_ids": [
+        "gloria-x"
+      ],
+      "project_ids": [
+        "gloria-x-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-010",
+      "url": "https://okjk.co/d7Hm5n",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "huajuan"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-011",
+      "url": "https://podcasts-stamp.depykung.app",
+      "canonical_url": null,
+      "label": "播客封面展示网站",
+      "type": "project",
+      "person_ids": [
+        "huajuan"
+      ],
+      "project_ids": [
+        "huajuan-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-012",
+      "url": "https://yytyyf.com",
+      "canonical_url": null,
+      "label": "Personal website",
+      "type": "personal_site",
+      "person_ids": [
+        "yang-yuntong"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-013",
+      "url": "https://opentrends.io",
+      "canonical_url": null,
+      "label": "OpenTrends",
+      "type": "project",
+      "person_ids": [
+        "yang-yuntong"
+      ],
+      "project_ids": [
+        "yang-yuntong-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-014",
+      "url": "https://keykeeper.dev",
+      "canonical_url": null,
+      "label": "KeyKeeper",
+      "type": "project",
+      "person_ids": [
+        "yang-yuntong"
+      ],
+      "project_ids": [
+        "yang-yuntong-project-02"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-015",
+      "url": "https://haitao.wiki",
+      "canonical_url": null,
+      "label": "haitao.wiki",
+      "type": "personal_site",
+      "person_ids": [
+        "haitao"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-016",
+      "url": "https://github.com/Openhaitao",
+      "canonical_url": null,
+      "label": "GitHub profile",
+      "type": "github",
+      "person_ids": [
+        "haitao"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-017",
+      "url": "https://x.com/ChatHHT",
+      "canonical_url": null,
+      "label": "X",
+      "type": "social",
+      "person_ids": [
+        "haitao"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-018",
+      "url": "https://www.linkedin.com/in/haitao-hu-71950a2b7",
+      "canonical_url": null,
+      "label": "LinkedIn",
+      "type": "professional_profile",
+      "person_ids": [
+        "haitao"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-019",
+      "url": "https://github.com/Openhaitao/iphone-use-pro",
+      "canonical_url": null,
+      "label": "iPhone Use Pro",
+      "type": "project",
+      "person_ids": [
+        "haitao"
+      ],
+      "project_ids": [
+        "haitao-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-020",
+      "url": "https://comma.surf",
+      "canonical_url": null,
+      "label": "Comma",
+      "type": "project",
+      "person_ids": [
+        "haitao"
+      ],
+      "project_ids": [
+        "haitao-project-02"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-021",
+      "url": "https://github.com/AFK-surf/Comma",
+      "canonical_url": null,
+      "label": "Comma source repository",
+      "type": "github",
+      "person_ids": [
+        "haitao"
+      ],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-022",
+      "url": "https://github.com/cassieliang6709",
+      "canonical_url": null,
+      "label": "GitHub profile",
+      "type": "github",
+      "person_ids": [
+        "cassie"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-023",
+      "url": "https://liangyue.site",
+      "canonical_url": null,
+      "label": "Portfolio",
+      "type": "personal_site",
+      "person_ids": [
+        "cassie"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-024",
+      "url": "https://notes.liangyue.site",
+      "canonical_url": null,
+      "label": "Notes",
+      "type": "writing",
+      "person_ids": [
+        "cassie"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-025",
+      "url": "https://www.linkedin.com/in/yue-liang-195960384",
+      "canonical_url": null,
+      "label": "LinkedIn",
+      "type": "professional_profile",
+      "person_ids": [
+        "cassie"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-026",
+      "url": "https://nudgecode.liangyue.site",
+      "canonical_url": null,
+      "label": "NudgeCode",
+      "type": "project",
+      "person_ids": [
+        "cassie"
+      ],
+      "project_ids": [
+        "cassie-project-02"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-027",
+      "url": "https://custombili.liangyue.site",
+      "canonical_url": null,
+      "label": "custombili",
+      "type": "project",
+      "person_ids": [
+        "cassie"
+      ],
+      "project_ids": [
+        "cassie-project-03"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-028",
+      "url": "https://xlrocket.blog",
+      "canonical_url": null,
+      "label": "xlrocket.blog",
+      "type": "personal_site",
+      "person_ids": [
+        "cc"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-029",
+      "url": "https://github.com/occupysaas",
+      "canonical_url": null,
+      "label": "Occupy SaaS",
+      "type": "project",
+      "person_ids": [
+        "cc"
+      ],
+      "project_ids": [
+        "cc-project-02"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-030",
+      "url": "https://jike.city/edwardluo",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "edward-luo"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-031",
+      "url": "https://tryklack.com",
+      "canonical_url": null,
+      "label": "Klack",
+      "type": "project",
+      "person_ids": [
+        "edward-luo"
+      ],
+      "project_ids": [
+        "edward-luo-project-02"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-032",
+      "url": "https://www.xiaohongshu.com/user/profile/60ba52ba0000000001008d5d",
+      "canonical_url": null,
+      "label": "小红书 profile",
+      "type": "social",
+      "person_ids": [
+        "sideway"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-033",
+      "url": "https://pixpet.com.cn",
+      "canonical_url": null,
+      "label": "PixPet",
+      "type": "project",
+      "person_ids": [
+        "sideway"
+      ],
+      "project_ids": [
+        "sideway-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-034",
+      "url": "https://joyboy.club",
+      "canonical_url": null,
+      "label": "JoyBoy.Club",
+      "type": "project",
+      "person_ids": [
+        "sideway"
+      ],
+      "project_ids": [
+        "sideway-project-04"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-035",
+      "url": "https://xhslink.cn/o/6CdhpsGK4H7",
+      "canonical_url": null,
+      "label": "小红书 profile",
+      "type": "social",
+      "person_ids": [
+        "yi-chen"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-036",
+      "url": "https://xhslink.cn/o/7r96tyl9HsH",
+      "canonical_url": null,
+      "label": "小红书 profile",
+      "type": "social",
+      "person_ids": [
+        "gou-yi"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-037",
+      "url": "https://askyumi.com",
+      "canonical_url": null,
+      "label": "味觉数字孪生 / Ask Yumi",
+      "type": "project",
+      "person_ids": [
+        "gou-yi"
+      ],
+      "project_ids": [
+        "gou-yi-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-038",
+      "url": "https://okjk.co/lgM9bS",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "wentao"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-039",
+      "url": "https://jike.city/galaxy",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "caoyuan-zhang"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-040",
+      "url": "https://github.com/hanxinhao000/WeRead-KOReader-Plugin",
+      "canonical_url": null,
+      "label": "weread.koplugin",
+      "type": "project",
+      "person_ids": [
+        "caoyuan-zhang"
+      ],
+      "project_ids": [
+        "caoyuan-zhang-project-01"
+      ],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-041",
+      "url": "https://gesture-synth-weld.vercel.app",
+      "canonical_url": null,
+      "label": "Gesture Synth demo",
+      "type": "project",
+      "person_ids": [
+        "caoyuan-zhang"
+      ],
+      "project_ids": [
+        "caoyuan-zhang-project-02"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-042",
+      "url": "https://github.com/ericwei97-cloud/gesture-synth",
+      "canonical_url": null,
+      "label": "Gesture Synth source",
+      "type": "github",
+      "person_ids": [
+        "caoyuan-zhang"
+      ],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-043",
+      "url": "https://okjk.co/ojWTx1",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "tiantian"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-044",
+      "url": "https://okjk.co/NwGumt",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "imxiaorong"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-045",
+      "url": "https://okjk.co/hC0GE1",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "yuhang"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-046",
+      "url": "https://okjk.co/eYNusZ",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "lucky"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-047",
+      "url": "https://www.youtube.com",
+      "canonical_url": null,
+      "label": "Andrew Huberman podcast",
+      "type": "media",
+      "person_ids": [
+        "lucky"
+      ],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-048",
+      "url": "https://project-e9844dc2.eazo.dev",
+      "canonical_url": null,
+      "label": "Personal website",
+      "type": "personal_site",
+      "person_ids": [
+        "xiaohe"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-049",
+      "url": "https://project-f73d2085.eazo.dev",
+      "canonical_url": null,
+      "label": "医桥中国",
+      "type": "project",
+      "person_ids": [
+        "xiaohe"
+      ],
+      "project_ids": [
+        "xiaohe-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-050",
+      "url": "https://twitter.com/jjying",
+      "canonical_url": null,
+      "label": "X / Twitter",
+      "type": "social",
+      "person_ids": [
+        "jj-ying"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-051",
+      "url": "https://anyway.fm",
+      "canonical_url": null,
+      "label": "Anyway.Fonts presentation",
+      "type": "project",
+      "person_ids": [
+        "jj-ying"
+      ],
+      "project_ids": [
+        "jj-ying-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-052",
+      "url": "https://xhslink.cn/o/3v8TE31vl4g",
+      "canonical_url": null,
+      "label": "小红书 profile",
+      "type": "social",
+      "person_ids": [
+        "chen-yana"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-053",
+      "url": "https://sidewave.link",
+      "canonical_url": null,
+      "label": "Sidewave / 1K",
+      "type": "project",
+      "person_ids": [
+        "chen-yana"
+      ],
+      "project_ids": [
+        "chen-yana-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-054",
+      "url": "https://x.com/xishengbo",
+      "canonical_url": null,
+      "label": "X / Twitter",
+      "type": "social",
+      "person_ids": [
+        "xi-shengbo"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-055",
+      "url": "https://huiye.org",
+      "canonical_url": null,
+      "label": "绘页",
+      "type": "project",
+      "person_ids": [
+        "xi-shengbo"
+      ],
+      "project_ids": [
+        "xi-shengbo-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-056",
+      "url": "https://x.com",
+      "canonical_url": null,
+      "label": "GEO tutorial referenced in talk",
+      "type": "reference",
+      "person_ids": [
+        "xi-shengbo"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-057",
+      "url": "https://okjk.co/3qic9O",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "hu-jingting"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-058",
+      "url": "https://github.com/hujingting",
+      "canonical_url": null,
+      "label": "GitHub profile",
+      "type": "github",
+      "person_ids": [
+        "hu-jingting"
+      ],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-059",
+      "url": "https://emojimix.brucehjt.workers.dev",
+      "canonical_url": null,
+      "label": "EmojiFuse",
+      "type": "project",
+      "person_ids": [
+        "hu-jingting"
+      ],
+      "project_ids": [
+        "hu-jingting-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-060",
+      "url": "https://github.com/Peterleixx",
+      "canonical_url": null,
+      "label": "GitHub profile",
+      "type": "github",
+      "person_ids": [
+        "peter-lei"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-061",
+      "url": "https://linkedin.com/in/kejing-y",
+      "canonical_url": null,
+      "label": "LinkedIn",
+      "type": "professional_profile",
+      "person_ids": [
+        "colleen"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-062",
+      "url": "https://springbrand.ai",
+      "canonical_url": null,
+      "label": "SpringBrand",
+      "type": "project",
+      "person_ids": [
+        "colleen"
+      ],
+      "project_ids": [
+        "colleen-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-063",
+      "url": "https://okjk.co/f9FyNU",
+      "canonical_url": null,
+      "label": "即刻 profile",
+      "type": "social",
+      "person_ids": [
+        "sima-guang-za-gang"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-064",
+      "url": "https://smg.fm",
+      "canonical_url": null,
+      "label": "smg.fm",
+      "type": "personal_site",
+      "person_ids": [
+        "sima-guang-za-gang"
+      ],
+      "project_ids": [
+        "sima-guang-za-gang-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-065",
+      "url": "https://x.com/0xinhua",
+      "canonical_url": null,
+      "label": "X / Twitter",
+      "type": "social",
+      "person_ids": [
+        "0xinhua"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-066",
+      "url": "https://twittershots.com",
+      "canonical_url": null,
+      "label": "TwitterShots",
+      "type": "project",
+      "person_ids": [
+        "0xinhua"
+      ],
+      "project_ids": [
+        "0xinhua-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-067",
+      "url": "https://www.postpiper.ai",
+      "canonical_url": null,
+      "label": "PostPiper",
+      "type": "project",
+      "person_ids": [
+        "0xinhua"
+      ],
+      "project_ids": [
+        "0xinhua-project-02"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-068",
+      "url": "https://x.com/hopsken",
+      "canonical_url": null,
+      "label": "X / Twitter",
+      "type": "social",
+      "person_ids": [
+        "sean-shao"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-069",
+      "url": "https://tab-002-prompt-jadd.pages.grok.bot",
+      "canonical_url": null,
+      "label": "Tab #002 prompt slides",
+      "type": "slides",
+      "person_ids": [
+        "sean-shao"
+      ],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-070",
+      "url": "https://goodinsight.ai",
+      "canonical_url": null,
+      "label": "GoodInsight.ai",
+      "type": "personal_site",
+      "person_ids": [
+        "hao"
+      ],
+      "project_ids": [
+        "hao-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-071",
+      "url": "https://github.com/haopsy/brand-logo-finder",
+      "canonical_url": null,
+      "label": "Brand Logo Finder",
+      "type": "github",
+      "person_ids": [
+        "hao"
+      ],
+      "project_ids": [
+        "hao-project-02"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-072",
+      "url": "https://blog.yorks0n.com",
+      "canonical_url": null,
+      "label": "Personal blog",
+      "type": "personal_site",
+      "person_ids": [
+        "yorkson"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-073",
+      "url": "https://github.com/Yorks0n",
+      "canonical_url": null,
+      "label": "GitHub profile",
+      "type": "github",
+      "person_ids": [
+        "yorkson"
+      ],
+      "project_ids": [],
+      "event_ids": [],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-074",
+      "url": "https://github.com/Yorks0n/ZotWatch",
+      "canonical_url": null,
+      "label": "ZotWatch repository",
+      "type": "project",
+      "person_ids": [
+        "yorkson"
+      ],
+      "project_ids": [
+        "yorkson-project-01"
+      ],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-075",
+      "url": "https://zotwatch.yorks0n.com",
+      "canonical_url": null,
+      "label": "ZotWatch web app",
+      "type": "project",
+      "person_ids": [
+        "yorkson"
+      ],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-076",
+      "url": "https://tabthursday.com/001",
+      "canonical_url": null,
+      "label": "Tab 星期四 #001 分享汇总",
+      "type": "event_source",
+      "person_ids": [],
+      "project_ids": [],
+      "event_ids": [
+        "001"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    },
+    {
+      "id": "link-077",
+      "url": "https://tabthursday.com/002",
+      "canonical_url": null,
+      "label": "Tab 星期四 #002 分享汇总",
+      "type": "event_source",
+      "person_ids": [],
+      "project_ids": [],
+      "event_ids": [
+        "002"
+      ],
+      "thumbnail_url": null,
+      "preview": {
+        "image_url": null,
+        "image_alt": null,
+        "title": null,
+        "description": null,
+        "site_name": null,
+        "favicon_url": null,
+        "card_type": null,
+        "image_source": null,
+        "status": "not_fetched",
+        "fetched_at": null,
+        "open_graph": {
+          "title": null,
+          "description": null,
+          "site_name": null,
+          "url": null,
+          "type": null,
+          "image_url": null,
+          "image_alt": null,
+          "image_width": null,
+          "image_height": null
+        },
+        "twitter_card": {
+          "card": null,
+          "title": null,
+          "description": null,
+          "image_url": null,
+          "image_alt": null
+        }
+      }
+    }
+  ],
+  "link_preview_schema": {
+    "purpose": "Every external URL is a first-class link record, so cards can render link thumbnails and rich previews without scraping URLs in the UI.",
+    "rendering": {
+      "primary_thumbnail_field": "links[].thumbnail_url",
+      "fallback_thumbnail_field": "links[].preview.image_url",
+      "favicon_fallback_field": "links[].preview.favicon_url",
+      "display_title_field": "links[].preview.title",
+      "display_description_field": "links[].preview.description",
+      "display_site_name_field": "links[].preview.site_name"
+    },
+    "metadata_sources": {
+      "open_graph": [
+        "og:title",
+        "og:description",
+        "og:site_name",
+        "og:url",
+        "og:image",
+        "og:image:alt",
+        "og:image:width",
+        "og:image:height"
+      ],
+      "twitter_card": [
+        "twitter:card",
+        "twitter:title",
+        "twitter:description",
+        "twitter:image",
+        "twitter:image:alt"
+      ],
+      "favicon": [
+        "link[rel=icon]",
+        "link[rel=apple-touch-icon]",
+        "fallback /favicon.ico"
+      ]
+    },
+    "thumbnail_resolution_order": [
+      "og:image",
+      "twitter:image",
+      "favicon"
+    ],
+    "notes": [
+      "Open Graph metadata is published by the destination page; it is not embedded in the URL itself.",
+      "Use og:image as the general-purpose social preview image. Preserve twitter:image separately because a page can provide an X-specific override.",
+      "For a platform-specific X preview, prefer twitter_card.image_url and fall back to open_graph.image_url.",
+      "For Meta, LinkedIn and most generic link cards, prefer open_graph.image_url.",
+      "Resolve relative image URLs against the final page URL after redirects.",
+      "Fetch and parse metadata server-side; browser-only fetches are often blocked by cross-origin restrictions.",
+      "Do not treat a favicon as a social thumbnail; use it only as a small icon fallback.",
+      "A null thumbnail_url means metadata has not yet been fetched, not that the page has no preview image."
+    ],
+    "status_values": [
+      "not_fetched",
+      "found",
+      "no_metadata",
+      "blocked",
+      "fetch_failed"
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+body.thursday{overflow:auto;background:#edf3ed;color:#34483e;--orange:#367b6c;--muted:#718e83}
+.thursday #app{height:auto;min-height:100dvh;padding-bottom:78px;background-image:radial-gradient(#345e4910 .6px,transparent .6px);background-size:5px 5px;overflow:clip}
+.thursday [hidden]{display:none!important}
+.thursday header{z-index:5}
+.thursday .edition{color:#7c9184}
+.thursday .shuffle{background:#f7f7efb3;border-color:#cad8cb;color:#5f796e;font-size:11px}
+.thursday main{position:relative;z-index:2;min-height:calc(100dvh - 182px);padding-top:clamp(35px,8vh,100px)}
+.thursday .search-section{position:relative;top:auto;left:auto;transform:none;margin:0 auto;width:min(720px,90vw);z-index:3;pointer-events:auto}
+.thursday h1{margin:18px -20px 17px;font-size:clamp(42px,5.2vw,70px);color:#34483e}
+.thursday h1 em{color:#367b6c}
+.thursday .eyebrow{color:#6b8d7d}
+.thursday .intro{color:#7c9186;font-size:13px;line-height:1.7;margin-bottom:27px}
+.thursday .input-wrap{background:#fffef7ec;border-color:#d0dcd0;box-shadow:0 10px 35px #375d4910;height:65px;backdrop-filter:blur(12px)}
+.thursday .input-wrap:focus-within{border-color:#77a18c;box-shadow:0 5px 28px #375d4918}
+.thursday input{color:#34483e}
+.thursday input::placeholder{color:#95a195}
+.thursday .suggestions{flex-wrap:wrap;color:#7c9186}
+.thursday .suggestions button{background:#f6f8efe0;border-color:#cddbd0;color:#688276}
+.thursday .suggestions button:hover,.thursday .suggestions button.active{background:#dbeae0;border-color:#a6c4b3;color:#326751}
+.thursday #search-status{color:#728e81;font-size:11px;line-height:1.6;min-height:18px}
+.thursday #search-status.error{color:#a4533f}
+.water-light{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 13%,#fcfaefed 0%,#f5f6e999 28%,transparent 60%),radial-gradient(ellipse at 18% 88%,#97ccc96b,transparent 65%),radial-gradient(ellipse at 88% 68%,#bdd5ad66,transparent 60%),linear-gradient(#eff3e9 25%,#d5e9dd 65%,#a9d3cb);}
+.water-light::after{content:'';position:absolute;inset:35% -15% -15%;opacity:.4;background:repeating-radial-gradient(ellipse at 30% 60%,transparent 0 65px,#fbfff924 70px,#fcfff84d 72px,transparent 78px 138px);filter:blur(6px);transform:rotate(-15deg);animation:water-breathe 24s ease-in-out infinite alternate}
+#ocean{position:fixed;z-index:0;inset:110px 2vw 64px;pointer-events:none;min-height:180px;transition:opacity .6s}
+.swimmer{--size:155px;position:absolute;left:0;top:0;width:var(--size);height:var(--size);padding:0;border-radius:50%;pointer-events:auto;opacity:var(--depth);transition:opacity .2s;will-change:transform;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;background:#ffffff12;border:1px solid #ffffff80;backdrop-filter:blur(6px) saturate(1.08);-webkit-backdrop-filter:blur(6px) saturate(1.08);box-shadow:0 3px 12px #244d4010}
+.person-avatar{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-radius:50%;font-family:"DM Sans",sans-serif;font-size:25px;line-height:1;letter-spacing:-1px;color:hsl(var(--avatar-hue) 30% 27%);background:radial-gradient(ellipse at 25% 15%,#ffffffbd,transparent 62%),radial-gradient(ellipse at 80% 90%,hsl(var(--avatar-hue) 36% 57%),hsl(var(--avatar-hue) 43% 83%) 76%);border:1px solid #ffffffb8;box-shadow:inset 0 2px 4px #fff9,inset 0 -7px 14px #345c4821}
+.avatar-initials{display:block;flex:none;white-space:nowrap;word-break:keep-all;overflow-wrap:normal;line-height:1.15;position:relative;z-index:0;font-weight:500;text-shadow:0 1px 1px #ffffff85}
+.swimmer .person-avatar{background:hsl(var(--avatar-hue) 38% 86% / .12);border:0;box-shadow:none}
+.swimmer .avatar-initials{font-size:calc(var(--size)*.22);font-weight:400;text-shadow:none}
+.swimmer .avatar-image{opacity:.85;pointer-events:none}
+.swimmer.dragging{cursor:grabbing;z-index:30!important;opacity:1}
+.swimmer.surfaced{border-color:#418c77;box-shadow:0 0 0 2px #418c7733}
+.avatar-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.swimmer:hover,.swimmer:focus-visible{opacity:1;filter:none;z-index:20!important}
+.swimmer-name{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);white-space:nowrap;font:11px 'DM Sans',sans-serif;background:#fffff3ed;padding:5px 9px;border-radius:10px;color:#416656;opacity:0;transition:opacity .2s;pointer-events:none}
+.swimmer:hover .swimmer-name,.swimmer:focus-visible .swimmer-name{opacity:1}
+#ocean-note{position:fixed;bottom:80px;left:0;right:0;text-align:center;font:italic 19px 'Instrument Serif',Georgia,serif;color:#638e80;pointer-events:none}
+.ocean-line{display:block;width:1px;height:30px;background:linear-gradient(#6d9d8466,transparent);margin:10px auto 0}
+.has-surface #ocean{opacity:.7}
+.has-surface .swimmer{pointer-events:auto}
+#surface{position:relative;z-index:2;width:min(1140px,91vw);margin:48px auto 35px;scroll-margin-top:25px;pointer-events:none}
+.surface-heading{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 4px 20px}
+.surface-heading h2{font-size:34px;color:#385d4c;margin:8px 0 0}
+#dive-back{font-size:11px;color:#688675;padding:10px 0}
+#people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.person-card{pointer-events:auto;position:relative;min-width:0;background:#f9fff0dc;backdrop-filter:blur(18px);border:1px solid #ffffffb3;border-radius:22px;padding:24px;box-shadow:0 10px 30px #416a4d0d;transform-origin:50px 50px;overflow-wrap:anywhere}
+.person-heading{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.person-heading .person-avatar{width:52px;height:52px;flex:none;font-size:24px}
+.person-identity{min-width:0}
+.person-card h3{font:29px/1.1 'Instrument Serif',Georgia,serif;font-weight:400;margin:0 0 8px;color:#365342}
+.person-editions{font-size:8px;letter-spacing:1px;color:#8b9a87;margin:0;line-height:1.7}
+.person-description{font-size:12px;line-height:1.8;color:#6d7f6d;margin:0 0 17px}
+.person-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.person-tags button{font-size:9px;line-height:1.3;padding:6px 9px;background:#edf2e6;border:1px solid #e4eadb;border-radius:20px;color:#64806c;text-align:left}
+.person-tags button:hover{border-color:#8db89c;background:#e0eddd}
+.person-card h4{font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:1.3px;color:#86967d;margin:0 0 14px}
+.person-projects{border-top:1px solid #e7ebdf;padding-top:19px}
+.project+.project{margin-top:16px}
+.project>a,.project>span{font-size:12px;font-weight:600;line-height:1.6;color:#436a50}
+.person-card a:hover{text-decoration:underline;text-underline-offset:3px}
+.project p,.person-talk>p:not(.talk-date),.profile-bio{font-size:11px;line-height:1.8;color:#85907d;margin:5px 0 0}
+.person-recaps{margin-top:22px;padding-top:15px;border-top:1px solid #e7ebdf}
+.person-recaps summary{cursor:pointer;color:#698068;font-size:11px;padding:3px 0;list-style-position:inside}
+.person-recaps summary:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+.person-talk{margin-top:20px}
+.person-talk .talk-date{font-size:9px;color:#8a9983;line-height:1.6}
+.person-talk h4{text-transform:none;letter-spacing:0;font-size:12px;line-height:1.6;color:#5f785e;margin:7px 0}
+.person-links{display:flex;flex-wrap:wrap;gap:9px 12px;margin-top:18px;font-size:10px;color:#4e805d}
+.thursday footer{position:fixed;background:#eef3e8ed;border-color:#d5dfce;color:#7b917f;backdrop-filter:blur(12px);z-index:6}
+.thursday footer button{color:#4d7056}
+.thursday .status-dot{background:#71a18b}
+.thursday .footer-divider{color:#bbcbbb}
+.current-paused .water-light::after{animation-play-state:paused}
+@keyframes water-breathe{to{transform:rotate(-9deg) scale(1.12) translateY(-2%)}}
+@media(min-width:1600px){#ocean{left:10vw;right:10vw}}
+@media(max-width:1000px){#people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.thursday .drag-hint{display:none}}
+@media(max-width:700px){.thursday main{padding-top:34px;min-height:calc(100dvh - 156px)}.thursday h1{font-size:43px;margin:16px 0}.thursday .intro{font-size:12px;margin-bottom:23px}.thursday .shuffle{font-size:10px;padding:8px 10px}.thursday .header-actions{gap:0}.thursday .input-wrap{height:60px}.thursday input{font-size:11px;padding-left:10px}.thursday #search-status{font-size:10px;min-height:32px}.thursday .suggestions{font-size:9px}#ocean{inset:110px 4vw 60px;min-height:210px}.swimmer{width:calc(var(--size)*.76);height:calc(var(--size)*.76)}.swimmer .avatar-initials{font-size:calc(var(--size)*.17)}#ocean-note{bottom:66px;font-size:16px}.ocean-line{height:15px;margin-top:8px}#surface{margin-top:30px;width:90vw}.surface-heading{align-items:flex-start;gap:10px}.surface-heading h2{font-size:30px}#dive-back{font-size:10px;max-width:100px;line-height:1.7;text-align:right}#people-grid{grid-template-columns:1fr;gap:16px}.person-card{padding:24px}.thursday footer{padding:0 16px}.thursday footer button{font-size:10px}}
+@media(max-height:740px) and (min-width:701px){.thursday main{padding-top:15px}#ocean{top:100px}}
+@media(prefers-reduced-motion:reduce){.thursday *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Publisher previews sit beside the person's original directory content. */
+.card-visual{display:block;position:relative;isolation:isolate;overflow:hidden;aspect-ratio:16/10;margin:0 0 21px;border-radius:13px;background:hsl(var(--visual-hue) 35% 88%);border:1px solid #365e4014;text-decoration:none!important}
+.visual-fallback{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:13px;padding:25px 23px 44px;background:radial-gradient(ellipse at 100% 0%,#ffffffc2,transparent 65%),linear-gradient(130deg,hsl(var(--visual-hue) 45% 90%),hsl(var(--visual-hue) 36% 74%));color:hsl(var(--visual-hue) 32% 27%)}
+.visual-fallback::after{content:'';position:absolute;z-index:-1;width:160px;height:160px;right:-60px;bottom:-70px;border:1px solid #ffffffa8;border-radius:50%;box-shadow:0 0 0 20px #ffffff20,0 0 0 40px #ffffff12}
+.visual-kicker{font-size:8px;letter-spacing:1.8px;font-weight:600;opacity:.65}
+.visual-title{font:29px/1.15 'Instrument Serif',Georgia,serif;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;text-wrap:balance}
+.project-preview{position:absolute;inset:0 0 29px;width:100%;height:calc(100% - 29px);object-fit:contain;object-position:center;background:#f6f7f1}
+.visual-caption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:9px 13px;font-size:9px;color:#fff;letter-spacing:.2px;background:#233d3ccc;backdrop-filter:blur(12px)}
+.card-visual:not(.has-preview) .visual-caption{background:#ffffff38;color:hsl(var(--visual-hue) 32% 27%);border-top:1px solid #ffffff55}
+.card-visual.has-preview .visual-fallback{visibility:hidden}
+@media(max-width:380px){.thursday .brand{font-size:14px}.thursday header{padding:0 16px}.thursday .shuffle{font-size:9px}}
+
+.card-close{position:absolute;right:12px;top:10px;width:30px;height:30px;border-radius:50%;font-size:23px;line-height:1;color:#688675;background:#ffffff60}
+.card-close:hover{background:#d9eadd;color:#315f4d}
+.person-heading{padding-right:15px}
+
+/* Generated ocean-life cutouts live below the interactive glass bubbles. */
+.ocean-life{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;user-select:none;contain:layout paint;mask-image:linear-gradient(to bottom,transparent 8%,#0006 30%,#000 55%);-webkit-mask-image:linear-gradient(to bottom,transparent 8%,#0006 30%,#000 55%)}
+.sea-creature{position:absolute;top:0;left:0;will-change:transform;pointer-events:none}
+.sea-creature img{display:block;width:100%;height:auto;pointer-events:none}
+.sea-fish{opacity:.54;filter:saturate(.72)}
+.sea-fish img{transform-origin:65% 50%;animation:sea-fin 3.4s ease-in-out var(--creature-phase) infinite}
+.sea-ray{opacity:.24;filter:saturate(.6) blur(.35px)}
+.sea-ray img{animation:sea-wing 6.5s ease-in-out var(--creature-phase) infinite}
+.sea-jellyfish{opacity:.56;filter:saturate(.7)}
+.sea-jellyfish img{animation:sea-bell 5.4s ease-in-out var(--creature-phase) infinite}
+.sea-kelp{position:absolute;bottom:-55px;width:190px;height:auto;opacity:.23;transform-origin:50% 100%;animation:sea-kelp 11s ease-in-out infinite alternate;pointer-events:none;filter:saturate(.65)}
+.sea-kelp-0{left:-45px;rotate:-15deg}
+.sea-kelp-1{right:-40px;width:230px;rotate:12deg;animation-delay:-5s}
+.sea-kelp-2{right:13%;bottom:-90px;width:155px;opacity:.14;animation-delay:-8s}
+.sea-air{position:absolute;left:var(--air-left);bottom:-15px;width:5px;height:5px;border:1px solid #ffffff94;border-radius:50%;opacity:0;animation:sea-air-rise var(--air-duration) linear var(--air-delay) infinite}
+.current-paused .ocean-life *{animation-play-state:paused!important}
+@keyframes sea-fin{0%,100%{transform:skewY(-2deg)}50%{transform:skewY(2deg)}}
+@keyframes sea-wing{0%,100%{transform:scaleY(.94)}50%{transform:scaleY(1.04)}}
+@keyframes sea-bell{0%,100%{transform:scale(.97,1.03)}45%{transform:scale(1.04,.96)}}
+@keyframes sea-kelp{from{transform:skewX(-4deg) rotate(-3deg)}to{transform:skewX(5deg) rotate(4deg)}}
+@keyframes sea-air-rise{0%{transform:translate(0,0);opacity:0}12%{opacity:.45}80%{opacity:.22}100%{transform:translate(35px,-70vh);opacity:0}}
+@media(max-width:700px){.sea-kelp{width:130px;bottom:-30px}.sea-kelp-1{width:150px}.sea-kelp-2{display:none}.sea-ray{opacity:.18}}
+
+/* A clicked bubble rises at its own coordinates, then reveals its reverse face. */
+.bubble-surfaces{position:fixed;inset:0;z-index:10;pointer-events:none;isolation:isolate}
+.bubble-surface{position:absolute;perspective:1400px;pointer-events:auto;transform-origin:50% 50%;outline:none}
+.bubble-turn{position:relative;width:100%;height:100%;transform-style:preserve-3d;transform:rotateY(180deg)}
+.bubble-front,.bubble-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.bubble-front{border:18px solid #fffef8;border-radius:50%;background:#e2f1e8;box-shadow:0 25px 65px #284f4030;overflow:hidden;transform:rotateY(0deg)}
+.bubble-front .person-avatar{background:hsl(var(--avatar-hue) 35% 83% / .5);border:0;box-shadow:none}
+.bubble-front .avatar-initials{font-size:calc(var(--surface-diameter)*.22);font-weight:400;text-shadow:none}
+.bubble-back{transform:rotateY(180deg);border:12px solid #fffef8;border-radius:32px;background:#f5faef;box-shadow:0 25px 65px #284f4030;overflow:hidden}
+.bubble-back .person-card{height:100%;width:100%;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:20px;border:0;border-radius:18px;background:transparent;box-shadow:none;backdrop-filter:none;outline:none}
+.bubble-back .card-close{position:sticky;float:right;top:0;margin:-8px -8px 0 0;z-index:2;background:#e7f0e0}
+.bubble-back .person-heading{min-height:52px;padding-right:25px}
+.bubble-back .card-visual{aspect-ratio:2/1;margin-bottom:18px}
+.bubble-source-open{opacity:0!important;pointer-events:none!important}
+.bubble-ripple{position:absolute;transform:translate(-50%,-50%);pointer-events:none;z-index:0}
+.bubble-ripple span{position:absolute;inset:0;border:2px solid #ffffffc9;border-radius:50%;box-shadow:0 0 8px #ffffff25;pointer-events:none}
+@media(max-width:700px){.bubble-back{border-width:9px;border-radius:25px}.bubble-back .person-card{padding:16px}.bubble-back .person-card h3{font-size:26px}.bubble-back .person-description{font-size:12px}}

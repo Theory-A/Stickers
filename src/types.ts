@@ -5,10 +5,10 @@ export interface Sticker {
 }
 export interface SearchMatch { id: string; score: number }
 export interface SearchResponse { matches: SearchMatch[]; mode: 'local' | 'jev'; query: string }
-export function parseSearchResponse(value: unknown, ids: Set<string>): SearchResponse {
+export function parseSearchResponse(value: unknown, ids: Set<string>, maxMatches = 10): SearchResponse {
  if (!value || typeof value !== 'object') throw new Error('Invalid search response');
  const data = value as Record<string, unknown>;
- if (!Array.isArray(data.matches) || data.matches.length > 10 || !['local','jev'].includes(String(data.mode)) || typeof data.query !== 'string') throw new Error('Invalid search response');
+ if (!Array.isArray(data.matches) || data.matches.length > maxMatches || !['local','jev'].includes(String(data.mode)) || typeof data.query !== 'string') throw new Error('Invalid search response');
  const seen = new Set<string>();
  for (const m of data.matches) {
   if (!m || typeof m.id !== 'string' || !ids.has(m.id) || seen.has(m.id) || typeof m.score !== 'number' || !Number.isFinite(m.score) || m.score < 0 || m.score > 1) throw new Error('Invalid match');
