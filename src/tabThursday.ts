@@ -57,6 +57,7 @@ let view: ViewMode = 'timeline';
 let lastAnimatedView: ViewMode | null = null;
 let filters: FilterState = { ...DEFAULT_FILTER_STATE };
 let badgeGuideOpen = false;
+let mobileOverviewOpen = false;
 let activePersonId: string | null = null;
 const expandedCards = new Set<string>();
 const selectedStopPerson = new Map<string, string>();
@@ -90,6 +91,9 @@ function el<K extends keyof HTMLElementTagNameMap>(
 function stableFocusSelector(node: Element | null): string | null {
  if (!(node instanceof HTMLElement)) return null;
  if (node.dataset.rolodexCard) return '[data-rolodex-card="true"]';
+ if (node.dataset.mobileOverviewToggle) return '[data-mobile-overview-toggle="true"]';
+ if (node.dataset.mobileTalk) return `[data-mobile-talk="${node.dataset.mobileTalk}"]`;
+ if (node.dataset.mobileDossier) return `[data-mobile-dossier="${node.dataset.mobileDossier}"]`;
  if (node.dataset.personProfile) return `[data-person-profile="${node.dataset.personProfile}"]`;
  if (node.dataset.openModal) return `[data-open-modal="${node.dataset.openModal}"]`;
  if (node.dataset.timelinePresentation) return `[data-timeline-presentation="${node.dataset.timelinePresentation}"]`;
@@ -1976,6 +1980,19 @@ function collapseAllInline() {
 
 function expandAndJumpToJourney(personId: string, eventId: string) {
  const key = cardKey(personId, eventId);
+ const behavior: ScrollBehavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+ if (matchMedia('(max-width: 760px)').matches) {
+  const mobileTag = contentRegion.querySelector<HTMLButtonElement>(`[data-mobile-talk="${key}"]`);
+  const row = mobileTag?.closest<HTMLElement>('.tt-journey-row')
+   ?? contentRegion.querySelector<HTMLElement>(`[data-journey-person="${personId}"]`);
+  if (mobileOverviewOpen) {
+   mobileOverviewOpen = false;
+   syncMobileOverviewDom();
+  }
+  row?.scrollIntoView({ behavior, block: 'center' });
+  openModal(personId, eventId, mobileTag ?? undefined);
+  return;
+ }
  const btn = contentRegion.querySelector<HTMLButtonElement>(`[data-journey-presentation="${key}"]`);
  if (btn) {
   const card = btn.closest<HTMLElement>('.tt-station-card');
@@ -1983,7 +2000,7 @@ function expandAndJumpToJourney(personId: string, eventId: string) {
    btn.click();
   }
   const row = btn.closest<HTMLElement>('.tt-journey-row');
-  row?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'center' });
+  row?.scrollIntoView({ behavior, block: 'center' });
   btn.focus({ preventScroll: true });
  }
 }
@@ -2051,6 +2068,11 @@ function renderTimelineView(
  section.dataset.timeline = 'true';
  if (animateEntrance) section.dataset.animate = 'true';
 
+ // Collapsible mobile overview wrapper (always visible on desktop > 760px)
+ const overview = el('div', 'tt-timeline-overview');
+ overview.id = 'tt-timeline-overview';
+ overview.dataset.mobileOpen = String(mobileOverviewOpen);
+
  // Intro + Legend
  const intro = el('div', 'tt-timeline-intro');
  const introLeft = el('div');
@@ -2066,8 +2088,16 @@ function renderTimelineView(
   legend.append(item);
  }
  legend.append(el('small', undefined, '颜色对应活动 · 徽章累计分享场次'));
- intro.append(introLeft, legend);
- section.append(intro, buildBadgeGuide());
+ const overviewCloseBtn = el('button', 'tt-mobile-overview-close', '收起 ▴');
+ overviewCloseBtn.type = 'button';
+ overviewCloseBtn.setAttribute('aria-label', '收起四期概览');
+ overviewCloseBtn.addEventListener('click', () => {
+  mobileOverviewOpen = false;
+  syncMobileOverviewDom();
+  contentRegion.querySelector<HTMLButtonElement>('.tt-mobile-overview-toggle')?.focus({ preventScroll: true });
+ });
+ intro.append(introLeft, overviewCloseBtn, legend);
+ overview.append(intro, buildBadgeGuide());
 
  // 4-Column Event Timeline Stops
  const stopsList = el('ol', 'tt-stops');
@@ -2263,7 +2293,8 @@ function renderTimelineView(
   li.append(datebar, spine, card);
   stopsList.append(li);
  }
- section.append(stopsList);
+ overview.append(stopsList);
+ section.append(overview);
 
  // People / Continuity Matrix
  const journeys = el('section', 'tt-journeys');
@@ -2282,6 +2313,26 @@ function renderTimelineView(
   el('span', 'tt-count-pill', `${visiblePeople.length} 人`),
   collapseAllBtn
  );
+
+ const overviewToggle = el('button', 'tt-mobile-overview-toggle');
+ overviewToggle.type = 'button';
+ overviewToggle.dataset.mobileOverviewToggle = 'true';
+ overviewToggle.dataset.open = String(mobileOverviewOpen);
+ overviewToggle.setAttribute('aria-controls', 'tt-timeline-overview');
+ overviewToggle.setAttribute('aria-expanded', String(mobileOverviewOpen));
+ const overviewToggleLabel = el(
+  'span',
+  'tt-mobile-overview-label',
+  mobileOverviewOpen ? '收起四期概览' : '四期概览与徽章'
+ );
+ const overviewToggleChevron = el('span', 'tt-mobile-overview-chevron', '▾');
+ overviewToggleChevron.setAttribute('aria-hidden', 'true');
+ overviewToggle.append(overviewToggleLabel, overviewToggleChevron);
+ overviewToggle.addEventListener('click', () => {
+  mobileOverviewOpen = !mobileOverviewOpen;
+  syncMobileOverviewDom();
+ });
+
  const journeyRight = el('div', 'tt-journey-right');
  const lineLegend = el('span', 'tt-line-legend');
  const solidSample = el('span');
@@ -2290,7 +2341,7 @@ function renderTimelineView(
  dashedSample.append(el('i', 'tt-line-sample tt-line-sample--dashed'), document.createTextNode('间隔重逢'));
  lineLegend.append(solidSample, dashedSample);
  journeyRight.append(lineLegend, el('span', undefined, 'PEOPLE / CONTINUITY'));
- journeyIntro.append(journeyHeading, journeyRight);
+ journeyIntro.append(journeyHeading, overviewToggle, journeyRight);
  journeys.append(journeyIntro);
 
  const journeyCard = el('div', 'tt-journey-card');
@@ -2390,10 +2441,12 @@ function renderTimelineView(
      btn.title = `${person.name} · ${presentation.title}`;
      btn.setAttribute('aria-label', `${person.name} · 第 ${stop.event.id} 期 · ${presentation.title}，展开或收起详情`);
 
+     const inlineDate = el('time', 'tt-station-inline-date', formatShortDate(stop.event.date));
+     inlineDate.dateTime = stop.event.date;
      const titleSpan = el('span', 'tt-station-title', presentation.title);
      const chevron = el('span', 'tt-station-chevron', '▾');
      chevron.setAttribute('aria-hidden', 'true');
-     btn.append(titleSpan, chevron);
+     btn.append(inlineDate, titleSpan, chevron);
 
      let stationAccordion: AccordionController | null = null;
      const createStationAccordion = (initiallyOpen: boolean) =>
@@ -2445,6 +2498,7 @@ function renderTimelineView(
      }
      station.append(stationCard);
     } else {
+     station.dataset.empty = 'true';
      const empty = el('span', 'tt-no-record');
      empty.setAttribute('aria-label', '未记录分享');
      station.append(empty);
@@ -2452,7 +2506,56 @@ function renderTimelineView(
     track.append(station);
    }
 
-   row.append(nameCol, track);
+   // Mobile-only dossier card body (hidden on desktop > 760px)
+   const mobileBody = el('div', 'tt-mobile-card-body');
+   const roles = person.profile?.roles ?? [];
+   if (roles.length > 0) {
+    const rolesRow = el('div', 'tt-mobile-roles');
+    for (const role of roles.slice(0, 3)) {
+     rolesRow.append(el('span', 'tt-mobile-role-chip', role));
+    }
+    mobileBody.append(rolesRow);
+   }
+
+   const dossierText = person.profile?.summary?.trim() || person.appearances[0]?.summary?.trim() || '';
+   if (dossierText) {
+    const dossierBtn = el('button', 'tt-mobile-dossier');
+    dossierBtn.type = 'button';
+    dossierBtn.dataset.mobileDossier = person.id;
+    dossierBtn.setAttribute('aria-haspopup', 'dialog');
+    dossierBtn.setAttribute('aria-label', `查看 ${person.name} 的完整档案简介`);
+    dossierBtn.append(el('span', 'tt-mobile-dossier-text', dossierText));
+    dossierBtn.addEventListener('click', () => openProfileModal(person.id, dossierBtn));
+    mobileBody.append(dossierBtn);
+   }
+
+   const talkTags = el('div', 'tt-mobile-talk-tags');
+   for (const stop of stops) {
+    const presentation = appearanceForEvent(person, stop.event.id);
+    if (!presentation) continue;
+    const key = cardKey(person.id, stop.event.id);
+    const tagBtn = el('button', 'tt-mobile-talk-tag');
+    tagBtn.type = 'button';
+    tagBtn.style.setProperty('--event-color', stop.color);
+    tagBtn.dataset.mobileTalk = key;
+    tagBtn.dataset.selected = String(filters.eventId === stop.event.id);
+    tagBtn.setAttribute('aria-haspopup', 'dialog');
+    tagBtn.setAttribute(
+     'aria-label',
+     `${person.name} · ${formatShortDate(stop.event.date)} · ${presentation.title}，查看分享详情`
+    );
+    const dateTag = el('time', 'tt-mobile-talk-date', formatShortDate(stop.event.date));
+    dateTag.dateTime = stop.event.date;
+    const titleTag = el('span', 'tt-mobile-talk-title', presentation.title);
+    tagBtn.append(dateTag, titleTag);
+    tagBtn.addEventListener('click', () => openModal(person.id, stop.event.id, tagBtn));
+    talkTags.append(tagBtn);
+   }
+   if (talkTags.childElementCount > 0) {
+    mobileBody.append(talkTags);
+   }
+
+   row.append(nameCol, track, mobileBody);
    journeyCard.append(row);
   }
  }
@@ -2585,9 +2688,12 @@ function renderTableView(
     btn.dataset.presentation = key;
     btn.setAttribute('aria-expanded', String(isExpanded));
     btn.setAttribute('aria-label', `${person.name} · 第 ${stop.event.id} 期 · ${presentation.title}，展开或收起详情`);
+    const inlineDate = el('time', 'tt-table-inline-date', formatShortDate(stop.event.date));
+    inlineDate.dateTime = stop.event.date;
+    const titleSpan = el('span', 'tt-talk-cell-title', presentation.title);
     const expand = el('span', 'tt-talk-expand', isExpanded ? '−' : '＋');
     expand.setAttribute('aria-hidden', 'true');
-    btn.append(el('span', undefined, presentation.title), expand);
+    btn.append(inlineDate, titleSpan, expand);
 
     let tableAccordion: AccordionController | null = null;
     const createTableAccordion = (initiallyOpen: boolean) =>
@@ -2640,6 +2746,7 @@ function renderTableView(
     }
     td.append(wrap);
    } else {
+    td.dataset.empty = 'true';
     const empty = el('span', 'tt-empty-cell', '—');
     empty.setAttribute('aria-label', '未记录分享');
     td.append(empty);
@@ -2884,10 +2991,30 @@ async function runSemanticSearch(query: string, version: number) {
  }
 }
 
+function syncMobileOverviewDom() {
+ const overview = contentRegion.querySelector<HTMLElement>('.tt-timeline-overview');
+ if (overview) {
+  overview.dataset.mobileOpen = String(mobileOverviewOpen);
+ }
+ const toggle = contentRegion.querySelector<HTMLButtonElement>('.tt-mobile-overview-toggle');
+ if (toggle) {
+  toggle.setAttribute('aria-expanded', String(mobileOverviewOpen));
+  toggle.dataset.open = String(mobileOverviewOpen);
+  const label = toggle.querySelector<HTMLElement>('.tt-mobile-overview-label');
+  if (label) {
+   label.textContent = mobileOverviewOpen ? '收起四期概览' : '四期概览与徽章';
+  }
+ }
+}
+
 function updateLocalQuery() {
  cancelSemanticSearch();
  semanticMatches = null;
  filters = { ...filters, query: searchInput.value };
+ if (searchInput.value.trim() && mobileOverviewOpen) {
+  mobileOverviewOpen = false;
+  syncMobileOverviewDom();
+ }
  renderContent();
 }
 
@@ -2896,6 +3023,10 @@ function triggerSemanticSearch() {
  if (!trimmed || composing || searchMode !== 'jev') return;
  cancelSemanticSearch();
  filters = { ...filters, query: searchInput.value };
+ if (mobileOverviewOpen) {
+  mobileOverviewOpen = false;
+  syncMobileOverviewDom();
+ }
  const version = searchVersion;
  void runSemanticSearch(trimmed, version);
 }
