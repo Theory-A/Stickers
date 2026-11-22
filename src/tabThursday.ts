@@ -54,6 +54,7 @@ const totalTalks = totalAppearances(people);
 const repeatCount = repeatPresenterCount(people);
 
 let view: ViewMode = 'timeline';
+let lastAnimatedView: ViewMode | null = null;
 let filters: FilterState = { ...DEFAULT_FILTER_STATE };
 let badgeGuideOpen = false;
 let activePersonId: string | null = null;
@@ -61,8 +62,9 @@ const expandedCards = new Set<string>();
 const selectedStopPerson = new Map<string, string>();
 let modalTrigger: HTMLElement | null = null;
 let modalTriggerSelector: string | null = null;
+let modalReturnToRolodexPersonId: string | null = null;
 let searchMode: 'local' | 'jev' = 'local';
-let semanticMatches: { query: string; ids: Set<string> } | null = null;
+let semanticMatches: { query: string; scores: Map<string, number> } | null = null;
 let semanticLoading = false;
 let semanticError = false;
 let searchVersion = 0;
@@ -111,6 +113,32 @@ function makeProfileTriggerBtn(
  btn.setAttribute('aria-label', `查看 ${person.name} 的分享者档案`);
  btn.addEventListener('click', () => openProfileModal(person.id, btn));
  return btn;
+}
+
+function formatRelevancyPct(score: number): number {
+ return Math.max(0, Math.min(100, Math.round(score * 100)));
+}
+
+function relevancyTier(score: number): 'high' | 'medium' | 'fallback' {
+ if (score >= 0.75) return 'high';
+ if (score >= 0.5) return 'medium';
+ return 'fallback';
+}
+
+function makeRelevancyPill(score: number): HTMLElement {
+ const pct = formatRelevancyPct(score);
+ const tier = relevancyTier(score);
+ const pill = el('span', 'tt-relevancy-pill');
+ pill.dataset.tier = tier;
+ pill.style.setProperty('--rel-pct', `${pct}%`);
+ pill.title = tier === 'fallback' ? `Jev 近似相关度 ${pct}%` : `Jev 语义相关度 ${pct}%`;
+ pill.setAttribute('aria-label', `Jev 语义相关度 ${pct}%`);
+
+ const value = el('span', 'tt-relevancy-value', `${pct}%`);
+ const bar = el('span', 'tt-relevancy-bar');
+ bar.setAttribute('aria-hidden', 'true');
+ pill.append(value, bar);
+ return pill;
 }
 
 function makeBadge(count: number, large = false): HTMLElement {
@@ -638,7 +666,92 @@ function closeModal() {
  }
 }
 
-function renderModalContent(person: Person, presentation: Appearance, event: TabEvent, color: string) {
+interface AccordionController {
+ readonly node: HTMLElement;
+ open: (animate: boolean) => void;
+ close: (onDone?: () => void) => void;
+}
+
+function createAccordion(content: HTMLElement, initiallyOpen = false): AccordionController {
+ const wrapper = el('div', 'tt-accordion');
+ wrapper.dataset.open = String(initiallyOpen);
+ const inner = el('div', 'tt-accordion-inner');
+ inner.append(content);
+ wrapper.append(inner);
+
+ let closeTimer: number | undefined;
+ let openRaf: number | undefined;
+ let activeOnEnd: ((event: TransitionEvent) => void) | undefined;
+
+ const clearPending = () => {
+  if (closeTimer !== undefined) {
+   window.clearTimeout(closeTimer);
+   closeTimer = undefined;
+  }
+  if (openRaf !== undefined) {
+   window.cancelAnimationFrame(openRaf);
+   openRaf = undefined;
+  }
+  if (activeOnEnd) {
+   wrapper.removeEventListener('transitionend', activeOnEnd);
+   activeOnEnd = undefined;
+  }
+ };
+
+ return {
+  node: wrapper,
+  open(animate: boolean) {
+   clearPending();
+   if (!animate || prefersReducedMotion()) {
+    wrapper.dataset.open = 'true';
+    return;
+   }
+   wrapper.dataset.open = 'false';
+   openRaf = window.requestAnimationFrame(() => {
+    openRaf = undefined;
+    if (wrapper.isConnected) {
+     wrapper.dataset.open = 'true';
+    }
+   });
+  },
+  close(onDone?: () => void) {
+   clearPending();
+   if (prefersReducedMotion() || !wrapper.isConnected) {
+    wrapper.remove();
+    onDone?.();
+    return;
+   }
+   wrapper.dataset.open = 'false';
+   let finished = false;
+   const finish = () => {
+    if (finished) return;
+    finished = true;
+    clearPending();
+    if (wrapper.dataset.open === 'false') {
+     wrapper.remove();
+     onDone?.();
+    }
+   };
+   activeOnEnd = (event: TransitionEvent) => {
+    if (event.target === wrapper && event.propertyName === 'grid-template-rows') {
+     finish();
+    }
+   };
+   wrapper.addEventListener('transitionend', activeOnEnd);
+   closeTimer = window.setTimeout(finish, 260);
+  }
+ };
+}
+
+function renderModalContent(
+ person: Person,
+ presentation: Appearance,
+ event: TabEvent,
+ color: string,
+ isSwap = false
+) {
+ clearGiantRolodexSpin();
+ modal.classList.remove('tt-rolodex-modal');
  modal.dataset.mode = 'talk';
  modal.style.setProperty('--event-color', color);
  const count = appearanceCount(person);
@@ -649,13 +762,19 @@ function renderModalContent(person: Person, presentation: Appearance, event: Tab
 
  const surface = el('div', 'tt-modal-surface');
 
- const accentBar = el('div', 'tt-modal-accent');
- accentBar.setAttribute('aria-hidden', 'true');
- surface.append(accentBar);
-
  // Sticky header
  const head = el('header', 'tt-modal-head');
  const eventMeta = el('div', 'tt-modal-event-meta');
+ if (modalReturnToRolodexPersonId) {
+  const returnPersonId = modalReturnToRolodexPersonId;
+  const backBtn = el('button', 'tt-modal-back-btn', '← 返回滚筒');
+  backBtn.type = 'button';
+  backBtn.addEventListener('click', () => {
+   const target = personById.get(returnPersonId) ?? person;
+   openGiantRolodexModal(target);
+  });
+  eventMeta.append(backBtn);
+ }
  const editionBadge = el('span', 'tt-modal-event-badge');
  const editionDot = el('i');
  editionDot.setAttribute('aria-hidden', 'true');
@@ -672,7 +791,7 @@ function renderModalContent(person: Person, presentation: Appearance, event: Tab
  surface.append(head);
 
  // Scrollable body
- const body = el('div', 'tt-modal-body');
+ const body = el('div', isSwap ? 'tt-modal-body tt-modal-body--swap' : 'tt-modal-body');
 
  // Presenter byline + large tier badge + progression + jump to profile
  const byline = el('div', 'tt-modal-byline');
@@ -871,15 +990,17 @@ function profileStatusLabel(status: 'verified' | 'partial' | 'appearances_only')
  return '基于分享记录';
 }
 
-function renderProfileModalContent(person: Person) {
- modal.dataset.mode = 'profile';
+interface PresenterDossierOptions {
+ headingId?: string;
+ showStatusPill?: boolean;
+ onOpenTalk: (eventId: string) => void;
+}
+
+function appendPresenterDossier(container: HTMLElement, person: Person, options: PresenterDossierOptions) {
  const personTalks = stops.flatMap(stop => {
   const appearance = appearanceForEvent(person, stop.event.id);
   return appearance ? [{ stop, appearance }] : [];
  });
- const accentColor = personTalks.at(-1)?.stop.color ?? '#a83c2b';
- modal.style.setProperty('--event-color', accentColor);
-
  const count = appearanceCount(person);
  const badgeInfo = badgeForCount(count);
  const profile = person.profile;
@@ -891,45 +1012,19 @@ function renderProfileModalContent(person: Person) {
   ].filter(name => name && name !== person.name))
  );
 
- const surface = el('div', 'tt-modal-surface');
-
- const accentBar = el('div', 'tt-modal-accent');
- accentBar.setAttribute('aria-hidden', 'true');
- surface.append(accentBar);
-
- // Sticky header
- const head = el('header', 'tt-modal-head');
- const meta = el('div', 'tt-modal-event-meta');
- const profileBadge = el('span', 'tt-modal-event-badge');
- const dot = el('i');
- dot.setAttribute('aria-hidden', 'true');
- profileBadge.append(dot, document.createTextNode('分享者档案'));
- meta.append(profileBadge);
-
- if (profile?.status) {
-  const statusPill = el('span', 'tt-profile-status-pill', profileStatusLabel(profile.status));
-  statusPill.dataset.status = profile.status;
-  meta.append(statusPill);
- }
-
- const closeBtn = el('button', 'tt-modal-close', '×');
- closeBtn.type = 'button';
- closeBtn.setAttribute('aria-label', '关闭分享者档案弹窗');
- closeBtn.addEventListener('click', closeModal);
- head.append(meta, closeBtn);
- surface.append(head);
-
- // Scrollable body
- const body = el('div', 'tt-modal-body');
-
  // Identity block
  const identity = el('div', 'tt-modal-byline tt-modal-byline--profile');
  identity.append(makeBadge(count, true));
  const idText = el('div', 'tt-modal-byline-text');
  const idTop = el('div', 'tt-modal-byline-top');
  const nameHeading = el('h2', 'tt-modal-person-title', person.name);
- nameHeading.id = 'tt-modal-title';
+ if (options.headingId) nameHeading.id = options.headingId;
  idTop.append(nameHeading, el('span', 'tt-modal-count-pill', `共 ${count} 场分享`));
+ if (options.showStatusPill && profile?.status) {
+  const statusPill = el('span', 'tt-profile-status-pill', profileStatusLabel(profile.status));
+  statusPill.dataset.status = profile.status;
+  idTop.append(statusPill);
+ }
  idText.append(idTop);
 
  if (aliases.length > 0) {
@@ -950,12 +1045,12 @@ function renderProfileModalContent(person: Person) {
   idText.append(siteChip);
  }
  identity.append(idText);
- body.append(identity);
+ container.append(identity);
 
  const featuredPreview = personPreview(person);
  if (featuredPreview) {
   const profilePreview = buildModalPreviewCard(featuredPreview, 'profile');
-  if (profilePreview) body.append(profilePreview);
+  if (profilePreview) container.append(profilePreview);
  }
 
  // Researched profile details
@@ -987,7 +1082,7 @@ function renderProfileModalContent(person: Person) {
    }
    overview.append(tagsWrap);
   }
-  body.append(overview);
+  container.append(overview);
 
   if (profile.notable_projects.length > 0) {
    const projectsSection = el('section', 'tt-modal-section');
@@ -999,9 +1094,47 @@ function renderProfileModalContent(person: Person) {
     projChips.append(el('span', 'tt-modal-project-chip', proj));
    }
    projectsSection.append(projHeading, projChips);
-   body.append(projectsSection);
+   container.append(projectsSection);
   }
+ }
 
+ // Chronological list of all Tab Thursday talks
+ if (personTalks.length > 0) {
+  const talksSection = el('section', 'tt-modal-section');
+  talksSection.setAttribute('aria-label', '历期分享记录');
+  const talksHeading = el('h3', 'tt-modal-section-label');
+  talksHeading.append(document.createTextNode('历期分享记录 '), el('span', undefined, `${personTalks.length} TALKS`));
+  const talksList = el('div', 'tt-modal-talk-cards');
+  talksList.setAttribute('role', 'group');
+  talksList.setAttribute('aria-label', '切换至对应场次的分享详情');
+
+  for (const { stop, appearance } of personTalks) {
+   const talkCard = el('button', 'tt-modal-talk-card');
+   talkCard.type = 'button';
+   talkCard.dataset.modalSwitchEvent = stop.event.id;
+   talkCard.style.setProperty('--event-color', stop.color);
+   talkCard.setAttribute('aria-label', `查看第 ${stop.event.id} 期分享详情：${appearance.title}`);
+
+   const cardTop = el('span', 'tt-modal-talk-card-top');
+   const metaTag = el('span', 'tt-modal-talk-meta');
+   const metaDot = el('i');
+   metaDot.setAttribute('aria-hidden', 'true');
+   metaTag.append(metaDot, document.createTextNode(`#${stop.event.id} · ${formatShortDate(stop.event.date)}`));
+   cardTop.append(metaTag, el('span', 'tt-modal-talk-card-cta', '查看详情 →'));
+
+   talkCard.append(
+    cardTop,
+    el('span', 'tt-modal-talk-card-title', appearance.title),
+    el('span', 'tt-modal-talk-card-summary', appearance.summary)
+   );
+   talkCard.addEventListener('click', () => options.onOpenTalk(stop.event.id));
+   talksList.append(talkCard);
+  }
+  talksSection.append(talksHeading, talksList);
+  container.append(talksSection);
+ }
+
+ if (profile) {
   const validSources = Array.from(
    new Set(profile.sources_checked.map(src => safeUrl(src)).filter((u): u is string => Boolean(u)))
   );
@@ -1035,48 +1168,65 @@ function renderProfileModalContent(person: Person) {
     srcList.append(li);
    }
    sourcesSection.append(srcHeading, srcList);
-   body.append(sourcesSection);
+   container.append(sourcesSection);
   }
  }
+}
 
- // Chronological list of all Tab Thursday talks
- if (personTalks.length > 0) {
-  const talksSection = el('section', 'tt-modal-section');
-  talksSection.setAttribute('aria-label', '历期分享记录');
-  const talksHeading = el('h3', 'tt-modal-section-label');
-  talksHeading.append(document.createTextNode('历期分享记录 '), el('span', undefined, `${personTalks.length} TALKS`));
-  const talksList = el('div', 'tt-modal-talk-cards');
-  talksList.setAttribute('role', 'group');
-  talksList.setAttribute('aria-label', '切换至对应场次的分享详情');
+function renderProfileModalContent(person: Person, isSwap = false) {
+ clearGiantRolodexSpin();
+ modal.classList.remove('tt-rolodex-modal');
+ modal.dataset.mode = 'profile';
+ const personTalks = stops.flatMap(stop => {
+  const appearance = appearanceForEvent(person, stop.event.id);
+  return appearance ? [{ stop, appearance }] : [];
+ });
+ const accentColor = personTalks.at(-1)?.stop.color ?? '#a83c2b';
+ modal.style.setProperty('--event-color', accentColor);
 
-  for (const { stop, appearance } of personTalks) {
-   const talkCard = el('button', 'tt-modal-talk-card');
-   talkCard.type = 'button';
-   talkCard.dataset.modalSwitchEvent = stop.event.id;
-   talkCard.style.setProperty('--event-color', stop.color);
-   talkCard.setAttribute('aria-label', `查看第 ${stop.event.id} 期分享详情：${appearance.title}`);
+ const profile = person.profile;
+ const websiteHref = safeUrl(person.website);
+ const surface = el('div', 'tt-modal-surface');
 
-   const cardTop = el('span', 'tt-modal-talk-card-top');
-   const metaTag = el('span', 'tt-modal-talk-meta');
-   const metaDot = el('i');
-   metaDot.setAttribute('aria-hidden', 'true');
-   metaTag.append(metaDot, document.createTextNode(`#${stop.event.id} · ${formatShortDate(stop.event.date)}`));
-   cardTop.append(metaTag, el('span', 'tt-modal-talk-card-cta', '查看详情 →'));
+ // Sticky header
+ const head = el('header', 'tt-modal-head');
+ const meta = el('div', 'tt-modal-event-meta');
+ if (modalReturnToRolodexPersonId) {
+  const returnPersonId = modalReturnToRolodexPersonId;
+  const backBtn = el('button', 'tt-modal-back-btn', '← 返回滚筒');
+  backBtn.type = 'button';
+  backBtn.addEventListener('click', () => {
+   const target = personById.get(returnPersonId) ?? person;
+   openGiantRolodexModal(target);
+  });
+  meta.append(backBtn);
+ }
+ const profileBadge = el('span', 'tt-modal-event-badge');
+ const dot = el('i');
+ dot.setAttribute('aria-hidden', 'true');
+ profileBadge.append(dot, document.createTextNode('分享者档案'));
+ meta.append(profileBadge);
 
-   talkCard.append(
-    cardTop,
-    el('span', 'tt-modal-talk-card-title', appearance.title),
-    el('span', 'tt-modal-talk-card-summary', appearance.summary)
-   );
-   talkCard.addEventListener('click', () => {
-    openModal(person.id, stop.event.id);
-   });
-   talksList.append(talkCard);
-  }
-  talksSection.append(talksHeading, talksList);
-  body.append(talksSection);
+ if (profile?.status) {
+  const statusPill = el('span', 'tt-profile-status-pill', profileStatusLabel(profile.status));
+  statusPill.dataset.status = profile.status;
+  meta.append(statusPill);
  }
 
+ const closeBtn = el('button', 'tt-modal-close', '×');
+ closeBtn.type = 'button';
+ closeBtn.setAttribute('aria-label', '关闭分享者档案弹窗');
+ closeBtn.addEventListener('click', closeModal);
+ head.append(meta, closeBtn);
+ surface.append(head);
+
+ // Scrollable body
+ const body = el('div', isSwap ? 'tt-modal-body tt-modal-body--swap' : 'tt-modal-body');
+ appendPresenterDossier(body, person, {
+  headingId: 'tt-modal-title',
+  showStatusPill: false,
+  onOpenTalk: eventId => openModal(person.id, eventId)
+ });
  surface.append(body);
 
  // Footer
@@ -1108,18 +1258,290 @@ function renderProfileModalContent(person: Person) {
  modal.replaceChildren(surface);
 }
 
-function openProfileModal(personId: string, trigger?: HTMLElement) {
- const person = personById.get(personId);
- if (!person) return;
+// ── Giant Desk Rolodex Modal Engine ──
+const giantRolodexHistory = new Set<string>();
+let giantRolodexLastPersonId: string | null = null;
+let giantRolodexCurrentPerson: Person | null = null;
+const giantRolodexTimers = new Set<number>();
+let giantRolodexSpinHandler: (() => void) | null = null;
+
+function clearGiantRolodexSpin() {
+ for (const id of giantRolodexTimers) {
+  window.clearTimeout(id);
+ }
+ giantRolodexTimers.clear();
+ modal.querySelectorAll('.tt-giant-leaf').forEach(node => node.remove());
+ const drum = modal.querySelector<HTMLElement>('.tt-giant-rolodex');
+ if (drum) drum.dataset.spinning = 'false';
+ const pulled = modal.querySelector<HTMLElement>('.tt-pulled-card');
+ if (pulled) pulled.dataset.spinning = 'false';
+}
+
+function scheduleGiantTimeout(fn: () => void, delayMs: number) {
+ const id = window.setTimeout(() => {
+  giantRolodexTimers.delete(id);
+  fn();
+ }, delayMs);
+ giantRolodexTimers.add(id);
+}
+
+function pickNextRandomPresenter(excludeId?: string | null): Person | null {
+ if (people.length === 0) return null;
+ if (people.length === 1) {
+  giantRolodexHistory.add(people[0].id);
+  giantRolodexLastPersonId = people[0].id;
+  return people[0];
+ }
+ let candidates = people.filter(p => !giantRolodexHistory.has(p.id) && p.id !== excludeId);
+ if (candidates.length === 0) {
+  giantRolodexHistory.clear();
+  candidates = people.filter(p => p.id !== excludeId);
+ }
+ const picked = candidates[Math.floor(Math.random() * candidates.length)] ?? people[0];
+ giantRolodexHistory.add(picked.id);
+ giantRolodexLastPersonId = picked.id;
+ return picked;
+}
+
+function fillGiantCard(container: HTMLElement, person: Person) {
+ container.replaceChildren();
+ const count = appearanceCount(person);
+ const aliases = person.aliases.filter(a => a && a !== person.name);
+ const top = el('span', 'tt-giant-card-top');
+ top.append(makeBadge(count, true), el('span', 'tt-giant-card-count', `${count} 场分享`));
+
+ const name = el('strong', 'tt-giant-card-name', person.name);
+ const teaser = el('span', 'tt-giant-card-teaser', rolodexSubtitle(person));
+ container.append(top, name);
+ if (aliases.length > 0) {
+  container.append(el('span', 'tt-giant-card-alias', aliases.slice(0, 2).join(' · ')));
+ }
+ container.append(teaser);
+}
+
+function renderGiantRolodexModalContent(initialPerson: Person) {
+ clearGiantRolodexSpin();
+ modal.classList.add('tt-rolodex-modal');
+ modal.dataset.mode = 'rolodex';
+ modalReturnToRolodexPersonId = null;
+ giantRolodexCurrentPerson = initialPerson;
+ giantRolodexHistory.add(initialPerson.id);
+ giantRolodexLastPersonId = initialPerson.id;
+
+ const surface = el('div', 'tt-modal-surface');
+
+ // Header
+ const head = el('header', 'tt-modal-head');
+ const headMeta = el('div', 'tt-modal-event-meta');
+ const headTitle = el('h2', 'tt-rolodex-modal-badge', 'TAB THURSDAY ROLODEX');
+ headTitle.id = 'tt-modal-title';
+ headMeta.append(headTitle, el('span', 'tt-rolodex-modal-hint', '点击滚筒随机抽选下一位分享者 · Space'));
+
+ const closeBtn = el('button', 'tt-modal-close', '×');
+ closeBtn.type = 'button';
+ closeBtn.setAttribute('aria-label', '关闭分享者滚筒弹窗');
+ closeBtn.addEventListener('click', closeModal);
+ head.append(headMeta, closeBtn);
+ surface.append(head);
+
+ // Two-pane layout
+ const layout = el('div', 'tt-rolodex-modal-layout');
+
+ // Left pane: Giant Physical Desk Rolodex
+ const leftPane = el('div', 'tt-giant-pane');
+ const giant = el('div', 'tt-giant-rolodex');
+ giant.dataset.spinning = 'false';
+
+ const stackTop = el('div', 'tt-giant-stack-top');
+ stackTop.setAttribute('aria-hidden', 'true');
+ stackTop.append(el('span'), el('span'));
+
+ const chassis = el('div', 'tt-giant-chassis');
+ const knobLeft = el('span', 'tt-giant-knob tt-giant-knob--left');
+ knobLeft.setAttribute('aria-hidden', 'true');
+ const knobRight = el('span', 'tt-giant-knob tt-giant-knob--right');
+ knobRight.setAttribute('aria-hidden', 'true');
+
+ const tabBar = el('div', 'tt-giant-tab-bar');
+ const tabCounter = el('span', 'tt-giant-counter');
+ const tabMode = el('span', 'tt-giant-mode');
+ const tabDot = el('i');
+ tabDot.setAttribute('aria-hidden', 'true');
+ const tabModeText = el('span', undefined, 'RANDOM SPIN');
+ tabMode.append(tabDot, tabModeText);
+ tabBar.append(tabCounter, tabMode);
+
+ const stage = el('div', 'tt-giant-stage');
+ const giantBaseBtn = el('button', 'tt-giant-card tt-giant-card--base');
+ giantBaseBtn.type = 'button';
+ giantBaseBtn.dataset.giantSpin = 'true';
+ giantBaseBtn.setAttribute('aria-label', '转动巨型滚筒随机抽选下一位分享者');
+
+ const spindle = el('div', 'tt-giant-spindle');
+ spindle.setAttribute('aria-hidden', 'true');
+ stage.append(giantBaseBtn, spindle);
+
+ chassis.append(knobLeft, knobRight, tabBar, stage);
+
+ const stackBottom = el('div', 'tt-giant-stack-bottom');
+ stackBottom.setAttribute('aria-hidden', 'true');
+ stackBottom.append(el('span'), el('span'));
+
+ giant.append(stackTop, chassis, stackBottom);
+
+ const spinBtn = el('button', 'tt-giant-spin-btn', '转动滚筒 · 随机抽选 ↻');
+ spinBtn.type = 'button';
+ spinBtn.dataset.giantSpin = 'true';
+
+ const drawnNote = el('p', 'tt-giant-drawn-note');
+ leftPane.append(giant, spinBtn, drawnNote);
+
+ // Right pane: Pulled-Out Profile Card
+ const rightPane = el('div', 'tt-pulled-pane');
+ const pulledCard = el('article', 'tt-pulled-card');
+ pulledCard.dataset.spinning = 'false';
+ rightPane.append(pulledCard);
+
+ layout.append(leftPane, rightPane);
+ surface.append(layout);
+
+ const syncGiantMeta = (person: Person) => {
+  const idx = (personIndexById.get(person.id) ?? 0) + 1;
+  tabCounter.textContent = `${String(idx).padStart(2, '0')} / ${String(people.length).padStart(2, '0')}`;
+  drawnNote.textContent = `已抽选 ${giantRolodexHistory.size} / ${people.length} 位分享者`;
+  const personTalks = stops.flatMap(stop => (appearanceForEvent(person, stop.event.id) ? [stop] : []));
+  modal.style.setProperty('--event-color', personTalks.at(-1)?.color ?? '#a83c2b');
+ };
+
+ const renderPulledProfile = (person: Person, animatePull: boolean) => {
+  pulledCard.replaceChildren();
+  pulledCard.classList.remove('tt-pulled-card--entering');
+  appendPresenterDossier(pulledCard, person, {
+   showStatusPill: true,
+   onOpenTalk: eventId => {
+    modalReturnToRolodexPersonId = person.id;
+    openModal(person.id, eventId);
+   }
+  });
+  rightPane.scrollTop = 0;
+  if (animatePull && !prefersReducedMotion()) {
+   void pulledCard.offsetWidth;
+   pulledCard.classList.add('tt-pulled-card--entering');
+  }
+ };
+
+ const flipGiantCardTo = (nextPerson: Person, durationMs: number, animate: boolean) => {
+  const prevPerson = giantRolodexCurrentPerson;
+  if (animate && !prefersReducedMotion() && prevPerson) {
+   const leaves = stage.querySelectorAll('.tt-giant-leaf');
+   if (leaves.length >= 2) leaves[0].remove();
+   const leaf = el('div', 'tt-giant-card tt-giant-leaf');
+   leaf.setAttribute('aria-hidden', 'true');
+   leaf.style.setProperty('--giant-flip-ms', `${durationMs}ms`);
+   fillGiantCard(leaf, prevPerson);
+   stage.insertBefore(leaf, spindle);
+
+   const removeLeaf = () => {
+    if (leaf.isConnected) leaf.remove();
+   };
+   leaf.addEventListener('animationend', removeLeaf, { once: true });
+   scheduleGiantTimeout(removeLeaf, durationMs + 90);
+
+   giantBaseBtn.classList.remove('tt-giant-card--entering');
+   giantBaseBtn.style.setProperty('--giant-flip-ms', `${durationMs}ms`);
+   void giantBaseBtn.offsetWidth;
+   giantBaseBtn.classList.add('tt-giant-card--entering');
+  }
+  giantRolodexCurrentPerson = nextPerson;
+  fillGiantCard(giantBaseBtn, nextPerson);
+  syncGiantMeta(nextPerson);
+ };
+
+ const runGiantSpin = () => {
+  clearGiantRolodexSpin();
+  const target = pickNextRandomPresenter(giantRolodexCurrentPerson?.id);
+  if (!target) return;
+
+  if (prefersReducedMotion()) {
+   flipGiantCardTo(target, 0, false);
+   renderPulledProfile(target, false);
+   return;
+  }
+
+  giant.dataset.spinning = 'true';
+  pulledCard.dataset.spinning = 'true';
+  tabModeText.textContent = 'SPINNING';
+
+  const pool = shuffledPeople(giantRolodexCurrentPerson?.id).filter(p => p.id !== target.id);
+  const intermediates = pool.slice(0, 6);
+  const schedule: Array<{ person: Person; atMs: number; flipMs: number }> = [
+   { person: intermediates[0] ?? target, atMs: 0, flipMs: 95 },
+   { person: intermediates[1] ?? target, atMs: 65, flipMs: 105 },
+   { person: intermediates[2] ?? target, atMs: 140, flipMs: 120 },
+   { person: intermediates[3] ?? target, atMs: 225, flipMs: 140 },
+   { person: intermediates[4] ?? target, atMs: 325, flipMs: 165 },
+   { person: intermediates[5] ?? target, atMs: 445, flipMs: 195 }
+  ];
+
+  for (const step of schedule) {
+   scheduleGiantTimeout(() => {
+    flipGiantCardTo(step.person, step.flipMs, true);
+   }, step.atMs);
+  }
+
+  scheduleGiantTimeout(() => {
+   flipGiantCardTo(target, 240, true);
+   giant.dataset.spinning = 'false';
+   pulledCard.dataset.spinning = 'false';
+   tabModeText.textContent = 'RANDOM SPIN';
+   renderPulledProfile(target, true);
+  }, 590);
+ };
+
+ giantRolodexSpinHandler = runGiantSpin;
+ giantBaseBtn.addEventListener('click', runGiantSpin);
+ spinBtn.addEventListener('click', runGiantSpin);
+
+ // Initial display
+ fillGiantCard(giantBaseBtn, initialPerson);
+ syncGiantMeta(initialPerson);
+ renderPulledProfile(initialPerson, true);
+
+ modal.replaceChildren(surface);
+}
+
+function openGiantRolodexModal(presetPerson?: Person, trigger?: HTMLElement) {
+ const chosen = presetPerson ?? pickNextRandomPresenter(giantRolodexLastPersonId);
+ if (!chosen) return;
 
  if (!modal.open) {
   modalTrigger = trigger ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
   modalTriggerSelector = stableFocusSelector(modalTrigger);
  }
 
- renderProfileModalContent(person);
+ renderGiantRolodexModalContent(chosen);
 
  if (!modal.open) {
+  modal.showModal();
+ }
+
+ modal.querySelector<HTMLButtonElement>('.tt-giant-spin-btn')?.focus({ preventScroll: true });
+}
+
+function openProfileModal(personId: string, trigger?: HTMLElement) {
+ const person = personById.get(personId);
+ if (!person) return;
+
+ const alreadyOpen = modal.open;
+ if (!alreadyOpen) {
+  modalReturnToRolodexPersonId = null;
+  modalTrigger = trigger ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+  modalTriggerSelector = stableFocusSelector(modalTrigger);
+ }
+
+ renderProfileModalContent(person, alreadyOpen);
+
+ if (!alreadyOpen) {
   modal.showModal();
  }
 
@@ -1139,15 +1561,17 @@ function openModal(
  const presentation = person ? appearanceForEvent(person, eventId) : undefined;
  if (!person || !event || !presentation) return;
 
- if (!modal.open) {
+ const alreadyOpen = modal.open;
+ if (!alreadyOpen) {
+  modalReturnToRolodexPersonId = null;
   modalTrigger = trigger ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
   modalTriggerSelector = stableFocusSelector(modalTrigger);
  }
 
  const color = stopByEventId.get(event.id)?.color ?? '#1f725b';
- renderModalContent(person, presentation, event, color);
+ renderModalContent(person, presentation, event, color, alreadyOpen);
 
- if (!modal.open) {
+ if (!alreadyOpen) {
   modal.showModal();
  }
 
@@ -1173,10 +1597,20 @@ modal.addEventListener('cancel', event => {
 });
 
 modal.addEventListener('close', () => {
+ clearGiantRolodexSpin();
+ giantRolodexSpinHandler = null;
+ const wasGiantRolodex = modal.classList.contains('tt-rolodex-modal') || modalReturnToRolodexPersonId !== null;
+ modal.classList.remove('tt-rolodex-modal');
+ modalReturnToRolodexPersonId = null;
+
+ if (wasGiantRolodex && giantRolodexCurrentPerson && rolodexState !== 'searching') {
+  syncMiniRolodexToPerson(giantRolodexCurrentPerson);
+ }
+
  const triggerToRestore = modalTrigger?.isConnected
   ? modalTrigger
   : modalTriggerSelector
-   ? contentRegion.querySelector<HTMLElement>(modalTriggerSelector)
+   ? (contentRegion.querySelector<HTMLElement>(modalTriggerSelector) ?? shell.querySelector<HTMLElement>(modalTriggerSelector))
    : null;
  modalTrigger = null;
  modalTriggerSelector = null;
@@ -1184,7 +1618,17 @@ modal.addEventListener('close', () => {
 });
 
 modal.addEventListener('keydown', event => {
- if (event.key !== 'Tab' || !modal.open) return;
+ if (!modal.open) return;
+ if (event.key === ' ' && modal.dataset.mode === 'rolodex' && giantRolodexSpinHandler) {
+  const active = document.activeElement as HTMLElement | null;
+  const interactive = Boolean(active?.matches('a[href], button, input, select, textarea, [contenteditable]'));
+  if (!interactive) {
+   event.preventDefault();
+   giantRolodexSpinHandler();
+   return;
+  }
+ }
+ if (event.key !== 'Tab') return;
  const focusables = focusableInside(modal);
  if (focusables.length === 0) {
   event.preventDefault();
@@ -1210,6 +1654,7 @@ type RolodexState = 'idle' | 'searching' | 'matched' | 'empty';
 const personIndexById = new Map(people.map((person, index) => [person.id, index]));
 let rolodexState: RolodexState = 'idle';
 let rolodexMatchCount = 0;
+let rolodexTopScore: number | undefined;
 let rolodexDeck: Person[] = [...people];
 let rolodexCursor = 0;
 let rolodexCurrentPerson: Person | null = people[0] ?? null;
@@ -1264,7 +1709,7 @@ function rolodexSubtitle(person: Person): string {
  return latestAppearance?.title ?? `${appearanceCount(person)} 场分享`;
 }
 
-function fillRolodexCard(container: HTMLElement, person: Person | null) {
+function fillRolodexCard(container: HTMLElement, person: Person | null, matchedScore?: number) {
  container.replaceChildren();
  if (!person) {
   const emptyIcon = el('span', 'tt-rolodex-empty-mark', '—');
@@ -1278,9 +1723,12 @@ function fillRolodexCard(container: HTMLElement, person: Person | null) {
   return;
  }
  const text = el('span', 'tt-rolodex-text');
+ const subtitle = matchedScore !== undefined
+  ? `相关度 ${formatRelevancyPct(matchedScore)}% · ${rolodexSubtitle(person)}`
+  : rolodexSubtitle(person);
  text.append(
   el('span', 'tt-rolodex-name', person.name),
-  el('span', 'tt-rolodex-sub', rolodexSubtitle(person))
+  el('span', 'tt-rolodex-sub', subtitle)
  );
  container.append(makeBadge(appearanceCount(person)), text);
 }
@@ -1295,7 +1743,8 @@ function updateRolodexChrome(state: RolodexState, matchCount = 0) {
  if (state === 'searching') {
   rolodexStatusText.textContent = 'JEV 检索中';
  } else if (state === 'matched') {
-  rolodexStatusText.textContent = `JEV 命中 · ${matchCount} 位`;
+  const prefix = rolodexTopScore !== undefined && rolodexTopScore < 0.5 ? 'JEV 近似' : 'JEV 命中';
+  rolodexStatusText.textContent = `${prefix} · ${matchCount} 位`;
  } else if (state === 'empty') {
   rolodexStatusText.textContent = 'JEV · 0 命中';
  } else {
@@ -1311,8 +1760,14 @@ function updateRolodexChrome(state: RolodexState, matchCount = 0) {
  }
 }
 
-function flipRolodexTo(nextPerson: Person | null, durationMs: number, animate = true) {
+function flipRolodexTo(
+ nextPerson: Person | null,
+ durationMs: number,
+ animate = true,
+ nextMatchedScore?: number
+) {
  const prevPerson = rolodexCurrentPerson;
+ const prevScore = rolodexState === 'matched' ? rolodexTopScore : undefined;
  const shouldAnimate = animate && !prefersReducedMotion();
 
  if (shouldAnimate) {
@@ -1323,7 +1778,7 @@ function flipRolodexTo(nextPerson: Person | null, durationMs: number, animate = 
   const leaf = el('div', 'tt-rolodex-card tt-rolodex-leaf');
   leaf.setAttribute('aria-hidden', 'true');
   leaf.style.setProperty('--rolodex-flip-ms', `${durationMs}ms`);
-  fillRolodexCard(leaf, prevPerson);
+  fillRolodexCard(leaf, prevPerson, prevScore);
   rolodexStage.insertBefore(leaf, rolodexHinge);
 
   const removeLeaf = () => {
@@ -1339,14 +1794,15 @@ function flipRolodexTo(nextPerson: Person | null, durationMs: number, animate = 
  }
 
  rolodexCurrentPerson = nextPerson;
- fillRolodexCard(rolodexBaseBtn, nextPerson);
- rolodexBaseBtn.disabled = !nextPerson || rolodexState === 'searching';
+ fillRolodexCard(rolodexBaseBtn, nextPerson, nextMatchedScore);
+ rolodexBaseBtn.disabled = rolodexState === 'searching' || people.length === 0;
  if (nextPerson) {
-  rolodexBaseBtn.title = `点击查看 ${nextPerson.name} 的分享者档案`;
-  rolodexBaseBtn.setAttribute('aria-label', `当前名片：${nextPerson.name}，点击查看分享者档案`);
+  const pctPart = nextMatchedScore !== undefined ? `（相关度 ${formatRelevancyPct(nextMatchedScore)}%）` : '';
+  rolodexBaseBtn.title = `点击打开巨型滚筒随机抽选分享者（当前：${nextPerson.name}${pctPart}）`;
+  rolodexBaseBtn.setAttribute('aria-label', `分享者名片盒，当前：${nextPerson.name}${pctPart}，点击打开巨型滚筒随机抽选`);
  } else {
-  rolodexBaseBtn.title = '暂无匹配档案';
-  rolodexBaseBtn.setAttribute('aria-label', '当前无匹配分享者档案');
+  rolodexBaseBtn.title = '点击打开巨型滚筒随机抽选分享者';
+  rolodexBaseBtn.setAttribute('aria-label', '当前无匹配，点击打开巨型滚筒随机抽选分享者');
  }
  updateRolodexChrome(rolodexState, rolodexMatchCount);
 }
@@ -1358,6 +1814,7 @@ function startRolodexSpin() {
 
  rolodexDeck = shuffledPeople(rolodexCurrentPerson?.id);
  rolodexCursor = 0;
+ rolodexTopScore = undefined;
  updateRolodexChrome('searching', 0);
  rolodexBaseBtn.disabled = true;
 
@@ -1380,7 +1837,7 @@ function startRolodexSpin() {
  rolodexIntervalId = window.setInterval(step, stepMs);
 }
 
-function settleRolodexOnResult(topPerson: Person | null, matchCount: number) {
+function settleRolodexOnResult(topPerson: Person | null, matchCount: number, topScore?: number) {
  clearRolodexTimers();
  const nextState: RolodexState = topPerson ? 'matched' : 'empty';
 
@@ -1388,7 +1845,8 @@ function settleRolodexOnResult(topPerson: Person | null, matchCount: number) {
   clearRolodexLeaves();
   rolodexState = nextState;
   rolodexMatchCount = matchCount;
-  flipRolodexTo(topPerson, 0, false);
+  rolodexTopScore = topPerson ? topScore : undefined;
+  flipRolodexTo(topPerson, 0, false, rolodexTopScore);
   updateRolodexChrome(nextState, matchCount);
   return;
  }
@@ -1405,9 +1863,24 @@ function settleRolodexOnResult(topPerson: Person | null, matchCount: number) {
  scheduleRolodexTimeout(() => {
   rolodexState = nextState;
   rolodexMatchCount = matchCount;
-  flipRolodexTo(topPerson, 240, true);
+  rolodexTopScore = topPerson ? topScore : undefined;
+  flipRolodexTo(topPerson, 240, true, rolodexTopScore);
   updateRolodexChrome(nextState, matchCount);
  }, 275);
+}
+
+function syncMiniRolodexToPerson(person: Person) {
+ clearRolodexTimers();
+ clearRolodexLeaves();
+ rolodexState = 'idle';
+ rolodexMatchCount = 0;
+ rolodexTopScore = undefined;
+ rolodexCurrentPerson = person;
+ fillRolodexCard(rolodexBaseBtn, person);
+ rolodexBaseBtn.disabled = false;
+ rolodexBaseBtn.title = `点击打开巨型滚筒随机抽选分享者（当前：${person.name}）`;
+ rolodexBaseBtn.setAttribute('aria-label', `分享者名片盒，当前：${person.name}，点击打开巨型滚筒随机抽选`);
+ updateRolodexChrome('idle', 0);
 }
 
 function resetRolodexToIdle() {
@@ -1415,29 +1888,37 @@ function resetRolodexToIdle() {
  clearRolodexLeaves();
  rolodexState = 'idle';
  rolodexMatchCount = 0;
+ rolodexTopScore = undefined;
  const target = rolodexCurrentPerson ?? people[0] ?? null;
  rolodexCurrentPerson = target;
  fillRolodexCard(rolodexBaseBtn, target);
  rolodexBaseBtn.disabled = !target;
  if (target) {
-  rolodexBaseBtn.title = `点击查看 ${target.name} 的分享者档案`;
-  rolodexBaseBtn.setAttribute('aria-label', `当前名片：${target.name}，点击查看分享者档案`);
+  rolodexBaseBtn.title = `点击打开巨型滚筒随机抽选分享者（当前：${target.name}）`;
+  rolodexBaseBtn.setAttribute('aria-label', `分享者名片盒，当前：${target.name}，点击打开巨型滚筒随机抽选`);
  }
  updateRolodexChrome('idle', 0);
 }
 
 rolodexBaseBtn.addEventListener('click', () => {
- if (rolodexState === 'searching' || !rolodexCurrentPerson) return;
- openProfileModal(rolodexCurrentPerson.id, rolodexBaseBtn);
+ if (rolodexState === 'searching' || people.length === 0) return;
+ openGiantRolodexModal(undefined, rolodexBaseBtn);
 });
 
-rolodexFlickBtn.addEventListener('click', () => {
+rolodexFlickBtn.addEventListener('click', event => {
+ event.stopPropagation();
  if (rolodexState === 'searching' || people.length === 0) return;
  clearRolodexTimers();
+ if (!prefersReducedMotion()) {
+  rolodexFlickBtn.classList.remove('tt-rolodex-flick--spinning');
+  void rolodexFlickBtn.offsetWidth;
+  rolodexFlickBtn.classList.add('tt-rolodex-flick--spinning');
+ }
  const currentIdx = rolodexCurrentPerson ? (personIndexById.get(rolodexCurrentPerson.id) ?? -1) : -1;
  const nextPerson = people[(currentIdx + 1) % people.length];
  rolodexState = 'idle';
  rolodexMatchCount = 0;
+ rolodexTopScore = undefined;
  flipRolodexTo(nextPerson, 240, true);
 });
 
@@ -1560,10 +2041,15 @@ function buildBadgeGuide(): HTMLDetailsElement {
  return details;
 }
 
-function renderTimelineView(visiblePeople: Person[]): HTMLElement {
+function renderTimelineView(
+ visiblePeople: Person[],
+ semanticScores?: ReadonlyMap<string, number>,
+ animateEntrance = false
+): HTMLElement {
  const section = el('section', 'tt-timeline');
  section.setAttribute('aria-label', 'Tab 星期四分享时间线');
  section.dataset.timeline = 'true';
+ if (animateEntrance) section.dataset.animate = 'true';
 
  // Intro + Legend
  const intro = el('div', 'tt-timeline-intro');
@@ -1591,6 +2077,7 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
   li.dataset.timelineEvent = stop.event.id;
   li.dataset.selected = String(filters.eventId === stop.event.id);
   li.style.setProperty('--event-color', stop.color);
+  li.style.setProperty('--stagger', String(stop.index));
 
   // Date bar
   const datebar = el('header', 'tt-stop-datebar');
@@ -1657,18 +2144,27 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
   splitBlock.append(splitRow, splitBar);
   card.append(splitBlock);
 
-  // Inline detail slot right inside this stop card (no modal)
+  // Inline detail slot right inside this stop card (smooth accordion)
   const stopInlineSlot = el('div');
   const dotButtons = new Map<string, HTMLButtonElement>();
+  let stopAccordion: AccordionController | null = null;
 
-  const renderStopInline = () => {
+  const renderStopInline = (animate = true) => {
    const selectedId = selectedStopPerson.get(stop.event.id);
    const selectedPerson = selectedId ? matchedInStop.find(p => p.id === selectedId) : undefined;
    for (const [pid, btn] of dotButtons) {
     btn.setAttribute('aria-expanded', String(selectedPerson?.id === pid));
    }
-   stopInlineSlot.replaceChildren();
-   if (!selectedPerson) return;
+   if (!selectedPerson) {
+    if (stopAccordion) {
+     const closing = stopAccordion;
+     stopAccordion = null;
+     closing.close();
+    } else {
+     stopInlineSlot.replaceChildren();
+    }
+    return;
+   }
    const presentation = appearanceForEvent(selectedPerson, stop.event.id);
    if (!presentation) return;
 
@@ -1696,7 +2192,7 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
    closeBtn.setAttribute('aria-label', '收起详情');
    closeBtn.addEventListener('click', () => {
     selectedStopPerson.delete(stop.event.id);
-    renderStopInline();
+    renderStopInline(true);
     dotButtons.get(selectedPerson.id)?.focus({ preventScroll: true });
    });
    controlsWrap.append(profileBtn, closeBtn);
@@ -1711,7 +2207,11 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
     onJumpToJourney: () => expandAndJumpToJourney(selectedPerson.id, stop.event.id)
    });
    box.append(boxHead, title, details);
-   stopInlineSlot.append(box);
+
+   stopInlineSlot.replaceChildren();
+   stopAccordion = createAccordion(box, !animate);
+   stopInlineSlot.append(stopAccordion.node);
+   if (animate) stopAccordion.open(true);
   };
 
   // Presenter badge cluster
@@ -1731,8 +2231,10 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
     dotBtn.dataset.timelinePresentation = cardKey(person.id, stop.event.id);
     dotBtn.dataset.active = String(activePersonId === person.id);
     dotBtn.setAttribute('aria-expanded', String(selectedStopPerson.get(stop.event.id) === person.id));
-    dotBtn.title = `${person.name} · ${presentation.title}`;
-    dotBtn.setAttribute('aria-label', `${person.name} · 第 ${stop.event.id} 期 · ${presentation.title}，展开详情`);
+    const score = semanticScores?.get(person.id);
+    const pctPart = score !== undefined ? ` · 相关度 ${formatRelevancyPct(score)}%` : '';
+    dotBtn.title = `${person.name}${pctPart} · ${presentation.title}`;
+    dotBtn.setAttribute('aria-label', `${person.name}${pctPart} · 第 ${stop.event.id} 期 · ${presentation.title}，展开详情`);
 
     const initials = el('span', 'tt-initials', avatarInitials(person.name));
     initials.setAttribute('aria-hidden', 'true');
@@ -1745,33 +2247,18 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
      } else {
       selectedStopPerson.set(stop.event.id, person.id);
      }
-     renderStopInline();
+     renderStopInline(true);
     });
     dotButtons.set(person.id, dotBtn);
     cluster.append(dotBtn);
    }
   }
   card.append(cluster, stopInlineSlot);
-  renderStopInline();
+  renderStopInline(false);
 
   if (matchedInStop.length !== stop.people.length) {
    card.append(el('p', 'tt-filtered-note', `筛选后显示 ${matchedInStop.length} / ${stop.people.length} 人`));
   }
-
-  // Cumulative growth footer
-  const growth = el('div', 'tt-growth');
-  const growthRow = el('div', 'tt-growth-row');
-  const growthStrong = el('strong');
-  growthStrong.append(document.createTextNode(String(stop.cumulativeCount)), el('small', undefined, ` / ${people.length} 人`));
-  growthRow.append(el('span', undefined, '累计分享者'), growthStrong);
-
-  const growthBar = el('div', 'tt-growth-bar');
-  growthBar.setAttribute('aria-hidden', 'true');
-  const fill = el('span');
-  fill.style.width = `${(stop.cumulativeCount / Math.max(people.length, 1)) * 100}%`;
-  growthBar.append(fill);
-  growth.append(growthRow, growthBar);
-  card.append(growth);
 
   li.append(datebar, spine, card);
   stopsList.append(li);
@@ -1846,15 +2333,25 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
     a.dataset.personWebsite = `journey-${person.id}`;
+    a.title = person.name;
     a.setAttribute('aria-label', `${person.name} 的个人主页（新窗口）`);
-    const arrow = el('span', undefined, '↗');
+    const label = el('span', 'tt-name-label', person.name);
+    const arrow = el('span', 'tt-name-arrow', '↗');
     arrow.setAttribute('aria-hidden', 'true');
-    a.append(document.createTextNode(person.name), arrow);
+    a.append(label, arrow);
     identity.append(a);
    } else {
-    identity.append(el('span', 'tt-plain-name', person.name));
+    const plain = el('span', 'tt-plain-name', person.name);
+    plain.title = person.name;
+    identity.append(plain);
    }
-   identity.append(makeProfileTriggerBtn(person, '档案', `journey-${person.id}`));
+   const actions = el('span', 'tt-journey-actions');
+   actions.append(makeProfileTriggerBtn(person, '档案', `journey-${person.id}`));
+   const score = semanticScores?.get(person.id);
+   if (score !== undefined) {
+    actions.append(makeRelevancyPill(score));
+   }
+   identity.append(actions);
    nameCol.append(identity, el('strong', 'tt-sr-only', `${appearanceCount(person)} 场`));
 
    const track = el('div', 'tt-track');
@@ -1898,16 +2395,19 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
      chevron.setAttribute('aria-hidden', 'true');
      btn.append(titleSpan, chevron);
 
-     let inlineBody: HTMLElement | null = null;
-     const createStationInlineBody = () =>
-      buildInlineDetails(person, presentation, stop.event, {
-       modalTriggerKey: `journey-${key}`,
-       onOpenModal: trigger => openModal(person.id, stop.event.id, trigger),
-       onCollapse: () => {
-        syncStationExpanded(false);
-        btn.focus({ preventScroll: true });
-       }
-      });
+     let stationAccordion: AccordionController | null = null;
+     const createStationAccordion = (initiallyOpen: boolean) =>
+      createAccordion(
+       buildInlineDetails(person, presentation, stop.event, {
+        modalTriggerKey: `journey-${key}`,
+        onOpenModal: trigger => openModal(person.id, stop.event.id, trigger),
+        onCollapse: () => {
+         syncStationExpanded(false);
+         btn.focus({ preventScroll: true });
+        }
+       }),
+       initiallyOpen
+      );
 
      const syncStationExpanded = (nextOpen: boolean) => {
       station.dataset.expanded = String(nextOpen);
@@ -1915,15 +2415,20 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
       btn.setAttribute('aria-expanded', String(nextOpen));
       if (nextOpen) {
        expandedCards.add(key);
-       if (!inlineBody) {
-        inlineBody = createStationInlineBody();
-        stationCard.append(inlineBody);
+       if (!stationAccordion) {
+        stationAccordion = createStationAccordion(false);
+        stationCard.append(stationAccordion.node);
        }
+       stationAccordion.open(true);
       } else {
        expandedCards.delete(key);
-       if (inlineBody) {
-        inlineBody.remove();
-        inlineBody = null;
+       if (stationAccordion) {
+        const closing = stationAccordion;
+        closing.close(() => {
+         if (stationAccordion === closing) {
+          stationAccordion = null;
+         }
+        });
        }
       }
       syncCollapseAllControls();
@@ -1935,8 +2440,8 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
 
      stationCard.append(btn);
      if (isExpanded) {
-      inlineBody = createStationInlineBody();
-      stationCard.append(inlineBody);
+      stationAccordion = createStationAccordion(true);
+      stationCard.append(stationAccordion.node);
      }
      station.append(stationCard);
     } else {
@@ -1961,9 +2466,14 @@ function renderTimelineView(visiblePeople: Person[]): HTMLElement {
 }
 
 // ── Table View Rendering ──
-function renderTableView(visiblePeople: Person[]): HTMLElement {
+function renderTableView(
+ visiblePeople: Person[],
+ semanticScores?: ReadonlyMap<string, number>,
+ animateEntrance = false
+): HTMLElement {
  const section = el('section', 'tt-table-section');
  section.setAttribute('aria-label', '分享者与四场活动完整对照表');
+ if (animateEntrance) section.dataset.animate = 'true';
 
  const tableBar = el('div', 'tt-table-bar');
  tableBar.append(el('span', undefined, '点击任意分享标题就地展开摘要、简介与资料链接，并可打开完整详情弹窗'));
@@ -2047,6 +2557,10 @@ function renderTableView(visiblePeople: Person[]): HTMLElement {
    pips.append(pip);
   }
   attendance.append(strong, pips, makeProfileTriggerBtn(person, '档案', `table-${person.id}`));
+  const score = semanticScores?.get(person.id);
+  if (score !== undefined) {
+   attendance.append(makeRelevancyPill(score));
+  }
   personCell.append(cellHead, attendance);
   tr.append(personCell);
 
@@ -2075,16 +2589,19 @@ function renderTableView(visiblePeople: Person[]): HTMLElement {
     expand.setAttribute('aria-hidden', 'true');
     btn.append(el('span', undefined, presentation.title), expand);
 
-    let inlineBody: HTMLElement | null = null;
-    const createTableInlineBody = () =>
-     buildInlineDetails(person, presentation, stop.event, {
-      modalTriggerKey: `table-${key}`,
-      onOpenModal: trigger => openModal(person.id, stop.event.id, trigger),
-      onCollapse: () => {
-       syncTableExpanded(false);
-       btn.focus({ preventScroll: true });
-      }
-     });
+    let tableAccordion: AccordionController | null = null;
+    const createTableAccordion = (initiallyOpen: boolean) =>
+     createAccordion(
+      buildInlineDetails(person, presentation, stop.event, {
+       modalTriggerKey: `table-${key}`,
+       onOpenModal: trigger => openModal(person.id, stop.event.id, trigger),
+       onCollapse: () => {
+        syncTableExpanded(false);
+        btn.focus({ preventScroll: true });
+       }
+      }),
+      initiallyOpen
+     );
 
     const syncTableExpanded = (nextOpen: boolean) => {
      td.dataset.expanded = String(nextOpen);
@@ -2093,15 +2610,20 @@ function renderTableView(visiblePeople: Person[]): HTMLElement {
      expand.textContent = nextOpen ? '−' : '＋';
      if (nextOpen) {
       expandedCards.add(key);
-      if (!inlineBody) {
-       inlineBody = createTableInlineBody();
-       wrap.append(inlineBody);
+      if (!tableAccordion) {
+       tableAccordion = createTableAccordion(false);
+       wrap.append(tableAccordion.node);
       }
+      tableAccordion.open(true);
      } else {
       expandedCards.delete(key);
-      if (inlineBody) {
-       inlineBody.remove();
-       inlineBody = null;
+      if (tableAccordion) {
+       const closing = tableAccordion;
+       closing.close(() => {
+        if (tableAccordion === closing) {
+         tableAccordion = null;
+        }
+       });
       }
      }
      syncCollapseAllControls();
@@ -2113,8 +2635,8 @@ function renderTableView(visiblePeople: Person[]): HTMLElement {
 
     wrap.append(btn);
     if (isExpanded) {
-     inlineBody = createTableInlineBody();
-     wrap.append(inlineBody);
+     tableAccordion = createTableAccordion(true);
+     wrap.append(tableAccordion.node);
     }
     td.append(wrap);
    } else {
@@ -2173,10 +2695,15 @@ function buildEmptyState(): HTMLElement {
 }
 
 // ── State Sync & Rendering ──
-function activeSemanticSet(): ReadonlySet<string> | undefined {
+function activeSemanticScores(): ReadonlyMap<string, number> | undefined {
  const normalized = filters.query.trim().normalize('NFKC').toLowerCase();
  if (!normalized || !semanticMatches || semanticMatches.query !== normalized) return undefined;
- return semanticMatches.ids;
+ return semanticMatches.scores;
+}
+
+function activeSemanticSet(): ReadonlySet<string> | undefined {
+ const scores = activeSemanticScores();
+ return scores ? new Set(scores.keys()) : undefined;
 }
 
 function syncJevButton(semanticActive: boolean) {
@@ -2220,8 +2747,9 @@ function renderContent() {
  shortcutKbd.hidden = Boolean(filters.query);
  searchLabel.dataset.loading = String(semanticLoading);
 
- const semanticSet = activeSemanticSet();
- const semanticActive = Boolean(semanticSet);
+ const semanticScores = activeSemanticScores();
+ const semanticSet = semanticScores ? new Set(semanticScores.keys()) : undefined;
+ const semanticActive = Boolean(semanticScores);
  syncJevButton(semanticActive);
 
  const visiblePeople = filterAndSortPeople(people, filters, semanticSet);
@@ -2231,8 +2759,15 @@ function renderContent() {
   el('strong', undefined, String(visiblePeople.length)),
   document.createTextNode(' 位分享者')
  );
- if (semanticActive) {
-  resultsStatus.append(el('span', 'tt-semantic-tag', 'JEV 语义'));
+ if (semanticActive && semanticScores) {
+  let maxScore = 0;
+  for (const score of semanticScores.values()) {
+   if (score > maxScore) maxScore = score;
+  }
+  const isFallback = semanticScores.size > 0 && maxScore < 0.5;
+  const tag = el('span', 'tt-semantic-tag', isFallback ? 'JEV 近似匹配' : 'JEV 语义');
+  if (isFallback) tag.dataset.fallback = 'true';
+  resultsStatus.append(tag);
   const localBtn = el('button', 'tt-local-fallback-btn', '切回本地');
   localBtn.type = 'button';
   localBtn.addEventListener('click', () => {
@@ -2260,11 +2795,18 @@ function renderContent() {
  const emptyReason = visiblePeople.length === 0
   ? `${searchMode}:${semanticLoading ? 'load' : semanticError ? 'err' : semanticActive ? 'jev0' : 'loc0'}:${filters.query.trim()}`
   : 'nonempty';
+ const scoreSignature = semanticScores
+  ? visiblePeople.map(p => {
+     const score = semanticScores.get(p.id);
+     return score !== undefined ? `${p.id}:${formatRelevancyPct(score)}` : p.id;
+    }).join(',')
+  : 'local';
  const signature = [
   view,
   filters.eventId,
   filters.sort,
   emptyReason,
+  scoreSignature,
   visiblePeople.map(p => p.id).join(',')
  ].join('|');
 
@@ -2276,7 +2818,11 @@ function renderContent() {
   : null;
 
  activePersonId = null;
- const rendered = view === 'timeline' ? renderTimelineView(visiblePeople) : renderTableView(visiblePeople);
+ const animateEntrance = lastAnimatedView !== view;
+ lastAnimatedView = view;
+ const rendered = view === 'timeline'
+  ? renderTimelineView(visiblePeople, semanticScores, animateEntrance)
+  : renderTableView(visiblePeople, semanticScores, animateEntrance);
  contentRegion.replaceChildren(rendered);
 
  if (focusedInContent) {
@@ -2314,11 +2860,15 @@ async function runSemanticSearch(query: string, version: number) {
    searchMode = 'jev';
    modePill.dataset.mode = 'jev';
    modePill.textContent = 'JEV · ENTER';
-   semanticMatches = { query: normalized, ids: new Set(parsed.matches.map(m => m.id)) };
-   const topMatch = parsed.matches
-    .map(match => personById.get(match.id))
-    .find((person): person is Person => Boolean(person)) ?? null;
-   settleRolodexOnResult(topMatch, parsed.matches.length);
+   const scores = new Map(parsed.matches.map(m => [m.id, m.score]));
+   semanticMatches = { query: normalized, scores };
+   const topEntry = parsed.matches
+    .map(match => {
+     const person = personById.get(match.id);
+     return person ? { person, score: match.score } : null;
+    })
+    .find((entry): entry is { person: Person; score: number } => Boolean(entry)) ?? null;
+   settleRolodexOnResult(topEntry?.person ?? null, parsed.matches.length, topEntry?.score);
   } else {
    resetRolodexToIdle();
   }
@@ -2456,6 +3006,7 @@ if (import.meta.hot) {
   cancelSemanticSearch();
   clearRolodexTimers();
   clearRolodexLeaves();
+  clearGiantRolodexSpin();
   closeModal();
   document.removeEventListener('keydown', onDocumentKeydown);
  });
