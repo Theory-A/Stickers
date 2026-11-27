@@ -16,20 +16,21 @@ import {
  totalAppearances
 } from '../src/tabThursdayModel';
 
-test('timeline stops reconcile first-time, returning, and cumulative counts across all 4 events', () => {
+test('timeline stops reconcile first-time, returning, and cumulative counts across all 5 events', () => {
  const stops = buildTimelineStops(events, people);
- assert.equal(stops.length, 4);
+ assert.equal(stops.length, 5);
  assert.deepEqual(
   stops.map(s => [s.event.id, s.people.length, s.firstCount, s.returningCount, s.cumulativeCount]),
   [
    ['001', 18, 18, 0, 18],
    ['002', 21, 13, 8, 31],
    ['003', 22, 12, 10, 43],
-   ['004', 21, 10, 11, 53]
+   ['004', 21, 10, 11, 53],
+   ['005', 19, 9, 10, 62]
   ]
  );
- assert.equal(totalAppearances(people), 82);
- assert.equal(repeatPresenterCount(people), 13);
+ assert.equal(totalAppearances(people), 101);
+ assert.equal(repeatPresenterCount(people), 18);
  assert.equal(dateRangeKicker(stops), '2026 / OCT — NOV');
 });
 
@@ -69,37 +70,47 @@ test('badge progression maps counts 1 through 12+ to the 8 canonical tiers with 
 
 test('continuity span distinguishes single appearance, consecutive runs, and gaps', () => {
  const stops = buildTimelineStops(events, people);
- const owen = people.find(p => p.id === 'p001')!; // 001, 002, 003, 004
+ const owen = people.find(p => p.id === 'p001')!; // 001, 002, 003, 004, 005
  const junwei = people.find(p => p.id === 'p003')!; // 001, 004 (gap)
- const gloria = people.find(p => p.id === 'p004')!; // 001 only
+ const gloria = people.find(p => p.id === 'p004')!; // 001, 005 (gap)
+ const huajuan = people.find(p => p.id === 'p005')!; // 001 only
 
  const owenSpan = continuitySpan(owen, stops);
  assert.equal(owenSpan.hasConnector, true);
  assert.equal(owenSpan.hasGap, false);
- assert.equal(owenSpan.lineStartPct, 12.5);
- assert.equal(owenSpan.lineWidthPct, 75);
+ assert.equal(owenSpan.lineStartPct, 10);
+ assert.equal(owenSpan.lineWidthPct, 80);
 
  const junweiSpan = continuitySpan(junwei, stops);
  assert.equal(junweiSpan.hasConnector, true);
  assert.equal(junweiSpan.hasGap, true);
- assert.equal(junweiSpan.lineStartPct, 12.5);
- assert.equal(junweiSpan.lineWidthPct, 75);
+ assert.equal(junweiSpan.lineStartPct, 10);
+ assert.equal(junweiSpan.lineWidthPct, 60);
 
  const gloriaSpan = continuitySpan(gloria, stops);
- assert.equal(gloriaSpan.hasConnector, false);
+ assert.equal(gloriaSpan.hasConnector, true);
+ assert.equal(gloriaSpan.hasGap, true);
+ assert.equal(gloriaSpan.lineStartPct, 10);
+ assert.equal(gloriaSpan.lineWidthPct, 80);
+
+ const huajuanSpan = continuitySpan(huajuan, stops);
+ assert.equal(huajuanSpan.hasConnector, false);
  assert.equal(firstEventIdForPerson(junwei, stops), '001');
 });
 
 test('filtering and sorting preserve event selection, repeats-only, exact names, plural keywords, aliases, and semantic union', () => {
  const defaultOrder = filterAndSortPeople(people, DEFAULT_FILTER_STATE);
- assert.deepEqual(defaultOrder.slice(0, 3).map(p => p.id), ['p001', 'p007', 'p002']);
+ assert.deepEqual(defaultOrder.slice(0, 3).map(p => p.id), ['p001', 'p007', 'p006']);
 
  const repeats = filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, repeatsOnly: true });
- assert.equal(repeats.length, 13);
+ assert.equal(repeats.length, 18);
  assert.ok(repeats.every(p => appearanceCount(p) >= 2));
 
  const event003 = filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, eventId: '003' });
  assert.equal(event003.length, 22);
+
+ const event005 = filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, eventId: '005' });
+ assert.equal(event005.length, 19);
 
  const aliasMatch = filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'yytyyf' });
  assert.deepEqual(aliasMatch.map(p => p.id), ['p006']);
@@ -110,6 +121,8 @@ test('filtering and sorting preserve event selection, repeats-only, exact names,
 
  // Preserved legacy aliases still resolve cleanly.
  assert.deepEqual(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'Owen Young' }).map(p => p.id), ['p001']);
+ assert.deepEqual(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'Gloria X' }).map(p => p.id), ['p004']);
+ assert.deepEqual(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'yue xu' }).map(p => p.id), ['p004']);
  assert.deepEqual(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'Haitao' }).map(p => p.id), ['p007']);
  assert.deepEqual(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'JTing' }).map(p => p.id), ['p024']);
 
@@ -120,6 +133,8 @@ test('filtering and sorting preserve event selection, repeats-only, exact names,
  // Researched presenter profiles are indexed by filterAndSortPeople.
  assert.ok(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'Anyway.FM' }).some(p => p.id === 'p022'));
  assert.ok(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'NebulaGraph' }).some(p => p.id === 'p053'));
+ assert.ok(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'Log4D' }).some(p => p.id === 'p056'));
+ assert.ok(filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, query: 'Float Lyrics' }).some(p => p.id === 'p061'));
 
  const semanticResult = filterAndSortPeople(
   people,
@@ -136,5 +151,5 @@ test('filtering and sorting preserve event selection, repeats-only, exact names,
  assert.deepEqual(semanticEmpty, []);
 
  const byRecent = filterAndSortPeople(people, { ...DEFAULT_FILTER_STATE, sort: 'recent' });
- assert.ok(byRecent[0].appearances.some(a => a.eventId === '004'));
+ assert.ok(byRecent[0].appearances.some(a => a.eventId === '005'));
 });

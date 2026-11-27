@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-27",
   "events": [
     {
       "id": "001",
@@ -28,6 +28,13 @@
       "venue": "上海 · 长宁幸福里",
       "source": "https://tabthursday.com/004",
       "presenterCount": 21
+    },
+    {
+      "id": "005",
+      "date": "2026-11-26",
+      "venue": "上海 · 长宁幸福里",
+      "source": "https://tabthursday.com/005",
+      "presenterCount": 19
     }
   ],
   "people": [
@@ -39,7 +46,7 @@
       ],
       "website": "https://www.owenyoung.com/",
       "profile": {
-        "summary": "常驻上海的独立开发者、创作者与工作流实践者，将个人网站 owenyoung.com 作为数字花园（digital garden）、知识库 Wiki 与轻博客运营，并活跃于 GitHub（@theowenyoung）。曾打造沉浸式翻译（Immersive Translate，于 2025 年中收购后离开），另开发维护播客与视频转文字工具 PodText、多语种热点聚合站 Buzzing、GitHub 同步轻博客系统 Jant、Track Awesome List 与 Actionsflow 等开源项目。在 Tab Thursday 多次围绕小团队温和软件理念、RSS 高效阅读工作流、面向小群体的 Cloudflare 轻部署实践，以及摆脱推荐算法的 indie web 探索展开分享。",
+        "summary": "常驻上海的独立开发者、创作者与工作流实践者，将个人网站 owenyoung.com 作为数字花园（digital garden）、知识库 Wiki 与轻博客运营，并活跃于 GitHub（@theowenyoung）。曾打造沉浸式翻译（Immersive Translate，于 2025 年中收购后离开），另开发维护播客与视频转文字工具 PodText、多语种热点聚合站 Buzzing、Hacker News 经典老帖中文归档站 HN Vault、GitHub 同步轻博客系统 Jant、Track Awesome List 与 Actionsflow 等开源项目。在 Tab Thursday 多次围绕小团队温和软件理念、RSS 高效阅读工作流、面向小群体的 Cloudflare 轻部署实践、摆脱推荐算法的 indie web 探索，以及 Hacker News 社区文化与阅读方法论展开分享。",
         "roles": [
           "独立开发者",
           "开源作者",
@@ -51,7 +58,8 @@
           "digital garden",
           "信息聚合与翻译",
           "indie web",
-          "Cloudflare 轻量部署"
+          "Cloudflare 轻量部署",
+          "Hacker News 社区生态"
         ],
         "notable_projects": [
           "Immersive Translate (沉浸式翻译)",
@@ -60,12 +68,14 @@
           "Jant",
           "Track Awesome List",
           "Actionsflow",
-          "owenyoung.com"
+          "owenyoung.com",
+          "HN Vault"
         ],
         "sources_checked": [
           "https://www.owenyoung.com/",
           "https://github.com/theowenyoung",
-          "https://podtext.owenyoung.com/"
+          "https://podtext.owenyoung.com/",
+          "https://hnvault.owenyoung.com/"
         ],
         "status": "verified"
       },
@@ -167,6 +177,66 @@
             {
               "label": "tinydogs.at",
               "href": "https://www.tinydogs.at/"
+            }
+          ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "Owen Young",
+          "title": "Hacker News 与 HN Vault",
+          "summary": "拆解 Hacker News 的起源、历史经典帖与读法，分享 HN 衍生中文聚合、HN Vault 老帖归档、未记录功能清单及防「高级智识多巴胺」成瘾的心得。",
+          "links": [
+            {
+              "label": "Hacker News",
+              "href": "https://news.ycombinator.com/"
+            },
+            {
+              "label": "Dropbox 首发帖",
+              "href": "https://news.ycombinator.com/item?id=8863"
+            },
+            {
+              "label": "Stripe 首发帖",
+              "href": "https://news.ycombinator.com/item?id=3053883"
+            },
+            {
+              "label": "Stripe 收购 Lemon Squeezy 讨论",
+              "href": "https://news.ycombinator.com/item?id=41080018"
+            },
+            {
+              "label": "Docker 首发帖",
+              "href": "https://news.ycombinator.com/item?id=5445387"
+            },
+            {
+              "label": "hn.buzzing.cc",
+              "href": "https://hn.buzzing.cc/"
+            },
+            {
+              "label": "hnnew.buzzing.cc",
+              "href": "https://hnnew.buzzing.cc/"
+            },
+            {
+              "label": "HN Algolia",
+              "href": "https://hn.algolia.com/"
+            },
+            {
+              "label": "HN Vault",
+              "href": "https://hnvault.owenyoung.com/"
+            },
+            {
+              "label": "HN 未记录功能清单",
+              "href": "https://github.com/minimaxir/hacker-news-undocumented/blob/master/README.md"
+            },
+            {
+              "label": "纽约客 HN 版主特稿",
+              "href": "https://www.newyorker.com/news/letter-from-silicon-valley/the-lonely-work-of-moderating-hacker-news"
+            },
+            {
+              "label": "Buzzing",
+              "href": "https://www.buzzing.cc/"
+            },
+            {
+              "label": "沉浸式翻译",
+              "href": "https://immersivetranslate.com/"
             }
           ]
         }
@@ -336,29 +406,43 @@
     },
     {
       "id": "p004",
-      "name": "Gloria X",
-      "aliases": [],
-      "website": null,
+      "name": "Gloria Xu",
+      "aliases": [
+        "Gloria X",
+        "yue xu（Gloria）",
+        "yue xu",
+        "Gloria"
+      ],
+      "website": "https://gloriaxu.com/",
       "profile": {
-        "summary": "在 Tab Thursday 分享并介绍了面向 AI Agent 的开源桌面浏览器 Ego Lite（lite.ego.app，由 Citro Labs 开发）。Ego Lite 基于 Chromium 构建，通过隔离工作区（Spaces）让 AI coding agents 并行执行网页任务而不干扰用户主标签页，并支持复用 Chrome 既有登录态、Cookie 与扩展，配合页内 JavaScript 自动化接口提升代理执行效率。目前其个人主页未在公开资料中列出，已验证信息聚焦于 AI Agent 浏览器与网页自动化实践。",
+        "summary": "Gloria Xu（yue xu，个人主页 gloriaxu.com）是关注 AI 互动娱乐、AI 硬件与 Agent 工具生态的创作者与产品实践者。其个人网站展示的项目包括以 AI 硬件为载体的大型 ARG 游戏 Multiverse Collective，以及 AI 教育课程平台「有画面」。在 Tab Thursday #001 她分享了面向 AI Agent 的开源隔离工作区浏览器 Ego Lite；在 #005 则深度体验并评测了玩家共创 AI 游戏平台涅瓦（Nevatown），对比重度信息流玩法与《见字如面》这类轻量陪伴式 AI 游戏的耐玩度差异。",
         "roles": [
-          "AI 工具分享者",
-          "AI Agent 实践者"
+          "AI 产品创作者",
+          "AI 互动游戏实践者",
+          "AI 工具观察者"
         ],
         "focus_areas": [
+          "AI 游戏与 ARG",
+          "AI 硬件体验",
+          "AI 教育",
           "AI Agent",
           "浏览器自动化",
-          "多工作区隔离",
-          "AI 工具生态"
+          "陪伴式交互设计"
         ],
         "notable_projects": [
-          "Ego Lite"
+          "Multiverse Collective",
+          "有画面",
+          "Ego Lite (分享项目)",
+          "gloriaxu.com"
         ],
         "sources_checked": [
+          "https://gloriaxu.com/",
+          "https://www.multiverseco.org/welcome",
+          "https://nevatown.com/",
           "https://lite.ego.app/zh-cn",
           "https://github.com/citrolabs/ego-lite"
         ],
-        "status": "partial"
+        "status": "verified"
       },
       "appearances": [
         {
@@ -370,6 +454,30 @@
             {
               "label": "Ego Lite",
               "href": "https://lite.ego.app/zh-cn"
+            }
+          ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "yue xu（Gloria）",
+          "title": "涅瓦（Nevatown）AI 游戏平台",
+          "summary": "深度体验玩家共创 AI 游戏平台涅瓦，对比《三国·城主》《车库到 IPO》的高信息负担与《见字如面》的轻量陪伴感。",
+          "links": [
+            {
+              "label": "涅瓦（Nevatown）",
+              "href": "https://nevatown.com/"
+            },
+            {
+              "label": "三国·城主",
+              "href": "https://sanguo.nevatown.com/"
+            },
+            {
+              "label": "车库到 IPO",
+              "href": "https://startup.nevatown.com/"
+            },
+            {
+              "label": "见字如面",
+              "href": "https://postcard.nevatown.com/"
             }
           ]
         }
@@ -421,7 +529,7 @@
       ],
       "website": "https://yytyyf.com/",
       "profile": {
-        "summary": "高产的独立开发者（个人作品集 yytyyf.com，GitHub @IvyYang1999），长期与 AI 协作并行开发多款 macOS/iOS/Apple Watch 应用、AI Agent 工具及 Obsidian 插件。代表作包括保护 API Key 的 macOS 密钥注入工具 KeyKeeper、面向 AI coding harness 的本地 git 图与会话调试器 Swob、连接 iPhone 灵感与 Mac Agent 任务的 Handoff、家电说明书 AI 问答应用物页 ManuFold、趋势信息流 OpenTrends、跨工具平等对话的 Dispatch 以及 Agent Comments、NaviBoard、Wristory 等。其作品与多次 Tab Thursday 分享一贯聚焦本地优先、个人上下文交接、多 Agent 协作架构与桌面端轻量效率体验。",
+        "summary": "前飞书产品/研发背景的高产独立开发者（个人作品集 yytyyf.com，GitHub @IvyYang1999），长期与 AI 协作并行开发多款 macOS/iOS/Apple Watch 应用、AI Agent 工具及 Obsidian 插件。代表作包括覆盖任意窗口并支持鼠标穿透与本地实时翻译的 macOS 工具 Transparent（翻译玻璃）、跨工具平等对话的 Dispatch、保护 API Key 的 KeyKeeper、面向 AI coding harness 的本地 git 图与会话调试器 Swob、连接 iPhone 灵感与 Mac Agent 任务的 Handoff、家电说明书 AI 问答应用物页 ManuFold、趋势信息流 OpenTrends 以及 Agent Comments、NaviBoard、Wristory 等。在 Tab Thursday #005 她还系统复盘了把大厂层级管理制度与 stophook 搬给多 Agent 后导致幻觉崩溃的实验。",
         "roles": [
           "独立开发者",
           "macOS/iOS 开发者",
@@ -443,11 +551,14 @@
           "Dispatch",
           "OpenTrends",
           "Agent Comments",
-          "Wristory"
+          "Wristory",
+          "Transparent（翻译玻璃）"
         ],
         "sources_checked": [
           "https://yytyyf.com/",
-          "https://github.com/IvyYang1999"
+          "https://github.com/IvyYang1999",
+          "https://transparent.vision/",
+          "https://dispatch.yytyyf.com/"
         ],
         "status": "verified"
       },
@@ -527,6 +638,26 @@
               "href": "https://swob.app/"
             }
           ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "杨云童",
+          "title": "一人 Agent 公司复盘与翻译玻璃 Transparent",
+          "summary": "复盘把大厂管理制度搬给多 Agent 后因规则过重与 stophook 引发幻觉和崩溃的经过，回归单会话与 Dispatch 通信，并演示桌面本地实时翻译工具 Transparent。",
+          "links": [
+            {
+              "label": "一人 Agent 公司复盘",
+              "href": "https://my.feishu.cn/wiki/UGMGwHblAiRMAOk3Vyfcx6XSnUg"
+            },
+            {
+              "label": "Dispatch",
+              "href": "https://dispatch.yytyyf.com/"
+            },
+            {
+              "label": "Transparent（翻译玻璃）",
+              "href": "https://transparent.vision/"
+            }
+          ]
         }
       ]
     },
@@ -540,7 +671,7 @@
       ],
       "website": "https://haitao.wiki/",
       "profile": {
-        "summary": "胡海涛（Haitao Hu），常驻上海的线性资本（Linear Capital）投资人与技术实践者，长期关注 AI 软件、AI 基础设施与生成式模型，维护个人站点 haitao.wiki 与 GitHub（@Openhaitao），也是上海技术社区聚会 Tab Thursday 的联合发起人之一。他亲自开发并开源了无需 WDA 或数据线、通过 AirPlay 与 BLE HID 从 Mac 控制 iPhone 的工具 iphone-use-pro。在 Tab Thursday 多次分享手机自动化、任务驱动型个人 AI 助理（如 Comma）、Apple 生态写作与收藏工具箱、Mac 跨平台兼容方案及自托管监控代理工作流。",
+        "summary": "胡海涛（Haitao Hu），常驻上海的线性资本（Linear Capital）投资人与技术实践者，长期关注 AI 软件、AI 基础设施与生成式模型，维护个人站点 haitao.wiki 与 GitHub（@Openhaitao），也是上海技术社区聚会 Tab Thursday 的联合发起人之一。他亲自开发并开源了无需 WDA 或数据线、通过 AirPlay 与 BLE HID 从 Mac 控制 iPhone 的工具 iphone-use-pro。在 Tab Thursday 多次分享手机自动化、任务驱动型个人 AI 助理（如 Comma）、Apple 生态写作与收藏工具箱、Mac 跨平台兼容方案、自托管监控代理工作流，以及用哈苏拍摄乡村人物并萌生普通人纪录片计划的人文随想。",
         "roles": [
           "科技投资人",
           "开源开发者",
@@ -551,7 +682,8 @@
           "AI Agent",
           "iOS / Mac 自动化",
           "Apple 生态工具",
-          "self-hosting"
+          "self-hosting",
+          "纪实摄影与人文观察"
         ],
         "notable_projects": [
           "iPhone Use Pro",
@@ -646,6 +778,13 @@
               "href": "https://github.com/Usagi-org/ai-goofish-monitor"
             }
           ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "海涛",
+          "title": "乡村人像拍摄计划「阿豪」",
+          "summary": "分享在自然学校偶遇无手机、坦荡奔放的村民「阿豪」并用哈苏拍下人像的经历，以及与摄影记者朋友计划回村拍摄普通人纪录片的念头。",
+          "links": []
         }
       ]
     },
@@ -719,7 +858,7 @@
       ],
       "website": "https://xlrocket.blog/",
       "profile": {
-        "summary": "火箭君CC（Kurtis C），知名中文效率博客与自媒体「效率火箭」（xlrocket.blog）主理人，长期深耕个人生产力、数字知识管理（PKM）、本地优先（local-first）软件与数字资产主权议题。其博客高频评测 Obsidian、Logseq、Markdown 工作流与全球前沿 AI 效率工具，并译介海外深度生产力与技术观察文章。在 Tab Thursday 连续围绕本地文件所有权、开源自部署替代商业 SaaS（Occupy SaaS）、可供本机 Agent 读写的文件式白板（tldraw offline）及零上传本地文档转上下文方案（AnyDoc 等）进行分享。",
+        "summary": "火箭君CC（Kurtis C），知名中文效率博客与自媒体「效率火箭」（xlrocket.blog）主理人，长期深耕个人生产力、数字知识管理（PKM）、本地优先（local-first）软件与数字资产主权议题。其博客高频评测 Obsidian、Logseq、Markdown 工作流与全球前沿 AI 效率工具，并译介海外深度生产力与技术观察文章。在 Tab Thursday 连续围绕本地文件所有权、开源自部署替代商业 SaaS（Occupy SaaS）、可供本机 Agent 读写的文件式白板（tldraw offline）、零上传本地文档转上下文方案（AnyDoc 等）以及持续将 Apple Notes 等苹果原生数据镜像为本地 Markdown 的 Exporter 进行分享。",
         "roles": [
           "效率工具博主",
           "知识管理作者",
@@ -737,7 +876,8 @@
           "效率火箭 (xlrocket.blog)"
         ],
         "sources_checked": [
-          "https://xlrocket.blog/"
+          "https://xlrocket.blog/",
+          "https://exporter.dev/"
         ],
         "status": "verified"
       },
@@ -794,6 +934,18 @@
             {
               "label": "LiteParse",
               "href": "https://github.com/run-llama/liteparse"
+            }
+          ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "火箭君CC",
+          "title": "Exporter：把苹果原生数据导出为本地 Markdown",
+          "summary": "以 Evernote 涨价锁死笔记为鉴，推荐将 Apple Notes、邮件、短信与健康等数据实时镜像为本地 Markdown 并提供 CLI/MCP 的工具 Exporter。",
+          "links": [
+            {
+              "label": "Exporter",
+              "href": "https://exporter.dev/"
             }
           ]
         }
@@ -1108,7 +1260,7 @@
       ],
       "website": "https://www.paradigmroadmap.com/",
       "profile": {
-        "summary": "草原张（亦用名 Naren、Galaxy）是 Tab Thursday 全勤常驻分享者（#001–#004），个人站点为 paradigmroadmap.com。其分享横跨旧设备阅读折腾（Kindle KOReader 微信读书插件）、摄像头手势交互网页合成器（Gesture Synth）、东亚青年低社交压力数字空间（韩国线上虚拟寺庙 sansatemple）以及 AI 辅助业余天文数据盲测与可证伪方法（TOI-7930）。整体上持续关注有趣的 indie web 交互实验、数字文化现象与严谨的科学验证思维。",
+        "summary": "草原张（亦用名 Naren、Galaxy）是 Tab Thursday 全勤常驻分享者（#001–#005），个人站点为 paradigmroadmap.com（含《月球摄影档案》等专题内容）。其分享横跨旧设备阅读折腾（Kindle KOReader 微信读书插件）、摄像头手势交互网页合成器（Gesture Synth）、东亚青年低社交压力数字空间（韩国线上虚拟寺庙 sansatemple）、AI 辅助业余天文数据盲测与可证伪方法（TOI-7930），以及用苹果无边记（Freeform）打造的上海天文馆互动导览画布与线下科技馆价值探讨。整体上持续关注有趣的 indie web 交互实验、天文科普、数字文化现象与严谨的科学验证思维。",
         "roles": [
           "Tab Thursday 全勤分享者",
           "数字文化与交互观察者",
@@ -1119,7 +1271,8 @@
           "人机交互与手势合成器",
           "数字文化",
           "电子阅读工具",
-          "AI 辅助科研与可证伪方法"
+          "AI 辅助科研与可证伪方法",
+          "天文科普与观展导览"
         ],
         "notable_projects": [
           "paradigmroadmap.com"
@@ -1184,6 +1337,18 @@
             {
               "label": "三维交互演示网页",
               "href": "https://tic4206066.pages.dev/"
+            }
+          ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "草原张（Naren）",
+          "title": "上海天文馆无边记导览",
+          "summary": "用苹果无边记（Freeform）的场景功能制作上海天文馆互动导览画布，结合《偶然的宇宙》串起傅科摆、云室与建筑轨道几何，探讨线下科技馆的不可替代性。",
+          "links": [
+            {
+              "label": "上海天文馆无边记导览画布",
+              "href": "https://www.icloud.com/freeform/0d8_QauDy-cLZh1ZiJ7-xcQAA"
             }
           ]
         }
@@ -1570,7 +1735,7 @@
       ],
       "website": "https://github.com/Peterleixx",
       "profile": {
-        "summary": "Peter Lei（GitHub: Peterleixx）是专注于 Autonomous AI Agents 与代理工作流实验的开发者，制作了面向 Codex 与 Claude Code 等本地 CLI 编码工具的上下文技能工具 agent_context_os。在 Tab Thursday #002 中，他分享了在非算法背景与单台 MacBook 有限算力条件下，用 AI Agent 开展 AI 合成图/PS 痕迹检测算法研究的实践：通过设定可量化评测基准、封装推理工具并组合公开模型驱动 Agent 自动迭代，而非从头训练模型。",
+        "summary": "Peter Lei（GitHub: Peterleixx）是专注于 Autonomous AI Agents、MCP 工具链与代理工作流实验的独立开发者，制作了面向 Codex 与 Claude Code 等本地 CLI 编码工具的上下文技能工具 agent_context_os，以及开源本地播客生成工具「页边电台（Margin Radio）」。在 Tab Thursday #002 他分享了单台 MacBook 上用 AI Agent 开展图像伪造检测算法评测的实践；在 #005 展示了用 stdio MCP 与 Agent Skill 在本机将 X 长文争论或复杂 GitHub PR 转为带文字稿对照中文播客的 Vibe Coding 作品。",
         "roles": [
           "AI Agent 实践者",
           "独立开发者"
@@ -1580,17 +1745,21 @@
           "Agent 驱动算法评测",
           "AI 图像伪造检测",
           "Agent Context 工具",
-          "CLI 编码工作流"
+          "CLI 编码工作流",
+          "MCP 与本地音频播客工作流",
+          "Vibe Coding"
         ],
         "notable_projects": [
-          "agent_context_os"
+          "agent_context_os",
+          "页边电台（Margin Radio）"
         ],
         "sources_checked": [
           "https://tabthursday.com/",
           "https://angskills.com/",
-          "https://github.com/Peterleixx"
+          "https://github.com/Peterleixx",
+          "https://github.com/Peterleixx/margin-radio-local"
         ],
-        "status": "partial"
+        "status": "verified"
       },
       "appearances": [
         {
@@ -1599,6 +1768,18 @@
           "title": "Agent 做算法研究",
           "summary": "分享非算法背景的实验：设可量化评测目标，封装工具，在算力有限时组合公开模型，而非从头训练。",
           "links": []
+        },
+        {
+          "eventId": "005",
+          "sourceName": "Peter Lei",
+          "title": "页边电台（Margin Radio）",
+          "summary": "开源本地「按需听内容」工具：通过 stdio MCP 与 Agent Skill，把 X 长文争论或复杂 GitHub PR 编排合成为带文字稿对照的中文音频节目。",
+          "links": [
+            {
+              "label": "页边电台（Margin Radio）",
+              "href": "https://github.com/Peterleixx/margin-radio-local"
+            }
+          ]
         }
       ]
     },
@@ -2217,10 +2398,14 @@
     {
       "id": "p036",
       "name": "祝以南",
-      "aliases": [],
-      "website": "https://xhslink.cn/o/586ZAU5ct02",
+      "aliases": [
+        "Nan",
+        "Nan（祝以南）",
+        "Shukuinan"
+      ],
+      "website": "https://xhslink.cn/o/5DhoeI1oBcx",
       "profile": {
-        "summary": "祝以南（Shukuinan）是常驻上海的独立设计师、插画师与独立开发者，作品覆盖品牌视觉、UI/UX、原创插画（如《宇宙飞行士 Sman》与云朵系列）及多款强调审美与手工质感的独立 iOS/Mac 应用。他独立设计与开发了本地优先（local-first）、无广告的 iPhone 个人记忆日记应用 Starland（记忆岛），将日常片段转化为带有情绪色彩的记忆球并汇聚为不同生活岛屿；此前的代表数字产品还包括日落色彩渐变提取应用《日落岛（Sunset Island）》以及将 iPhone 变为 Mac 局域网无线触控板与遥控器的 MuseTap。",
+        "summary": "祝以南（Nan / Shukuinan）是常驻上海的独立设计师、插画师与独立开发者，作品覆盖品牌视觉、UI/UX、原创插画（如《宇宙飞行士 Sman》与云朵系列）及多款强调审美与手工质感的独立 iOS/Mac 应用。他独立设计与开发了本地优先（local-first）个人记忆日记应用 Starland（记忆岛）、免费开源的 Mac 极简侧边栏网页工具盒 Musecube（内置 63 款常用网页工具，⌥M 随时呼出）、日落色彩渐变提取应用《日落岛（Sunset Island）》以及将 iPhone 变为 Mac 无线触控板的 MuseTap。",
         "roles": [
           "独立设计师",
           "独立开发者",
@@ -2237,13 +2422,15 @@
           "Starland（记忆岛）",
           "日落岛（Sunset Island）",
           "MuseTap",
-          "宇宙飞行士 Sman"
+          "宇宙飞行士 Sman",
+          "Musecube"
         ],
         "sources_checked": [
           "https://starland.app/",
           "https://muse-tap.com/",
           "https://wowdesign.fun/",
-          "https://heyastronaut.com/"
+          "https://heyastronaut.com/",
+          "https://musecube.app/"
         ],
         "status": "verified"
       },
@@ -2257,6 +2444,18 @@
             {
               "label": "Starland（记忆岛）",
               "href": "https://starland.app/"
+            }
+          ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "Nan（祝以南）",
+          "title": "Musecube：Mac 侧边栏网页工具盒",
+          "summary": "开源免费 Mac 原生极简侧边栏浏览器，支持 ⌥M 随叫随到与 ⌘1–9 切换，内置 63 款常用网页小工具并可收录任意网页，比找 AI 批处理更省交互成本。",
+          "links": [
+            {
+              "label": "Musecube",
+              "href": "https://musecube.app/"
             }
           ]
         }
@@ -2325,10 +2524,14 @@
     {
       "id": "p038",
       "name": "张潘",
-      "aliases": [],
-      "website": "https://sspai.com/u/s5hoou8h/",
+      "aliases": [
+        "Cecil",
+        "Cecil Chang",
+        "张潘（Cecil）"
+      ],
+      "website": "https://cecil.codeberg.page/",
       "profile": {
-        "summary": "张潘（网名 Cecil / Cecil Chang，少数派账号「单宁酸也是Cecil」）是上海财经大学世界经济专业在读学生、少数派 Matrix 社区作者与 Linux 使用者。他长期在少数派分享数字生产力工具、Vim/Helix 编辑器流派、Markdown 阅读器、Vibe Coding 以及人与 Agent 协作范式的深度观察，并在 Codeberg 托管个人开源代码。他用 Zig 编写并开源了受 mods 启发的极简命令行 LLM 工具 hmod，践行「shell 即 harness」的 Unix 小工具哲学——仅保留纯粹模型对话，将渲染、历史记录与命令确认交给管道和脚本处理。",
+        "summary": "张潘（网名 Cecil / Cecil Chang，个人主页 cecil.codeberg.page，少数派账号「单宁酸也是Cecil」）是上海财经大学世界经济专业在读学生、少数派 Matrix 社区作者与 Linux 使用者。他长期分享数字生产力工具、Vim/Helix 编辑器流派、Vibe Coding、人与 Agent 协作范式及 Agent 商业模式观察，并在 Codeberg 托管开源代码。他用 Zig 编写并开源了践行「shell 即 harness」哲学的极简命令行 LLM 工具 hmod；在 Tab Thursday #005 结合经济学视角分析了 Personal Agent 时代对广告平台的冲击，提出在 Agent 等待空窗期以自愿广告抵扣 Token 费用的商业构想。",
         "roles": [
           "少数派作者",
           "开源工具开发者",
@@ -2340,15 +2543,20 @@
           "AI Agent 协作范式",
           "Zig",
           "Vibe Coding",
-          "Linux 与编辑器"
+          "Linux 与编辑器",
+          "Agent 商业模式与广告经济学"
         ],
         "notable_projects": [
-          "hmod"
+          "hmod",
+          "《agent 的广告业务》讲稿",
+          "cecil.codeberg.page"
         ],
         "sources_checked": [
           "https://sspai.com/u/s5hoou8h/",
           "https://codeberg.org/Cecil",
-          "https://bonjour.bio"
+          "https://bonjour.bio",
+          "https://cecil.codeberg.page/",
+          "https://prepre.surge.sh/"
         ],
         "status": "verified"
       },
@@ -2366,6 +2574,18 @@
             {
               "label": "mods",
               "href": "https://github.com/charmbracelet/mods"
+            }
+          ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "张潘（Cecil）",
+          "title": "agent 的广告业务",
+          "summary": "从经济学与平台广告收入结构切入，分析 Personal Agent 冲击下海外终端广告案例（kickbacks.ai、freebuff），提出在 Thinking 等待空窗期以自愿广告抵扣 Token 费用的构想。",
+          "links": [
+            {
+              "label": "agent 的广告业务（讲稿）",
+              "href": "https://prepre.surge.sh/"
             }
           ]
         }
@@ -2922,25 +3142,36 @@
     {
       "id": "p051",
       "name": "Ricky Lin",
-      "aliases": [],
+      "aliases": [
+        "Chien Lin"
+      ],
       "website": "https://www.linkedin.com/in/chien-lin-b92385253/",
       "profile": {
-        "summary": "Ricky Lin（LinkedIn 名称 Chien Lin）是关注技术社会学与产品伦理的思考者。在 Tab Thursday 004 以《当观光客变成流浪者》为题，借助社会学家齐格蒙特·鲍曼的理论框架剖析 AI 替代浪潮下的结构性变迁与价值分配议题，认为个体不应独自承担系统性变化带来的归咎，并探讨如何通过产品设计参与塑造更积极的改变。",
+        "summary": "Ricky Lin（LinkedIn 名称 Chien Lin）是开源 AI 原生操作系统项目 Taku（taku.ai）的团队成员，同时长期关注数字主权、技术社会学与产品伦理。在 Tab Thursday #004 他借社会学家鲍曼的框架探讨 AI 替代浪潮下的结构性变迁与价值分配；在 #005 系统辨析了三类「AI OS」，深入剖析 DHH 打造的 AI 友好 Arch Linux 发行版 Omarchy，并现场真机演示团队基于 Android / LineageOS 构建的手机端开源 AI 原生系统 Taku OS（支持应用后台窗口供 Agent 操作及接入自选编码 Agent）。",
         "roles": [
-          "产品思考者",
-          "AI 社会影响观察者"
+          "AI 原生操作系统构建者",
+          "Taku OS 团队成员",
+          "产品思考者"
         ],
         "focus_areas": [
-          "AI 社会影响",
-          "价值分配与劳动替代",
-          "产品设计伦理",
-          "鲍曼社会学视角"
+          "AI Native OS",
+          "数字主权",
+          "Omarchy / Linux",
+          "移动端 Agent 系统",
+          "AI 社会影响与价值分配",
+          "产品设计伦理"
         ],
         "notable_projects": [
+          "Taku OS",
+          "Omarchy AI OS 在线讲稿",
           "《当观光客变成流浪者》在线讲稿"
         ],
-        "sources_checked": [],
-        "status": "appearances_only"
+        "sources_checked": [
+          "https://taku.ai/",
+          "https://omarchy-aios.vercel.app/cn/#/1",
+          "https://omarchy.org/"
+        ],
+        "status": "verified"
       },
       "appearances": [
         {
@@ -2956,6 +3187,26 @@
             {
               "label": "完整版 PDF",
               "href": "https://media.jant.me/media/sit_01m6jwpv0ee7xrn0jc9qt1p086/files/med_01m7w340ates4r98q1098nx3sb.pdf"
+            }
+          ]
+        },
+        {
+          "eventId": "005",
+          "sourceName": "Ricky Lin",
+          "title": "Omarchy 与手机开源系统 Taku OS",
+          "summary": "辨析三类「AI OS」，重点剖析 DHH 打造的 AI 友好 Arch Linux 发行版 Omarchy 与数字主权，并现场真机演示团队基于 Android/LineageOS 开发的开源手机系统 Taku OS。",
+          "links": [
+            {
+              "label": "在线讲稿",
+              "href": "https://omarchy-aios.vercel.app/cn/#/1"
+            },
+            {
+              "label": "Omarchy",
+              "href": "https://omarchy.org/"
+            },
+            {
+              "label": "Taku OS",
+              "href": "https://taku.ai/"
             }
           ]
         }
@@ -3070,6 +3321,480 @@
             {
               "label": "Ducter",
               "href": "https://ducter.ai/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p054",
+      "name": "Jerry Yan",
+      "aliases": [
+        "Jerry",
+        "ycdjry"
+      ],
+      "website": "https://ycdjry.com/",
+      "profile": {
+        "summary": "18 岁在上海就读大学的年轻创作者与 AI 产品实践者（个人网站 ycdjry.com，X @ycdjry）。没有系统编程背景的他，在 15 天（实际投入约 60 小时、成本约 1,000 元）内以总制作人身份统筹 20 多个分工明确的 Claude 会话，结合 ChatGPT、Tripo AI、Blender 与 Unity 完成了可完整通关、带全收集与隐藏成就的 3D 游戏《绿野仙踪》（wizofoz.cc），并撰写详尽的《0 基础 3D 游戏开发攻略》。除游戏外，他还参与团队 AI 目标拆解产品 WorldUp 的原型、体验优化与内测运营，以及《回声》Echo、Spark-Meet、触见 TouchSight、X Know、Shiba.Hackclub 与 Blockwise 等早期作品。",
+        "roles": [
+          "AI 游戏制作人",
+          "大学生创作者",
+          "AI 产品实践者"
+        ],
+        "focus_areas": [
+          "AI 辅助游戏开发",
+          "多 Claude 会话协作",
+          "Unity / 3D 创作",
+          "Vibe Coding",
+          "AI 个人成长产品"
+        ],
+        "notable_projects": [
+          "《绿野仙踪》3D 游戏 (wizofoz.cc)",
+          "0 基础 3D 游戏开发攻略",
+          "WorldUp",
+          "ycdjry.com"
+        ],
+        "sources_checked": [
+          "https://ycdjry.com/",
+          "https://wizofoz.cc/",
+          "https://wizofoz.cc/article/zh.html",
+          "https://x.com/ycdjry"
+        ],
+        "status": "verified"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "Jerry Yan",
+          "title": "全 AI 制作的 3D 游戏《绿野仙踪》",
+          "summary": "零编程基础用 15 天和约千元成本，以「总指挥」调度 20 多个 Claude 会话配合 ChatGPT、Tripo AI、Blender 与 Unity 做出带隐藏成就的 3D 游戏《绿野仙踪》。",
+          "links": [
+            {
+              "label": "绿野仙踪",
+              "href": "https://wizofoz.cc/"
+            },
+            {
+              "label": "0 基础 3D 游戏开发攻略",
+              "href": "https://wizofoz.cc/article/zh.html"
+            },
+            {
+              "label": "X (@ycdjry)",
+              "href": "https://x.com/ycdjry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p055",
+      "name": "Eazy Lee",
+      "aliases": [
+        "EazyLee",
+        "EazyLee30"
+      ],
+      "website": "https://eazylee.si/",
+      "profile": {
+        "summary": "关注生物科技、长寿健康、硬件实验与 Vibe Coding 的高产独立开发者（个人主页 eazylee.si，GitHub @EazyLee30）。他热衷围绕智能穿戴与 AI Agent 做软硬件跨界原型：面向乐奇（Rokid）单绿光波导智能眼镜，用 Blender 预渲染场景、陀螺仪 2D 视角映射与低内存 WASM 混音模块打造了 3DoF 音乐玩具「星拍游乐场（Orbit Pop）」，并探索用 Sprite Stacking 技术在低算力眼镜上呈现物体立体剖面；此外还开源维护 AIUI Immersive 3DoF、Whooper、OmaScribe、BioTrip、OmaBerry、Berry Browser CJK 与 Luck Ring 等一系列健康数据、输入法与个人工具项目。",
+        "roles": [
+          "独立开发者",
+          "AR 硬件玩具作者",
+          "开源创作者"
+        ],
+        "focus_areas": [
+          "智能眼镜与 3DoF 交互",
+          "WebAssembly / 低算力渲染",
+          "AI Agent 与 Vibe Coding",
+          "生物科技与健康追踪",
+          "创意软硬件实验"
+        ],
+        "notable_projects": [
+          "星拍游乐场（Orbit Pop）",
+          "AIUI Immersive 3DoF",
+          "Whooper",
+          "OmaScribe",
+          "BioTrip",
+          "OmaBerry",
+          "eazylee.si"
+        ],
+        "sources_checked": [
+          "https://eazylee.si/",
+          "https://github.com/EazyLee30",
+          "https://mp.weixin.qq.com/s/P7A9Lvx9DVS9I0DydS1MXQ"
+        ],
+        "status": "verified"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "Eazy Lee",
+          "title": "乐奇单绿眼镜音乐玩具「星拍游乐场」",
+          "summary": "在乐奇单绿光波导眼镜上用陀螺仪 + 2D 视角映射与 WASM 混音做出 3DoF 音乐玩具「星拍游乐场」，并演示低算力 Sprite Stacking 立体剖面实验。",
+          "links": [
+            {
+              "label": "星拍游乐场",
+              "href": "https://mp.weixin.qq.com/s/P7A9Lvx9DVS9I0DydS1MXQ"
+            },
+            {
+              "label": "AIUI Immersive 3DoF",
+              "href": "https://github.com/EazyLee30/aiui-immersive-3dof"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p056",
+      "name": "狄敬超",
+      "aliases": [
+        "alswl",
+        "Jingchao"
+      ],
+      "website": "https://x.com/alswl",
+      "profile": {
+        "summary": "狄敬超（网名 alswl，公众号「窥豹」）是资深基础设施工程师与独立技术博客 Log4D（blog.alswl.com，始建于 2005 年）作者，活跃于 GitHub（@alswl）与 X（@alswl）。早期参与过堆糖等项目，曾任职沪江网，后在蚂蚁集团从事计算集群管理与容器调度系统研发。他持续实践并系统总结 AI Native 工程演进路径（Stage 1–8），开源了 logbook 交付工具集 lbkit、Agent 轻量通信工具 chatta、本地优先 AI Skill 管理器 skm、自动化工具 apilot 及技术指南仓库 guides 等项目。",
+        "roles": [
+          "基础设施工程师",
+          "资深技术博主",
+          "开源工具作者"
+        ],
+        "focus_areas": [
+          "AI Native 研发流程",
+          "多 Agent 调度架构",
+          "计算集群与容器调度",
+          "变异测试与工程验证",
+          "开发者工具链"
+        ],
+        "notable_projects": [
+          "Log4D (blog.alswl.com)",
+          "lbkit",
+          "chatta",
+          "skm",
+          "apilot"
+        ],
+        "sources_checked": [
+          "https://blog.alswl.com/about/",
+          "https://blog.alswl.com/2026/10/ai-native-stage-8/",
+          "https://github.com/alswl"
+        ],
+        "status": "verified"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "狄敬超",
+          "title": "AI Native 实践续篇：迈向 Stage 8",
+          "summary": "分享 1+N 统筹者（Captain）多 Agent 交付实践：用 lbkit 做 Preflight 预演，以变异测试「测试测试」，并让 Delivery 与 Verify 借 chatta 对立验收。",
+          "links": [
+            {
+              "label": "AI Native 实践续篇：迈向 Stage 8",
+              "href": "https://blog.alswl.com/2026/10/ai-native-stage-8/"
+            },
+            {
+              "label": "lbkit",
+              "href": "https://github.com/alswl/lbkit"
+            },
+            {
+              "label": "chatta",
+              "href": "https://github.com/alswl/chatta"
+            },
+            {
+              "label": "skm",
+              "href": "https://github.com/alswl/skm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p057",
+      "name": "demon",
+      "aliases": [],
+      "website": "https://xhslink.cn/o/1OLIBlm2fbX",
+      "profile": {
+        "summary": "demon 关注面向 AI Agent 的云端运行环境与持久上下文基础设施。在 Tab Thursday #005 中，他分享了面向 Agent 的云端原生电脑平台 Beeuni（beeuni.ai），重点介绍其针对云端 Blender 3D 建模与 Godot 游戏构建的图形化 Worker 能力，以及独立云端沙盒隔离、3,000+ 外部应用凭据托管与基于 Change Request 审阅合并机制的 Agent 记忆与 Skill 协作设计。",
+        "roles": [
+          "AI Agent 基础设施实践者",
+          "云端工作区分享者"
+        ],
+        "focus_areas": [
+          "面向 Agent 的云端电脑",
+          "云端沙盒与安全隔离",
+          "Blender / Godot Agent 工作流",
+          "MCP 与凭据托管",
+          "Agent 记忆与变更审阅"
+        ],
+        "notable_projects": [
+          "Beeuni (分享项目)"
+        ],
+        "sources_checked": [
+          "https://beeuni.ai/"
+        ],
+        "status": "partial"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "demon",
+          "title": "Beeuni：面向 Agent 的云端原生电脑",
+          "summary": "介绍为 Agent 提供独立云端沙盒、凭据托管与 Change Request 审阅机制的云端电脑 Beeuni，并展示其对云端 Blender 与 Godot 图形化任务的适配。",
+          "links": [
+            {
+              "label": "Beeuni",
+              "href": "https://beeuni.ai/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p058",
+      "name": "Mingxuan Wang",
+      "aliases": [
+        "Lennon Wang",
+        "lennondotw"
+      ],
+      "website": "https://github.com/lennondotw",
+      "profile": {
+        "summary": "Mingxuan Wang（Lennon Wang，GitHub @lennondotw）是个人 AI 助理平台 Today AI（today.ai）的创始工程师（Founding Engineer），此前曾任职于 Apple、Bilibili 以及字节跳动（飞书、豆包团队）。他兼具深厚的前端工程、交互动效与系统开发背景，在 GitHub 维护 120 余个仓库，涵盖交互实验项目 interaction-lab、自托管网络诊断工具 netprobe、macOS Electron 缩放帧同步补丁 electron-resize-sync 及源自工程实践的 Agent Skills 集合等。在 Tab Thursday #005 分享了 Today AI 跨设备持续上下文、主动式健康与工作协同以及两层长短期记忆压缩架构的设计实践。",
+        "roles": [
+          "创始工程师",
+          "全栈与前端工程师",
+          "AI 产品构建者"
+        ],
+        "focus_areas": [
+          "Personal Agent",
+          "长短期记忆与上下文压缩",
+          "跨设备多端协同",
+          "交互动效与前端架构",
+          "Agent Skills"
+        ],
+        "notable_projects": [
+          "Today AI",
+          "interaction-lab",
+          "netprobe",
+          "electron-resize-sync",
+          "skills"
+        ],
+        "sources_checked": [
+          "https://github.com/lennondotw",
+          "https://today.ai/"
+        ],
+        "status": "verified"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "Mingxuan Wang",
+          "title": "Today AI：持续上下文个人助理",
+          "summary": "介绍跨 Mac/Linux/iOS/Android 的个人 AI 助理 Today AI，打通苹果健康、日历、Slack 与 GitHub，并拆解动态压缩与分板块凌晨整理的两层记忆架构。",
+          "links": [
+            {
+              "label": "Today AI",
+              "href": "https://today.ai/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p059",
+      "name": "张飒",
+      "aliases": [
+        "Sa Zhang",
+        "张飒（Sa Zhang）",
+        "hey-sa"
+      ],
+      "website": "https://github.com/hey-sa/",
+      "profile": {
+        "summary": "张飒（Sa Zhang，GitHub @hey-sa）是 Jina AI 团队成员，2022 年加入 Jina AI 负责产品运营与社区生态，并随公司于 2025 年 10 月并入 Elastic。她在 GitHub 分享并维护多份与 Jina Reader、Jina OCR、向量搜索及 DeepResearch 相关的演示、演讲资料与工作流集成（如 obsidian-ReadItLater_with_Jina_Reader、ksug-jina-ocr-deck 等）。在 Tab Thursday #005 深入拆解了开源网页转 Markdown 工具 Jina Reader 背后的无头浏览器渲染与反爬工程，并探讨了 Agent 时代网页抓取与网站变现的商业困局。",
+        "roles": [
+          "AI 产品运营",
+          "技术社区建设者",
+          "Jina AI / Elastic 团队成员"
+        ],
+        "focus_areas": [
+          "网页读取与解析 (Jina Reader)",
+          "神经搜索与多模态检索",
+          "DeepResearch 工作流",
+          "Agent 时代网页经济",
+          "AI 基础设施生态"
+        ],
+        "notable_projects": [
+          "Jina Reader",
+          "ksug-jina-ocr-deck",
+          "obsidian-ReadItLater_with_Jina_Reader"
+        ],
+        "sources_checked": [
+          "https://github.com/hey-sa/",
+          "https://jina.ai/reader"
+        ],
+        "status": "verified"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "张飒（Sa Zhang）",
+          "title": "Jina Reader 与 Agent 时代的网页经济",
+          "summary": "拆解 r.jina.ai 用无头浏览器池与分阶段快照将动态网页转为 Markdown 的工程难点，并围绕 AI 抓取付费与「广告验证放行」探讨内容网站变现出路。",
+          "links": [
+            {
+              "label": "Jina Reader",
+              "href": "https://jina.ai/reader"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p060",
+      "name": "Lafe",
+      "aliases": [
+        "Lafe8088"
+      ],
+      "website": "https://x.com/Lafe8088",
+      "profile": {
+        "summary": "Lafe（X @Lafe8088）是 AI Agent 构建与集成平台 SpringBrand（springbrand.ai）的联合创始人兼 AI 工程师。SpringBrand 将 Semrush、Ahrefs 等上万种外部 API 与自动化任务打包进统一订阅，支持在云端定时批量运行营销、线索开发与研究型 Agent，并可接入 Codex、Claude Code、Cursor 等客户端。在 Tab Thursday #005，他分享了六天内借自动化 Agent 将谷歌日均自然曝光拉升 6.5 倍的海外 SEO 实战，并提炼出将人工判断沉淀为 CLI、Skill、知识库与人类决策表的系统化方法论。",
+        "roles": [
+          "AI 创业者 / 联合创始人",
+          "AI 工程师",
+          "自动化增长实践者"
+        ],
+        "focus_areas": [
+          "AI Agent 平台与 MCP",
+          "自动化 SEO 增长",
+          "人类决策沉淀系统",
+          "API 集成与云端任务调度",
+          "出海营销自动化"
+        ],
+        "notable_projects": [
+          "SpringBrand (springbrand.ai)"
+        ],
+        "sources_checked": [
+          "https://springbrand.ai/",
+          "https://x.com/Lafe8088"
+        ],
+        "status": "verified"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "Lafe",
+          "title": "SpringBrand 自动化海外 SEO 实践",
+          "summary": "分享用 SpringBrand 云端批量跑海外谷歌 SEO、六天曝光涨 6.5 倍的实战，重点是将人工判断固化为 CLI、Skill、知识库与决策表，并让 AI 从淘汰词中反捞盲区。",
+          "links": [
+            {
+              "label": "SpringBrand",
+              "href": "https://springbrand.ai/"
+            },
+            {
+              "label": "英文长文复盘",
+              "href": "https://x.com/Lafe8088/status/2124147638048002174"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p061",
+      "name": "Chester",
+      "aliases": [
+        "chesterlee14",
+        "WYSIATI"
+      ],
+      "website": "https://x.com/chesterlee14",
+      "profile": {
+        "summary": "Chester（X @chesterlee14，GitHub @WYSIATI）是活跃的独立开发者与开源作者，持续构建面向 macOS 桌面体验与 AI Agent 生态的轻量化工具。他用原生 SwiftUI 编写并开源了已通过苹果公证的桌面与刘海悬浮歌词工具 Float Lyrics，支持对接 Spotify 与 Apple Music 及开源词库 LRCLIB；此外在 GitHub 还维护 Agent 模型路由菜单栏工具 magpie、Agent 工具目录 agentfirst.directory、面向人与 Agent 的订房命令行工具 booking-cli、轻量 Agent 框架 pop 及 X 广告弱化插件 AdsDim 等项目。",
+        "roles": [
+          "独立开发者",
+          "macOS / SwiftUI 开发者",
+          "开源作者"
+        ],
+        "focus_areas": [
+          "macOS 原生工具",
+          "SwiftUI",
+          "AI Agent 工具与模型路由",
+          "音乐与桌面效率体验",
+          "开源小工具"
+        ],
+        "notable_projects": [
+          "Float Lyrics",
+          "magpie",
+          "agentfirst.directory",
+          "booking-cli",
+          "pop",
+          "AdsDim"
+        ],
+        "sources_checked": [
+          "https://github.com/WYSIATI",
+          "https://github.com/WYSIATI/FloatLyrics",
+          "https://x.com/chesterlee14"
+        ],
+        "status": "verified"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "Chester",
+          "title": "Float Lyrics：macOS 桌面与刘海悬浮歌词",
+          "summary": "怀念千千静听而用原生 SwiftUI 开源免费歌词工具，通过 macOS 自动化读取 Spotify 与 Apple Music 进度并对接 LRCLIB，支持半透明悬窗或藏进 MacBook 刘海显示。",
+          "links": [
+            {
+              "label": "Float Lyrics",
+              "href": "https://github.com/WYSIATI/FloatLyrics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p062",
+      "name": "August",
+      "aliases": [
+        "TobeBetterV"
+      ],
+      "website": "https://github.com/TobeBetterV",
+      "profile": {
+        "summary": "August（GitHub @TobeBetterV）是专注于 macOS 原生效率工具、本地优先应用与多 Agent 协作基础设施的独立开发者与开源作者。他打造并开源了面向 macOS 的屏幕理解助手 openSiri（opensiri.ai），默认在本地完成 OCR 且不上传原始截图，专注微信聊天语境回复建议、划词改写与待办提炼；其 GitHub 仓库还涵盖基于 Matrix 房间的人机协作多 Agent 系统 AgentTeams、本地聊天记录 SQL/AI 分析工具 ChatLab、菜单栏模型代理 droidproxy、滚动长截图应用 ScrollSnap、私有微博笔记应用 Moments 及 wxocr 等多个实用项目。",
+        "roles": [
+          "独立开发者",
+          "macOS 应用作者",
+          "开源开发者"
+        ],
+        "focus_areas": [
+          "macOS 本地 AI 助手",
+          "屏幕理解与本地 OCR",
+          "多 Agent 协作基础设施",
+          "local-first 隐私工具",
+          "桌面效率应用"
+        ],
+        "notable_projects": [
+          "openSiri",
+          "AgentTeams",
+          "ChatLab",
+          "droidproxy",
+          "ScrollSnap",
+          "Moments"
+        ],
+        "sources_checked": [
+          "https://github.com/TobeBetterV",
+          "https://opensiri.ai/"
+        ],
+        "status": "verified"
+      },
+      "appearances": [
+        {
+          "eventId": "005",
+          "sourceName": "August",
+          "title": "openSiri：本地 OCR 屏幕理解 macOS 助手",
+          "summary": "针对国行 Siri 能力缺失打造的开源 macOS 助手，克制地舍弃语音交互，主打本地 OCR 与默认不上传截图的圈选屏幕理解、聊天回复建议、划词改写与待办提取。",
+          "links": [
+            {
+              "label": "openSiri",
+              "href": "https://opensiri.ai/"
+            },
+            {
+              "label": "GitHub (opensiri)",
+              "href": "https://github.com/TobeBetterV/opensiri"
             }
           ]
         }

@@ -29,10 +29,10 @@ import { parseSearchResponse } from '../src/types';
 
 const ids = new Set(people.map(person => person.id));
 
-test('canonical directory covers all 4 events, 53 presenters, 82 appearances, and valid links', () => {
- assert.equal(events.length, 4);
- assert.equal(people.length, 53);
- assert.equal(ids.size, 53);
+test('canonical directory covers all 5 events, 62 presenters, 101 appearances, and valid links', () => {
+ assert.equal(events.length, 5);
+ assert.equal(people.length, 62);
+ assert.equal(ids.size, 62);
 
  let totalAppearances = 0;
  const countByEvent = new Map<string, number>();
@@ -73,7 +73,7 @@ test('canonical directory covers all 4 events, 53 presenters, 82 appearances, an
   );
  }
 
- assert.equal(totalAppearances, 82);
+ assert.equal(totalAppearances, 101);
  for (const event of events) {
   assert.equal(countByEvent.get(event.id), event.presenterCount, `event ${event.id} presenterCount mismatch`);
  }
@@ -140,7 +140,19 @@ test('keyword search finds names, aliases, Chinese topics, projects, link labels
   ['Immersive Translate', 'p001'],
   ['digital garden', 'p001'],
   ['Anyway.FM', 'p022'],
-  ['NebulaGraph', 'p053']
+  ['NebulaGraph', 'p053'],
+  ['绿野仙踪', 'p054'],
+  ['星拍游乐场', 'p055'],
+  ['Log4D', 'p056'],
+  ['Beeuni', 'p057'],
+  ['Today AI', 'p058'],
+  ['Jina Reader', 'p059'],
+  ['SpringBrand', 'p060'],
+  ['Float Lyrics', 'p061'],
+  ['openSiri', 'p062'],
+  ['Taku OS', 'p051'],
+  ['Musecube', 'p036'],
+  ['Nevatown', 'p004']
  ]) {
   assert.ok(localPeopleSearch(query, people).some(person => person.id === id), query);
  }
@@ -166,7 +178,7 @@ test('exact names and aliases resolve without asking Jev', async () => {
  assert.deepEqual(nameHit.matches, [{ id: 'p002', score: 1 }]);
 });
 
-test('Jev evaluates all 53 presenters, supports >10 matches, and caches queries', async () => {
+test('Jev evaluates all 62 presenters, supports >10 matches, and caches queries', async () => {
  let calls = 0;
  const client = new TypeSafeClient({
   apiKey: 'test',
@@ -175,7 +187,7 @@ test('Jev evaluates all 53 presenters, supports >10 matches, and caches queries'
    calls++;
    const body = JSON.parse(String(init?.body));
    assert.equal(body.state.search, 'people exploring ideas');
-   assert.equal(body.state.people.length, 53);
+   assert.equal(body.state.people.length, 62);
    assert.ok(!('stickers' in body.state));
    for (const person of people) {
     assert.ok(body.questions[person.id].instructions.includes(person.id));
@@ -195,7 +207,7 @@ test('Jev evaluates all 53 presenters, supports >10 matches, and caches queries'
    return new Response(JSON.stringify({
     model: 'jev-latest',
     answers: Object.fromEntries(people.map((person, i) => [person.id, { type: 'noul', noul: i === 0 ? 0.2 : 0.9 }])),
-    usage: { input_tokens: 100, output_tokens: 53 }
+    usage: { input_tokens: 100, output_tokens: 62 }
    }), { headers: { 'Content-Type': 'application/json' } });
   }
  });
@@ -228,7 +240,7 @@ test('Jev falls back to top 5 positive matches when all scores are below PEOPLE_
   fetch: async () => new Response(JSON.stringify({
    model: 'jev-latest',
    answers: Object.fromEntries(people.map(person => [person.id, { type: 'noul', noul: scoredIds[person.id] ?? 0 }])),
-   usage: { input_tokens: 100, output_tokens: 53 }
+   usage: { input_tokens: 100, output_tokens: 62 }
   }), { headers: { 'Content-Type': 'application/json' } })
  });
  const fallbackResult = await createPeopleSearchService(people, fallbackClient)('exploratory niche curiosity');
@@ -252,7 +264,7 @@ test('Jev falls back to top 5 positive matches when all scores are below PEOPLE_
     person.id,
     { type: 'noul', noul: person.id === 'p009' ? 0.35 : person.id === 'p001' ? 0.2 : 0 }
    ])),
-   usage: { input_tokens: 100, output_tokens: 53 }
+   usage: { input_tokens: 100, output_tokens: 62 }
   }), { headers: { 'Content-Type': 'application/json' } })
  });
  const sparseResult = await createPeopleSearchService(people, sparseClient)('sparse exploratory topic');
@@ -274,7 +286,7 @@ test('Jev falls back to top 5 positive matches when all scores are below PEOPLE_
      noul: person.id === 'p001' ? 0.5 : person.id === 'p002' ? 0.49 : person.id === 'p003' ? 0.2 : 0
     }
    ])),
-   usage: { input_tokens: 100, output_tokens: 53 }
+   usage: { input_tokens: 100, output_tokens: 62 }
   }), { headers: { 'Content-Type': 'application/json' } })
  });
  const primaryResult = await createPeopleSearchService(people, primaryClient)('threshold boundary query');
@@ -332,7 +344,7 @@ test('people API routes, Vercel pre-parsed body, status, and isolation from miss
  assert.equal(sticker.status, 200);
  assert.ok(sticker.body.matches.every((match: { id: string }) => match.id.startsWith('sticker-')));
 
- assert.equal((await request('/api/status', 'GET')).body.peopleCount, 53);
+ assert.equal((await request('/api/status', 'GET')).body.peopleCount, 62);
  assert.equal((await request('/api/people-search', 'GET')).status, 405);
  assert.equal((await request('/api/people-search', 'POST', { query: 1 })).status, 400);
  assert.equal((await request('/api/people-search', 'POST', { query: 'x'.repeat(241) })).status, 400);

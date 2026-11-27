@@ -34,7 +34,7 @@ export const BADGE_TIERS: readonly BadgeTier[] = [
  { id: 'anchor', minimum: 12, name: 'Community Anchor', zh: '社区锚点', lightText: false, image: '/tab-thursday/badges/centennial.webp' }
 ] as const;
 
-export const EVENT_COLORS = ['#1f725b', '#b8562b', '#3561a3', '#864886'] as const;
+export const EVENT_COLORS = ['#1f725b', '#b8562b', '#3561a3', '#864886', '#8d6418'] as const;
 
 export function eventColor(index: number): string {
  return EVENT_COLORS[((index % EVENT_COLORS.length) + EVENT_COLORS.length) % EVENT_COLORS.length];

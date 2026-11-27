@@ -8,11 +8,11 @@
   },
   "http://joyboy.club": {
     "url": "http://JoyBoy.Club",
+    "image": "/people-previews/joyboy-club-10c89e1c8f.webp",
     "imageAlt": "joyboy.club — say a game, play it",
-    "siteName": "joyboy.club",
-    "status": "found",
     "title": "joyboy.club — say a game, play it",
-    "image": "/people-previews/joyboy-club-10c89e1c8f.webp"
+    "siteName": "joyboy.club",
+    "status": "found"
   },
   "http://okjk.co/NwGumt": {
     "url": "http://okjk.co/NwGumt",
@@ -52,11 +52,11 @@
   },
   "https://air.build": {
     "url": "https://air.build/",
+    "image": "/people-previews/air-build-57a16e1823.webp",
     "imageAlt": "AirBuild — AI iOS App Builder That Handles App Review",
-    "siteName": "AirBuild",
-    "status": "found",
     "title": "AirBuild — AI iOS App Builder That Handles App Review",
-    "image": "/people-previews/air-build-57a16e1823.webp"
+    "siteName": "AirBuild",
+    "status": "found"
   },
   "https://anyway.fm/fonts/tab": {
     "url": "https://anyway.fm/fonts/tab/",
@@ -72,11 +72,11 @@
   },
   "https://apple.com/iphone-air": {
     "url": "https://www.apple.com/iphone-air/",
+    "image": "/people-previews/apple-com-be1bb8881c.webp",
     "imageAlt": "iPhone Air",
-    "siteName": "Apple",
-    "status": "found",
     "title": "iPhone Air",
-    "image": "/people-previews/apple-com-be1bb8881c.webp"
+    "siteName": "Apple",
+    "status": "found"
   },
   "https://apps.apple.com/us/app/delta-game-emulator/id1048524688": {
     "url": "https://apps.apple.com/us/app/delta-game-emulator/id1048524688",
@@ -86,9 +86,11 @@
   },
   "https://apps.apple.com/us/app/manic-emu-game-emulator/id6743335790": {
     "url": "https://apps.apple.com/us/app/manic-emu-game-emulator/id6743335790",
-    "imageAlt": "Manic EMU",
-    "siteName": "apps.apple.com",
-    "status": "fetch_failed"
+    "imageAlt": "iPhone 版“Today” - App Store",
+    "siteName": "App Store",
+    "status": "found",
+    "title": "iPhone 版“Today” - App Store",
+    "image": "/people-previews/apps-apple-com-4eaa56e334.webp"
   },
   "https://askyumi.com": {
     "url": "https://askyumi.com",
@@ -102,13 +104,29 @@
     "url": "https://bauman-ai-3min.vercel.app/#/1",
     "imageAlt": "3 分钟在线版",
     "siteName": "bauman-ai-3min.vercel.app",
-    "status": "fetch_failed"
+    "status": "no_image",
+    "title": "当观光客变成流浪者（3 分钟版） - Slidev"
+  },
+  "https://beeuni.ai": {
+    "url": "https://beeuni.ai/",
+    "imageAlt": "Beeuni — A computer for AI",
+    "siteName": "Beeuni",
+    "status": "found",
+    "title": "Beeuni | The Computer That Gets Better With You",
+    "image": "/people-previews/beeuni-ai-639d1cddb8.webp"
   },
   "https://bilibili.com/video/BV1QXHN6ZE3K": {
     "url": "https://www.bilibili.com/video/BV1QXHN6ZE3K/",
     "imageAlt": "样片",
     "siteName": "bilibili.com",
     "status": "no_image"
+  },
+  "https://blog.alswl.com/2026/10/ai-native-stage-8": {
+    "url": "https://blog.alswl.com/2026/10/ai-native-stage-8/",
+    "imageAlt": "AI Native 实践续篇：迈向 Stage 8",
+    "siteName": "Log4D",
+    "status": "no_image",
+    "title": "AI Native 实践续篇：迈向 Stage 8"
   },
   "https://blog.yorks0n.com": {
     "url": "https://blog.yorks0n.com/",
@@ -131,13 +149,27 @@
     "status": "no_image",
     "title": "Bob"
   },
+  "https://buzzing.cc": {
+    "url": "https://www.buzzing.cc/",
+    "imageAlt": "Buzzing",
+    "siteName": "Buzzing",
+    "status": "no_image",
+    "title": "Buzzing"
+  },
+  "https://cecil.codeberg.page": {
+    "url": "https://cecil.codeberg.page/",
+    "imageAlt": "张潘",
+    "siteName": "cecil.codeberg.page",
+    "status": "no_image",
+    "title": "Cecil Chang's Home Page"
+  },
   "https://cleverfranke.com/project/adc-brand-identity": {
     "url": "https://www.cleverfranke.com/project/adc-brand-identity",
+    "image": "/people-previews/cleverfranke-com-f573dfd303.webp",
     "imageAlt": "ADC brand identity | CLEVER°FRANKE",
-    "siteName": "cleverfranke.com",
-    "status": "found",
     "title": "ADC brand identity | CLEVER°FRANKE",
-    "image": "/people-previews/cleverfranke-com-f573dfd303.webp"
+    "siteName": "cleverfranke.com",
+    "status": "found"
   },
   "https://cloudhiker.net": {
     "url": "https://cloudhiker.net/",
@@ -147,19 +179,19 @@
   },
   "https://codeberg.org/Cecil/hmod": {
     "url": "https://codeberg.org/Cecil/hmod",
+    "image": "/people-previews/codeberg-org-430b81a2af.webp",
     "imageAlt": "Summary card of repository Cecil/hmod, described as: `hmod` 的灵感来自 [charmbracelet/mods](https://github.com/charmbracelet/mods)。mods 是 LLM 在 CLI 中的早期实践，我认识和使用它都早于目前的一切类似工具。但是 mods 不再维护，于是我准备开发属于自己的 mods，同时融合目前的前沿概念 harness，推出 hmod。",
-    "siteName": "Codeberg.org",
-    "status": "found",
     "title": "hmod",
-    "image": "/people-previews/codeberg-org-430b81a2af.webp"
+    "siteName": "Codeberg.org",
+    "status": "found"
   },
   "https://codeweavers.com/crossover": {
     "url": "https://www.codeweavers.com/crossover",
+    "image": "/people-previews/codeweavers-com-1c62bd885f.webp",
     "imageAlt": "CrossOver runs the Windows software you need on Mac and Linux.",
-    "siteName": "CodeWeavers",
-    "status": "found",
     "title": "CrossOver runs the Windows software you need on Mac and Linux.",
-    "image": "/people-previews/codeweavers-com-1c62bd885f.webp"
+    "siteName": "CodeWeavers",
+    "status": "found"
   },
   "https://comma.surf": {
     "url": "https://comma.surf/",
@@ -171,24 +203,25 @@
   },
   "https://con.nowledge.co": {
     "url": "https://con.nowledge.co/",
-    "imageAlt": "con",
-    "siteName": "con.nowledge.co",
-    "status": "fetch_failed"
+    "imageAlt": "con terminal emulator hero preview",
+    "siteName": "con",
+    "status": "found",
+    "title": "con: terminal-first AI terminal",
+    "image": "/people-previews/con-nowledge-co-6bee850b07.webp"
   },
   "https://cool-glitter-88a5.iniwex.workers.dev": {
     "url": "https://cool-glitter-88a5.iniwex.workers.dev/#/devices",
     "imageAlt": "VoHive",
     "siteName": "cool-glitter-88a5.iniwex.workers.dev",
-    "status": "no_image",
-    "title": "VoHive 2"
+    "status": "fetch_failed"
   },
   "https://corespeed.io": {
     "url": "https://corespeed.io/",
+    "image": "/people-previews/corespeed-io-9141c6fe93.webp",
     "imageAlt": "CoreSpeed · The agent-native cloud",
-    "siteName": "CoreSpeed",
-    "status": "found",
     "title": "CoreSpeed · The agent-native cloud",
-    "image": "/people-previews/corespeed-io-9141c6fe93.webp"
+    "siteName": "CoreSpeed",
+    "status": "found"
   },
   "https://curriculum.theory-a.com": {
     "url": "https://curriculum.theory-a.com/",
@@ -200,11 +233,11 @@
   },
   "https://cursor.com/grok-bot": {
     "url": "https://cursor.com/grok-bot",
+    "image": "/people-previews/cursor-com-0c267dc175.webp",
     "imageAlt": "Cursor - The best way to code with AI",
-    "siteName": "cursor.com",
-    "status": "found",
     "title": "Cursor - The best way to code with AI",
-    "image": "/people-previews/cursor-com-0c267dc175.webp"
+    "siteName": "cursor.com",
+    "status": "found"
   },
   "https://custombili.liangyue.site": {
     "url": "https://custombili.liangyue.site/",
@@ -236,11 +269,11 @@
   },
   "https://dj.theory-a.com/who-will-prompt-the-prompts": {
     "url": "https://dj.theory-a.com/who-will-prompt-the-prompts",
+    "image": "/people-previews/dj-theory-a-com-14dff0de13.webp",
     "imageAlt": "Watercolor: a student asleep over exam books while a sky of little servers and laptops does the work",
-    "siteName": "David Jiang",
-    "status": "found",
     "title": "Who Will Prompt the Prompts? · 谁来提示提示词",
-    "image": "/people-previews/dj-theory-a-com-14dff0de13.webp"
+    "siteName": "David Jiang",
+    "status": "found"
   },
   "https://drive.corespeed.app/drv_18f41626575b4037b4b7f32176e55a0a?k=slFLDqr-Bb3_RC1SBoTizmpXzuQ3IKBdgYQgnxJ9f1w": {
     "url": "https://drive.corespeed.app/drv_18f41626575b4037b4b7f32176e55a0a?k=slFLDqr-Bb3_RC1SBoTizmpXzuQ3IKBdgYQgnxJ9f1w",
@@ -257,17 +290,27 @@
   },
   "https://droid-deck.dev": {
     "url": "https://droid-deck.dev/",
+    "image": "/people-previews/droid-deck-dev-d01b2575a3.webp",
     "imageAlt": "DroidDeck",
-    "siteName": "DroidDeck",
-    "status": "found",
     "title": "DroidDeck: PC gaming on Android",
-    "image": "/people-previews/droid-deck-dev-d01b2575a3.webp"
+    "siteName": "DroidDeck",
+    "status": "found"
   },
   "https://ducter.ai": {
     "url": "https://ducter.ai/",
-    "imageAlt": "Ducter",
-    "siteName": "ducter.ai",
-    "status": "fetch_failed"
+    "imageAlt": "The words Hand it ten things. Hear back only what needs you. A personal AI for builders, on your own computers or servers. Beside them, a real screen of Ducter: a morning note with two things that need you, above an errand it finished (a di",
+    "siteName": "Ducter",
+    "status": "found",
+    "title": "Ducter: a personal AI for builders, running your AI agents on your own computers or servers",
+    "image": "/people-previews/ducter-ai-ac936a1e13.webp"
+  },
+  "https://eazylee.si": {
+    "url": "https://eazylee.si/",
+    "imageAlt": "EazyLee’s Notion-style avatar",
+    "siteName": "EazyLee",
+    "status": "found",
+    "title": "EazyLee",
+    "image": "/people-previews/eazylee-si-eaf650c71f.webp"
   },
   "https://emojimix.brucehjt.workers.dev": {
     "url": "https://emojimix.brucehjt.workers.dev/",
@@ -275,12 +318,21 @@
     "siteName": "emojimix.brucehjt.workers.dev",
     "status": "fetch_failed"
   },
+  "https://exporter.dev": {
+    "url": "https://exporter.dev/",
+    "imageAlt": "Exporter for Mac and iPhone: Apple Notes, Apple Health and more to Markdown",
+    "siteName": "Exporter",
+    "status": "found",
+    "title": "Exporter for Mac and iPhone: Apple Notes, Apple Health and more to Markdown",
+    "image": "/people-previews/exporter-dev-2aa74de091.webp"
+  },
   "https://felo.ai": {
     "url": "https://felo.ai/",
-    "imageAlt": "Felo",
+    "imageAlt": "Felo — Free Multilingual AI Search & Creation Platform",
     "siteName": "Felo",
-    "status": "fetch_failed",
-    "title": "Felo — Free Multilingual AI Search & Creation Platform"
+    "status": "found",
+    "title": "Felo — Free Multilingual AI Search & Creation Platform",
+    "image": "/people-previews/felo-ai-4b082d6a12.webp"
   },
   "https://firecrawl.github.io/anydoc": {
     "url": "https://firecrawl.github.io/anydoc/",
@@ -307,8 +359,9 @@
     "url": "https://gitflic.ru/project/goring/chatlog_alpha",
     "imageAlt": "Chatlog Alpha",
     "siteName": "gitflic.ru",
-    "status": "fetch_failed",
-    "title": "goring/chatlog_alpha: Chatlog Alpha"
+    "status": "found",
+    "title": "goring/chatlog_alpha: Chatlog Alpha",
+    "image": "/people-previews/gitflic-ru-459cc5318e.webp"
   },
   "https://github.com/AFK-surf/Comma": {
     "url": "https://github.com/AFK-surf/Comma",
@@ -320,35 +373,43 @@
   },
   "https://github.com/BiboyQG/WeChat-MCP": {
     "url": "https://github.com/BiboyQG/WeChat-MCP",
+    "image": "/people-previews/github-com-98843c8942.webp",
     "imageAlt": "WeChat-MCP: let Openclaw/Claude/ChatGPT and other AI assistants read and reply to WeChat for you - BiboyQG/WeChat-MCP",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - BiboyQG/WeChat-MCP: WeChat-MCP: let Openclaw/Claude/ChatGPT and other AI assistants read and reply to WeChat for you",
-    "image": "/people-previews/github-com-98843c8942.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/DIYgod/pinky": {
     "url": "https://github.com/DIYgod/pinky",
+    "image": "/people-previews/github-com-d071452cc1.webp",
     "imageAlt": "Let AI use your iPhone or Android phone, with you in the loop: any MCP agent from macOS, Windows or Linux, or Pinky itself, right on the phone. - DIYgod/pinky",
+    "title": "GitHub - DIYgod/pinky: Let AI use your iPhone or Android phone, with you in the loop: any MCP agent from macOS, Windows or Linux, or Pinky itself, right on the phone.",
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://github.com/EazyLee30/aiui-immersive-3dof": {
+    "url": "https://github.com/EazyLee30/aiui-immersive-3dof",
+    "imageAlt": "A field-tested agent skill for immersive Rokid AIUI: fixed-eye 3DoF, CJK pixel typography, temple controls, synchronized demos, and release workflows. - EazyLee30/aiui-immersive-3dof",
     "siteName": "GitHub",
     "status": "found",
-    "title": "GitHub - DIYgod/pinky: Let AI use your iPhone or Android phone, with you in the loop: any MCP agent from macOS, Windows or Linux, or Pinky itself, right on the phone.",
-    "image": "/people-previews/github-com-d071452cc1.webp"
+    "title": "GitHub - EazyLee30/aiui-immersive-3dof: A field-tested agent skill for immersive Rokid AIUI: fixed-eye 3DoF, CJK pixel typography, temple controls, synchronized demos, and release workflows.",
+    "image": "/people-previews/github-com-95437f2226.webp"
   },
   "https://github.com/Jocs": {
     "url": "https://github.com/Jocs",
+    "image": "/people-previews/github-com-2b32a7980f.webp",
     "imageAlt": "Author of @marktext and @mind-box. Main contributor of @dream-num. Love markdown and text editor, Open source enthusiasts. - Jocs",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "Jocs - Overview",
-    "image": "/people-previews/github-com-2b32a7980f.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/LNPANDY/NX2Apple": {
     "url": "https://github.com/LNPANDY/NX2Apple",
+    "image": "/people-previews/github-com-c3337f44bb.webp",
     "imageAlt": "Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game. - LNPANDY/NX2Apple",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - LNPANDY/NX2Apple: Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.",
-    "image": "/people-previews/github-com-c3337f44bb.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/MDX-Tom/gpt-instruct": {
     "url": "https://github.com/MDX-Tom/gpt-instruct",
@@ -359,10 +420,11 @@
   },
   "https://github.com/OpenMinis/OpenMinis": {
     "url": "https://github.com/OpenMinis/OpenMinis",
-    "imageAlt": "OpenMinis",
+    "imageAlt": "OpenMinis — The AI Agent app across platforms. Fully free and open source. - OpenMinis/OpenMinis",
     "siteName": "GitHub",
-    "status": "fetch_failed",
-    "title": "GitHub - OpenMinis/OpenMinis: OpenMinis — The AI Agent app across platforms. Fully free and open source."
+    "status": "found",
+    "title": "GitHub - OpenMinis/OpenMinis: OpenMinis — The AI Agent app across platforms. Fully free and open source.",
+    "image": "/people-previews/github-com-f449954843.webp"
   },
   "https://github.com/Openhaitao/iphone-use-pro": {
     "url": "https://github.com/Openhaitao/iphone-use-pro",
@@ -374,27 +436,59 @@
   },
   "https://github.com/Peterleixx": {
     "url": "https://github.com/Peterleixx",
+    "image": "/people-previews/github-com-1b637a9831.webp",
     "imageAlt": "Peterleixx has 18 repositories available. Follow their code on GitHub.",
+    "title": "Peterleixx - Overview",
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://github.com/Peterleixx/margin-radio-local": {
+    "url": "https://github.com/Peterleixx/margin-radio-local",
+    "imageAlt": "页边电台 · 把文章、文档和聊天做成中文播客或有声书。本机运行，自选 TTS 模型与音色，支持 MCP。 - Peterleixx/margin-radio-local",
     "siteName": "GitHub",
     "status": "found",
-    "title": "Peterleixx - Overview",
-    "image": "/people-previews/github-com-1b637a9831.webp"
+    "title": "GitHub - Peterleixx/margin-radio-local: 页边电台 · 把文章、文档和聊天做成中文播客或有声书。本机运行，自选 TTS 模型与音色，支持 MCP。",
+    "image": "/people-previews/github-com-efd57863f7.webp"
   },
   "https://github.com/RuoJi6/ARTEX": {
     "url": "https://github.com/RuoJi6/ARTEX",
+    "image": "/people-previews/github-com-2e945d2f18.webp",
     "imageAlt": "Autumn-27/ARTEX 持续维护开源版本 （Internationalized version） - RuoJi6/ARTEX",
+    "title": "GitHub - RuoJi6/ARTEX: Autumn-27/ARTEX 持续维护开源版本 （Internationalized version）",
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://github.com/TobeBetterV": {
+    "url": "https://github.com/TobeBetterV",
+    "imageAlt": "TobeBetterV has 25 repositories available. Follow their code on GitHub.",
     "siteName": "GitHub",
     "status": "found",
-    "title": "GitHub - RuoJi6/ARTEX: Autumn-27/ARTEX 持续维护开源版本 （Internationalized version）",
-    "image": "/people-previews/github-com-2e945d2f18.webp"
+    "title": "TobeBetterV - Overview",
+    "image": "/people-previews/github-com-e8aaca9260.webp"
+  },
+  "https://github.com/TobeBetterV/opensiri": {
+    "url": "https://github.com/TobeBetterV/opensiri",
+    "imageAlt": "基于 AgentTeams 的 macOS 多 Agent 基础设施. Contribute to TobeBetterV/opensiri development by creating an account on GitHub.",
+    "siteName": "GitHub",
+    "status": "found",
+    "title": "GitHub - TobeBetterV/opensiri: 基于 AgentTeams 的 macOS 多 Agent 基础设施",
+    "image": "/people-previews/github-com-9345634e60.webp"
   },
   "https://github.com/Usagi-org/ai-goofish-monitor": {
     "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+    "image": "/people-previews/github-com-df77d7d300.webp",
     "imageAlt": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。 - Usagi-org/ai-goofish-monitor",
+    "title": "GitHub - Usagi-org/ai-goofish-monitor: 基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://github.com/WYSIATI/FloatLyrics": {
+    "url": "https://github.com/WYSIATI/FloatLyrics",
+    "imageAlt": "Live lyrics for Spotify and Apple Music, right on your Mac desktop or in your notch. Native, minimal, and open source. - WYSIATI/FloatLyrics",
     "siteName": "GitHub",
     "status": "found",
-    "title": "GitHub - Usagi-org/ai-goofish-monitor: 基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
-    "image": "/people-previews/github-com-df77d7d300.webp"
+    "title": "GitHub - WYSIATI/FloatLyrics: Live lyrics for Spotify and Apple Music, right on your Mac desktop or in your notch. Native, minimal, and open source.",
+    "image": "/people-previews/github-com-834e04d090.webp"
   },
   "https://github.com/Yorks0n/ZotWatch": {
     "url": "https://github.com/Yorks0n/ZotWatch",
@@ -406,43 +500,67 @@
   },
   "https://github.com/allin2": {
     "url": "https://github.com/allin2",
+    "image": "/people-previews/github-com-31193da287.webp",
     "imageAlt": "allin2 has 33 repositories available. Follow their code on GitHub.",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "allin2 - Overview",
-    "image": "/people-previews/github-com-31193da287.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/allin2/AgentForWin7": {
     "url": "https://github.com/allin2/AgentForWin7",
+    "image": "/people-previews/github-com-019e345a24.webp",
     "imageAlt": "面向 Windows 7 SP1 x64 的 AI 编程助手 | AI coding agent for Windows 7 SP1 x64: workspace editing, commands, checkpoints, audit, OpenAI-compatible models such as DeepSeek. - allin2/AgentForWin7",
+    "title": "GitHub - allin2/AgentForWin7: 面向 Windows 7 SP1 x64 的 AI 编程助手 | AI coding agent for Windows 7 SP1 x64: workspace editing, commands, checkpoints, audit, OpenAI-compatible models such as DeepSeek.",
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://github.com/alswl/chatta": {
+    "url": "https://github.com/alswl/chatta",
+    "imageAlt": "chatta is chat to agent, tiny CLI and SKILL. Contribute to alswl/chatta development by creating an account on GitHub.",
     "siteName": "GitHub",
     "status": "found",
-    "title": "GitHub - allin2/AgentForWin7: 面向 Windows 7 SP1 x64 的 AI 编程助手 | AI coding agent for Windows 7 SP1 x64: workspace editing, commands, checkpoints, audit, OpenAI-compatible models such as DeepSeek.",
-    "image": "/people-previews/github-com-019e345a24.webp"
+    "title": "GitHub - alswl/chatta: chatta is chat to agent, tiny CLI and SKILL",
+    "image": "/people-previews/github-com-4076429a1f.webp"
+  },
+  "https://github.com/alswl/lbkit": {
+    "url": "https://github.com/alswl/lbkit",
+    "imageAlt": "logbook kit. Contribute to alswl/lbkit development by creating an account on GitHub.",
+    "siteName": "GitHub",
+    "status": "found",
+    "title": "GitHub - alswl/lbkit: logbook kit",
+    "image": "/people-previews/github-com-66647108f5.webp"
+  },
+  "https://github.com/alswl/skm": {
+    "url": "https://github.com/alswl/skm",
+    "imageAlt": "a tiny local-first AI Skill Manager. Contribute to alswl/skm development by creating an account on GitHub.",
+    "siteName": "GitHub",
+    "status": "found",
+    "title": "GitHub - alswl/skm: a tiny local-first AI Skill Manager",
+    "image": "/people-previews/github-com-64cfe3a8bc.webp"
   },
   "https://github.com/cassieliang6709": {
     "url": "https://github.com/cassieliang6709",
+    "image": "/people-previews/github-com-be4b879bbb.webp",
     "imageAlt": "LLM inference · on-device. cassieliang6709 has 18 repositories available. Follow their code on GitHub.",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "cassieliang6709 - Overview",
-    "image": "/people-previews/github-com-be4b879bbb.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/charmbracelet/mods": {
     "url": "https://github.com/charmbracelet/mods",
+    "image": "/people-previews/github-com-d7e37d55c6.webp",
     "imageAlt": "AI on the command line. Contribute to charmbracelet/mods development by creating an account on GitHub.",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - charmbracelet/mods: AI on the command line",
-    "image": "/people-previews/github-com-d7e37d55c6.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/choyiny/saasmail": {
     "url": "https://github.com/choyiny/saasmail",
+    "image": "/people-previews/github-com-5a43a54858.webp",
     "imageAlt": "Self-hosted email server for SaaS teams on Cloudflare Workers with WebMCP support - choyiny/saasmail",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - choyiny/saasmail: Self-hosted email server for SaaS teams on Cloudflare Workers with WebMCP support",
-    "image": "/people-previews/github-com-5a43a54858.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/ericwei97-cloud/gesture-synth": {
     "url": "https://github.com/ericwei97-cloud/gesture-synth",
@@ -454,19 +572,19 @@
   },
   "https://github.com/finlater/weread.koplugin": {
     "url": "https://github.com/finlater/weread.koplugin",
+    "image": "/people-previews/github-com-d8579f3c71.webp",
     "imageAlt": "微信读书 koreader 插件，在 koreader 里阅读微信读书里的书籍、公众号文章，支持阅读进度同步，阅读时长上报和统计，本地书籍支持获取微信读书划线和想法内容，支持Kindle、Kobo等所有能安装 koreader 的设备。 - finlater/weread.koplugin",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - finlater/weread.koplugin: 微信读书 koreader 插件，在 koreader 里阅读微信读书里的书籍、公众号文章，支持阅读进度同步，阅读时长上报和统计，本地书籍支持获取微信读书划线和想法内容，支持Kindle、Kobo等所有能安装 koreader 的设备。",
-    "image": "/people-previews/github-com-d8579f3c71.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/firecrawl/anydoc": {
     "url": "https://github.com/firecrawl/anydoc",
+    "image": "/people-previews/github-com-752908444a.webp",
     "imageAlt": "Convert Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF to clean Markdown. Built in Rust, with Node.js and Python bindings. - firecrawl/anydoc",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - firecrawl/anydoc: Convert Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF to clean Markdown. Built in Rust, with Node.js and Python bindings.",
-    "image": "/people-previews/github-com-752908444a.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/haopsy/brand-logo-finder": {
     "url": "https://github.com/haopsy/brand-logo-finder",
@@ -478,58 +596,83 @@
   },
   "https://github.com/hashtagbasit/Zaviya": {
     "url": "https://github.com/hashtagbasit/Zaviya",
+    "image": "/people-previews/github-com-72e80d20c4.webp",
     "imageAlt": "Based on SteamOS for ARM, built for ARM handhelds and tablets. Formerly known as Unofficial SteamOS ARM Port. - hashtagbasit/Zaviya",
+    "title": "GitHub - hashtagbasit/Zaviya: Based on SteamOS for ARM, built for ARM handhelds and tablets. Formerly known as Unofficial SteamOS ARM Port.",
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://github.com/hey-sa": {
+    "url": "https://github.com/hey-sa/",
+    "imageAlt": "sa.zhang@elastic.co. hey-sa has 42 repositories available. Follow their code on GitHub.",
     "siteName": "GitHub",
     "status": "found",
-    "title": "GitHub - hashtagbasit/Zaviya: Based on SteamOS for ARM, built for ARM handhelds and tablets. Formerly known as Unofficial SteamOS ARM Port.",
-    "image": "/people-previews/github-com-72e80d20c4.webp"
+    "title": "hey-sa - Overview",
+    "image": "/people-previews/github-com-94ae6ca5f2.webp"
   },
   "https://github.com/hujingting": {
     "url": "https://github.com/hujingting",
+    "image": "/people-previews/github-com-984b9ef28e.webp",
     "imageAlt": "hujingting has 11 repositories available. Follow their code on GitHub.",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "hujingting - Overview",
-    "image": "/people-previews/github-com-984b9ef28e.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/ish-app/ish": {
     "url": "https://github.com/ish-app/ish",
+    "image": "/people-previews/github-com-a566601fea.webp",
     "imageAlt": "Linux shell for iOS. Contribute to ish-app/ish development by creating an account on GitHub.",
+    "title": "GitHub - ish-app/ish: Linux shell for iOS",
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://github.com/lennondotw": {
+    "url": "https://github.com/lennondotw",
+    "imageAlt": "Build <a/> better world. lennondotw has 123 repositories available. Follow their code on GitHub.",
     "siteName": "GitHub",
     "status": "found",
-    "title": "GitHub - ish-app/ish: Linux shell for iOS",
-    "image": "/people-previews/github-com-a566601fea.webp"
+    "title": "lennondotw - Overview",
+    "image": "/people-previews/github-com-ddfd2d3c7b.webp"
   },
   "https://github.com/microsoft/markitdown": {
     "url": "https://github.com/microsoft/markitdown",
+    "image": "/people-previews/github-com-dec36f96df.webp",
     "imageAlt": "Python tool for converting files and office documents to Markdown. - microsoft/markitdown",
+    "title": "GitHub - microsoft/markitdown: Python tool for converting files and office documents to Markdown.",
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://github.com/minimaxir/hacker-news-undocumented/blob/master/README.md": {
+    "url": "https://github.com/minimaxir/hacker-news-undocumented/blob/master/README.md",
+    "imageAlt": "Some of the hidden norms about Hacker News not otherwise covered in the Guidelines and the FAQ. - minimaxir/hacker-news-undocumented",
     "siteName": "GitHub",
     "status": "found",
-    "title": "GitHub - microsoft/markitdown: Python tool for converting files and office documents to Markdown.",
-    "image": "/people-previews/github-com-dec36f96df.webp"
+    "title": "hacker-news-undocumented/README.md at master · minimaxir/hacker-news-undocumented",
+    "image": "/people-previews/github-com-00de7c60bc.webp"
   },
   "https://github.com/muhraufan/robodust": {
     "url": "https://github.com/muhraufan/robodust",
+    "image": "/people-previews/github-com-75436316f7.webp",
     "imageAlt": "A fun and silly way to clean up your desktop mess. Let's make software fun again. - muhraufan/robodust",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - muhraufan/robodust: A fun and silly way to clean up your desktop mess. Let's make software fun again.",
-    "image": "/people-previews/github-com-75436316f7.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/mxhm11cr/LinuxRunner": {
     "url": "https://github.com/mxhm11cr/LinuxRunner",
+    "image": "/people-previews/github-com-4bca24e1d3.webp",
     "imageAlt": "Run ARM64 Linux userspace and desktop applications on iPhone and iPad. - mxhm11cr/LinuxRunner",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - mxhm11cr/LinuxRunner: Run ARM64 Linux userspace and desktop applications on iPhone and iPad.",
-    "image": "/people-previews/github-com-4bca24e1d3.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/nekoium/Olea": {
     "url": "https://github.com/nekoium/Olea",
-    "imageAlt": "Olea",
+    "imageAlt": "Your agents, in your hands. Olea is an agent orchestrator that truly runs on your phone, currently MVP and under fast development. - nekoium/Olea",
     "siteName": "GitHub",
-    "status": "fetch_failed",
-    "title": "GitHub - nekoium/Olea: Your agents, in your hands - Olea is an agent orchestrator that truly runs on your phone, currently MVP and under fast development."
+    "status": "found",
+    "title": "GitHub - nekoium/Olea: Your agents, in your hands. Olea is an agent orchestrator that truly runs on your phone, currently MVP and under fast development.",
+    "image": "/people-previews/github-com-660c52aad7.webp"
   },
   "https://github.com/occupysaas": {
     "url": "https://github.com/occupysaas",
@@ -541,59 +684,59 @@
   },
   "https://github.com/oneamendez/crate-ios": {
     "url": "https://github.com/oneamendez/crate-ios",
+    "image": "/people-previews/github-com-bc02870ace.webp",
     "imageAlt": "crate: run Linux VMs on iPhone and iPad. Contribute to oneamendez/crate-ios development by creating an account on GitHub.",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - oneamendez/crate-ios: crate: run Linux VMs on iPhone and iPad",
-    "image": "/people-previews/github-com-bc02870ace.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/p-e-w/heretic": {
     "url": "https://github.com/p-e-w/heretic",
+    "image": "/people-previews/github-com-3db40af345.webp",
     "imageAlt": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more - p-e-w/heretic",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - p-e-w/heretic: Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
-    "image": "/people-previews/github-com-3db40af345.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/router-for-me/CLIProxyAPI": {
     "url": "https://github.com/router-for-me/CLIProxyAPI",
+    "image": "/people-previews/github-com-d38431da0d.webp",
     "imageAlt": "Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini Series, GPT Series, Grok Se...",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - router-for-me/CLIProxyAPI: Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini Series, GPT Series, Grok Series, C",
-    "image": "/people-previews/github-com-d38431da0d.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/router-for-me/Cli-Proxy-API-Management-Center": {
     "url": "https://github.com/router-for-me/Cli-Proxy-API-Management-Center",
+    "image": "/people-previews/github-com-3e58418a09.webp",
     "imageAlt": "This is a WebUI interface based on CLI-Proxy-API, designed to simplify configuration modifications and runtime status monitoring. - router-for-me/Cli-Proxy-API-Management-Center",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - router-for-me/Cli-Proxy-API-Management-Center: This is a WebUI interface based on CLI-Proxy-API, designed to simplify configuration modifications and runtime status monitoring.",
-    "image": "/people-previews/github-com-3e58418a09.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/run-llama/liteparse": {
     "url": "https://github.com/run-llama/liteparse",
+    "image": "/people-previews/github-com-8ba92212f6.webp",
     "imageAlt": "A fast, helpful, and open-source document parser. Contribute to run-llama/liteparse development by creating an account on GitHub.",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - run-llama/liteparse: A fast, helpful, and open-source document parser",
-    "image": "/people-previews/github-com-8ba92212f6.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/rynx-cc": {
     "url": "https://github.com/rynx-cc",
+    "image": "/people-previews/github-com-fb96437c0d.webp",
     "imageAlt": "rynx-cc has 6 repositories available. Follow their code on GitHub.",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "rynx-cc - Overview",
-    "image": "/people-previews/github-com-fb96437c0d.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/rynx-cc/mcp-server-nuxt": {
     "url": "https://github.com/rynx-cc/mcp-server-nuxt",
+    "image": "/people-previews/github-com-de88ad572c.webp",
     "imageAlt": "MCP server for Nuxt — 22 tools and 7 resources so agents can inspect routes, components, composables, Nitro routes, auto-imports, and config. - rynx-cc/mcp-server-nuxt",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - rynx-cc/mcp-server-nuxt: MCP server for Nuxt — 22 tools and 7 resources so agents can inspect routes, components, composables, Nitro routes, auto-imports, and config.",
-    "image": "/people-previews/github-com-de88ad572c.webp"
+    "siteName": "GitHub",
+    "status": "found"
   },
   "https://github.com/sofish/standup": {
     "url": "https://github.com/sofish/standup",
@@ -604,11 +747,18 @@
   },
   "https://github.com/wlzh/dji-4g-vohive-mac": {
     "url": "https://github.com/wlzh/dji-4g-vohive-mac",
+    "image": "/people-previews/github-com-60ab37d62c.webp",
     "imageAlt": "在 Mac（Apple Silicon / Intel）上用 UTM 跑 Linux 虚拟机，把大疆 4G 模块（EG25-G）伪装成移远 Quectel EC25 并部署 vohive 平台的完整步骤 - wlzh/dji-4g-vohive-mac",
-    "siteName": "GitHub",
-    "status": "found",
     "title": "GitHub - wlzh/dji-4g-vohive-mac: 在 Mac（Apple Silicon / Intel）上用 UTM 跑 Linux 虚拟机，把大疆 4G 模块（EG25-G）伪装成移远 Quectel EC25 并部署 vohive 平台的完整步骤",
-    "image": "/people-previews/github-com-60ab37d62c.webp"
+    "siteName": "GitHub",
+    "status": "found"
+  },
+  "https://gloriaxu.com": {
+    "url": "https://gloriaxu.com/",
+    "imageAlt": "Gloria Xu",
+    "siteName": "gloriaxu.com",
+    "status": "no_image",
+    "title": "GLORIA XU"
   },
   "https://glove.theory-a.com": {
     "url": "https://glove.theory-a.com",
@@ -642,11 +792,11 @@
   },
   "https://grug.so": {
     "url": "https://grug.so/",
+    "image": "/people-previews/grug-so-9f0c2fc514.webp",
     "imageAlt": "grug. - philosophical developer wisdom",
-    "siteName": "grug.so",
-    "status": "found",
     "title": "grug.",
-    "image": "/people-previews/grug-so-9f0c2fc514.webp"
+    "siteName": "grug.so",
+    "status": "found"
   },
   "https://haitao.wiki": {
     "url": "https://haitao.wiki/",
@@ -657,49 +807,81 @@
   },
   "https://handoff.yytyyf.com": {
     "url": "https://handoff.yytyyf.com/",
+    "image": "/people-previews/handoff-yytyyf-com-e257bf4038.webp",
     "imageAlt": "Handoff · 存链接和一句话，Agent 把它们变成派单",
-    "siteName": "handoff.yytyyf.com",
-    "status": "found",
     "title": "Handoff · 存链接和一句话，Agent 把它们变成派单",
-    "image": "/people-previews/handoff-yytyyf-com-e257bf4038.webp"
+    "siteName": "handoff.yytyyf.com",
+    "status": "found"
   },
   "https://hark.com": {
     "url": "https://hark.com/",
+    "image": "/people-previews/hark-com-6927950c68.webp",
     "imageAlt": "Hark",
-    "siteName": "hark.com",
-    "status": "found",
     "title": "Hark",
-    "image": "/people-previews/hark-com-6927950c68.webp"
+    "siteName": "hark.com",
+    "status": "found"
   },
   "https://hawdb.ai": {
     "url": "https://hawdb.ai/",
-    "imageAlt": "HawDB",
-    "siteName": "hawdb.ai",
-    "status": "fetch_failed"
+    "imageAlt": "HawDB: an embedded database for graph, SQL, full-text, and vector search.",
+    "siteName": "HawDB",
+    "status": "found",
+    "title": "HawDB — Embedded Graph, SQL & Vector Database",
+    "image": "/people-previews/hawdb-ai-b61c83bbce.webp"
   },
   "https://herotxt.page": {
     "url": "https://www.herotxt.page/",
+    "image": "/people-previews/herotxt-page-ab87403307.webp",
     "imageAlt": "Track How Your Competitors Reposition | Hero Section Library",
-    "siteName": "Hero Section Library",
-    "status": "found",
     "title": "Track How Your Competitors Reposition | Hero Section Library",
-    "image": "/people-previews/herotxt-page-ab87403307.webp"
+    "siteName": "Hero Section Library",
+    "status": "found"
+  },
+  "https://hn.algolia.com": {
+    "url": "https://hn.algolia.com/",
+    "imageAlt": "HN Algolia",
+    "siteName": "HN Search",
+    "status": "no_image",
+    "title": "HN Search powered by Algolia"
+  },
+  "https://hn.buzzing.cc": {
+    "url": "https://hn.buzzing.cc/",
+    "imageAlt": "Hacker News 热门",
+    "siteName": "Hacker News 热门",
+    "status": "found",
+    "title": "Hacker News 热门",
+    "image": "/people-previews/hn-buzzing-cc-9524e5d64c.webp"
+  },
+  "https://hnnew.buzzing.cc": {
+    "url": "https://hnnew.buzzing.cc/",
+    "imageAlt": "Hacker News 最新提交",
+    "siteName": "Hacker News 最新提交",
+    "status": "found",
+    "title": "Hacker News 最新提交",
+    "image": "/people-previews/hnnew-buzzing-cc-67832494f0.webp"
+  },
+  "https://hnvault.owenyoung.com": {
+    "url": "https://hnvault.owenyoung.com/",
+    "imageAlt": "HN Vault",
+    "siteName": "hnvault.owenyoung.com",
+    "status": "no_image",
+    "title": "The Hacker Classics"
   },
   "https://huiye.org/zh": {
     "url": "https://huiye.org/zh",
+    "image": "/people-previews/huiye-org-bb3d3ffe69.webp",
     "imageAlt": "绘页:手绘故事视频制作",
-    "siteName": "绘页",
-    "status": "found",
     "title": "绘页:手绘故事视频制作",
-    "image": "/people-previews/huiye-org-bb3d3ffe69.webp"
+    "siteName": "绘页",
+    "status": "found"
   },
   "https://huyixi.com": {
     "url": "https://huyixi.com/",
+    "image": "/people-previews/huyixi-com-664b58b0d1.webp",
     "imageAlt": "huyixi",
-    "siteName": "huyixi",
-    "status": "found",
     "title": "huyixi’s Personal Website — Writing, Apps & Notes",
-    "image": "/people-previews/huyixi-com-664b58b0d1.webp"
+    "siteName": "huyixi",
+    "status": "found"
   },
   "https://i.variablize.app": {
     "url": "https://i.variablize.app/",
@@ -708,6 +890,13 @@
     "status": "no_image",
     "title": "Variablize I: AI Business Case Studies"
   },
+  "https://icloud.com/freeform/0d8_QauDy-cLZh1ZiJ7-xcQAA": {
+    "url": "https://www.icloud.com/freeform/0d8_QauDy-cLZh1ZiJ7-xcQAA",
+    "imageAlt": "上海天文馆无边记导览画布",
+    "siteName": "Apple Support",
+    "status": "no_image",
+    "title": "If a Freeform link isn't working - Apple Support"
+  },
   "https://ii.variablize.app": {
     "url": "https://ii.variablize.app/",
     "imageAlt": "变量 II",
@@ -715,11 +904,29 @@
     "status": "no_image",
     "title": "Variablize II: Fundamentals Thermometer"
   },
+  "https://immersivetranslate.com": {
+    "url": "https://immersivetranslate.com/",
+    "imageAlt": "Immersive Translate - Next-Gen AI Translator | Bilingual Website Translation, PDF, Video Subtitle, Manga & Image Translation | Immersive Translate",
+    "siteName": "Immersive Translate",
+    "status": "found",
+    "title": "Immersive Translate - Next-Gen AI Translator | Bilingual Website Translation, PDF, Video Subtitle, Manga & Image Translation | Immersive Translate",
+    "image": "/people-previews/immersivetranslate-com-99e2624cd7.webp"
+  },
   "https://instinct.com": {
     "url": "https://instinct.com/",
     "imageAlt": "Instinct",
-    "siteName": "instinct.com",
-    "status": "fetch_failed"
+    "siteName": "Instinct",
+    "status": "found",
+    "title": "Instinct",
+    "image": "/people-previews/instinct-com-182d1ae2b1.webp"
+  },
+  "https://jina.ai/reader": {
+    "url": "https://jina.ai/reader",
+    "imageAlt": "Reader API - Jina AI",
+    "siteName": "jina.ai",
+    "status": "found",
+    "title": "Reader API - Jina AI",
+    "image": "/people-previews/jina-ai-894849aa59.webp"
   },
   "https://junwei.cool": {
     "url": "https://junwei.cool",
@@ -737,11 +944,11 @@
   },
   "https://linfeibala.fun": {
     "url": "https://linfeibala.fun/",
+    "image": "/people-previews/linfeibala-fun-893709ed5f.webp",
     "imageAlt": "丑颜工具",
-    "siteName": "linfeibala.fun",
-    "status": "found",
     "title": "丑颜工具｜丑，也是一种美",
-    "image": "/people-previews/linfeibala-fun-893709ed5f.webp"
+    "siteName": "linfeibala.fun",
+    "status": "found"
   },
   "https://linkedin.com/in/chien-lin-b92385253": {
     "url": "https://www.linkedin.com/in/chien-lin-b92385253/",
@@ -777,11 +984,11 @@
   },
   "https://lite.ego.app/zh-cn": {
     "url": "https://lite.ego.app/zh-cn",
+    "image": "/people-previews/lite-ego-app-4a0f1b4e1b.webp",
     "imageAlt": "让 AI Agent 执行网页自动化最快的浏览器 | ego(lite)",
-    "siteName": "ego(lite)",
-    "status": "found",
     "title": "让 AI Agent 执行网页自动化最快的浏览器 | ego(lite)",
-    "image": "/people-previews/lite-ego-app-4a0f1b4e1b.webp"
+    "siteName": "ego(lite)",
+    "status": "found"
   },
   "https://m.okjike.com/users/7a0ddf6f-de6f-4e6d-8366-29bee03344e8": {
     "url": "https://m.okjike.com/users/7a0ddf6f-de6f-4e6d-8366-29bee03344e8",
@@ -791,11 +998,11 @@
   },
   "https://manufold.yytyyf.com": {
     "url": "https://manufold.yytyyf.com/",
+    "image": "/people-previews/manufold-yytyyf-com-f8f0bd4786.webp",
     "imageAlt": "ManuFold · 物页 — 让 AI 替你管理说明书",
-    "siteName": "manufold.yytyyf.com",
-    "status": "found",
     "title": "ManuFold · 物页 — 让 AI 替你管理说明书",
-    "image": "/people-previews/manufold-yytyyf-com-f8f0bd4786.webp"
+    "siteName": "manufold.yytyyf.com",
+    "status": "found"
   },
   "https://marktext.me": {
     "url": "https://www.marktext.me/",
@@ -812,9 +1019,11 @@
   },
   "https://mem.nowledge.co": {
     "url": "https://mem.nowledge.co/",
-    "imageAlt": "Nowledge Mem",
-    "siteName": "mem.nowledge.co",
-    "status": "fetch_failed"
+    "imageAlt": "Nowledge Mem: Think, Remember, Connect",
+    "siteName": "Nowledge Mem",
+    "status": "found",
+    "title": "Nowledge Mem: Think, Remember, Connect",
+    "image": "/people-previews/mem-nowledge-co-221705761c.webp"
   },
   "https://miniflux.app": {
     "url": "https://miniflux.app/",
@@ -825,11 +1034,11 @@
   },
   "https://mobbin.com": {
     "url": "https://mobbin.com/",
+    "image": "/people-previews/mobbin-com-52bddd2008.webp",
     "imageAlt": "Mobbin — UI & UX design inspiration for mobile & web apps",
-    "siteName": "Mobbin",
-    "status": "found",
     "title": "Mobbin — UI & UX design inspiration for mobile & web apps",
-    "image": "/people-previews/mobbin-com-52bddd2008.webp"
+    "siteName": "Mobbin",
+    "status": "found"
   },
   "https://mp.weixin.qq.com/s/7S0dirp_76vApfjhqWEmNA": {
     "url": "https://mp.weixin.qq.com/s/7S0dirp_76vApfjhqWEmNA",
@@ -843,6 +1052,12 @@
     "siteName": "mp.weixin.qq.com",
     "status": "skipped"
   },
+  "https://mp.weixin.qq.com/s/P7A9Lvx9DVS9I0DydS1MXQ": {
+    "url": "https://mp.weixin.qq.com/s/P7A9Lvx9DVS9I0DydS1MXQ",
+    "imageAlt": "星拍游乐场",
+    "siteName": "mp.weixin.qq.com",
+    "status": "skipped"
+  },
   "https://mp.weixin.qq.com/s/qTW71nGuBODbF_bPv93r7Q": {
     "url": "https://mp.weixin.qq.com/s/qTW71nGuBODbF_bPv93r7Q",
     "imageAlt": "介绍文章",
@@ -851,17 +1066,27 @@
   },
   "https://murdoku.com": {
     "url": "https://murdoku.com/",
+    "image": "/people-previews/murdoku-com-8ea77d637f.webp",
     "imageAlt": "Murdoku – Sudoku meets murder mystery",
-    "siteName": "Murdoku",
-    "status": "found",
     "title": "Murdoku – Sudoku meets murder mystery",
-    "image": "/people-previews/murdoku-com-8ea77d637f.webp"
+    "siteName": "Murdoku",
+    "status": "found"
   },
   "https://muse.ai": {
     "url": "https://muse.ai/",
-    "imageAlt": "Muse",
-    "siteName": "muse.ai",
-    "status": "fetch_failed"
+    "imageAlt": "Muse wearing headphones and working at a laptop",
+    "siteName": "Muse",
+    "status": "found",
+    "title": "Muse — Your Personal AI Agent",
+    "image": "/people-previews/muse-ai-72408fd729.webp"
+  },
+  "https://musecube.app": {
+    "url": "https://musecube.app/",
+    "imageAlt": "Musecube window showing a web tool in the sidebar app, with the ⌥M shortcut",
+    "siteName": "Musecube",
+    "status": "found",
+    "title": "Musecube — Every web tool, one keystroke away",
+    "image": "/people-previews/musecube-app-9eef8c2f4c.webp"
   },
   "https://museumoffailure.com/ai-failure": {
     "url": "https://museumoffailure.com/ai-failure",
@@ -882,13 +1107,19 @@
     "siteName": "my.feishu.cn",
     "status": "skipped"
   },
+  "https://my.feishu.cn/wiki/UGMGwHblAiRMAOk3Vyfcx6XSnUg": {
+    "url": "https://my.feishu.cn/wiki/UGMGwHblAiRMAOk3Vyfcx6XSnUg",
+    "imageAlt": "一人 Agent 公司复盘",
+    "siteName": "my.feishu.cn",
+    "status": "skipped"
+  },
   "https://mymind.com": {
     "url": "https://mymind.com/",
+    "image": "/people-previews/mymind-com-833bc82c78.webp",
     "imageAlt": "mymind is the extension for your mind.",
-    "siteName": "mymind",
-    "status": "found",
     "title": "mymind is the extension for your mind.",
-    "image": "/people-previews/mymind-com-833bc82c78.webp"
+    "siteName": "mymind",
+    "status": "found"
   },
   "https://nekoium.com": {
     "url": "https://nekoium.com/",
@@ -905,21 +1136,71 @@
     "siteName": "NetNewsWire",
     "status": "found"
   },
+  "https://nevatown.com": {
+    "url": "https://nevatown.com/",
+    "imageAlt": "涅瓦（Nevatown）",
+    "siteName": "nevatown.com",
+    "status": "no_image",
+    "title": "涅瓦 nevatown · 玩家做的原创游戏"
+  },
+  "https://news.ycombinator.com": {
+    "url": "https://news.ycombinator.com/",
+    "imageAlt": "Hacker News",
+    "siteName": "news.ycombinator.com",
+    "status": "no_image",
+    "title": "Hacker News"
+  },
+  "https://news.ycombinator.com/item?id=3053883": {
+    "url": "https://news.ycombinator.com/item?id=3053883",
+    "imageAlt": "Stripe 首发帖",
+    "siteName": "news.ycombinator.com",
+    "status": "no_image",
+    "title": "Stripe: instant payment processing for developers | Hacker News"
+  },
+  "https://news.ycombinator.com/item?id=41080018": {
+    "url": "https://news.ycombinator.com/item?id=41080018",
+    "imageAlt": "Stripe 收购 Lemon Squeezy 讨论",
+    "siteName": "news.ycombinator.com",
+    "status": "no_image",
+    "title": "Stripe acquires Lemon Squeezy | Hacker News"
+  },
+  "https://news.ycombinator.com/item?id=5445387": {
+    "url": "https://news.ycombinator.com/item?id=5445387",
+    "imageAlt": "Docker 首发帖",
+    "siteName": "news.ycombinator.com",
+    "status": "no_image",
+    "title": "Docker, the Linux container runtime: now open-source | Hacker News"
+  },
+  "https://news.ycombinator.com/item?id=8863": {
+    "url": "https://news.ycombinator.com/item?id=8863",
+    "imageAlt": "Dropbox 首发帖",
+    "siteName": "news.ycombinator.com",
+    "status": "no_image",
+    "title": "My YC app: Dropbox - Throw away your USB drive | Hacker News"
+  },
+  "https://newyorker.com/news/letter-from-silicon-valley/the-lonely-work-of-moderating-hacker-news": {
+    "url": "https://www.newyorker.com/news/letter-from-silicon-valley/the-lonely-work-of-moderating-hacker-news",
+    "imageAlt": "The Lonely Work of Moderating Hacker News",
+    "siteName": "The New Yorker",
+    "status": "found",
+    "title": "The Lonely Work of Moderating Hacker News",
+    "image": "/people-previews/newyorker-com-04939b6f0d.webp"
+  },
   "https://nudgecode.liangyue.site/roadmap/array/learn": {
     "url": "https://nudgecode.liangyue.site/roadmap/array/learn",
+    "image": "/people-previews/nudgecode-liangyue-site-b0e86d6e34.webp",
     "imageAlt": "Array & Hash Table · interview pattern guide · NudgeCode",
-    "siteName": "NudgeCode",
-    "status": "found",
     "title": "Array & Hash Table · interview pattern guide · NudgeCode",
-    "image": "/people-previews/nudgecode-liangyue-site-b0e86d6e34.webp"
+    "siteName": "NudgeCode",
+    "status": "found"
   },
   "https://offline.tldraw.com": {
     "url": "https://offline.tldraw.com/",
+    "image": "/people-previews/offline-tldraw-com-6a96d46393.webp",
     "imageAlt": "tldraw office",
-    "siteName": "offline.tldraw.com",
-    "status": "found",
     "title": "tldraw office",
-    "image": "/people-previews/offline-tldraw-com-6a96d46393.webp"
+    "siteName": "offline.tldraw.com",
+    "status": "found"
   },
   "https://okjk.co/3IW2oj": {
     "url": "https://okjk.co/3IW2oj",
@@ -963,21 +1244,44 @@
     "siteName": "okjk.co",
     "status": "skipped"
   },
+  "https://omarchy-aios.vercel.app/cn": {
+    "url": "https://omarchy-aios.vercel.app/cn/#/1",
+    "imageAlt": "在线讲稿",
+    "siteName": "omarchy-aios.vercel.app",
+    "status": "no_image",
+    "title": "谈到 AI OS，你会想到什么？ - Slidev"
+  },
+  "https://omarchy.org": {
+    "url": "https://omarchy.org/",
+    "imageAlt": "The Omarchy wordmark in the Solitude theme",
+    "siteName": "Omarchy",
+    "status": "found",
+    "title": "Omarchy - Beautiful, fun & agentic Linux by DHH",
+    "image": "/people-previews/omarchy-org-7bc3da3ef1.webp"
+  },
   "https://open.spotify.com/album/2eNr5z7kVBrGXwIAou3qUR": {
     "url": "https://open.spotify.com/album/2eNr5z7kVBrGXwIAou3qUR",
+    "image": "/people-previews/open-spotify-com-11ffd299c9.webp",
     "imageAlt": "Listen to Dream Again - EP by 思为 | Spotify",
-    "siteName": "Spotify",
-    "status": "found",
     "title": "Listen to Dream Again - EP by 思为 | Spotify",
-    "image": "/people-previews/open-spotify-com-11ffd299c9.webp"
+    "siteName": "Spotify",
+    "status": "found"
+  },
+  "https://opensiri.ai": {
+    "url": "https://opensiri.ai/",
+    "imageAlt": "openSiri",
+    "siteName": "opensiri.ai",
+    "status": "found",
+    "title": "openSiri — 你的 macOS AI 助理，随时出现",
+    "image": "/people-previews/opensiri-ai-bd1a39ab2f.webp"
   },
   "https://opentrends.io/zh": {
     "url": "https://opentrends.io/zh",
+    "image": "/people-previews/opentrends-io-e0e402ce72.webp",
     "imageAlt": "OpenTrends: hundreds of first-hand AI, tech, hardware, biotech and Chinese-web sources, cross-checked and translated into eight languages",
-    "siteName": "OpenTrends",
-    "status": "found",
     "title": "人与 AI 共用的信息雷达 · OpenTrends",
-    "image": "/people-previews/opentrends-io-e0e402ce72.webp"
+    "siteName": "OpenTrends",
+    "status": "found"
   },
   "https://outline.tabthursday.com": {
     "url": "https://outline.tabthursday.com/",
@@ -1010,11 +1314,11 @@
   },
   "https://parallels.com": {
     "url": "https://www.parallels.com/",
+    "image": "/people-previews/parallels-com-cd2c1af84d.webp",
     "imageAlt": "Parallels | Run Windows on Mac, VDI, and Enterprise Virtualization Solutions",
-    "siteName": "parallels.com",
-    "status": "found",
     "title": "Parallels | Run Windows on Mac, VDI, and Enterprise Virtualization Solutions",
-    "image": "/people-previews/parallels-com-cd2c1af84d.webp"
+    "siteName": "parallels.com",
+    "status": "found"
   },
   "https://pixpet.com.cn": {
     "url": "https://pixpet.com.cn",
@@ -1041,7 +1345,9 @@
     "url": "https://poke.com/",
     "imageAlt": "Poke",
     "siteName": "poke.com",
-    "status": "fetch_failed"
+    "status": "found",
+    "title": "Poke – Chat with Poke",
+    "image": "/people-previews/poke-com-f6a3db0272.webp"
   },
   "https://portmaster.games": {
     "url": "https://portmaster.games/",
@@ -1050,6 +1356,13 @@
     "status": "no_image",
     "title": "PortMaster Wiki"
   },
+  "https://postcard.nevatown.com": {
+    "url": "https://postcard.nevatown.com/",
+    "imageAlt": "见字如面",
+    "siteName": "postcard.nevatown.com",
+    "status": "no_image",
+    "title": "见字如面 · Wish You Were Here"
+  },
   "https://postpiper.ai": {
     "url": "https://www.postpiper.ai",
     "image": "/people-previews/link-067.webp",
@@ -1057,6 +1370,13 @@
     "title": "Social Media Scheduler for the AI era | PostPiper",
     "siteName": "postpiper.ai",
     "status": "found"
+  },
+  "https://prepre.surge.sh": {
+    "url": "https://prepre.surge.sh/",
+    "imageAlt": "agent 的广告业务（讲稿）",
+    "siteName": "prepre.surge.sh",
+    "status": "no_image",
+    "title": "agent 的广告业务"
   },
   "https://project-e9844dc2.eazo.dev": {
     "url": "https://project-e9844dc2.eazo.dev/",
@@ -1090,19 +1410,19 @@
   },
   "https://random.studio/innovation": {
     "url": "https://random.studio/innovation",
+    "image": "/people-previews/random-studio-9b03b31c5d.webp",
     "imageAlt": "Random Studio – Applied Innovation - Random Studio",
-    "siteName": "Random Studio",
-    "status": "found",
     "title": "Random Studio – Applied Innovation - Random Studio",
-    "image": "/people-previews/random-studio-9b03b31c5d.webp"
+    "siteName": "Random Studio",
+    "status": "found"
   },
   "https://repebble.com": {
     "url": "https://repebble.com/",
+    "image": "/people-previews/repebble-com-a39e2d0c9b.webp",
     "imageAlt": "Pebble Smartwatch — Official Store",
-    "siteName": "repebble.com",
-    "status": "found",
     "title": "Pebble Smartwatch — Official Store",
-    "image": "/people-previews/repebble-com-a39e2d0c9b.webp"
+    "siteName": "repebble.com",
+    "status": "found"
   },
   "https://rss.huyixi.com": {
     "url": "https://rss.huyixi.com/",
@@ -1113,41 +1433,50 @@
   },
   "https://ruffood.com": {
     "url": "https://www.ruffood.com/",
-    "imageAlt": "若饭",
-    "siteName": "ruffood.com",
-    "status": "fetch_failed"
+    "imageAlt": "若饭官网 - 让吃饭多一个省心的选择｜悠购科技",
+    "siteName": "若饭",
+    "status": "found",
+    "title": "若饭官网 - 让吃饭多一个省心的选择｜悠购科技",
+    "image": "/people-previews/ruffood-com-b7815edc84.webp"
   },
   "https://s2arm.com": {
     "url": "https://s2arm.com/",
+    "image": "/people-previews/s2arm-com-bcdc05f030.webp",
     "imageAlt": "S2Arm Guide",
-    "siteName": "S2Arm Guide",
-    "status": "found",
     "title": "S2Arm Guide: Downloads and Setup",
-    "image": "/people-previews/s2arm-com-bcdc05f030.webp"
+    "siteName": "S2Arm Guide",
+    "status": "found"
+  },
+  "https://sanguo.nevatown.com": {
+    "url": "https://sanguo.nevatown.com/",
+    "imageAlt": "三国·城主",
+    "siteName": "sanguo.nevatown.com",
+    "status": "no_image",
+    "title": "三国 · 城主"
   },
   "https://sansatemple.com": {
     "url": "https://sansatemple.com/",
+    "image": "/people-previews/sansatemple-com-a4a0fe28a1.webp",
     "imageAlt": "정면으로 합장하는 동자승과 초록 산·흰 법당 로고. 산사, 잠깐 쉬어가요.",
-    "siteName": "산사",
-    "status": "found",
     "title": "산사, 잠깐 쉬어가요",
-    "image": "/people-previews/sansatemple-com-a4a0fe28a1.webp"
+    "siteName": "산사",
+    "status": "found"
   },
   "https://shapr3d.com": {
     "url": "https://www.shapr3d.com/",
+    "image": "/people-previews/shapr3d-com-f64ff9e47e.webp",
     "imageAlt": "Shapr3D: 3D Modeling software | Windows & Mac & iPad & iPhone",
-    "siteName": "shapr3d.com",
-    "status": "found",
     "title": "Shapr3D: 3D Modeling software | Windows & Mac & iPad & iPhone",
-    "image": "/people-previews/shapr3d-com-f64ff9e47e.webp"
+    "siteName": "shapr3d.com",
+    "status": "found"
   },
   "https://sidewave.link/1k/surface": {
     "url": "https://sidewave.link/1k/surface",
+    "image": "/people-previews/sidewave-link-60d872542c.webp",
     "imageAlt": "The surface — 1K",
-    "siteName": "1K",
-    "status": "found",
     "title": "The surface — 1K",
-    "image": "/people-previews/sidewave-link-60d872542c.webp"
+    "siteName": "1K",
+    "status": "found"
   },
   "https://sidewave.link/fkndoit": {
     "url": "https://sidewave.link/fkndoit/",
@@ -1159,11 +1488,11 @@
   },
   "https://sidwith.wordpress.com": {
     "url": "https://sidwith.wordpress.com/",
+    "image": "/people-previews/sidwith-wordpress-com-53da758ca2.webp",
     "imageAlt": "赛德SAIde",
-    "siteName": "赛德SAIde",
-    "status": "found",
     "title": "赛德SAIde",
-    "image": "/people-previews/sidwith-wordpress-com-53da758ca2.webp"
+    "siteName": "赛德SAIde",
+    "status": "found"
   },
   "https://siwei.io/talks/tab-2026": {
     "url": "https://siwei.io/talks/tab-2026",
@@ -1181,11 +1510,11 @@
   },
   "https://softlabor.biz": {
     "url": "https://www.softlabor.biz/",
+    "image": "/people-previews/softlabor-biz-e2a5c48e87.webp",
     "imageAlt": "Soft Labor",
-    "siteName": "Soft Labor",
-    "status": "found",
     "title": "Soft Labor",
-    "image": "/people-previews/softlabor-biz-e2a5c48e87.webp"
+    "siteName": "Soft Labor",
+    "status": "found"
   },
   "https://springbrand.ai": {
     "url": "https://springbrand.ai/",
@@ -1201,67 +1530,68 @@
     "status": "no_image",
     "title": "Teamily growth teardown: where users came from, who it targeted, how it grew"
   },
-  "https://sspai.com/u/s5hoou8h": {
-    "url": "https://sspai.com/u/s5hoou8h/",
-    "imageAlt": "张潘",
-    "siteName": "sspai.com",
-    "status": "no_image",
-    "title": "少数派 - 高效工作，品质生活"
-  },
   "https://starland.app": {
     "url": "https://starland.app/",
+    "image": "/people-previews/starland-app-7f681a2eb2.webp",
     "imageAlt": "Starland app icon",
-    "siteName": "Starland",
-    "status": "found",
     "title": "Starland — iPhone app that turns written moments into memory islands",
-    "image": "/people-previews/starland-app-7f681a2eb2.webp"
+    "siteName": "Starland",
+    "status": "found"
+  },
+  "https://startup.nevatown.com": {
+    "url": "https://startup.nevatown.com/",
+    "imageAlt": "车库到 IPO",
+    "siteName": "startup.nevatown.com",
+    "status": "no_image",
+    "title": "车库到 IPO"
   },
   "https://store.steampowered.com/app/2333000/Silver_Pines": {
     "url": "https://store.steampowered.com/app/2333000/Silver_Pines/",
+    "image": "/people-previews/store-steampowered-com-072fbb1f47.webp",
     "imageAlt": "Silver Pines on Steam",
-    "siteName": "store.steampowered.com",
-    "status": "found",
     "title": "Silver Pines on Steam",
-    "image": "/people-previews/store-steampowered-com-072fbb1f47.webp"
+    "siteName": "store.steampowered.com",
+    "status": "found"
   },
   "https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead": {
     "url": "https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead/",
+    "image": "/people-previews/store-steampowered-com-032368f309.webp",
     "imageAlt": "The Roottrees are Dead on Steam",
-    "siteName": "store.steampowered.com",
-    "status": "found",
     "title": "The Roottrees are Dead on Steam",
-    "image": "/people-previews/store-steampowered-com-032368f309.webp"
+    "siteName": "store.steampowered.com",
+    "status": "found"
   },
   "https://store.steampowered.com/app/4488860/The_Red_Pearls_Of_Borneo": {
     "url": "https://store.steampowered.com/app/4488860/The_Red_Pearls_Of_Borneo/",
+    "image": "/people-previews/store-steampowered-com-26d42c4817.webp",
     "imageAlt": "The Red Pearls Of Borneo on Steam",
-    "siteName": "store.steampowered.com",
-    "status": "found",
     "title": "The Red Pearls Of Borneo on Steam",
-    "image": "/people-previews/store-steampowered-com-26d42c4817.webp"
+    "siteName": "store.steampowered.com",
+    "status": "found"
   },
   "https://supernote.com": {
     "url": "https://supernote.com/",
-    "imageAlt": "Supernote",
+    "imageAlt": "Supernote – For Those Who Write, For Those Who Create",
     "siteName": "Supernote",
-    "status": "fetch_failed",
-    "title": "Supernote – For Those Who Write, For Those Who Create"
+    "status": "found",
+    "title": "Supernote – For Those Who Write, For Those Who Create",
+    "image": "/people-previews/supernote-com-88352078ff.webp"
   },
   "https://supple.kr/news/cmvw1x37owu9513patyhvxmfi": {
     "url": "https://supple.kr/news/cmvw1x37owu9513patyhvxmfi",
+    "image": "/people-previews/supple-kr-ed867099ff.webp",
     "imageAlt": "\"방구석 누워 108배로 힐링\"…사흘간 60만명 다녀간 온라인 산사 - 서플",
-    "siteName": "서플",
-    "status": "found",
     "title": "\"방구석 누워 108배로 힐링\"…사흘간 60만명 다녀간 온라인 산사 - 서플",
-    "image": "/people-previews/supple-kr-ed867099ff.webp"
+    "siteName": "서플",
+    "status": "found"
   },
   "https://swob.app": {
     "url": "https://swob.app/",
+    "image": "/people-previews/swob-app-cfb8c42853.webp",
     "imageAlt": "Swob — your AI history, kept",
-    "siteName": "Swob",
-    "status": "found",
     "title": "Swob — your AI history, kept",
-    "image": "/people-previews/swob-app-cfb8c42853.webp"
+    "siteName": "Swob",
+    "status": "found"
   },
   "https://tab-002-prompt-jadd.pages.grok.bot": {
     "url": "https://tab-002-prompt-jadd.pages.grok.bot/",
@@ -1270,21 +1600,28 @@
     "status": "no_image",
     "title": "Prompt to spark intelligence - Grok Bot"
   },
+  "https://taku.ai": {
+    "url": "https://taku.ai/",
+    "imageAlt": "Taku OS",
+    "siteName": "Taku",
+    "status": "no_image",
+    "title": "Taku — Your World, on Your Terms"
+  },
   "https://testflight.apple.com/join/fHUB9J9V": {
     "url": "https://testflight.apple.com/join/fHUB9J9V",
+    "image": "/people-previews/testflight-apple-com-c80bf23831.webp",
     "imageAlt": "Join the Torchlight II beta",
-    "siteName": "testflight.apple.com",
-    "status": "found",
     "title": "Join the Torchlight II beta",
-    "image": "/people-previews/testflight-apple-com-c80bf23831.webp"
+    "siteName": "testflight.apple.com",
+    "status": "found"
   },
   "https://thefreemovie.buzz": {
     "url": "https://thefreemovie.buzz/",
+    "image": "/people-previews/thefreemovie-buzz-39e3d18f7a.webp",
     "imageAlt": "the Free Movie",
-    "siteName": "the Free Movie",
-    "status": "found",
     "title": "the Free Movie",
-    "image": "/people-previews/thefreemovie-buzz-39e3d18f7a.webp"
+    "siteName": "the Free Movie",
+    "status": "found"
   },
   "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html?m=1": {
     "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html?m=1",
@@ -1301,35 +1638,42 @@
   },
   "https://tinydogs.at": {
     "url": "https://www.tinydogs.at/",
+    "image": "/people-previews/tinydogs-at-214f16b5ed.webp",
     "imageAlt": "Tiny Dogs",
-    "siteName": "Tiny Dogs",
-    "status": "found",
     "title": "Tiny Dogs",
-    "image": "/people-previews/tinydogs-at-214f16b5ed.webp"
+    "siteName": "Tiny Dogs",
+    "status": "found"
   },
   "https://today.ai": {
     "url": "https://today.ai/",
+    "image": "/people-previews/today-ai-bbac458d8e.webp",
     "imageAlt": "Today AI",
-    "siteName": "Today AI",
-    "status": "found",
     "title": "Today AI",
-    "image": "/people-previews/today-ai-bbac458d8e.webp"
+    "siteName": "Today AI",
+    "status": "found"
   },
   "https://trancy.org": {
     "url": "https://www.trancy.org/",
+    "image": "/people-previews/trancy-org-f567f282f9.webp",
     "imageAlt": "Trancy - YouTube AI Bilingual Subtitles & Language Reactor Pro",
-    "siteName": "Trancy",
-    "status": "found",
     "title": "Trancy - YouTube AI Bilingual Subtitles & Language Reactor Pro",
-    "image": "/people-previews/trancy-org-f567f282f9.webp"
+    "siteName": "Trancy",
+    "status": "found"
   },
   "https://trancy.org/trancy-air": {
     "url": "https://www.trancy.org/trancy-air",
+    "image": "/people-previews/trancy-org-55b6aaef99.webp",
     "imageAlt": "Trancy Air — Translate anything, in any app | macOS & Windows",
-    "siteName": "trancy.org",
-    "status": "found",
     "title": "Trancy Air — Translate anything, in any app | macOS & Windows",
-    "image": "/people-previews/trancy-org-55b6aaef99.webp"
+    "siteName": "trancy.org",
+    "status": "found"
+  },
+  "https://transparent.vision": {
+    "url": "https://transparent.vision/",
+    "imageAlt": "Transparent（翻译玻璃）",
+    "siteName": "transparent.vision",
+    "status": "no_image",
+    "title": "Transparent"
   },
   "https://tryklack.com": {
     "url": "https://tryklack.com",
@@ -1355,27 +1699,27 @@
   },
   "https://twoyi.app/zh": {
     "url": "https://twoyi.app/zh/",
+    "image": "/people-previews/twoyi-app-23e8b03393.webp",
     "imageAlt": "两仪 · 把一部完整的 Android 装进一个 App",
-    "siteName": "两仪 Twoyi",
-    "status": "found",
     "title": "两仪 · 把一部完整的 Android 装进一个 App",
-    "image": "/people-previews/twoyi-app-23e8b03393.webp"
+    "siteName": "两仪 Twoyi",
+    "status": "found"
   },
   "https://ultracombos.com/zh-tw": {
     "url": "https://ultracombos.com/zh-tw",
+    "image": "/people-previews/ultracombos-com-f7297c41c8.webp",
     "imageAlt": "ULTRACOMBOS - Art + Design Studio, creating timeless work with digital.",
-    "siteName": "ultracombos.com",
-    "status": "found",
     "title": "ULTRACOMBOS - Art + Design Studio, creating timeless work with digital.",
-    "image": "/people-previews/ultracombos-com-f7297c41c8.webp"
+    "siteName": "ultracombos.com",
+    "status": "found"
   },
   "https://ulysses.app": {
     "url": "https://ulysses.app/",
+    "image": "/people-previews/ulysses-app-ddfa509f95.webp",
     "imageAlt": "Ulysses -",
-    "siteName": "ulysses.app",
-    "status": "found",
     "title": "Ulysses -",
-    "image": "/people-previews/ulysses-app-ddfa509f95.webp"
+    "siteName": "ulysses.app",
+    "status": "found"
   },
   "https://universaleverything.com/art": {
     "url": "https://www.universaleverything.com/art",
@@ -1392,11 +1736,11 @@
   },
   "https://variablize.app": {
     "url": "https://variablize.app/",
+    "image": "/people-previews/variablize-app-5dc5818410.webp",
     "imageAlt": "Variablize — two free sites: AI Business Case Studies and Fundamentals Thermometer",
-    "siteName": "Variablize",
-    "status": "found",
     "title": "Variablize",
-    "image": "/people-previews/variablize-app-5dc5818410.webp"
+    "siteName": "Variablize",
+    "status": "found"
   },
   "https://web.okjike.com/u/2a57f026-9048-43bf-951a-89d0715b7578/post/683c73a7f0d718ce7a4b15dd": {
     "url": "https://web.okjike.com/u/2a57f026-9048-43bf-951a-89d0715b7578/post/683c73a7f0d718ce7a4b15dd",
@@ -1406,23 +1750,61 @@
   },
   "https://whatships.com": {
     "url": "https://whatships.com/",
+    "image": "/people-previews/whatships-com-26cef7d1c0.webp",
     "imageAlt": "Startup & Product Launch Videos from X — What Ships",
-    "siteName": "What Ships",
-    "status": "found",
     "title": "Startup & Product Launch Videos from X — What Ships",
-    "image": "/people-previews/whatships-com-26cef7d1c0.webp"
+    "siteName": "What Ships",
+    "status": "found"
   },
   "https://whimsical.club": {
     "url": "https://whimsical.club/",
+    "image": "/people-previews/whimsical-club-1912af804f.webp",
     "imageAlt": "The Whimsical Web",
-    "siteName": "The Whimsical Web",
-    "status": "found",
     "title": "The Whimsical Web",
-    "image": "/people-previews/whimsical-club-1912af804f.webp"
+    "siteName": "The Whimsical Web",
+    "status": "found"
+  },
+  "https://wizofoz.cc": {
+    "url": "https://wizofoz.cc/",
+    "imageAlt": "绿野仙踪",
+    "siteName": "wizofoz.cc",
+    "status": "no_image",
+    "title": "The Wizard of Oz — Follow the Yellow Brick Road"
+  },
+  "https://wizofoz.cc/article/zh.html": {
+    "url": "https://wizofoz.cc/article/zh.html",
+    "imageAlt": "0 基础 3D 游戏开发攻略",
+    "siteName": "wizofoz.cc",
+    "status": "no_image",
+    "title": "0基础3D游戏开发攻略"
   },
   "https://x.com/0xinhua": {
     "url": "https://x.com/0xinhua",
     "imageAlt": "0xinhua",
+    "siteName": "x.com",
+    "status": "skipped"
+  },
+  "https://x.com/Lafe8088": {
+    "url": "https://x.com/Lafe8088",
+    "imageAlt": "Lafe",
+    "siteName": "x.com",
+    "status": "skipped"
+  },
+  "https://x.com/Lafe8088/status/2124147638048002174": {
+    "url": "https://x.com/Lafe8088/status/2124147638048002174",
+    "imageAlt": "英文长文复盘",
+    "siteName": "x.com",
+    "status": "skipped"
+  },
+  "https://x.com/alswl": {
+    "url": "https://x.com/alswl",
+    "imageAlt": "狄敬超",
+    "siteName": "x.com",
+    "status": "skipped"
+  },
+  "https://x.com/chesterlee14": {
+    "url": "https://x.com/chesterlee14",
+    "imageAlt": "Chester",
     "siteName": "x.com",
     "status": "skipped"
   },
@@ -1468,9 +1850,21 @@
     "siteName": "x.com",
     "status": "skipped"
   },
+  "https://x.com/ycdjry": {
+    "url": "https://x.com/ycdjry",
+    "imageAlt": "X (@ycdjry)",
+    "siteName": "x.com",
+    "status": "skipped"
+  },
   "https://xhslink.cn/m/6dMu8ycuH7y": {
     "url": "https://xhslink.cn/m/6dMu8ycuH7y",
     "imageAlt": "Victoria Zhang",
+    "siteName": "xhslink.cn",
+    "status": "skipped"
+  },
+  "https://xhslink.cn/o/1OLIBlm2fbX": {
+    "url": "https://xhslink.cn/o/1OLIBlm2fbX",
+    "imageAlt": "demon",
     "siteName": "xhslink.cn",
     "status": "skipped"
   },
@@ -1480,8 +1874,8 @@
     "siteName": "xhslink.cn",
     "status": "skipped"
   },
-  "https://xhslink.cn/o/586ZAU5ct02": {
-    "url": "https://xhslink.cn/o/586ZAU5ct02",
+  "https://xhslink.cn/o/5DhoeI1oBcx": {
+    "url": "https://xhslink.cn/o/5DhoeI1oBcx",
     "imageAlt": "祝以南",
     "siteName": "xhslink.cn",
     "status": "skipped"
@@ -1500,45 +1894,52 @@
     "siteName": "效率火箭，火箭君的新博客",
     "status": "found"
   },
+  "https://ycdjry.com": {
+    "url": "https://ycdjry.com/",
+    "imageAlt": "Jerry Yan",
+    "siteName": "ycdjry.com",
+    "status": "no_image",
+    "title": "Jerry · 作品与经历"
+  },
   "https://yeta.ai": {
     "url": "https://yeta.ai/",
+    "image": "/people-previews/yeta-ai-543ce47e3a.webp",
     "imageAlt": "Yeta Labs · Uncensored & open LLM API, zero data retention",
-    "siteName": "Yeta Labs",
-    "status": "found",
     "title": "Yeta Labs · Uncensored & open LLM API, zero data retention",
-    "image": "/people-previews/yeta-ai-543ce47e3a.webp"
+    "siteName": "Yeta Labs",
+    "status": "found"
   },
   "https://youtube.com/watch?v=1XxNXkOHKZw": {
     "url": "https://www.youtube.com/watch?v=1XxNXkOHKZw",
+    "image": "/people-previews/youtube-com-4cef25836a.webp",
     "imageAlt": "Apple Music. Made by Sound: Behind the new brand identity",
-    "siteName": "YouTube",
-    "status": "found",
     "title": "Apple Music. Made by Sound: Behind the new brand identity",
-    "image": "/people-previews/youtube-com-4cef25836a.webp"
+    "siteName": "YouTube",
+    "status": "found"
   },
   "https://youtube.com/watch?v=V95nfAEXlZ4": {
     "url": "https://www.youtube.com/watch?v=V95nfAEXlZ4",
+    "image": "/people-previews/youtube-com-526af7909a.webp",
     "imageAlt": "Apple’s New TV Intro Has Zero CGI — Here’s How They Filmed It",
-    "siteName": "YouTube",
-    "status": "found",
     "title": "Apple’s New TV Intro Has Zero CGI — Here’s How They Filmed It",
-    "image": "/people-previews/youtube-com-526af7909a.webp"
+    "siteName": "YouTube",
+    "status": "found"
   },
   "https://youtube.com/watch?v=_QSX3BF9UX0": {
     "url": "https://www.youtube.com/watch?v=_QSX3BF9UX0",
+    "image": "/people-previews/youtube-com-c5c0a9b083.webp",
     "imageAlt": "Why Every AI Lab Will Become a Biotech Company | Andrew Huberman",
-    "siteName": "YouTube",
-    "status": "found",
     "title": "Why Every AI Lab Will Become a Biotech Company | Andrew Huberman",
-    "image": "/people-previews/youtube-com-c5c0a9b083.webp"
+    "siteName": "YouTube",
+    "status": "found"
   },
   "https://yuque.com/doiot/5giot": {
     "url": "https://www.yuque.com/doiot/5giot",
+    "image": "/people-previews/yuque-com-3d6607f71f.webp",
     "imageAlt": "度云物联 · 语雀",
-    "siteName": "yuque.com",
-    "status": "found",
     "title": "度云物联 · 语雀",
-    "image": "/people-previews/yuque-com-3d6607f71f.webp"
+    "siteName": "yuque.com",
+    "status": "found"
   },
   "https://yytyyf.com": {
     "url": "https://yytyyf.com/",
